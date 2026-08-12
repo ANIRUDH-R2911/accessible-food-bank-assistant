@@ -6,7 +6,7 @@ reader = easyocr.Reader(['en'])
 
 print("Reading image...")
 
-results = reader.readtext("data/raw_images/1.jpg")
+results = reader.readtext("data/raw_images/3.jpg")
 
 print("\nDetected Text:\n")
 
