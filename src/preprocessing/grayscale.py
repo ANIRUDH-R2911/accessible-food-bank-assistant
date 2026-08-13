@@ -1,7 +1,7 @@
 import cv2
 
-image = cv2.imread("data/raw_images/1.jpg")
-output_path = "data/processed_images/gray_sample_food_image.jpg"
+image = cv2.imread("data/raw_images/3.jpg")
+output_path = "data/processed_images/3_gray_sample_food_image.jpg"
 
 gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
 
