@@ -1,16 +1,55 @@
 import easyocr
+import cv2
 
-print("Loading OCR model...")
-
+# Initialize OCR reader
 reader = easyocr.Reader(['en'])
 
-print("Reading image...")
+# Load images
+original_image = cv2.imread("data/raw_images/1.jpg")
 
-results = reader.readtext("data/raw_images/3.jpg")
+#gray_image = cv2.imread("data/processed_images/gray_sample_food_image.jpg")
 
-print("\nDetected Text:\n")
+#binary_image = cv2.imread("data/processed_images/threshold_image.jpg")
 
-for bbox, text, confidence in results:
-    print(f"Text: {text}")
-    print(f"Confidence: {confidence:.2f}")
-    print("-" * 40)
+# Run OCR
+original_results = reader.readtext(original_image)
+
+#gray_results = reader.readtext(gray_image)
+
+#binary_results = reader.readtext(binary_image)
+
+resized_image = cv2.imread("data/processed_images/resized_sample_food_image.jpg")
+
+resized_results = reader.readtext(resized_image)
+
+# Print results
+print("=" * 50)
+print("OCR RESULTS - ORIGINAL IMAGE")
+print("=" * 50)
+
+for result in original_results:
+    print(result[1])
+'''
+print("\n")
+print("=" * 50)
+print("OCR RESULTS - GRAYSCALE IMAGE")
+print("=" * 50)
+
+for result in gray_results:
+    print(result[1])
+    
+print("\n")
+print("=" * 50)
+print("OCR RESULTS - Binary IMAGE")
+print("=" * 50)
+
+for result in binary_results:
+    print(result[1])
+'''
+print("=" * 50)
+print("OCR RESULTS - RESIZED IMAGE")
+print("=" * 50)
+
+for result in resized_results:
+    print(result[1])
+
