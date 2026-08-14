@@ -33,12 +33,10 @@ NUTRITION_WORDS = [
 
 
 def correct_word(word):
-
     best_match = word
     highest_score = 0
 
     for candidate in NUTRITION_WORDS:
-
         score = fuzz.ratio(
             word.lower(),
             candidate.lower()
@@ -54,46 +52,71 @@ def correct_word(word):
     return word, highest_score
 
 
+def correct_line(line):
+    words = line.split()
+    corrected_words = []
+
+    for word in words:
+        if word.isalpha():
+            corrected_word, _ = correct_word(word)
+            corrected_words.append(corrected_word)
+        else:
+            corrected_words.append(word)
+
+    return " ".join(corrected_words)
+
+
 def correct_text(text):
-
     corrected_lines = []
-
     lines = text.split("\n")
 
     for line in lines:
-
         line = line.strip()
-
         if not line:
             continue
 
-        corrected_word, _ = correct_word(line)
-
-        corrected_lines.append(corrected_word)
+        corrected_line = correct_line(line)
+        corrected_lines.append(corrected_line)
 
     return "\n".join(corrected_lines)
 
-
 def generate_correction_report(text):
-
     report = []
-
     lines = text.split("\n")
 
     for line in lines:
-
         line = line.strip()
-
         if not line:
             continue
 
-        corrected_word, score = correct_word(line)
+        words = line.split()
+        for word in words:
+            if word.isalpha():
+                corrected, score = correct_word(word)
+                report.append(
+                    {
+                        "original": word,
+                        "corrected": corrected,
+                        "score": round(score, 2),
+                        "changed": word != corrected
+                    }
+                )
+    return report
 
-        report.append({
-            "original": line,
-            "corrected": corrected_word,
-            "score": round(score, 2),
-            "changed": line != corrected_word
-        })
+def generate_line_report(line):
+    words = line.split()
+    report = []
+
+    for word in words:
+        if word.isalpha():
+            corrected, score = correct_word(word)
+            report.append(
+                {
+                    "original": word,
+                    "corrected": corrected,
+                    "score": round(score, 2),
+                    "changed": word != corrected
+                }
+            )
 
     return report

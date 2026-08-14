@@ -10,11 +10,11 @@ from src.postprocessing.text_corrector import (
 )
 
 raw_text = """
-IMGREDIENT
-Sodlum
-Viamin
-Flbre
-Pnosphorus
+Ingredients
+Whole Grain Oats
+Sodlum 180mg
+Viamin D
+Contains Wheat
 """
 
 print("\nRAW OCR OUTPUT")
