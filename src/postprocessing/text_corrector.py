@@ -35,7 +35,6 @@ NUTRITION_WORDS = [
 def correct_word(word):
     best_match = word
     highest_score = 0
-
     for candidate in NUTRITION_WORDS:
         score = fuzz.ratio(
             word.lower(),
@@ -48,21 +47,18 @@ def correct_word(word):
 
     if highest_score >= SIMILARITY_THRESHOLD:
         return best_match, highest_score
-
     return word, highest_score
 
 
 def correct_line(line):
     words = line.split()
     corrected_words = []
-
     for word in words:
         if word.isalpha():
             corrected_word, _ = correct_word(word)
             corrected_words.append(corrected_word)
         else:
             corrected_words.append(word)
-
     return " ".join(corrected_words)
 
 
@@ -77,7 +73,6 @@ def correct_text(text):
 
         corrected_line = correct_line(line)
         corrected_lines.append(corrected_line)
-
     return "\n".join(corrected_lines)
 
 def generate_correction_report(text):
@@ -106,7 +101,6 @@ def generate_correction_report(text):
 def generate_line_report(line):
     words = line.split()
     report = []
-
     for word in words:
         if word.isalpha():
             corrected, score = correct_word(word)

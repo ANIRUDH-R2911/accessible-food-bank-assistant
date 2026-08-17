@@ -17,5 +17,4 @@ Sugar 12g
 """
 
 result = extract_food_information(sample_text)
-
 print(result)
