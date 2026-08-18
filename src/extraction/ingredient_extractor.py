@@ -1,31 +1,50 @@
 import re
 
-def extract_ingredients(text):
-    pattern = r"ingredients\s*:?\s*(.*)"
-    match = re.search(
-        pattern,
-        text,
-        re.IGNORECASE | re.DOTALL
-    )
+INGREDIENT_KEYWORDS = [
+    "ingredients",
+    "ingredient"
+]
 
-    if not match:
+STOP_WORDS = [
+    "contains",
+    "nutrition",
+    "nutrition facts",
+    "calories",
+    "protein",
+    "fat",
+    "sodium"
+]
+
+def extract_ingredients(text):
+    lines = text.split("\n")
+    ingredient_line = None
+    for line in lines:
+        lower_line = line.lower()
+        if any(
+            keyword in lower_line
+            for keyword in INGREDIENT_KEYWORDS
+        ):
+            ingredient_line = line
+            break
+
+    if not ingredient_line:
         return []
 
-    ingredients_text = match.group(1)
-    stop_words = [
-        "contains",
-        "nutrition",
-        "nutrition facts"
-    ]
+    ingredient_line = re.sub(
+        r"ingredients?:?",
+        "",
+        ingredient_line,
+        flags=re.IGNORECASE
+    )
 
-    for word in stop_words:
-        idx = ingredients_text.lower().find(word)
+    for stop_word in STOP_WORDS:
+        idx = ingredient_line.lower().find(stop_word)
         if idx != -1:
-            ingredients_text = ingredients_text[:idx]
+            ingredient_line = ingredient_line[:idx]
 
     ingredients = [
         item.strip()
-        for item in ingredients_text.split(",")
+        for item in ingredient_line.split(",")
         if item.strip()
     ]
 

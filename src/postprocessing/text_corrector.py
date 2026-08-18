@@ -1,11 +1,20 @@
 from rapidfuzz import fuzz
 
-SIMILARITY_THRESHOLD = 80
+SIMILARITY_THRESHOLD = 75
 
 NUTRITION_WORDS = [
+    "Ingredient",
     "Ingredients",
+    "Contains",
     "Calories",
     "Protein",
+    "Milk",
+    "Soy",
+    "Peanut",
+    "Peanuts",
+    "Tree Nuts",
+    "Egg",
+    "Eggs",
     "Fat",
     "Fibre",
     "Fiber",
