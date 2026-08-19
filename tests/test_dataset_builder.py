@@ -10,7 +10,6 @@ from src.evaluation.dataset_builder import EvaluationDataset
 dataset = EvaluationDataset()
 
 sample_record = {
-
     "image_name": "sample.jpg",
 
     "ground_truth_ocr":

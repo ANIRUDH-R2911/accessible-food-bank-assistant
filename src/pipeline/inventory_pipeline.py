@@ -39,4 +39,9 @@ class InventoryPipeline:
         saved_record = self.inventory_manager.add_product(extracted_data)
         print("[6] Complete!")
 
-        return saved_record
+        return {
+            "raw_text": raw_text,
+            "corrected_text": corrected_text,
+            "extracted_data": extracted_data,
+            "saved_record": saved_record
+        }

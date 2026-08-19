@@ -7,42 +7,42 @@ sys.path.append(str(project_root))
 from src.evaluation.metrics import Metrics
 
 
-gt_text = "Milk Honey Oats"
-ocr_text = "MI Honey Oats"
+print("\nPRODUCT METRIC")
+print("-" * 30)
 
 print(
-    "Character Accuracy:",
-    Metrics.character_accuracy(
-        gt_text,
-        ocr_text
+    Metrics.product_accuracy(
+        "Honey Nut Cheerios",
+        "Honey Nut Cheerios"
     )
 )
 
 print(
-    "Word Accuracy:",
-    Metrics.word_accuracy(
-        gt_text,
-        ocr_text
+    Metrics.product_accuracy(
+        "Honey Nut Cheerios",
+        "Cheerios"
     )
 )
 
-gt_ingredients = [
-    "milk",
-    "honey",
-    "oats"
-]
 
-pred_ingredients = [
-    "milk",
-    "honey"
-]
+print("\nNUTRITION METRIC")
+print("-" * 30)
 
-precision = Metrics.precision(gt_ingredients,pred_ingredients)
+expected = {
+    "calories": 140,
+    "protein": 3,
+    "fat": 2
+}
 
-recall = Metrics.recall(gt_ingredients,pred_ingredients)
+predicted = {
+    "calories": 140,
+    "protein": 2,
+    "fat": 2
+}
 
-f1 = Metrics.f1_score(precision,recall)
-
-print("Precision:", precision)
-print("Recall:", recall)
-print("F1:", f1)
+print(
+    Metrics.nutrition_accuracy(
+        expected,
+        predicted
+    )
+)

@@ -6,11 +6,13 @@ sys.path.append(str(project_root))
 
 from src.evaluation.evaluator import Evaluator
 
-evaluator = Evaluator()
-report = evaluator.evaluate()
+report = Evaluator().evaluate()
 
-print("\nEVALUATION REPORT")
-print("-" * 20)
+if report:
+    print("\n")
+    print("-" * 30)
+    print("PIPELINE EVALUATION REPORT")
+    print("-" * 30)
 
-for metric, value in report.items():
-    print(f"{metric}: {value}")
+    for metric, value in report.items():
+        print(f"{metric}: {value}")
