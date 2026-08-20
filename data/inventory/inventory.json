@@ -518,5 +518,155 @@
             "Fiber": "39",
             "Carbohydrate": "379"
         }
+    },
+    {
+        "id": 34,
+        "created_at": "2026-08-20T00:43:53.686217",
+        "product_name": "WHOLE Milk co ttar\" SWiLK",
+        "ingredients": [
+            "MI"
+        ],
+        "allergens": [
+            "Milk"
+        ],
+        "allergens_may_contain": [],
+        "allergens_free_from": [],
+        "nutrition": {
+            "Total Fat": "9",
+            "Cholesterol": "3",
+            "Sodium": "123"
+        }
+    },
+    {
+        "id": 35,
+        "created_at": "2026-08-20T00:44:01.066286",
+        "product_name": "'pT1a TarOlu Dneyiynnen",
+        "ingredients": [],
+        "allergens": [],
+        "allergens_may_contain": [],
+        "allergens_free_from": [],
+        "nutrition": {
+            "Total Fat": "2",
+            "Saturated Fat": "0",
+            "Sodium": "90",
+            "Total Sugars": "149",
+            "Protein": "40"
+        }
+    },
+    {
+        "id": 36,
+        "created_at": "2026-08-20T00:44:14.819505",
+        "product_name": "WHOLE GSecal GRAIN",
+        "ingredients": [
+            "Only 290 p.s.Milk"
+        ],
+        "allergens": [
+            "Milk"
+        ],
+        "allergens_may_contain": [],
+        "allergens_free_from": [],
+        "nutrition": {
+            "Cholesterol": "0mg",
+            "Sodium": "160mg",
+            "Total Sugars": "9",
+            "Protein": "3g"
+        }
+    },
+    {
+        "id": 37,
+        "created_at": "2026-08-20T00:44:20.703572",
+        "product_name": "Scrvi ng 50 F2s0 carbal",
+        "ingredients": [
+            "cl Bakra"
+        ],
+        "allergens": [
+            "Milk"
+        ],
+        "allergens_may_contain": [
+            "Egg",
+            "Peanut"
+        ],
+        "allergens_free_from": [],
+        "nutrition": {
+            "Calories": "110"
+        }
+    },
+    {
+        "id": 38,
+        "created_at": "2026-08-20T00:44:26.328748",
+        "product_name": "TasDas Vate DMsrutonmtnanse Inusnradar {ors *k Jet",
+        "ingredients": [
+            "Enriched (lour (wheat flour; niacin; reduced iron; Vitamin B; (thiamin mononitrate] Vitamin B2 (riboflavin], tolic acid) vegetable oil (soybean and palm oil with TBHO tor ireshness ; cheese made with skim Milk (skim"
+        ],
+        "allergens": [
+            "Milk",
+            "Wheat"
+        ],
+        "allergens_may_contain": [],
+        "allergens_free_from": [],
+        "nutrition": {
+            "Total Fat": "89",
+            "Saturated Fat": "2g",
+            "Trans Fat": "0g",
+            "Sodium": "230",
+            "Total Carbohydrate": "179",
+            "Dietary Fiber": "1g",
+            "Total Sugars": "09",
+            "Protein": "39"
+        }
+    },
+    {
+        "id": 39,
+        "created_at": "2026-08-20T00:45:04.223289",
+        "product_name": "omn rest. asa",
+        "ingredients": [
+            "Cocoa beand cocoa butter",
+            "7 Made a facility free of wheat. ni Peanuts & eggs: 2 4l Image ID: 3DEFBZD alamy WWW.alamy com 229 Omg 109 Daily"
+        ],
+        "allergens": [],
+        "allergens_may_contain": [],
+        "allergens_free_from": [
+            "Wheat",
+            "Egg",
+            "Peanut"
+        ],
+        "nutrition": {
+            "Saturated Fat": "120",
+            "Dietary Fiber": "4g",
+            "Protein": "5g"
+        }
+    },
+    {
+        "id": 40,
+        "created_at": "2026-08-20T00:45:15.662047",
+        "product_name": "MOjeors. Ineetond aelusle",
+        "ingredients": [],
+        "allergens": [],
+        "allergens_may_contain": [],
+        "allergens_free_from": [],
+        "nutrition": {
+            "Calories": "130",
+            "Trans Fat": "09",
+            "Total Carbohydrate": "259",
+            "Protein": "6g"
+        }
+    },
+    {
+        "id": 41,
+        "created_at": "2026-08-20T00:45:20.629144",
+        "product_name": "Cutalviith Ceteal_Skm Kiar",
+        "ingredients": [],
+        "allergens": [],
+        "allergens_may_contain": [],
+        "allergens_free_from": [],
+        "nutrition": {
+            "Total Fat": "89",
+            "Saturated Fat": "2.59",
+            "Trans Fat": "0g",
+            "Sodium": "5",
+            "Dietary Fiber": "39",
+            "Total Sugars": "139",
+            "Protein": "4g"
+        }
     }
 ]
