@@ -668,5 +668,308 @@
             "Total Sugars": "139",
             "Protein": "4g"
         }
+    },
+    {
+        "id": 42,
+        "created_at": "2026-08-20T12:10:44.625337",
+        "product_name": "Vitamin D",
+        "ingredients": [
+            "mi"
+        ],
+        "allergens": [
+            "Milk"
+        ],
+        "allergens_may_contain": [],
+        "allergens_free_from": [],
+        "nutrition": {
+            "Total Fat": "9",
+            "Cholesterol": "3",
+            "Sodium": "123"
+        }
+    },
+    {
+        "id": 43,
+        "created_at": "2026-08-20T12:10:50.904628",
+        "product_name": "package (48gl",
+        "ingredients": [],
+        "allergens": [],
+        "allergens_may_contain": [],
+        "allergens_free_from": [],
+        "nutrition": {
+            "Total Fat": "2",
+            "Saturated Fat": "0",
+            "Sodium": "90",
+            "Total Sugars": "149",
+            "Protein": "40"
+        }
+    },
+    {
+        "id": 44,
+        "created_at": "2026-08-20T12:11:02.558263",
+        "product_name": "WHOLE",
+        "ingredients": [
+            "only 290 p.s.milk"
+        ],
+        "allergens": [
+            "Milk"
+        ],
+        "allergens_may_contain": [],
+        "allergens_free_from": [],
+        "nutrition": {
+            "Cholesterol": "0mg",
+            "Sodium": "160mg",
+            "Total Sugars": "9",
+            "Protein": "3g"
+        }
+    },
+    {
+        "id": 45,
+        "created_at": "2026-08-20T12:11:07.649619",
+        "product_name": "Scrvi ng 50",
+        "ingredients": [
+            "cl bakra"
+        ],
+        "allergens": [
+            "Milk"
+        ],
+        "allergens_may_contain": [
+            "Egg",
+            "Peanut"
+        ],
+        "allergens_free_from": [],
+        "nutrition": {
+            "Calories": "110"
+        }
+    },
+    {
+        "id": 46,
+        "created_at": "2026-08-20T12:11:12.330570",
+        "product_name": "27 Crackers (30g)",
+        "ingredients": [
+            "enriched (lour (wheat flour; niacin; reduced iron; vitamin b; (thiamin mononitrate] vitamin b2 (riboflavin], tolic acid) vegetable oil (soybean and palm oil with tbho tor ireshness ; cheese made with skim milk (skim"
+        ],
+        "allergens": [
+            "Milk",
+            "Wheat"
+        ],
+        "allergens_may_contain": [],
+        "allergens_free_from": [],
+        "nutrition": {
+            "Total Fat": "89",
+            "Saturated Fat": "2g",
+            "Trans Fat": "0g",
+            "Sodium": "230",
+            "Total Carbohydrate": "179",
+            "Dietary Fiber": "1g",
+            "Total Sugars": "09",
+            "Protein": "39"
+        }
+    },
+    {
+        "id": 47,
+        "created_at": "2026-08-20T12:11:41.300082",
+        "product_name": "omn",
+        "ingredients": [
+            "cocoa beand cocoa butter",
+            "7 made a facility free of wheat. ni peanuts & eggs: 2 4l image id: 3defbzd alamy www.alamy com 229 omg 109"
+        ],
+        "allergens": [],
+        "allergens_may_contain": [],
+        "allergens_free_from": [
+            "Wheat",
+            "Egg",
+            "Peanut"
+        ],
+        "nutrition": {
+            "Saturated Fat": "120",
+            "Dietary Fiber": "4g",
+            "Protein": "5g"
+        }
+    },
+    {
+        "id": 48,
+        "created_at": "2026-08-20T12:11:52.607275",
+        "product_name": "MOjeors.",
+        "ingredients": [],
+        "allergens": [],
+        "allergens_may_contain": [],
+        "allergens_free_from": [],
+        "nutrition": {
+            "Calories": "130",
+            "Trans Fat": "09",
+            "Total Carbohydrate": "259",
+            "Protein": "6g"
+        }
+    },
+    {
+        "id": 49,
+        "created_at": "2026-08-20T12:11:58.043635",
+        "product_name": "Cutalviith",
+        "ingredients": [],
+        "allergens": [],
+        "allergens_may_contain": [],
+        "allergens_free_from": [],
+        "nutrition": {
+            "Total Fat": "89",
+            "Saturated Fat": "2.59",
+            "Trans Fat": "0g",
+            "Sodium": "5",
+            "Dietary Fiber": "39",
+            "Total Sugars": "139",
+            "Protein": "4g"
+        }
+    },
+    {
+        "id": 50,
+        "created_at": "2026-08-20T12:25:17.547544",
+        "product_name": "WHOLE Milk",
+        "ingredients": [
+            "mi"
+        ],
+        "allergens": [
+            "Milk"
+        ],
+        "allergens_may_contain": [],
+        "allergens_free_from": [],
+        "nutrition": {
+            "Total Fat": "9",
+            "Cholesterol": "3",
+            "Sodium": "123"
+        }
+    },
+    {
+        "id": 51,
+        "created_at": "2026-08-20T12:25:27.166858",
+        "product_name": "Mo",
+        "ingredients": [
+            "inae lernioe otdic 6838ds 41ul8tr amouolpor ing3e0 mtst gra; cabiies 182 sali",
+            "matural altr daily malue\" bk"
+        ],
+        "allergens": [],
+        "allergens_may_contain": [],
+        "allergens_free_from": [],
+        "nutrition": {
+            "Total Fat": "2",
+            "Saturated Fat": "0",
+            "Sodium": "90",
+            "Total Sugars": "149",
+            "Protein": "40"
+        }
+    },
+    {
+        "id": 52,
+        "created_at": "2026-08-20T12:25:42.174619",
+        "product_name": "WHOLE 8",
+        "ingredients": [
+            "only 290 p.s.milk"
+        ],
+        "allergens": [
+            "Milk"
+        ],
+        "allergens_may_contain": [],
+        "allergens_free_from": [],
+        "nutrition": {
+            "Cholesterol": "0mg",
+            "Sodium": "160mg",
+            "Total Sugars": "9",
+            "Protein": "3g"
+        }
+    },
+    {
+        "id": 53,
+        "created_at": "2026-08-20T12:25:47.959221",
+        "product_name": "Scrvi ng 50",
+        "ingredients": [
+            "cl bakra"
+        ],
+        "allergens": [
+            "Milk"
+        ],
+        "allergens_may_contain": [
+            "Egg",
+            "Peanut"
+        ],
+        "allergens_free_from": [],
+        "nutrition": {
+            "Calories": "110"
+        }
+    },
+    {
+        "id": 54,
+        "created_at": "2026-08-20T12:25:54.999984",
+        "product_name": "27 Crackers (30g)",
+        "ingredients": [
+            "enriched (lour (wheat flour; niacin; reduced iron; vitamin b; (thiamin mononitrate] vitamin b2 (riboflavin], tolic acid) vegetable oil (soybean and palm oil with tbho tor ireshness ; cheese made with skim milk (skim"
+        ],
+        "allergens": [
+            "Milk",
+            "Wheat"
+        ],
+        "allergens_may_contain": [],
+        "allergens_free_from": [],
+        "nutrition": {
+            "Total Fat": "89",
+            "Saturated Fat": "2g",
+            "Trans Fat": "0g",
+            "Sodium": "230",
+            "Total Carbohydrate": "179",
+            "Dietary Fiber": "1g",
+            "Total Sugars": "09",
+            "Protein": "39"
+        }
+    },
+    {
+        "id": 55,
+        "created_at": "2026-08-20T12:26:35.978396",
+        "product_name": "a",
+        "ingredients": [
+            "le dietary fiber 4g 16% total sugars og 3 we 11",
+            "a includes 0g added sugars what"
+        ],
+        "allergens": [],
+        "allergens_may_contain": [],
+        "allergens_free_from": [
+            "Wheat",
+            "Egg",
+            "Peanut"
+        ],
+        "nutrition": {
+            "Saturated Fat": "120",
+            "Dietary Fiber": "4g",
+            "Protein": "5g"
+        }
+    },
+    {
+        "id": 56,
+        "created_at": "2026-08-20T12:26:51.045753",
+        "product_name": "MOjeors.",
+        "ingredients": [],
+        "allergens": [],
+        "allergens_may_contain": [],
+        "allergens_free_from": [],
+        "nutrition": {
+            "Calories": "130",
+            "Trans Fat": "09",
+            "Total Carbohydrate": "259",
+            "Protein": "6g"
+        }
+    },
+    {
+        "id": 57,
+        "created_at": "2026-08-20T12:26:56.396134",
+        "product_name": "Cutalviith",
+        "ingredients": [],
+        "allergens": [],
+        "allergens_may_contain": [],
+        "allergens_free_from": [],
+        "nutrition": {
+            "Total Fat": "89",
+            "Saturated Fat": "2.59",
+            "Trans Fat": "0g",
+            "Sodium": "5",
+            "Dietary Fiber": "39",
+            "Total Sugars": "139",
+            "Protein": "4g"
+        }
     }
 ]
