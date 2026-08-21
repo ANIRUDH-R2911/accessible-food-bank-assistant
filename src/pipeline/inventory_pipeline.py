@@ -1,10 +1,10 @@
-import easyocr
 import sys
 from pathlib import Path
 
 project_root = Path(__file__).resolve().parent.parent
 sys.path.append(str(project_root))
 
+from src.ocr.paddle_ocr import PaddleOCREngine
 from src.preprocessing.pipeline import preprocess_image
 from src.postprocessing.text_corrector import correct_text
 from src.extraction.extractor import extract_food_information
@@ -13,12 +13,17 @@ from src.storage.inventory_manager import InventoryManager
 
 class InventoryPipeline:
     def __init__(self):
-        self.reader = easyocr.Reader(['en'])
+        self.reader = PaddleOCREngine()
         self.inventory_manager = InventoryManager()
 
     def process_image(self, image_path):
         print("\n[1] Preprocessing Image...")
         processed_image = preprocess_image(image_path)
+        print(type(processed_image))
+        try:
+            print(processed_image.shape)
+        except:
+            pass
 
         print("[2] Running OCR...")
         ocr_results = self.reader.readtext(processed_image)

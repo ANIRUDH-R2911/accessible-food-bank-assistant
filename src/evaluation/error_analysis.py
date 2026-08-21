@@ -1,4 +1,9 @@
 from collections import Counter
+import sys
+from pathlib import Path
+
+project_root = Path(__file__).resolve().parent.parent.parent
+sys.path.append(str(project_root))
 
 from src.evaluation.dataset_builder import EvaluationDataset
 
@@ -46,3 +51,22 @@ class ErrorAnalyzer:
                     reverse=True
                 )
         }
+        
+
+if __name__ == "__main__":
+    analyzer = ErrorAnalyzer()
+    results = analyzer.analyze()
+    print("\nMOST MISSED INGREDIENTS")
+    print("-" * 40)
+
+    for ingredient, count in results["most_missed_ingredients"]:
+        print(f"{ingredient}: {count}")
+
+    print("\nWORST IMAGES")
+    print("-" * 40)
+    for image in results["worst_images"]:
+        print(
+            f"{image['image_name']} | "
+            f"Missed: {image['missed_count']} | "
+            f"{image['missed_items']}"
+        )
