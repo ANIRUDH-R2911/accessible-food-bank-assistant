@@ -1184,5 +1184,1926 @@
             "Total Fat": "8g",
             "Total Sugars": "13g"
         }
+    },
+    {
+        "id": 69,
+        "created_at": "2026-08-24T10:54:55.507914",
+        "product_name": "WHOLE Milk",
+        "ingredients": [
+            "milk. vitamin d3"
+        ],
+        "allergens": [
+            "Milk"
+        ],
+        "allergens_may_contain": [],
+        "allergens_free_from": [],
+        "nutrition": {
+            "Total Fat": "8g",
+            "Saturated Fat": "5g",
+            "Cholesterol": "35mg",
+            "Sodium": "125mg",
+            "Total Carbohydrate": "12g",
+            "Total Sugars": "12g",
+            "Protein": "8g"
+        }
+    },
+    {
+        "id": 70,
+        "created_at": "2026-08-24T10:55:07.086218",
+        "product_name": "NO ARTIFICIAL",
+        "ingredients": [
+            "t serving size 1 package (48g) the % daily ae(ov) as y hn) in a serving of bod contbues ba d d"
+        ],
+        "allergens": [],
+        "allergens_may_contain": [],
+        "allergens_free_from": [],
+        "nutrition": {
+            "Total Fat": "2.5g",
+            "Saturated Fat": "0.5g",
+            "Protein": "4g"
+        }
+    },
+    {
+        "id": 71,
+        "created_at": "2026-08-24T10:55:24.822152",
+        "product_name": "E &",
+        "ingredients": [
+            "e & nutrition fat general milk per 3/4 cup (29 g) amount cereal plus 125 ml only 2% p.s. milk"
+        ],
+        "allergens": [
+            "Milk"
+        ],
+        "allergens_may_contain": [],
+        "allergens_free_from": [],
+        "nutrition": {}
+    },
+    {
+        "id": 72,
+        "created_at": "2026-08-24T10:55:34.101598",
+        "product_name": "1 bar(22g)",
+        "ingredients": [
+            "whole grain cats",
+            "sugar",
+            "paim and palm kernel o rice flour",
+            "com syrup. cocoa",
+            "cane syrup",
+            "honey",
+            "salt",
+            "soy lecithin",
+            "natural flavor",
+            "dry whole mik",
+            "baking soda"
+        ],
+        "allergens": [
+            "Soy"
+        ],
+        "allergens_may_contain": [
+            "Wheat",
+            "Egg",
+            "Peanut",
+            "Cashew"
+        ],
+        "allergens_free_from": [],
+        "nutrition": {
+            "Saturated Fat": "3g",
+            "Trans Fat": "0g",
+            "Sodium": "95mg",
+            "Total Carbohydrate": "159",
+            "Dietary Fiber": "1g",
+            "Total Sugars": "8g"
+        }
+    },
+    {
+        "id": 73,
+        "created_at": "2026-08-24T10:55:42.329665",
+        "product_name": "per Contains",
+        "ingredients": [
+            "enriched flour (wheat flour, niacin, reduced iron, vitamin b [thiamin mononitrate] vitamin b [riboflavin], folic acid)",
+            "vegetable oil (soybean and palm oil with tbhq for"
+        ],
+        "allergens": [
+            "Wheat"
+        ],
+        "allergens_may_contain": [],
+        "allergens_free_from": [],
+        "nutrition": {
+            "Total Fat": "8g",
+            "Saturated Fat": "2g",
+            "Protein": "3g"
+        }
+    },
+    {
+        "id": 74,
+        "created_at": "2026-08-24T10:56:13.030884",
+        "product_name": "1/2 bar (42.5g)",
+        "ingredients": [
+            "ingrelients: cocoa bean? cocoa butter. made in a facility free of wheat. peanuts & eggs.a"
+        ],
+        "allergens": [],
+        "allergens_may_contain": [],
+        "allergens_free_from": [
+            "Wheat",
+            "Egg",
+            "Peanut"
+        ],
+        "nutrition": {
+            "Total Fat": "22g",
+            "Saturated Fat": "12g",
+            "Total Sugars": "0g",
+            "Protein": "5g"
+        }
+    },
+    {
+        "id": 75,
+        "created_at": "2026-08-24T10:56:28.244786",
+        "product_name": "alamy a",
+        "ingredients": [],
+        "allergens": [],
+        "allergens_may_contain": [],
+        "allergens_free_from": [],
+        "nutrition": {}
+    },
+    {
+        "id": 76,
+        "created_at": "2026-08-24T10:56:36.589010",
+        "product_name": "Size 213",
+        "ingredients": [],
+        "allergens": [
+            "Milk"
+        ],
+        "allergens_may_contain": [],
+        "allergens_free_from": [],
+        "nutrition": {
+            "Total Fat": "8g",
+            "Total Sugars": "13g"
+        }
+    },
+    {
+        "id": 77,
+        "created_at": "2026-08-24T11:01:01.222169",
+        "product_name": "WHOLE Milk",
+        "ingredients": [
+            "milk",
+            "vitamin d3"
+        ],
+        "allergens": [
+            "Milk"
+        ],
+        "allergens_may_contain": [],
+        "allergens_free_from": [],
+        "nutrition": {
+            "Total Fat": "8g",
+            "Saturated Fat": "5g",
+            "Cholesterol": "35mg",
+            "Sodium": "125mg",
+            "Total Carbohydrate": "12g",
+            "Total Sugars": "12g",
+            "Protein": "8g"
+        }
+    },
+    {
+        "id": 78,
+        "created_at": "2026-08-24T11:01:10.079685",
+        "product_name": "NO ARTIFICIAL",
+        "ingredients": [
+            "t serving size 1 package (48g) the % daily ae(ov) as y hn) in a serving of bod contbues ba d d"
+        ],
+        "allergens": [],
+        "allergens_may_contain": [],
+        "allergens_free_from": [],
+        "nutrition": {
+            "Total Fat": "2.5g",
+            "Saturated Fat": "0.5g",
+            "Protein": "4g"
+        }
+    },
+    {
+        "id": 79,
+        "created_at": "2026-08-24T11:01:24.486755",
+        "product_name": "E &",
+        "ingredients": [
+            "e & nutrition fat general milk per 3/4 cup (29 g) amount cereal plus 125 ml only 2% p",
+            "milk"
+        ],
+        "allergens": [
+            "Milk"
+        ],
+        "allergens_may_contain": [],
+        "allergens_free_from": [],
+        "nutrition": {}
+    },
+    {
+        "id": 80,
+        "created_at": "2026-08-24T11:01:32.426133",
+        "product_name": "1 bar(22g)",
+        "ingredients": [
+            "whole grain cats",
+            "sugar",
+            "paim and palm kernel o rice flour",
+            "com syrup",
+            "cocoa",
+            "cane syrup",
+            "honey",
+            "salt",
+            "soy lecithin",
+            "natural flavor",
+            "dry whole mik",
+            "baking soda"
+        ],
+        "allergens": [
+            "Soy"
+        ],
+        "allergens_may_contain": [
+            "Wheat",
+            "Egg",
+            "Peanut",
+            "Cashew"
+        ],
+        "allergens_free_from": [],
+        "nutrition": {
+            "Saturated Fat": "3g",
+            "Trans Fat": "0g",
+            "Sodium": "95mg",
+            "Total Carbohydrate": "159",
+            "Dietary Fiber": "1g",
+            "Total Sugars": "8g"
+        }
+    },
+    {
+        "id": 81,
+        "created_at": "2026-08-24T11:01:39.844892",
+        "product_name": "per Contains",
+        "ingredients": [
+            "enriched flour (wheat flour, niacin, reduced iron, vitamin b [thiamin mononitrate] vitamin b [riboflavin], folic acid)",
+            "vegetable oil (soybean and palm oil with tbhq for"
+        ],
+        "allergens": [
+            "Wheat"
+        ],
+        "allergens_may_contain": [],
+        "allergens_free_from": [],
+        "nutrition": {
+            "Total Fat": "8g",
+            "Saturated Fat": "2g",
+            "Protein": "3g"
+        }
+    },
+    {
+        "id": 82,
+        "created_at": "2026-08-24T11:02:09.821658",
+        "product_name": "1/2 bar (42.5g)",
+        "ingredients": [
+            "ingrelients: cocoa bean? cocoa butter",
+            "made in a facility free of wheat",
+            "peanuts & eggs"
+        ],
+        "allergens": [],
+        "allergens_may_contain": [],
+        "allergens_free_from": [
+            "Wheat",
+            "Egg",
+            "Peanut"
+        ],
+        "nutrition": {
+            "Total Fat": "22g",
+            "Saturated Fat": "12g",
+            "Total Sugars": "0g",
+            "Protein": "5g"
+        }
+    },
+    {
+        "id": 83,
+        "created_at": "2026-08-24T11:02:33.827162",
+        "product_name": "alamy a",
+        "ingredients": [],
+        "allergens": [],
+        "allergens_may_contain": [],
+        "allergens_free_from": [],
+        "nutrition": {}
+    },
+    {
+        "id": 84,
+        "created_at": "2026-08-24T11:02:43.951296",
+        "product_name": "Size 213",
+        "ingredients": [],
+        "allergens": [
+            "Milk"
+        ],
+        "allergens_may_contain": [],
+        "allergens_free_from": [],
+        "nutrition": {
+            "Total Fat": "8g",
+            "Total Sugars": "13g"
+        }
+    },
+    {
+        "id": 85,
+        "created_at": "2026-08-24T11:09:19.405458",
+        "product_name": "WHOLE Milk",
+        "ingredients": [
+            "milk",
+            "vitamin d3"
+        ],
+        "allergens": [
+            "Milk"
+        ],
+        "allergens_may_contain": [],
+        "allergens_free_from": [],
+        "nutrition": {
+            "Total Fat": "8g",
+            "Saturated Fat": "5g",
+            "Cholesterol": "35mg",
+            "Sodium": "125mg",
+            "Total Carbohydrate": "12g",
+            "Total Sugars": "12g",
+            "Protein": "8g"
+        }
+    },
+    {
+        "id": 86,
+        "created_at": "2026-08-24T11:09:28.818206",
+        "product_name": "NO ARTIFICIAL",
+        "ingredients": [
+            "t serving size 1 package (48g) the % daily ae(ov) as y hn) in a serving of bod contbues ba d d"
+        ],
+        "allergens": [],
+        "allergens_may_contain": [],
+        "allergens_free_from": [],
+        "nutrition": {
+            "Total Fat": "2.5g",
+            "Saturated Fat": "0.5g",
+            "Protein": "4g"
+        }
+    },
+    {
+        "id": 87,
+        "created_at": "2026-08-24T11:09:44.037280",
+        "product_name": "E &",
+        "ingredients": [
+            "e & nutrition fat general milk per 3/4 cup (29 g) amount cereal plus 125 ml only 2% p",
+            "milk"
+        ],
+        "allergens": [
+            "Milk"
+        ],
+        "allergens_may_contain": [],
+        "allergens_free_from": [],
+        "nutrition": {}
+    },
+    {
+        "id": 88,
+        "created_at": "2026-08-24T11:09:52.125391",
+        "product_name": "1 bar(22g)",
+        "ingredients": [
+            "whole grain cats",
+            "sugar",
+            "paim and palm kernel o rice flour",
+            "com syrup",
+            "cocoa",
+            "cane syrup",
+            "honey",
+            "salt",
+            "soy lecithin",
+            "natural flavor",
+            "dry whole mik",
+            "baking soda"
+        ],
+        "allergens": [
+            "Soy"
+        ],
+        "allergens_may_contain": [
+            "Wheat",
+            "Egg",
+            "Peanut",
+            "Cashew"
+        ],
+        "allergens_free_from": [],
+        "nutrition": {
+            "Saturated Fat": "3g",
+            "Trans Fat": "0g",
+            "Sodium": "95mg",
+            "Total Carbohydrate": "159",
+            "Dietary Fiber": "1g",
+            "Total Sugars": "8g"
+        }
+    },
+    {
+        "id": 89,
+        "created_at": "2026-08-24T11:09:59.841771",
+        "product_name": "per Contains",
+        "ingredients": [
+            "enriched flour (wheat flour, niacin, reduced iron, vitamin b [thiamin mononitrate] vitamin b [riboflavin], folic acid)",
+            "vegetable oil (soybean and palm oil with tbhq for"
+        ],
+        "allergens": [
+            "Wheat"
+        ],
+        "allergens_may_contain": [],
+        "allergens_free_from": [],
+        "nutrition": {
+            "Total Fat": "8g",
+            "Saturated Fat": "2g",
+            "Protein": "3g"
+        }
+    },
+    {
+        "id": 90,
+        "created_at": "2026-08-24T11:10:33.204134",
+        "product_name": "1/2 bar (42.5g)",
+        "ingredients": [
+            "ingrelients: cocoa bean? cocoa butter",
+            "made in a facility free of wheat",
+            "peanuts & eggs"
+        ],
+        "allergens": [],
+        "allergens_may_contain": [],
+        "allergens_free_from": [
+            "Wheat",
+            "Egg",
+            "Peanut"
+        ],
+        "nutrition": {
+            "Total Fat": "22g",
+            "Saturated Fat": "12g",
+            "Total Sugars": "0g",
+            "Protein": "5g"
+        }
+    },
+    {
+        "id": 91,
+        "created_at": "2026-08-24T11:10:51.716790",
+        "product_name": "alamy a",
+        "ingredients": [],
+        "allergens": [],
+        "allergens_may_contain": [],
+        "allergens_free_from": [],
+        "nutrition": {}
+    },
+    {
+        "id": 92,
+        "created_at": "2026-08-24T11:11:00.656802",
+        "product_name": "Size 213",
+        "ingredients": [],
+        "allergens": [
+            "Milk"
+        ],
+        "allergens_may_contain": [],
+        "allergens_free_from": [],
+        "nutrition": {
+            "Total Fat": "8g",
+            "Total Sugars": "13g"
+        }
+    },
+    {
+        "id": 93,
+        "created_at": "2026-08-24T11:16:56.645277",
+        "product_name": "NO ARTIFICIAL",
+        "ingredients": [
+            "whole gran gats",
+            "sisr"
+        ],
+        "allergens": [],
+        "allergens_may_contain": [],
+        "allergens_free_from": [],
+        "nutrition": {
+            "Total Fat": "2.5g",
+            "Saturated Fat": "0.5g",
+            "Protein": "4g"
+        }
+    },
+    {
+        "id": 94,
+        "created_at": "2026-08-24T11:19:29.217051",
+        "product_name": "NO ARTIFICIAL",
+        "ingredients": [
+            "whole gran gats",
+            "sisr"
+        ],
+        "allergens": [],
+        "allergens_may_contain": [],
+        "allergens_free_from": [],
+        "nutrition": {
+            "Total Fat": "2.5g",
+            "Saturated Fat": "0.5g",
+            "Protein": "4g"
+        }
+    },
+    {
+        "id": 95,
+        "created_at": "2026-08-24T11:22:11.481632",
+        "product_name": "NO ARTIFICIAL",
+        "ingredients": [
+            "whole gran gats",
+            "sisr"
+        ],
+        "allergens": [],
+        "allergens_may_contain": [],
+        "allergens_free_from": [],
+        "nutrition": {
+            "Total Fat": "2.5g",
+            "Saturated Fat": "0.5g",
+            "Protein": "4g"
+        }
+    },
+    {
+        "id": 96,
+        "created_at": "2026-08-24T11:25:23.556366",
+        "product_name": "NO ARTIFICIAL",
+        "ingredients": [
+            "whole gran gats",
+            "sisr calories salt",
+            "natural flavor (123-068"
+        ],
+        "allergens": [],
+        "allergens_may_contain": [],
+        "allergens_free_from": [],
+        "nutrition": {
+            "Total Fat": "2.5g",
+            "Saturated Fat": "0.5g",
+            "Protein": "4g"
+        }
+    },
+    {
+        "id": 97,
+        "created_at": "2026-08-24T11:31:12.967076",
+        "product_name": "NO ARTIFICIAL",
+        "ingredients": [
+            "whole gran gats",
+            "sisr salt",
+            "natural flavor"
+        ],
+        "allergens": [],
+        "allergens_may_contain": [],
+        "allergens_free_from": [],
+        "nutrition": {
+            "Total Fat": "2.5g",
+            "Saturated Fat": "0.5g",
+            "Protein": "4g"
+        }
+    },
+    {
+        "id": 98,
+        "created_at": "2026-08-24T11:33:08.392654",
+        "product_name": "NO ARTIFICIAL",
+        "ingredients": [
+            "whole gran gats",
+            "sisr",
+            "salt",
+            "natural flavor"
+        ],
+        "allergens": [],
+        "allergens_may_contain": [],
+        "allergens_free_from": [],
+        "nutrition": {
+            "Total Fat": "2.5g",
+            "Saturated Fat": "0.5g",
+            "Protein": "4g"
+        }
+    },
+    {
+        "id": 99,
+        "created_at": "2026-08-24T11:34:42.062474",
+        "product_name": "WHOLE Milk",
+        "ingredients": [
+            "milk",
+            "vitamin d3",
+            "8 serving per contains"
+        ],
+        "allergens": [
+            "Milk"
+        ],
+        "allergens_may_contain": [],
+        "allergens_free_from": [],
+        "nutrition": {
+            "Total Fat": "8g",
+            "Saturated Fat": "5g",
+            "Cholesterol": "35mg",
+            "Sodium": "125mg",
+            "Total Carbohydrate": "12g",
+            "Total Sugars": "12g",
+            "Protein": "8g"
+        }
+    },
+    {
+        "id": 100,
+        "created_at": "2026-08-24T11:34:51.273981",
+        "product_name": "NO ARTIFICIAL",
+        "ingredients": [
+            "whole gran gats",
+            "sisr",
+            "salt",
+            "natural flavor"
+        ],
+        "allergens": [],
+        "allergens_may_contain": [],
+        "allergens_free_from": [],
+        "nutrition": {
+            "Total Fat": "2.5g",
+            "Saturated Fat": "0.5g",
+            "Protein": "4g"
+        }
+    },
+    {
+        "id": 101,
+        "created_at": "2026-08-24T11:35:06.692180",
+        "product_name": "E &",
+        "ingredients": [],
+        "allergens": [
+            "Milk"
+        ],
+        "allergens_may_contain": [],
+        "allergens_free_from": [],
+        "nutrition": {}
+    },
+    {
+        "id": 102,
+        "created_at": "2026-08-24T11:35:15.032705",
+        "product_name": "1 bar(22g)",
+        "ingredients": [
+            "whole grain cats",
+            "sugar",
+            "paim and palm kernel",
+            "o rice flour",
+            "com syrup",
+            "cocoa",
+            "cane syrup",
+            "honey",
+            "salt",
+            "soy lecithin",
+            "natural flavor",
+            "dry whole mik",
+            "baking soda"
+        ],
+        "allergens": [
+            "Soy"
+        ],
+        "allergens_may_contain": [
+            "Wheat",
+            "Egg",
+            "Peanut",
+            "Cashew"
+        ],
+        "allergens_free_from": [],
+        "nutrition": {
+            "Saturated Fat": "3g",
+            "Trans Fat": "0g",
+            "Sodium": "95mg",
+            "Total Carbohydrate": "159",
+            "Dietary Fiber": "1g",
+            "Total Sugars": "8g"
+        }
+    },
+    {
+        "id": 103,
+        "created_at": "2026-08-24T11:35:22.447961",
+        "product_name": "per Contains",
+        "ingredients": [
+            "enriched flour (wheat flour, niacin,, reduced iron, vitamin b [thiamin mononitrate], vitamin b [riboflavin], folic acid)",
+            "vegetable oil",
+            "(soybean and palm oil with tbhq for"
+        ],
+        "allergens": [
+            "Wheat"
+        ],
+        "allergens_may_contain": [],
+        "allergens_free_from": [],
+        "nutrition": {
+            "Total Fat": "8g",
+            "Saturated Fat": "2g",
+            "Protein": "3g"
+        }
+    },
+    {
+        "id": 104,
+        "created_at": "2026-08-24T11:35:51.942396",
+        "product_name": "1/2 bar (42.5g)",
+        "ingredients": [],
+        "allergens": [],
+        "allergens_may_contain": [],
+        "allergens_free_from": [
+            "Wheat",
+            "Egg",
+            "Peanut"
+        ],
+        "nutrition": {
+            "Total Fat": "22g",
+            "Saturated Fat": "12g",
+            "Total Sugars": "0g",
+            "Protein": "5g"
+        }
+    },
+    {
+        "id": 105,
+        "created_at": "2026-08-24T11:36:07.880689",
+        "product_name": "alamy a",
+        "ingredients": [],
+        "allergens": [],
+        "allergens_may_contain": [],
+        "allergens_free_from": [],
+        "nutrition": {}
+    },
+    {
+        "id": 106,
+        "created_at": "2026-08-24T11:36:16.166749",
+        "product_name": "Size 213",
+        "ingredients": [],
+        "allergens": [
+            "Milk"
+        ],
+        "allergens_may_contain": [],
+        "allergens_free_from": [],
+        "nutrition": {
+            "Total Fat": "8g",
+            "Total Sugars": "13g"
+        }
+    },
+    {
+        "id": 107,
+        "created_at": "2026-08-24T11:51:41.133654",
+        "product_name": "WHOLE Milk",
+        "ingredients": [
+            "milk",
+            "vitamin d3",
+            "8 serving per contains"
+        ],
+        "allergens": [
+            "Milk"
+        ],
+        "allergens_may_contain": [],
+        "allergens_free_from": [],
+        "nutrition": {
+            "Total Fat": "8g",
+            "Saturated Fat": "5g",
+            "Cholesterol": "35mg",
+            "Sodium": "125mg",
+            "Total Carbohydrate": "12g",
+            "Total Sugars": "12g",
+            "Protein": "8g"
+        }
+    },
+    {
+        "id": 108,
+        "created_at": "2026-08-24T11:51:50.466586",
+        "product_name": "NO ARTIFICIAL",
+        "ingredients": [
+            "whole grain gats",
+            "sisr",
+            "salt",
+            "natural flavor"
+        ],
+        "allergens": [],
+        "allergens_may_contain": [],
+        "allergens_free_from": [],
+        "nutrition": {
+            "Total Fat": "2.5g",
+            "Saturated Fat": "0.5g",
+            "Protein": "4g"
+        }
+    },
+    {
+        "id": 109,
+        "created_at": "2026-08-24T11:52:06.351852",
+        "product_name": "E &",
+        "ingredients": [],
+        "allergens": [
+            "Milk"
+        ],
+        "allergens_may_contain": [],
+        "allergens_free_from": [],
+        "nutrition": {}
+    },
+    {
+        "id": 110,
+        "created_at": "2026-08-24T11:52:14.637302",
+        "product_name": "1 bar(22g)",
+        "ingredients": [
+            "whole grain cats",
+            "sugar",
+            "palm and palm kernel",
+            "o rice flour",
+            "com syrup",
+            "cocoa",
+            "cane syrup",
+            "honey",
+            "salt",
+            "soy lecithin",
+            "natural flavor",
+            "dry whole mik",
+            "baking soda"
+        ],
+        "allergens": [
+            "Soy"
+        ],
+        "allergens_may_contain": [
+            "Wheat",
+            "Egg",
+            "Peanut",
+            "Cashew"
+        ],
+        "allergens_free_from": [],
+        "nutrition": {
+            "Saturated Fat": "3g",
+            "Trans Fat": "0g",
+            "Sodium": "95mg",
+            "Total Carbohydrate": "159",
+            "Dietary Fiber": "1g",
+            "Total Sugars": "8g"
+        }
+    },
+    {
+        "id": 111,
+        "created_at": "2026-08-24T11:52:22.090290",
+        "product_name": "per Contains",
+        "ingredients": [
+            "enriched flour (wheat flour, niacin,, reduced iron, vitamin b [thiamin mononitrate], vitamin b [riboflavin], folic acid)",
+            "vegetable oil",
+            "(soybean and palm oil with tbhq flour"
+        ],
+        "allergens": [
+            "Wheat"
+        ],
+        "allergens_may_contain": [],
+        "allergens_free_from": [],
+        "nutrition": {
+            "Total Fat": "8g",
+            "Saturated Fat": "2g",
+            "Protein": "3g"
+        }
+    },
+    {
+        "id": 112,
+        "created_at": "2026-08-24T11:52:50.329502",
+        "product_name": "1/2 bar (42.5g)",
+        "ingredients": [],
+        "allergens": [],
+        "allergens_may_contain": [],
+        "allergens_free_from": [
+            "Wheat",
+            "Egg",
+            "Peanut"
+        ],
+        "nutrition": {
+            "Total Fat": "22g",
+            "Saturated Fat": "12g",
+            "Total Sugars": "0g",
+            "Protein": "5g"
+        }
+    },
+    {
+        "id": 113,
+        "created_at": "2026-08-24T11:53:06.418099",
+        "product_name": "alamy a",
+        "ingredients": [],
+        "allergens": [],
+        "allergens_may_contain": [],
+        "allergens_free_from": [],
+        "nutrition": {}
+    },
+    {
+        "id": 114,
+        "created_at": "2026-08-24T11:53:15.162267",
+        "product_name": "Size 213",
+        "ingredients": [],
+        "allergens": [
+            "Milk"
+        ],
+        "allergens_may_contain": [],
+        "allergens_free_from": [],
+        "nutrition": {
+            "Total Fat": "8g",
+            "Total Sugars": "13g"
+        }
+    },
+    {
+        "id": 115,
+        "created_at": "2026-08-24T11:57:06.285078",
+        "product_name": "WHOLE Milk",
+        "ingredients": [
+            "milk",
+            "vitamin d3",
+            "8 serving per contains"
+        ],
+        "allergens": [
+            "Milk"
+        ],
+        "allergens_may_contain": [],
+        "allergens_free_from": [],
+        "nutrition": {
+            "Total Fat": "8g",
+            "Saturated Fat": "5g",
+            "Cholesterol": "35mg",
+            "Sodium": "125mg",
+            "Total Carbohydrate": "12g",
+            "Total Sugars": "12g",
+            "Protein": "8g"
+        }
+    },
+    {
+        "id": 116,
+        "created_at": "2026-08-24T11:57:16.449034",
+        "product_name": "NO ARTIFICIAL",
+        "ingredients": [
+            "whole grain gats",
+            "sisr",
+            "salt",
+            "natural flavor"
+        ],
+        "allergens": [],
+        "allergens_may_contain": [],
+        "allergens_free_from": [],
+        "nutrition": {
+            "Total Fat": "2.5g",
+            "Saturated Fat": "0.5g",
+            "Protein": "4g"
+        }
+    },
+    {
+        "id": 117,
+        "created_at": "2026-08-24T11:57:33.871802",
+        "product_name": "E &",
+        "ingredients": [],
+        "allergens": [
+            "Milk"
+        ],
+        "allergens_may_contain": [],
+        "allergens_free_from": [],
+        "nutrition": {}
+    },
+    {
+        "id": 118,
+        "created_at": "2026-08-24T11:57:42.606806",
+        "product_name": "1 bar(22g)",
+        "ingredients": [
+            "whole grain cats",
+            "sugar",
+            "palm and palm kernel",
+            "o rice flour",
+            "com syrup",
+            "cocoa",
+            "cane syrup",
+            "honey",
+            "salt",
+            "soy lecithin",
+            "natural flavor",
+            "dry whole mik",
+            "baking soda"
+        ],
+        "allergens": [
+            "Soy"
+        ],
+        "allergens_may_contain": [
+            "Wheat",
+            "Egg",
+            "Peanut",
+            "Cashew"
+        ],
+        "allergens_free_from": [],
+        "nutrition": {
+            "Saturated Fat": "3g",
+            "Trans Fat": "0g",
+            "Sodium": "95mg",
+            "Total Carbohydrate": "159",
+            "Dietary Fiber": "1g",
+            "Total Sugars": "8g"
+        }
+    },
+    {
+        "id": 119,
+        "created_at": "2026-08-24T11:57:50.336791",
+        "product_name": "per Contains",
+        "ingredients": [
+            "enriched flour (wheat flour, niacin,, reduced iron, vitamin b [thiamin mononitrate], vitamin b [riboflavin], folic acid)",
+            "vegetable oil",
+            "(soybean and palm oil with tbhq flour"
+        ],
+        "allergens": [
+            "Wheat"
+        ],
+        "allergens_may_contain": [],
+        "allergens_free_from": [],
+        "nutrition": {
+            "Total Fat": "8g",
+            "Saturated Fat": "2g",
+            "Protein": "3g"
+        }
+    },
+    {
+        "id": 120,
+        "created_at": "2026-08-24T11:58:27.426419",
+        "product_name": "1/2 bar (42.5g)",
+        "ingredients": [],
+        "allergens": [],
+        "allergens_may_contain": [],
+        "allergens_free_from": [
+            "Wheat",
+            "Egg",
+            "Peanut"
+        ],
+        "nutrition": {
+            "Total Fat": "22g",
+            "Saturated Fat": "12g",
+            "Total Sugars": "0g",
+            "Protein": "5g"
+        }
+    },
+    {
+        "id": 121,
+        "created_at": "2026-08-24T11:58:48.213022",
+        "product_name": "alamy a",
+        "ingredients": [],
+        "allergens": [],
+        "allergens_may_contain": [],
+        "allergens_free_from": [],
+        "nutrition": {}
+    },
+    {
+        "id": 122,
+        "created_at": "2026-08-24T11:58:58.074080",
+        "product_name": "Size 213",
+        "ingredients": [],
+        "allergens": [
+            "Milk"
+        ],
+        "allergens_may_contain": [],
+        "allergens_free_from": [],
+        "nutrition": {
+            "Total Fat": "8g",
+            "Total Sugars": "13g"
+        }
+    },
+    {
+        "id": 123,
+        "created_at": "2026-08-24T12:08:12.296958",
+        "product_name": "WHOLE Milk",
+        "ingredients": [
+            "milk",
+            "vitamin d3",
+            "8 serving per contains"
+        ],
+        "allergens": [
+            "Milk"
+        ],
+        "allergens_may_contain": [],
+        "allergens_free_from": [],
+        "nutrition": {
+            "Total Fat": "8g",
+            "Saturated Fat": "5g",
+            "Cholesterol": "35mg",
+            "Sodium": "125mg",
+            "Total Carbohydrate": "12g",
+            "Total Sugars": "12g",
+            "Protein": "8g"
+        }
+    },
+    {
+        "id": 124,
+        "created_at": "2026-08-24T12:08:21.627936",
+        "product_name": "NO ARTIFICIAL",
+        "ingredients": [
+            "whole grain gats",
+            "sisr",
+            "salt",
+            "natural flavor"
+        ],
+        "allergens": [],
+        "allergens_may_contain": [],
+        "allergens_free_from": [],
+        "nutrition": {
+            "Total Fat": "2.5g",
+            "Saturated Fat": "0.5g",
+            "Protein": "4g"
+        }
+    },
+    {
+        "id": 125,
+        "created_at": "2026-08-24T12:08:38.456834",
+        "product_name": "E &",
+        "ingredients": [],
+        "allergens": [
+            "Milk"
+        ],
+        "allergens_may_contain": [],
+        "allergens_free_from": [],
+        "nutrition": {}
+    },
+    {
+        "id": 126,
+        "created_at": "2026-08-24T12:08:47.461407",
+        "product_name": "1 bar(22g)",
+        "ingredients": [
+            "whole grain cats",
+            "sugar",
+            "palm and palm kernel",
+            "o rice flour",
+            "com syrup",
+            "cocoa",
+            "cane syrup",
+            "honey",
+            "salt",
+            "soy lecithin",
+            "natural flavor",
+            "dry whole mik",
+            "baking soda"
+        ],
+        "allergens": [
+            "Soy"
+        ],
+        "allergens_may_contain": [
+            "Wheat",
+            "Egg",
+            "Peanut",
+            "Cashew"
+        ],
+        "allergens_free_from": [],
+        "nutrition": {
+            "Saturated Fat": "3g",
+            "Trans Fat": "0g",
+            "Sodium": "95mg",
+            "Total Carbohydrate": "159",
+            "Dietary Fiber": "1g",
+            "Total Sugars": "8g"
+        }
+    },
+    {
+        "id": 127,
+        "created_at": "2026-08-24T12:08:55.126651",
+        "product_name": "per Contains",
+        "ingredients": [
+            "enriched flour (wheat flour, niacin,, reduced iron, vitamin b [thiamin mononitrate], vitamin b [riboflavin], folic acid)",
+            "vegetable oil",
+            "(soybean and palm oil with tbhq flour"
+        ],
+        "allergens": [
+            "Wheat"
+        ],
+        "allergens_may_contain": [],
+        "allergens_free_from": [],
+        "nutrition": {
+            "Total Fat": "8g",
+            "Saturated Fat": "2g",
+            "Protein": "3g"
+        }
+    },
+    {
+        "id": 128,
+        "created_at": "2026-08-24T12:09:24.894180",
+        "product_name": "1/2 bar (42.5g)",
+        "ingredients": [],
+        "allergens": [],
+        "allergens_may_contain": [],
+        "allergens_free_from": [
+            "Wheat",
+            "Egg",
+            "Peanut"
+        ],
+        "nutrition": {
+            "Total Fat": "22g",
+            "Saturated Fat": "12g",
+            "Total Sugars": "0g",
+            "Protein": "5g"
+        }
+    },
+    {
+        "id": 129,
+        "created_at": "2026-08-24T12:09:40.917136",
+        "product_name": "alamy a",
+        "ingredients": [],
+        "allergens": [],
+        "allergens_may_contain": [],
+        "allergens_free_from": [],
+        "nutrition": {}
+    },
+    {
+        "id": 130,
+        "created_at": "2026-08-24T12:09:49.575624",
+        "product_name": "Size 213",
+        "ingredients": [],
+        "allergens": [
+            "Milk"
+        ],
+        "allergens_may_contain": [],
+        "allergens_free_from": [],
+        "nutrition": {
+            "Total Fat": "8g",
+            "Total Sugars": "13g"
+        }
+    },
+    {
+        "id": 131,
+        "created_at": "2026-08-24T12:16:28.230421",
+        "product_name": "WHOLE Milk",
+        "ingredients": [
+            "milk",
+            "vitamin d3",
+            "8 serving per contains"
+        ],
+        "allergens": [
+            "Milk"
+        ],
+        "allergens_may_contain": [],
+        "allergens_free_from": [],
+        "nutrition": {
+            "Total Fat": "8g",
+            "Saturated Fat": "5g",
+            "Cholesterol": "35mg",
+            "Sodium": "125mg",
+            "Total Carbohydrate": "12g",
+            "Total Sugars": "12g",
+            "Protein": "8g"
+        }
+    },
+    {
+        "id": 132,
+        "created_at": "2026-08-24T12:16:37.666789",
+        "product_name": "NO ARTIFICIAL",
+        "ingredients": [
+            "whole grain oats",
+            "sugar",
+            "salt",
+            "natural flavor"
+        ],
+        "allergens": [],
+        "allergens_may_contain": [],
+        "allergens_free_from": [],
+        "nutrition": {
+            "Total Fat": "2.5g",
+            "Saturated Fat": "0.5g",
+            "Protein": "4g"
+        }
+    },
+    {
+        "id": 133,
+        "created_at": "2026-08-24T12:16:53.745264",
+        "product_name": "E &",
+        "ingredients": [],
+        "allergens": [
+            "Milk"
+        ],
+        "allergens_may_contain": [],
+        "allergens_free_from": [],
+        "nutrition": {}
+    },
+    {
+        "id": 134,
+        "created_at": "2026-08-24T12:17:02.991199",
+        "product_name": "1 bar(22g)",
+        "ingredients": [
+            "whole grain oats",
+            "sugar",
+            "palm and palm kernel",
+            "o rice flour",
+            "com syrup",
+            "cocoa",
+            "cane syrup",
+            "honey",
+            "salt",
+            "soy lecithin",
+            "natural flavor",
+            "dry whole milk",
+            "baking soda"
+        ],
+        "allergens": [
+            "Milk",
+            "Soy"
+        ],
+        "allergens_may_contain": [
+            "Wheat",
+            "Egg",
+            "Peanut",
+            "Cashew"
+        ],
+        "allergens_free_from": [],
+        "nutrition": {
+            "Saturated Fat": "3g",
+            "Trans Fat": "0g",
+            "Sodium": "95mg",
+            "Total Carbohydrate": "159",
+            "Dietary Fiber": "1g",
+            "Total Sugars": "8g"
+        }
+    },
+    {
+        "id": 135,
+        "created_at": "2026-08-24T12:17:11.290015",
+        "product_name": "per Contains",
+        "ingredients": [
+            "enriched flour (wheat flour, niacin,, reduced iron, vitamin b [thiamin mononitrate], vitamin b [riboflavin], folic acid)",
+            "vegetable oil",
+            "(soybean and palm oil with tbhq flour"
+        ],
+        "allergens": [
+            "Wheat"
+        ],
+        "allergens_may_contain": [],
+        "allergens_free_from": [],
+        "nutrition": {
+            "Total Fat": "8g",
+            "Saturated Fat": "2g",
+            "Protein": "3g"
+        }
+    },
+    {
+        "id": 136,
+        "created_at": "2026-08-24T12:17:42.650668",
+        "product_name": "1/2 bar (42.5g)",
+        "ingredients": [
+            "cocoa beans? cocoa",
+            "butter",
+            "made in a facility free of wheat",
+            "peanuts & eggs"
+        ],
+        "allergens": [],
+        "allergens_may_contain": [],
+        "allergens_free_from": [
+            "Wheat",
+            "Egg",
+            "Peanut"
+        ],
+        "nutrition": {
+            "Total Fat": "22g",
+            "Saturated Fat": "12g",
+            "Total Sugars": "0g",
+            "Protein": "5g"
+        }
+    },
+    {
+        "id": 137,
+        "created_at": "2026-08-24T12:18:00.431658",
+        "product_name": "alamy a",
+        "ingredients": [],
+        "allergens": [],
+        "allergens_may_contain": [],
+        "allergens_free_from": [],
+        "nutrition": {}
+    },
+    {
+        "id": 138,
+        "created_at": "2026-08-24T12:18:08.832624",
+        "product_name": "Size 213",
+        "ingredients": [],
+        "allergens": [
+            "Milk"
+        ],
+        "allergens_may_contain": [],
+        "allergens_free_from": [],
+        "nutrition": {
+            "Total Fat": "8g",
+            "Total Sugars": "13g"
+        }
+    },
+    {
+        "id": 139,
+        "created_at": "2026-08-24T12:31:05.943183",
+        "product_name": "WHOLE Milk",
+        "ingredients": [
+            "milk",
+            "vitamin d3",
+            "8 serving per contains"
+        ],
+        "allergens": [
+            "Milk"
+        ],
+        "allergens_may_contain": [],
+        "allergens_free_from": [],
+        "nutrition": {
+            "Total Fat": "8g",
+            "Saturated Fat": "5g",
+            "Cholesterol": "35mg",
+            "Sodium": "125mg",
+            "Total Carbohydrate": "12g",
+            "Total Sugars": "12g",
+            "Protein": "8g"
+        }
+    },
+    {
+        "id": 140,
+        "created_at": "2026-08-24T12:31:16.134012",
+        "product_name": "NO ARTIFICIAL",
+        "ingredients": [
+            "whole grain oats",
+            "sugar",
+            "salt",
+            "natural flavor"
+        ],
+        "allergens": [],
+        "allergens_may_contain": [],
+        "allergens_free_from": [],
+        "nutrition": {
+            "Total Fat": "2.5g",
+            "Saturated Fat": "0.5g",
+            "Protein": "4g"
+        }
+    },
+    {
+        "id": 141,
+        "created_at": "2026-08-24T12:31:32.652735",
+        "product_name": "E &",
+        "ingredients": [],
+        "allergens": [
+            "Milk"
+        ],
+        "allergens_may_contain": [],
+        "allergens_free_from": [],
+        "nutrition": {}
+    },
+    {
+        "id": 142,
+        "created_at": "2026-08-24T12:31:41.973228",
+        "product_name": "1 bar(22g)",
+        "ingredients": [
+            "whole grain oats",
+            "sugar",
+            "palm and palm kernel",
+            "o rice flour",
+            "corn syrup",
+            "cocoa",
+            "cane syrup",
+            "honey",
+            "salt",
+            "soy lecithin",
+            "natural flavor",
+            "dry whole milk",
+            "baking soda"
+        ],
+        "allergens": [
+            "Milk",
+            "Soy"
+        ],
+        "allergens_may_contain": [
+            "Wheat",
+            "Egg",
+            "Peanut",
+            "Cashew"
+        ],
+        "allergens_free_from": [],
+        "nutrition": {
+            "Saturated Fat": "3g",
+            "Trans Fat": "0g",
+            "Sodium": "95mg",
+            "Total Carbohydrate": "159",
+            "Dietary Fiber": "1g",
+            "Total Sugars": "8g"
+        }
+    },
+    {
+        "id": 143,
+        "created_at": "2026-08-24T12:31:50.065096",
+        "product_name": "per Contains",
+        "ingredients": [
+            "enriched flour (wheat flour, niacin,, reduced iron, vitamin b [thiamin mononitrate], vitamin b [riboflavin], folic acid)",
+            "vegetable oil",
+            "(soybean and palm oil with tbhq flour"
+        ],
+        "allergens": [
+            "Wheat"
+        ],
+        "allergens_may_contain": [],
+        "allergens_free_from": [],
+        "nutrition": {
+            "Total Fat": "8g",
+            "Saturated Fat": "2g",
+            "Protein": "3g"
+        }
+    },
+    {
+        "id": 144,
+        "created_at": "2026-08-24T12:32:20.054753",
+        "product_name": "1/2 bar (42.5g)",
+        "ingredients": [
+            "cocoa beans cocoa",
+            "butter",
+            "made in a facility free of wheat",
+            "peanuts & eggs"
+        ],
+        "allergens": [],
+        "allergens_may_contain": [],
+        "allergens_free_from": [
+            "Wheat",
+            "Egg",
+            "Peanut"
+        ],
+        "nutrition": {
+            "Total Fat": "22g",
+            "Saturated Fat": "12g",
+            "Total Sugars": "0g",
+            "Protein": "5g"
+        }
+    },
+    {
+        "id": 145,
+        "created_at": "2026-08-24T12:32:35.683068",
+        "product_name": "alamy a",
+        "ingredients": [],
+        "allergens": [],
+        "allergens_may_contain": [],
+        "allergens_free_from": [],
+        "nutrition": {}
+    },
+    {
+        "id": 146,
+        "created_at": "2026-08-24T12:32:44.200552",
+        "product_name": "Size 213",
+        "ingredients": [],
+        "allergens": [
+            "Milk"
+        ],
+        "allergens_may_contain": [],
+        "allergens_free_from": [],
+        "nutrition": {
+            "Total Fat": "8g",
+            "Total Sugars": "13g"
+        }
+    },
+    {
+        "id": 147,
+        "created_at": "2026-08-24T12:36:42.710476",
+        "product_name": "1/2 bar (42.5g)",
+        "ingredients": [
+            "cocoa beans cocoa",
+            "butter",
+            "made in a facility free of wheat",
+            "peanuts & eggs"
+        ],
+        "allergens": [],
+        "allergens_may_contain": [],
+        "allergens_free_from": [
+            "Wheat",
+            "Egg",
+            "Peanut"
+        ],
+        "nutrition": {
+            "Total Fat": "22g",
+            "Saturated Fat": "12g",
+            "Total Sugars": "0g",
+            "Protein": "5g"
+        }
+    },
+    {
+        "id": 148,
+        "created_at": "2026-08-24T12:42:44.572493",
+        "product_name": "1/2 bar (42.5g)",
+        "ingredients": [
+            "cocoa beans cocoa",
+            "butter",
+            "made in a facility free of wheat",
+            "peanuts & eggs"
+        ],
+        "allergens": [],
+        "allergens_may_contain": [],
+        "allergens_free_from": [
+            "Wheat",
+            "Egg",
+            "Peanut"
+        ],
+        "nutrition": {
+            "Total Fat": "22g",
+            "Saturated Fat": "12g",
+            "Total Sugars": "0g",
+            "Protein": "5g"
+        }
+    },
+    {
+        "id": 149,
+        "created_at": "2026-08-24T12:50:32.399584",
+        "product_name": "1/2 bar (42.5g)",
+        "ingredients": [
+            "cocoa beans cocoa",
+            "butter"
+        ],
+        "allergens": [],
+        "allergens_may_contain": [],
+        "allergens_free_from": [
+            "Wheat",
+            "Egg",
+            "Peanut"
+        ],
+        "nutrition": {
+            "Total Fat": "22g",
+            "Saturated Fat": "12g",
+            "Total Sugars": "0g",
+            "Protein": "5g"
+        }
+    },
+    {
+        "id": 150,
+        "created_at": "2026-08-24T12:58:35.695014",
+        "product_name": "WHOLE Milk",
+        "ingredients": [
+            "milk",
+            "vitamin d3",
+            "8 serving per contains"
+        ],
+        "allergens": [
+            "Milk"
+        ],
+        "allergens_may_contain": [],
+        "allergens_free_from": [],
+        "nutrition": {
+            "Total Fat": "8g",
+            "Saturated Fat": "5g",
+            "Cholesterol": "35mg",
+            "Sodium": "125mg",
+            "Total Carbohydrate": "12g",
+            "Total Sugars": "12g",
+            "Protein": "8g"
+        }
+    },
+    {
+        "id": 151,
+        "created_at": "2026-08-24T12:58:45.265958",
+        "product_name": "NO ARTIFICIAL",
+        "ingredients": [
+            "whole grain oats",
+            "sugar",
+            "salt",
+            "natural flavor"
+        ],
+        "allergens": [],
+        "allergens_may_contain": [],
+        "allergens_free_from": [],
+        "nutrition": {
+            "Total Fat": "2.5g",
+            "Saturated Fat": "0.5g",
+            "Protein": "4g"
+        }
+    },
+    {
+        "id": 152,
+        "created_at": "2026-08-24T12:59:02.108224",
+        "product_name": "E &",
+        "ingredients": [],
+        "allergens": [
+            "Milk"
+        ],
+        "allergens_may_contain": [],
+        "allergens_free_from": [],
+        "nutrition": {}
+    },
+    {
+        "id": 153,
+        "created_at": "2026-08-24T12:59:10.978475",
+        "product_name": "1 bar(22g)",
+        "ingredients": [
+            "whole grain oats",
+            "sugar",
+            "palm and palm kernel",
+            "o rice flour",
+            "corn syrup",
+            "cocoa",
+            "cane syrup",
+            "honey",
+            "salt",
+            "soy lecithin",
+            "natural flavor",
+            "dry whole milk",
+            "baking soda"
+        ],
+        "allergens": [
+            "Milk",
+            "Soy"
+        ],
+        "allergens_may_contain": [
+            "Wheat",
+            "Egg",
+            "Peanut",
+            "Cashew"
+        ],
+        "allergens_free_from": [],
+        "nutrition": {
+            "Saturated Fat": "3g",
+            "Trans Fat": "0g",
+            "Sodium": "95mg",
+            "Total Carbohydrate": "159",
+            "Dietary Fiber": "1g",
+            "Total Sugars": "8g"
+        }
+    },
+    {
+        "id": 154,
+        "created_at": "2026-08-24T12:59:18.803424",
+        "product_name": "per Contains",
+        "ingredients": [
+            "enriched flour (wheat flour, niacin,, reduced iron, vitamin b [thiamin mononitrate], vitamin b [riboflavin], folic acid)",
+            "vegetable oil",
+            "(soybean and palm oil with tbhq flour"
+        ],
+        "allergens": [
+            "Wheat"
+        ],
+        "allergens_may_contain": [],
+        "allergens_free_from": [],
+        "nutrition": {
+            "Total Fat": "8g",
+            "Saturated Fat": "2g",
+            "Protein": "3g"
+        }
+    },
+    {
+        "id": 155,
+        "created_at": "2026-08-24T12:59:50.342881",
+        "product_name": "1/2 bar (42.5g)",
+        "ingredients": [
+            "cocoa beans cocoa",
+            "butter"
+        ],
+        "allergens": [],
+        "allergens_may_contain": [],
+        "allergens_free_from": [
+            "Wheat",
+            "Egg",
+            "Peanut"
+        ],
+        "nutrition": {
+            "Total Fat": "22g",
+            "Saturated Fat": "12g",
+            "Total Sugars": "0g",
+            "Protein": "5g"
+        }
+    },
+    {
+        "id": 156,
+        "created_at": "2026-08-24T13:00:07.056195",
+        "product_name": "alamy a",
+        "ingredients": [],
+        "allergens": [],
+        "allergens_may_contain": [],
+        "allergens_free_from": [],
+        "nutrition": {}
+    },
+    {
+        "id": 157,
+        "created_at": "2026-08-24T13:00:15.571801",
+        "product_name": "Size 213",
+        "ingredients": [],
+        "allergens": [
+            "Milk"
+        ],
+        "allergens_may_contain": [],
+        "allergens_free_from": [],
+        "nutrition": {
+            "Total Fat": "8g",
+            "Total Sugars": "13g"
+        }
+    },
+    {
+        "id": 158,
+        "created_at": "2026-08-24T13:10:47.811357",
+        "product_name": "WHOLE Milk Contains Milk.",
+        "ingredients": [
+            "milk",
+            "vitamin d3",
+            "8 serving per contains"
+        ],
+        "allergens": [
+            "Milk"
+        ],
+        "allergens_may_contain": [],
+        "allergens_free_from": [],
+        "nutrition": {
+            "Total Fat": "8g",
+            "Saturated Fat": "5g",
+            "Cholesterol": "35mg",
+            "Sodium": "125mg",
+            "Total Carbohydrate": "12g",
+            "Total Sugars": "12g",
+            "Protein": "8g"
+        }
+    },
+    {
+        "id": 159,
+        "created_at": "2026-08-24T13:10:58.235042",
+        "product_name": "ARTIFICIAL PRESERMITINES OR Flavor",
+        "ingredients": [
+            "whole grain oats",
+            "sugar",
+            "salt",
+            "natural flavor"
+        ],
+        "allergens": [],
+        "allergens_may_contain": [],
+        "allergens_free_from": [],
+        "nutrition": {
+            "Total Fat": "2.5g",
+            "Saturated Fat": "0.5g",
+            "Protein": "4g"
+        }
+    },
+    {
+        "id": 160,
+        "created_at": "2026-08-24T13:11:13.801576",
+        "product_name": "General Milk Cereal",
+        "ingredients": [],
+        "allergens": [
+            "Milk"
+        ],
+        "allergens_may_contain": [],
+        "allergens_free_from": [],
+        "nutrition": {}
+    },
+    {
+        "id": 161,
+        "created_at": "2026-08-24T13:11:22.204429",
+        "product_name": "Trotr A Eang ar apfiaraua fom 0.cicat ad pasit CXLWYRAM",
+        "ingredients": [
+            "whole grain oats",
+            "sugar",
+            "palm and palm kernel",
+            "o rice flour",
+            "corn syrup",
+            "cocoa",
+            "cane syrup",
+            "honey",
+            "salt",
+            "soy lecithin",
+            "natural flavor",
+            "dry whole milk",
+            "baking soda"
+        ],
+        "allergens": [
+            "Milk",
+            "Soy"
+        ],
+        "allergens_may_contain": [
+            "Wheat",
+            "Egg",
+            "Peanut",
+            "Cashew"
+        ],
+        "allergens_free_from": [],
+        "nutrition": {
+            "Saturated Fat": "3g",
+            "Trans Fat": "0g",
+            "Sodium": "95mg",
+            "Total Carbohydrate": "159",
+            "Dietary Fiber": "1g",
+            "Total Sugars": "8g"
+        }
+    },
+    {
+        "id": 162,
+        "created_at": "2026-08-24T13:11:30.059441",
+        "product_name": "Contains Omg Includes",
+        "ingredients": [
+            "enriched flour (wheat flour, niacin,, reduced iron, vitamin b [thiamin mononitrate], vitamin b [riboflavin], folic acid)",
+            "vegetable oil",
+            "(soybean and palm oil with tbhq flour"
+        ],
+        "allergens": [
+            "Wheat"
+        ],
+        "allergens_may_contain": [],
+        "allergens_free_from": [],
+        "nutrition": {
+            "Total Fat": "8g",
+            "Saturated Fat": "2g",
+            "Protein": "3g"
+        }
+    },
+    {
+        "id": 163,
+        "created_at": "2026-08-24T13:11:58.693329",
+        "product_name": "bwo whpos Trc DaGeee",
+        "ingredients": [
+            "cocoa beans cocoa",
+            "butter"
+        ],
+        "allergens": [],
+        "allergens_may_contain": [],
+        "allergens_free_from": [
+            "Wheat",
+            "Egg",
+            "Peanut"
+        ],
+        "nutrition": {
+            "Total Fat": "22g",
+            "Saturated Fat": "12g",
+            "Total Sugars": "0g",
+            "Protein": "5g"
+        }
+    },
+    {
+        "id": 164,
+        "created_at": "2026-08-24T13:12:14.238369",
+        "product_name": "alamy Size cup",
+        "ingredients": [],
+        "allergens": [],
+        "allergens_may_contain": [],
+        "allergens_free_from": [],
+        "nutrition": {}
+    },
+    {
+        "id": 165,
+        "created_at": "2026-08-24T13:12:22.696051",
+        "product_name": "Size cup Cereal with",
+        "ingredients": [],
+        "allergens": [
+            "Milk"
+        ],
+        "allergens_may_contain": [],
+        "allergens_free_from": [],
+        "nutrition": {
+            "Total Fat": "8g",
+            "Total Sugars": "13g"
+        }
     }
 ]

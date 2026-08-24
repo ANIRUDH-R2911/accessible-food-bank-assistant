@@ -1,8 +1,9 @@
+import re
 from rapidfuzz import fuzz
 
 SIMILARITY_THRESHOLD = 75
 
-NUTRITION_WORDS = [
+KNOWN_FOOD_WORDS = [
     "Ingredient",
     "Ingredients",
     "Contains",
@@ -37,19 +38,46 @@ NUTRITION_WORDS = [
     "Nutrition",
     "Total",
     "Daily",
-    "Value"
+    "Value",
+    "Oats",
+    "Grain",
+    "Sugar",
+    "Salt",
+    "Corn",
+    "Syrup",
+    "Palm",
+    "Oil",
+    "Cocoa",
+    "Beans",
+    "Butter",
+    "Honey",
+    "Flavor",
+    "Natural",
+    "Lecithin",
+    "Soybean",
+    "Wheat",
+    "Rice",
+    "Flour",
 ]
 
+MANUAL_CORRECTIONS = {
+    "gats": "oats",
+    "cats": "oats",
+    "gran": "grain",
+    "sisr": "sugar",
+    "com": "corn",
+    "petassium": "potassium",
+    "caloun": "calcium",
+}
 
 def correct_word(word):
+    word_lower = word.lower()
+    if word_lower in MANUAL_CORRECTIONS:
+        return MANUAL_CORRECTIONS[word_lower], 100
     best_match = word
     highest_score = 0
-    for candidate in NUTRITION_WORDS:
-        score = fuzz.ratio(
-            word.lower(),
-            candidate.lower()
-        )
-
+    for candidate in KNOWN_FOOD_WORDS:
+        score = fuzz.ratio(word.lower(), candidate.lower())
         if score > highest_score:
             highest_score = score
             best_match = candidate
@@ -60,15 +88,15 @@ def correct_word(word):
 
 
 def correct_line(line):
-    words = line.split()
-    corrected_words = []
-    for word in words:
-        if word.isalpha():
-            corrected_word, _ = correct_word(word)
-            corrected_words.append(corrected_word)
+    tokens = re.findall(r"[A-Za-z]+|[^A-Za-z]+", line)
+    corrected_tokens = []
+    for token in tokens:
+        if token.isalpha():
+            corrected_word, _ = correct_word(token)
+            corrected_tokens.append(corrected_word)
         else:
-            corrected_words.append(word)
-    return " ".join(corrected_words)
+            corrected_tokens.append(token)
+    return "".join(corrected_tokens)
 
 
 def correct_text(text):

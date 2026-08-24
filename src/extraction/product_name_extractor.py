@@ -1,3 +1,4 @@
+'''
 STOP_WORDS = [
     "nutrition",
     "facts",
@@ -128,4 +129,3 @@ def extract_product_name(text):
         return "Unknown Product"
 
     return " ".join(candidates[:3])
-'''
