@@ -7,7 +7,7 @@
         "ocr_output": "WHOLE\nMILK\nVITAMIN D\nNutrition Facts\nINGREDIENTS: MILK.\nVITAMIN D3\n8 servings per container\nCONTAINS MILK.\nServing size\n1 cup (240mL)\nAmount per serving\nCalories\n150\n% Baily Value\"\nTotal Fat 8g\n10%\nSELL BY DATE AND\nSaturated Fat 5g\n25%\nPLANT  STAMPED ON\nTrans Fat Og\nPACKAGE\nCholesterol 35mg\n12%\nSodium 125mg\n5%\nTotal Carbohydrate 12g\nDietary Fiber Og\n0%\nTotal Sugars 12g\nIncludes Og Added Sugars\n0%\nProtein8g\n16%\nVilamin D2 5mcg 10%Caloun 300ng 25%\nIron Omg 0\nPetassium 400ng8%\nCiy WU MS yoUTOV TNOY a RuT\n4tugoc0c0oay2000\ncesadMaM\nMhers",
         "corrected_output": "WHOLE\nMilk\nVitamin D\nNutrition Fat\nIngredients: Milk.\nVitamin D3\n8 Serving per Contains\nContains Milk.\nServing size\n1 cup (240mL)\nAmount per Serving\nCalories\n150\n% Daily Value\"\nTotal Fat 8g\n10%\nSELL BY DATE AND\nSaturated Fat 5g\n25%\nPLANT  STAMPED ON\nTrans Fat Og\nPACKAGE\nCholesterol 35mg\n12%\nSodium 125mg\n5%\nTotal Carbohydrate 12g\nDietary Fiber Og\n0%\nTotal Sugars 12g\nIncludes Og Added Sugars\n0%\nProtein8g\n16%\nVitamin D2 5mcg 10%calcium 300ng 25%\nIron Omg 0\npotassium 400ng8%\nCiy WU MS yoUTOV TNOY a RuT\n4tugoc0c0oay2000\ncesadMaM\nMhers",
         "expected_product": "Whole Milk Vitamin D",
-        "predicted_product": "WHOLE Milk Contains Milk.",
+        "predicted_product": "WHOLE Milk",
         "expected_ingredients": [
             "milk",
             "vitamin d3"
@@ -32,13 +32,11 @@
             "protein": 8
         },
         "predicted_nutrition": {
-            "Total Fat": "8g",
-            "Saturated Fat": "5g",
-            "Cholesterol": "35mg",
-            "Sodium": "125mg",
-            "Total Carbohydrate": "12g",
-            "Total Sugars": "12g",
-            "Protein": "8g"
+            "calories": 150.0,
+            "total_fat": 8.0,
+            "sodium": 125.0,
+            "carbohydrate": 12.0,
+            "protein": 8.0
         }
     },
     {
@@ -49,7 +47,7 @@
         "ocr_output": "NO\n\nARTIFICIAL\nPRESERMITINES\nOR FLAVORS\nNutrition\nFacts\nVitamin D Omcg 0% \u2022 Calcom 2lng\n5\nIron 1.3mg\n6%Potassium 30ong\nserving per\ncontainer\nT\nServing\nsize\n1 package (48g)\nThe % Daly ae(OV) as y hn)\nin a saring of bod contbues ba d d.\ncalorkes a day is used for geres nuiarda\nAmount per serving\n180\nINGREDIENTS: WHOLE GRAN GATS,SISR\nCalories\nSALT, NATURAL FLAVOR\n(123-068\n% Daily Value\"\nDISTRIBUTED BY.\nTotal Fat 2.5g\n3%\nTHE QUAKER OATS COMPANY\nP.O. BOX 049033\nSaturated Fat 0.5g\n3%\nCHICAGO, IL 60604-9003 U.S.A\n\u00a92020 The Quaker Oas Compan\nTrans\nFat Og\nWe're here to help.\nPolyunsaturated Fat 0.5g\nQuakereats.com or 800555.6287\nMonounsaturated Fat 1g\nPlease have package asalable nee alin\nCholesterol\nOmg\n0%\nsmartlobel\"\nSodium\n290mg\n13%\nTotal Carb.\n13%\n37g\nFiber\n3g\n11%\nDietary\nOW\n180\nTotal Sugars\n14g\n27%\nScan here for noe foi\nIncl. 14g Added Sugars\narat\nProtein 4g\n1-800-555-6287\nCURSES\nSE AX",
         "corrected_output": "NO\nARTIFICIAL\nPRESERMITINES\nOR Flavor\nNutrition\nFat\nVitamin D Omcg 0% \u2022 Calcium 2lng\n5\nIron 1.3mg\n6%Potassium 30ong\nServing per\nContains\nT\nServing\nsize\n1 package (48g)\nThe % Daily ae(OV) as y hn)\nin a Serving of bod contbues ba d d.\nCalories a Daily is used Flour geres nuiarda\nAmount per Serving\n180\nIngredients: WHOLE grain oats,sugar\nCalories\nSalt, Natural Flavor\n(123-068\n% Daily Value\"\nDISTRIBUTED BY.\nTotal Fat 2.5g\n3%\nTHE QUAKER Oats COMPANY\nP.O. BOX 049033\nSaturated Fat 0.5g\n3%\nCHICAGO, Oil 60604-9003 U.S.A\n\u00a92020 The Quaker Oats Compan\nTrans\nFat Og\nWe're here to help.\nUnsaturated Fat 0.5g\nQuakereats.corn or 800555.6287\nUnsaturated Fat 1g\nPlease have package asalable nee alin\nCholesterol\nOmg\n0%\nsmartlobel\"\nSodium\n290mg\n13%\nTotal Carb.\n13%\n37g\nFiber\n3g\n11%\nDietary\nOW\n180\nTotal Sugars\n14g\n27%\nScan here Flour noe foi\nIncl. 14g Added Sugars\narat\nProtein 4g\n1-800-555-6287\nCURSES\nSE AX",
         "expected_product": "Quaker Oatmeal",
-        "predicted_product": "ARTIFICIAL PRESERMITINES OR Flavor",
+        "predicted_product": "PRESERMITINES OR Flavor",
         "expected_ingredients": [
             "whole grain oats",
             "sugar",
@@ -72,9 +70,11 @@
             "protein": 4
         },
         "predicted_nutrition": {
-            "Total Fat": "2.5g",
-            "Saturated Fat": "0.5g",
-            "Protein": "4g"
+            "calories": 180.0,
+            "total_fat": 2.5,
+            "sodium": 290.0,
+            "carbohydrate": 13.0,
+            "protein": 4.0
         }
     },
     {
@@ -85,7 +85,7 @@
         "ocr_output": "E\n&\nNutrition Facts\nGeneral\nMIl\nPer 3/4 cup (29 g)\nAmount\nCereal\nPlus 125 mL\nOnly\n2% p.s. Milk\nCalories\n110\n170\nHoney Nut\n% Daily Value\nFat\n1.5 g*\n2%\n6 %\nCheerios\nSaturated 0.3 g\n2%\n10 %\nTrans\n0 g\n+\nCholesterol\n0\nmg\nSodium\n160\nmg\n7%\n9 %\nMADE WITH Real Honey\nCarbohydrate\n23\ng\n8 %\n10 %\nFibre\n29\n8%\n8 %\nSugars\n9\ng\nProtein\n3\ng\nVitamin A\n0 %\n6%\nVitamin \n0%\n0%\nCalcium\n10 %\n25 %\n30 %\n30 %\nIron\n0%\n30 %\nVitamin D\nNiacin\n6%\n15\n%\nVitamin B6\n10 %\n15\n%\n8 %\n10 %\nOAT FIBRE\nFolate\nHELPS LOWER\n6%\n10 %\nPantothenate\nCHOLESTEROL\nPhosphorus\n8 %\n20 %\nMagnesium\n10 %\n15 %\nZinc\n6 %\n10 %\nRM OOIFSONYNOHERMCEREALHDE\nWIDH US PRUNIDS ZON OF THE ONLY AMOLNT OF THE\nAmount in cereal",
         "corrected_output": "E\n&\nNutrition Fat\nGeneral\nMilk\nPer 3/4 cup (29 g)\nAmount\nCereal\nPlus 125 mL\nOnly\n2% p.s. Milk\nCalories\n110\n170\nHoney Nut\n% Daily Value\nFat\n1.5 g*\n2%\n6 %\nCheerios\nSaturated 0.3 g\n2%\n10 %\nTrans\n0 g\n+\nCholesterol\n0\nmg\nSodium\n160\nmg\n7%\n9 %\nMADE WITH Real Honey\nCarbohydrate\n23\ng\n8 %\n10 %\nFibre\n29\n8%\n8 %\nSugars\n9\ng\nProtein\n3\ng\nVitamin A\n0 %\n6%\nVitamin\n0%\n0%\nCalcium\n10 %\n25 %\n30 %\n30 %\nIron\n0%\n30 %\nVitamin D\nNiacin\n6%\n15\n%\nVitamin B6\n10 %\n15\n%\n8 %\n10 %\nOats Fibre\nFolate\nHELPS LOWER\n6%\n10 %\nPantothenate\nCholesterol\nPhosphorus\n8 %\n20 %\nMagnesium\n10 %\n15 %\nZinc\n6 %\n10 %\nRM OOIFSONYNOHERMCEREALHDE\nWIDH US PRUNIDS ZON OF THE ONLY AMOLNT OF THE\nAmount in cereal",
         "expected_product": "Honey Nut Cheerios",
-        "predicted_product": "General Milk Cereal",
+        "predicted_product": "General Milk",
         "expected_ingredients": [],
         "predicted_ingredients": [],
         "expected_allergens": [],
@@ -94,12 +94,18 @@
         ],
         "expected_nutrition": {
             "calories": 110,
-            "fat": 1.5,
+            "total_fat": 1.5,
             "sodium": 160,
             "carbohydrate": 23,
             "protein": 3
         },
-        "predicted_nutrition": {}
+        "predicted_nutrition": {
+            "calories": 110.0,
+            "total_fat": 1.5,
+            "sodium": 160.0,
+            "carbohydrate": 23.0,
+            "protein": 3.0
+        }
     },
     {
         "image_name": "Granola_bar.jpg",
@@ -109,7 +115,7 @@
         "ocr_output": "Nutrition\nFacts\n6 servings per container\nServing size\n1 bar(22g)\n110\nCalories\nSRolty Vilue\nTotal Fal 5g\n6%\nSaturated Fat 3g\n15%\nTrans Fat 0g\nCholesterol Cmg\n0%\nSodlum 95mg\n4%\nTotal Carbahrydrate 159\n5%\nDetary Fier 1g\n4%\nTotal Sugars 8g\nincludies 8g Added Supars 16%\nPretein to\nTrotr A Eang\n4%\nar apfiaraua fom 0.cicat ad pasit\nCXLWYRAM\nM\nIngredients: Whole Grain Cats,\nSugar, Paim and Palm Kernel\nO Rice Flour, Com Syrup.\nCocoa, Cane Syrup, Honey, Salt,\nSoy Lecithin, Natural Flavor,\nDry Whole Mik, Baking Soda.\nCONTAINS MLK, SOY; MAY\nCONTAIN EGG, WHEAT.\nPEANUT, ALMIOND, CASHEW.\nMACADAMIA NUT, AND PECAN\nINGREDIENTS.\nCAST OV GENERIAS MILLS SALES, IWC.\nMMNEAPKES, MNSSHO (USA\nContains Bloengineered\nFood ingredients\nLem more at.Ack.Genecs/ilisnont\nPRODUCT OFCAIMSIOA",
         "corrected_output": "Nutrition\nFat\n6 Serving per Contains\nServing size\n1 bar(22g)\n110\nCalories\nSRolty Value\nTotal Fal 5g\n6%\nSaturated Fat 3g\n15%\nTrans Fat 0g\nCholesterol Cmg\n0%\nSodium 95mg\n4%\nTotal Carbohydrate 159\n5%\nDietary Fiber 1g\n4%\nTotal Sugars 8g\nincludies 8g Added Sugars 16%\nProtein to\nTrotr A Eang\n4%\nar apfiaraua fom 0.cicat ad pasit\nCXLWYRAM\nM\nIngredients: Whole Grain oats,\nSugar, Palm and Palm Kernel\nO Rice Flour, corn Syrup.\nCocoa, Cane Syrup, Honey, Salt,\nSoy Lecithin, Natural Flavor,\nDry Whole Milk, Baking Soda.\nContains Milk, Soy; MAY\nContains Egg, Wheat.\nPeanut, ALMIOND, CASHEW.\nMACADAMIA NUT, AND PECAN\nIngredients.\nCAST OV GENERIAS MILLS SALES, IWC.\nMMNEAPKES, MNSSHO (USA\nContains Bloengineered\nFood Ingredients\nLem more Fat.Ack.Genecs/ilisnont\nPRODUCT OFCAIMSIOA",
         "expected_product": "Granola Bar",
-        "predicted_product": "Trotr A Eang ar apfiaraua fom 0.cicat ad pasit CXLWYRAM",
+        "predicted_product": "SRolty Value",
         "expected_ingredients": [
             "whole grain oats",
             "sugar",
@@ -146,18 +152,16 @@
         ],
         "expected_nutrition": {
             "calories": 110,
-            "fat": 5,
+            "total_fat": 5,
             "sodium": 95,
             "carbohydrate": 15,
             "protein": 1
         },
         "predicted_nutrition": {
-            "Saturated Fat": "3g",
-            "Trans Fat": "0g",
-            "Sodium": "95mg",
-            "Total Carbohydrate": "159",
-            "Dietary Fiber": "1g",
-            "Total Sugars": "8g"
+            "total_fat": 3.0,
+            "sodium": 95.0,
+            "carbohydrate": 159.0,
+            "protein": 4.0
         }
     },
     {
@@ -168,7 +172,7 @@
         "ocr_output": "Nutrition Facts\nAbout 12 servings\nper\ncontainer\nServing size\n27\nCrackers (30g)\nAmount per serving\n150\nCalories\n% Daily Value*\nTotal Fat 8g\n10%\nSaturated Fat 2g\n10%\nTrans Fat Og\nPolyunsaturated Fat 4g\nMonounsaturated Fat 2g\nCholesterol\nOmg\n0%\nSodium\n230mg\n10%\nTotal\nCarbohydrate 17g\n6%\nDietary Fiber\n<1g\n2%\nTotal\nSugars\n0g\nIncludes\nOg Added Sugars\n0%\nProtein 3g\nVitamin D Omcg 0%\nCalcium 40mg 2%\nIron 1.1mg 6%\nPotassium 30mg 0%\nT  Day VDV  you  uch a nt n a sving of food\n \nIngredients: Enriched flour (wheat flour, niacin,\nreduced iron, vitamin B [thiamin mononitrate]\nvitamin B [riboflavin], folic acid), vegetable oil\n(soybean and palm oil with TBHQ for",
         "corrected_output": "Nutrition Fat\nAbout 12 Serving\nper\nContains\nServing size\n27\nCrackers (30g)\nAmount per Serving\n150\nCalories\n% Daily Value*\nTotal Fat 8g\n10%\nSaturated Fat 2g\n10%\nTrans Fat Og\nUnsaturated Fat 4g\nUnsaturated Fat 2g\nCholesterol\nOmg\n0%\nSodium\n230mg\n10%\nTotal\nCarbohydrate 17g\n6%\nDietary Fiber\n<1g\n2%\nTotal\nSugars\n0g\nIncludes\nOg Added Sugars\n0%\nProtein 3g\nVitamin D Omcg 0%\nCalcium 40mg 2%\nIron 1.1mg 6%\nPotassium 30mg 0%\nT  Daily VDV  you  uch a nt n a Serving of food\nIngredients: Enriched Flour (Wheat Flour, niacin,\nreduced Iron, Vitamin B [thiamin mononitrate]\nVitamin B [riboflavin], folic acid), vegetable Oil\n(Soybean and Palm Oil with TBHQ Flour",
         "expected_product": "Crackers",
-        "predicted_product": "Contains Omg Includes",
+        "predicted_product": "per Contains",
         "expected_ingredients": [],
         "predicted_ingredients": [
             "enriched flour (wheat flour, niacin,, reduced iron, vitamin b [thiamin mononitrate], vitamin b [riboflavin], folic acid)",
@@ -185,15 +189,16 @@
         ],
         "expected_nutrition": {
             "calories": 150,
-            "fat": 8,
+            "total_fat": 8,
             "sodium": 230,
             "carbohydrate": 17,
             "protein": 3
         },
         "predicted_nutrition": {
-            "Total Fat": "8g",
-            "Saturated Fat": "2g",
-            "Protein": "3g"
+            "total_fat": 8.0,
+            "sodium": 230.0,
+            "carbohydrate": 17.0,
+            "protein": 3.0
         }
     },
     {
@@ -204,7 +209,7 @@
         "ocr_output": "Nutrition Fac\n2 servings per bar\n1/2 bar (42.5g)\nServing size\na\nAmount per serving\n238\nCalories\n% Daily Value\n33%\nTotal Fat 22g\n60%\nSaturated Fat 12g\na\no\nTrans Fat Og\n0%\nCholesterol Omg\n%0\nbwo whpos\n%8\nTrc\n%91\nDaGeee\nTotal Sugars 0g\na\nIncludes Og Added Sugars\nProtein 5g\n0%\nalamy\nVitaminD\na\n4%\nCalcium\n18%\nIron\n14%\nPotassium\na\nThe % Daily Value (DV) tells you how much a nutrient in\na serving of food contributes to a daily diet. 2,000 calories\na day is used for general nutrition advice.\nship\nIngrelients: Cocoa bean? cocoa\nbutter.\nMade in a facility free of wheat.\npeanuts & eggs.a",
         "corrected_output": "Nutrition Fac\n2 Serving per bar\n1/2 bar (42.5g)\nServing size\na\nAmount per Serving\n238\nCalories\n% Daily Value\n33%\nTotal Fat 22g\n60%\nSaturated Fat 12g\na\no\nTrans Fat Og\n0%\nCholesterol Omg\n%0\nbwo whpos\n%8\nTrc\n%91\nDaGeee\nTotal Sugars 0g\na\nIncludes Og Added Sugars\nProtein 5g\n0%\nalamy\nVitamin\na\n4%\nCalcium\n18%\nIron\n14%\nPotassium\na\nThe % Daily Value (DV) tells you how much a nutrient in\na Serving of food contributes to a Daily diet. 2,000 Calories\na Daily is used Flour general Nutrition advice.\nship\nIngredients: Cocoa Beans? Cocoa\nButter.\nMade in a facility free of Wheat.\nPeanuts & Eggs.a",
         "expected_product": "Chocolate Bar",
-        "predicted_product": "bwo whpos Trc DaGeee",
+        "predicted_product": "a",
         "expected_ingredients": [
             "cocoa beans",
             "cocoa butter"
@@ -217,16 +222,14 @@
         "predicted_allergens": [],
         "expected_nutrition": {
             "calories": 238,
-            "fat": 22,
+            "total_fat": 22,
             "sodium": 0,
             "carbohydrate": 10,
             "protein": 5
         },
         "predicted_nutrition": {
-            "Total Fat": "22g",
-            "Saturated Fat": "12g",
-            "Total Sugars": "0g",
-            "Protein": "5g"
+            "total_fat": 22.0,
+            "protein": 5.0
         }
     },
     {
@@ -237,19 +240,25 @@
         "ocr_output": "alamy\na\nFacts\nNutrition\nSize\n1/2\ncup\n(130g)\nServing\n100 years.\nabout\n4.5\nServings\nPer\nContainer\nerjection to\nEASY\nAmount Per Serving\nsweet and\nfrom\nFat 10\nOPEN\nCalories\n130\nCalories\nade toaste,\n% Daily\nValue*\nPOPTOR\n2%\nmained a\nTotal Fat\n1g\nSaturated Fat Og\n0%\n a\n2\nTrans\nFat Og\nCholesterol Omg\n0%\nROSTRCCIONES\nSodium\n480mg\n20%\nRACLENTE, FRIA\nWEGGRATURA\nTotal\nCarbohydrate 25g\n8%\nDietary\nFiber\n5g\n20%\nCOM Giete\nSugars\n7g\ncme\nHOOONOAS\nProtein\n6g\n1nos\nVitamin A 0%\nVitamin C 0%\n sgend\nspinal\nCalcium 6%\nIron 10%\nseh\nPercent Daily Values are based on a 2,000\nmaECE\ncalorie diet. Your daily values may be higher or\ni\nlower depending on your calorie needs:\n1m actao\nCalories:\n2,000\n2,500\n10 tirt\nTotal Fat\nLess than\n65g\n80g\n38\nSat Fat\nLess than\n20g\n25g\nE CORN SYRUP\nCholesterol\nLess than\n300mg\n300mg\nATTOMA P RE\nSodium\nLess than\n2,400mg\n2,400mg\nTotal Carbohydrate\n300g\n375g\nEPPSTACT\nDietary Fiber\n25g\n30g\nAINCN ETRACT\nSatisfaction guaranteed. If you have\nTABTM\nquestions or comments, please call\n1-800-232-6736. Please have code and\ndate information from container. Visit\nour website at: www.campbells.com\nFor great tasting recipes using\nCampbell's\u00ae Pork a Beans,\nvisit our website at\nCampbellskitchen.com\nWHERE FADLITES\nRIACABLE",
         "corrected_output": "alamy\na\nFat\nNutrition\nSize\n1/2\ncup\n(130g)\nServing\n100 years.\nabout\n4.5\nServing\nPer\nContains\nerjection to\nEASY\nAmount Per Serving\nsweet and\nfrom\nFat 10\nOPEN\nCalories\n130\nCalories\nade toaste,\n% Daily\nValue*\nPOPTOR\n2%\nmained a\nTotal Fat\n1g\nSaturated Fat Og\n0%\na\n2\nTrans\nFat Og\nCholesterol Omg\n0%\nROSTRCCIONES\nSodium\n480mg\n20%\nRACLENTE, FRIA\nWEGGRATURA\nTotal\nCarbohydrate 25g\n8%\nDietary\nFiber\n5g\n20%\ncorn Giete\nSugars\n7g\ncme\nHOOONOAS\nProtein\n6g\n1nos\nVitamin A 0%\nVitamin C 0%\nsgend\nspinal\nCalcium 6%\nIron 10%\nseh\nPercent Daily Value are based on a 2,000\nmaECE\nCalories diet. Your Daily Value may be higher or\ni\nlower depending on your Calories needs:\n1m actao\nCalories:\n2,000\n2,500\n10 tirt\nTotal Fat\nLess than\n65g\n80g\n38\nSalt Fat\nLess than\n20g\n25g\nE Corn Syrup\nCholesterol\nLess than\n300mg\n300mg\nATTOMA P RE\nSodium\nLess than\n2,400mg\n2,400mg\nTotal Carbohydrate\n300g\n375g\nEPPSTACT\nDietary Fiber\n25g\n30g\nAINCN ETRACT\nSatisfaction guaranteed. If you have\nTABTM\nquestions or comments, please call\n1-800-232-6736. Please have code and\ndate information from Contains. Visit\nFlour website Fat: www.campbells.corn\nFlour great tasting recipes using\nCampbell's\u00ae Pork a Beans,\nvisit Flour website Fat\nCampbellskitchen.corn\nWHERE FADLITES\nRIACABLE",
         "expected_product": "Campbell's Pork and Beans",
-        "predicted_product": "alamy Size cup",
+        "predicted_product": "alamy a",
         "expected_ingredients": [],
         "predicted_ingredients": [],
         "expected_allergens": [],
         "predicted_allergens": [],
         "expected_nutrition": {
             "calories": 130,
-            "fat": 1,
+            "total_fat": 1,
             "sodium": 480,
             "carbohydrate": 25,
             "protein": 6
         },
-        "predicted_nutrition": {}
+        "predicted_nutrition": {
+            "calories": 130.0,
+            "total_fat": 1.0,
+            "sodium": 480.0,
+            "carbohydrate": 25.0,
+            "protein": 6.0
+        }
     },
     {
         "image_name": "Cereal_Box.jpg",
@@ -259,7 +268,7 @@
         "ocr_output": "Nutrition\nFacts\nServing\nSize\n213\ncup\n(51g)\nServings Per Container About 9\nCereal with\n1/2 cup\nAmount Per Serving\nCereal\nSkim Mik\nCalories\n240\n280\nCalories from Fat\n70\n70\n% Dally Value*\nTotal Fat 8g*\n12%\n12%\nSaturated\nFat 2.5g 13%\n13%\nTrans Fat Og\nCholesterol\nOmg\n0%\n0%\nSodium\n50mg\n2%\n5%\nTotal\nCarbohydrate 37g 12%\n14%\nDietary\nFiber 3g\n12%\n12%\nSugars 13g\nProtein\n4g\n8%\n16%\nVitamin A\n0%\n4%\nVitamin C\n0%\n0%\nCalcium\n2%\n15%\nIron\n6%\n6%",
         "corrected_output": "Nutrition\nFat\nServing\nSize\n213\ncup\n(51g)\nServing Per Contains About 9\nCereal with\n1/2 cup\nAmount Per Serving\nCereal\nSkim Milk\nCalories\n240\n280\nCalories from Fat\n70\n70\n% Daily Value*\nTotal Fat 8g*\n12%\n12%\nSaturated\nFat 2.5g 13%\n13%\nTrans Fat Og\nCholesterol\nOmg\n0%\n0%\nSodium\n50mg\n2%\n5%\nTotal\nCarbohydrate 37g 12%\n14%\nDietary\nFiber 3g\n12%\n12%\nSugars 13g\nProtein\n4g\n8%\n16%\nVitamin A\n0%\n4%\nVitamin C\n0%\n0%\nCalcium\n2%\n15%\nIron\n6%\n6%",
         "expected_product": "Cereal",
-        "predicted_product": "Size cup Cereal with",
+        "predicted_product": "Cereal with",
         "expected_ingredients": [],
         "predicted_ingredients": [],
         "expected_allergens": [],
@@ -268,14 +277,17 @@
         ],
         "expected_nutrition": {
             "calories": 240,
-            "fat": 8,
+            "total_fat": 8,
             "sodium": 50,
             "carbohydrate": 37,
             "protein": 4
         },
         "predicted_nutrition": {
-            "Total Fat": "8g",
-            "Total Sugars": "13g"
+            "calories": 240.0,
+            "total_fat": 8.0,
+            "sodium": 50.0,
+            "carbohydrate": 37.0,
+            "protein": 4.0
         }
     }
 ]
