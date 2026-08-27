@@ -1,0 +1,62 @@
+{
+    "metrics": {
+        "images_evaluated": 3,
+        "tp": 5,
+        "fp": 4,
+        "fn": 1,
+        "precision": 0.5555555555555556,
+        "recall": 0.8333333333333334,
+        "f1": 0.6666666666666667
+    },
+    "results": [
+        {
+            "image_name": "Whole_milk.jpg",
+            "ground_truth": [
+                "milk"
+            ],
+            "prediction": [
+                "milk"
+            ],
+            "missed": [],
+            "extra": []
+        },
+        {
+            "image_name": "Granola_bar.jpg",
+            "ground_truth": [
+                "peanut",
+                "soy"
+            ],
+            "prediction": [
+                "almond",
+                "egg",
+                "milk",
+                "peanut",
+                "soy",
+                "wheat"
+            ],
+            "missed": [],
+            "extra": [
+                "almond",
+                "egg",
+                "milk",
+                "wheat"
+            ]
+        },
+        {
+            "image_name": "Crackers.jpg",
+            "ground_truth": [
+                "milk",
+                "soy",
+                "wheat"
+            ],
+            "prediction": [
+                "soy",
+                "wheat"
+            ],
+            "missed": [
+                "milk"
+            ],
+            "extra": []
+        }
+    ]
+}

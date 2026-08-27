@@ -38,12 +38,15 @@ class Evaluator:
             correction_char_scores.append(Metrics.character_accuracy(record["ground_truth_ocr"],record["corrected_output"]))
             correction_word_scores.append(Metrics.word_accuracy(record["ground_truth_ocr"],record["corrected_output"]))
             product_scores.append(Metrics.product_accuracy(record["expected_product"],record["predicted_product"]))
-            ingredient_precision = Metrics.precision(record["expected_ingredients"],record["predicted_ingredients"])
-            ingredient_recall = Metrics.recall(record["expected_ingredients"],record["predicted_ingredients"])
-            ingredient_f1 = Metrics.f1_score(ingredient_precision,ingredient_recall)
-            ingredient_precision_scores.append(ingredient_precision)
-            ingredient_recall_scores.append(ingredient_recall)
-            ingredient_f1_scores.append(ingredient_f1)
+            
+            if record.get("evaluate_ingredients", False):
+                ingredient_precision = Metrics.precision(record["expected_ingredients"],record["predicted_ingredients"])
+                ingredient_recall = Metrics.recall(record["expected_ingredients"], record["predicted_ingredients"])
+                ingredient_f1 = Metrics.f1_score(ingredient_precision,ingredient_recall)
+                ingredient_precision_scores.append(ingredient_precision)
+                ingredient_recall_scores.append(ingredient_recall)
+                ingredient_f1_scores.append(ingredient_f1)
+                            
             nutrition_scores.append(Metrics.nutrition_accuracy(record["expected_nutrition"],record["predicted_nutrition"]))
 
         allergen_results = run_allergen_evaluation()

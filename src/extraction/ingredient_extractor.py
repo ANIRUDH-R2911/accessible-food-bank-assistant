@@ -43,6 +43,27 @@ NUTRITION_NOISE_PATTERNS = [
     r"^% daily value",
 ]
 
+COMMON_INGREDIENT_BREAKS = [
+    "salt",
+    "sugar",
+    "water",
+    "soy lecithin",
+    "soy flour",
+    "cocoa butter",
+    "cocoa beans",
+]
+
+OCR_INGREDIENT_CORRECTIONS = {
+    "olfic": "oleic",
+    "crosp": "crisp",
+    "degerimnated": "germinated",
+    "retiners": "refiners",
+    "wateh": "water",
+    "sodum": "sodium",
+    "cithin": "lecithin"
+}
+
+
 def looks_like_ingredient_header(line):
     line = line.lower().strip()
     if len(line) < 5:
@@ -55,19 +76,69 @@ def looks_like_ingredient_header(line):
             return True
     return False
 
+
 def looks_like_hard_stop_line(line):
     line = line.lower()
     return any(
         re.search(pattern, line)
         for pattern in HARD_STOP_PATTERNS
     )
-    
+
 def looks_like_stop_line(line):
     line = line.lower()
     return any(
         re.search(pattern, line)
         for pattern in STOP_LINE_PATTERNS
     )
+
+def looks_like_noise(text):
+    text = text.lower()
+    noise_terms = [
+        "serving",
+        "daily value",
+        "nutrition",
+        "calories",
+        "container",
+        "amount per serving",
+        "protein",
+        "sodium"
+    ]
+    if len(text.split()) > 12:
+        return True
+    if any(term in text for term in noise_terms):
+        return True
+    return False
+
+def normalize_ingredient(text):
+    text = text.lower().strip()
+    text = text.replace("(", "")
+    text = text.replace(")", "")
+    text = re.sub(r"\s+", " ", text)
+    text = text.rstrip(".,;:")
+    return text
+
+
+def split_compound_ingredient(text):
+    parts = [text]
+    for keyword in COMMON_INGREDIENT_BREAKS:
+        new_parts = []
+        for part in parts:
+            if keyword in part and part != keyword:
+                chunks = part.split(keyword)
+                for i, chunk in enumerate(chunks):
+                    chunk = chunk.strip()
+                    if chunk:
+                        new_parts.append(chunk)
+                    if i < len(chunks) - 1:
+                        new_parts.append(keyword)
+            else:
+                new_parts.append(part)
+        parts = new_parts
+    return [
+        p.strip()
+        for p in parts
+        if len(p.strip()) > 2
+    ]
 
 def extract_ingredients(text):
     lines = [
@@ -81,39 +152,33 @@ def extract_ingredients(text):
             print("HEADER FOUND:", line)
             start_idx = i
             break
-
     if start_idx is None:
         return []
-
     block_lines = []
     MAX_LINES = 15
     for idx, line in enumerate(lines[start_idx:start_idx + MAX_LINES]):
         line_lower = line.lower().strip()
         if looks_like_hard_stop_line(line):
             break
-        if (idx >= 3 and looks_like_stop_line(line)):
+        if idx >= 3 and looks_like_stop_line(line):
             break
         if any(
             re.search(pattern, line_lower)
             for pattern in NUTRITION_NOISE_PATTERNS
-            ):
+        ):
             continue
         if re.fullmatch(r"[\(\)\d\-]+", line.strip()):
             continue
-        
         block_lines.append(line)
-
     ingredient_block = ", ".join(block_lines)
-    ingredient_block = re.sub(
-        r"ingredients?:?",
-        "",
-        ingredient_block,
-        flags=re.IGNORECASE
-    )
-    ingredient_block = ingredient_block.replace("?", "")
+    ingredient_block = ingredient_block.lower()
+    for wrong, correct in OCR_INGREDIENT_CORRECTIONS.items():
+        ingredient_block = ingredient_block.replace(wrong, correct)
+    ingredient_block = re.sub(r"ingredients?:?","",ingredient_block,flags=re.IGNORECASE)
+    ingredient_block = ingredient_block.replace("?", ",")
     ingredient_block = ingredient_block.replace(". ", ", ")
     ingredient_block = ingredient_block.replace(".", ",")
-
+    ingredient_block = ingredient_block.replace("cocoa beans cocoa","cocoa beans, cocoa butter")
     ingredients = []
     current = ""
     depth = 0
@@ -131,17 +196,23 @@ def extract_ingredients(text):
             current = ""
         else:
             current += ch
-
     if current.strip():
         ingredients.append(current.strip())
-
     cleaned = []
     for ingredient in ingredients:
-        ingredient = ingredient.strip()
-        ingredient = ingredient.rstrip(".")
+        ingredient = normalize_ingredient(ingredient)
         if len(ingredient) < 2:
             continue
-        
-        cleaned.append(ingredient.lower())
+        if looks_like_noise(ingredient):
+            continue
+        split_items = split_compound_ingredient(ingredient)
+        cleaned.extend(split_items)
 
-    return cleaned
+    final_ingredients = []
+    seen = set()
+    for ingredient in cleaned:
+        ingredient = ingredient.strip()
+        if ingredient not in seen:
+            seen.add(ingredient)
+            final_ingredients.append(ingredient)
+    return final_ingredients

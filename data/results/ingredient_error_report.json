@@ -1,0 +1,152 @@
+{
+    "summary": {
+        "images_evaluated": 8,
+        "total_tp": 11,
+        "total_fp": 3,
+        "total_fn": 10,
+        "macro_precision": 0.7833,
+        "macro_recall": 0.7019,
+        "macro_f1": 0.7111,
+        "micro_precision": 0.7857,
+        "micro_recall": 0.5238,
+        "micro_f1": 0.6286,
+        "most_common_false_positives": [
+            [
+                "high oleic canola oil cereal",
+                1
+            ],
+            [
+                "butter",
+                1
+            ],
+            [
+                "cocoa",
+                1
+            ]
+        ],
+        "most_common_false_negatives": [
+            [
+                "baking soda",
+                1
+            ],
+            [
+                "cereal crisp",
+                1
+            ],
+            [
+                "dark refiners syrup",
+                1
+            ],
+            [
+                "germinated yellow corn flour",
+                1
+            ],
+            [
+                "high oleic canola oil",
+                1
+            ],
+            [
+                "salt",
+                1
+            ],
+            [
+                "soy flour",
+                1
+            ],
+            [
+                "soy lecithin",
+                1
+            ],
+            [
+                "water",
+                1
+            ],
+            [
+                "cocoa butter",
+                1
+            ]
+        ]
+    },
+    "image_reports": [
+        {
+            "image_name": "Whole_milk.jpg",
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "tp_count": 2,
+            "fp_count": 0,
+            "fn_count": 0,
+            "true_positives": [
+                "milk",
+                "vitamin d3"
+            ],
+            "false_positives": [],
+            "false_negatives": []
+        },
+        {
+            "image_name": "Oatmeal.jpg",
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "tp_count": 4,
+            "fp_count": 0,
+            "fn_count": 0,
+            "true_positives": [
+                "natural flavor",
+                "salt",
+                "sugar",
+                "whole grain oats"
+            ],
+            "false_positives": [],
+            "false_negatives": []
+        },
+        {
+            "image_name": "Granola_bar.jpg",
+            "precision": 0.8,
+            "recall": 0.3077,
+            "f1": 0.4445,
+            "tp_count": 4,
+            "fp_count": 1,
+            "fn_count": 9,
+            "true_positives": [
+                "dry roasted peanuts",
+                "peanut butter",
+                "rolled oats",
+                "sugar"
+            ],
+            "false_positives": [
+                "high oleic canola oil cereal"
+            ],
+            "false_negatives": [
+                "baking soda",
+                "cereal crisp",
+                "dark refiners syrup",
+                "germinated yellow corn flour",
+                "high oleic canola oil",
+                "salt",
+                "soy flour",
+                "soy lecithin",
+                "water"
+            ]
+        },
+        {
+            "image_name": "Chocolate_bar.jpg",
+            "precision": 0.3333,
+            "recall": 0.5,
+            "f1": 0.4,
+            "tp_count": 1,
+            "fp_count": 2,
+            "fn_count": 1,
+            "true_positives": [
+                "cocoa beans"
+            ],
+            "false_positives": [
+                "butter",
+                "cocoa"
+            ],
+            "false_negatives": [
+                "cocoa butter"
+            ]
+        }
+    ]
+}

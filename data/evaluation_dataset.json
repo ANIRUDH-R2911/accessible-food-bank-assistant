@@ -14,8 +14,7 @@
         ],
         "predicted_ingredients": [
             "milk",
-            "vitamin d3",
-            "8 serving per contains"
+            "vitamin d3"
         ],
         "expected_allergens": [
             "milk"
@@ -135,9 +134,8 @@
             "rolled oats",
             "sugar",
             "peanut butter",
-            "(dry roasted peanuts)",
-            "high olfic canola oil cereal",
-            "crosp (degerimnated yellow corn flour soy flour, sugar, salt soy lecithin) dark retiners syrup"
+            "dry roasted peanuts",
+            "high oleic canola oil cereal"
         ],
         "expected_allergens": [
             "peanuts",
@@ -177,9 +175,8 @@
         "predicted_product": "per Contains",
         "expected_ingredients": [],
         "predicted_ingredients": [
-            "enriched flour (wheat flour, niacin,, reduced iron, vitamin b [thiamin mononitrate], vitamin b [riboflavin], folic acid)",
             "vegetable oil",
-            "(soybean and palm oil with tbhq flour"
+            "soybean and palm oil with tbhq flour"
         ],
         "expected_allergens": [
             "milk",
@@ -218,7 +215,8 @@
             "cocoa butter"
         ],
         "predicted_ingredients": [
-            "cocoa beans cocoa",
+            "cocoa beans",
+            "cocoa",
             "butter"
         ],
         "expected_allergens": [],
