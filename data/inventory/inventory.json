@@ -4758,5 +4758,1118 @@
             "carbohydrate": 37.0,
             "protein": 4.0
         }
+    },
+    {
+        "id": 246,
+        "created_at": "2026-08-31T02:22:49.458632",
+        "product_name": "WHOLE Milk",
+        "ingredients": [
+            "milk",
+            "vitamin d3"
+        ],
+        "allergens": [
+            "Milk"
+        ],
+        "allergens_may_contain": [],
+        "allergens_free_from": [],
+        "nutrition": {
+            "calories": 150.0,
+            "total_fat": 8.0,
+            "sodium": 125.0,
+            "carbohydrate": 12.0,
+            "protein": 8.0
+        }
+    },
+    {
+        "id": 247,
+        "created_at": "2026-08-31T02:23:01.604791",
+        "product_name": "PRESERMITINES OR Flavor",
+        "ingredients": [
+            "whole grain oats",
+            "sugar",
+            "salt",
+            "natural flavor"
+        ],
+        "allergens": [],
+        "allergens_may_contain": [],
+        "allergens_free_from": [],
+        "nutrition": {
+            "calories": 180.0,
+            "total_fat": 2.5,
+            "sodium": 290.0,
+            "carbohydrate": 13.0,
+            "protein": 4.0
+        }
+    },
+    {
+        "id": 248,
+        "created_at": "2026-08-31T02:23:22.344614",
+        "product_name": "General Milk",
+        "ingredients": [],
+        "allergens": [
+            "Milk"
+        ],
+        "allergens_may_contain": [],
+        "allergens_free_from": [],
+        "nutrition": {
+            "calories": 110.0,
+            "total_fat": 1.5,
+            "sodium": 160.0,
+            "carbohydrate": 23.0,
+            "protein": 3.0
+        }
+    },
+    {
+        "id": 249,
+        "created_at": "2026-08-31T02:23:51.674023",
+        "product_name": "Mi",
+        "ingredients": [
+            "rolled oats",
+            "sugar",
+            "peanut butter",
+            "dry roasted peanuts",
+            "high oleic canola oil cereal"
+        ],
+        "allergens": [
+            "Almond",
+            "Egg",
+            "Milk",
+            "Peanut",
+            "Soy",
+            "Wheat"
+        ],
+        "allergens_may_contain": [],
+        "allergens_free_from": [],
+        "nutrition": {
+            "total_fat": 6.0,
+            "sodium": 140.0,
+            "carbohydrate": 29.0,
+            "protein": 5.0
+        }
+    },
+    {
+        "id": 250,
+        "created_at": "2026-08-31T02:24:03.812508",
+        "product_name": "per Contains",
+        "ingredients": [
+            "vegetable oil",
+            "soybean and palm oil with tbhq flour"
+        ],
+        "allergens": [
+            "Soy",
+            "Wheat"
+        ],
+        "allergens_may_contain": [],
+        "allergens_free_from": [],
+        "nutrition": {
+            "total_fat": 8.0,
+            "sodium": 230.0,
+            "carbohydrate": 17.0,
+            "protein": 3.0
+        }
+    },
+    {
+        "id": 251,
+        "created_at": "2026-08-31T02:24:43.081511",
+        "product_name": "a",
+        "ingredients": [
+            "cocoa beans",
+            "cocoa",
+            "butter"
+        ],
+        "allergens": [
+            "Egg",
+            "Peanut"
+        ],
+        "allergens_may_contain": [],
+        "allergens_free_from": [
+            "Wheat"
+        ],
+        "nutrition": {
+            "total_fat": 22.0,
+            "protein": 5.0
+        }
+    },
+    {
+        "id": 252,
+        "created_at": "2026-08-31T02:25:03.444647",
+        "product_name": "alamy a",
+        "ingredients": [],
+        "allergens": [],
+        "allergens_may_contain": [],
+        "allergens_free_from": [],
+        "nutrition": {
+            "calories": 130.0,
+            "total_fat": 1.0,
+            "sodium": 480.0,
+            "carbohydrate": 25.0,
+            "protein": 6.0
+        }
+    },
+    {
+        "id": 253,
+        "created_at": "2026-08-31T02:25:15.777590",
+        "product_name": "Cereal with",
+        "ingredients": [],
+        "allergens": [
+            "Milk"
+        ],
+        "allergens_may_contain": [],
+        "allergens_free_from": [],
+        "nutrition": {
+            "calories": 240.0,
+            "total_fat": 8.0,
+            "sodium": 50.0,
+            "carbohydrate": 37.0,
+            "protein": 4.0
+        }
+    },
+    {
+        "id": 254,
+        "created_at": "2026-08-31T02:36:29.753240",
+        "product_name": "WHOLE Milk",
+        "ingredients": [
+            "milk",
+            "vitamin d3"
+        ],
+        "allergens": [
+            "Milk"
+        ],
+        "allergens_may_contain": [],
+        "allergens_free_from": [],
+        "nutrition": {
+            "calories": 150.0,
+            "total_fat": 8.0,
+            "sodium": 125.0,
+            "carbohydrate": 12.0,
+            "protein": 8.0
+        }
+    },
+    {
+        "id": 255,
+        "created_at": "2026-08-31T02:36:41.355112",
+        "product_name": "PRESERMITINES OR Flavor",
+        "ingredients": [
+            "whole grain oats",
+            "sugar",
+            "salt",
+            "natural flavor"
+        ],
+        "allergens": [],
+        "allergens_may_contain": [],
+        "allergens_free_from": [],
+        "nutrition": {
+            "calories": 180.0,
+            "total_fat": 2.5,
+            "sodium": 290.0,
+            "carbohydrate": 13.0,
+            "protein": 4.0
+        }
+    },
+    {
+        "id": 256,
+        "created_at": "2026-08-31T02:37:03.130815",
+        "product_name": "General Milk",
+        "ingredients": [],
+        "allergens": [
+            "Milk"
+        ],
+        "allergens_may_contain": [],
+        "allergens_free_from": [],
+        "nutrition": {
+            "calories": 110.0,
+            "total_fat": 1.5,
+            "sodium": 160.0,
+            "carbohydrate": 23.0,
+            "protein": 3.0
+        }
+    },
+    {
+        "id": 257,
+        "created_at": "2026-08-31T02:37:31.647700",
+        "product_name": "Mi",
+        "ingredients": [
+            "rolled oats",
+            "sugar",
+            "peanut butter",
+            "dry roasted peanuts",
+            "high oleic canola oil cereal"
+        ],
+        "allergens": [
+            "Almond",
+            "Egg",
+            "Milk",
+            "Peanut",
+            "Soy",
+            "Wheat"
+        ],
+        "allergens_may_contain": [],
+        "allergens_free_from": [],
+        "nutrition": {
+            "total_fat": 6.0,
+            "sodium": 140.0,
+            "carbohydrate": 29.0,
+            "protein": 5.0
+        }
+    },
+    {
+        "id": 258,
+        "created_at": "2026-08-31T02:37:41.205055",
+        "product_name": "per Contains",
+        "ingredients": [
+            "vegetable oil",
+            "soybean and palm oil with tbhq flour"
+        ],
+        "allergens": [
+            "Soy",
+            "Wheat"
+        ],
+        "allergens_may_contain": [],
+        "allergens_free_from": [],
+        "nutrition": {
+            "total_fat": 8.0,
+            "sodium": 230.0,
+            "carbohydrate": 17.0,
+            "protein": 3.0
+        }
+    },
+    {
+        "id": 259,
+        "created_at": "2026-08-31T02:38:26.433083",
+        "product_name": "a",
+        "ingredients": [
+            "cocoa beans",
+            "cocoa",
+            "butter"
+        ],
+        "allergens": [
+            "Egg",
+            "Peanut"
+        ],
+        "allergens_may_contain": [],
+        "allergens_free_from": [
+            "Wheat"
+        ],
+        "nutrition": {
+            "total_fat": 22.0,
+            "protein": 5.0
+        }
+    },
+    {
+        "id": 260,
+        "created_at": "2026-08-31T02:38:49.064961",
+        "product_name": "alamy a",
+        "ingredients": [],
+        "allergens": [],
+        "allergens_may_contain": [],
+        "allergens_free_from": [],
+        "nutrition": {
+            "calories": 130.0,
+            "total_fat": 1.0,
+            "sodium": 480.0,
+            "carbohydrate": 25.0,
+            "protein": 6.0
+        }
+    },
+    {
+        "id": 261,
+        "created_at": "2026-08-31T02:39:01.055061",
+        "product_name": "Cereal with",
+        "ingredients": [],
+        "allergens": [
+            "Milk"
+        ],
+        "allergens_may_contain": [],
+        "allergens_free_from": [],
+        "nutrition": {
+            "calories": 240.0,
+            "total_fat": 8.0,
+            "sodium": 50.0,
+            "carbohydrate": 37.0,
+            "protein": 4.0
+        }
+    },
+    {
+        "id": 262,
+        "created_at": "2026-08-31T02:41:27.441385",
+        "product_name": "WHOLE Milk",
+        "ingredients": [
+            "milk",
+            "vitamin d3"
+        ],
+        "allergens": [
+            "Milk"
+        ],
+        "allergens_may_contain": [],
+        "allergens_free_from": [],
+        "nutrition": {
+            "calories": 150.0,
+            "total_fat": 8.0,
+            "sodium": 125.0,
+            "carbohydrate": 12.0,
+            "protein": 8.0
+        }
+    },
+    {
+        "id": 263,
+        "created_at": "2026-08-31T02:41:38.334076",
+        "product_name": "PRESERMITINES OR Flavor",
+        "ingredients": [
+            "whole grain oats",
+            "sugar",
+            "salt",
+            "natural flavor"
+        ],
+        "allergens": [],
+        "allergens_may_contain": [],
+        "allergens_free_from": [],
+        "nutrition": {
+            "calories": 180.0,
+            "total_fat": 2.5,
+            "sodium": 290.0,
+            "carbohydrate": 13.0,
+            "protein": 4.0
+        }
+    },
+    {
+        "id": 264,
+        "created_at": "2026-08-31T02:41:56.713326",
+        "product_name": "General Milk",
+        "ingredients": [],
+        "allergens": [
+            "Milk"
+        ],
+        "allergens_may_contain": [],
+        "allergens_free_from": [],
+        "nutrition": {
+            "calories": 110.0,
+            "total_fat": 1.5,
+            "sodium": 160.0,
+            "carbohydrate": 23.0,
+            "protein": 3.0
+        }
+    },
+    {
+        "id": 265,
+        "created_at": "2026-08-31T02:42:22.510266",
+        "product_name": "Mi",
+        "ingredients": [
+            "rolled oats",
+            "sugar",
+            "peanut butter",
+            "dry roasted peanuts",
+            "high oleic canola oil cereal"
+        ],
+        "allergens": [
+            "Almond",
+            "Egg",
+            "Milk",
+            "Peanut",
+            "Soy",
+            "Wheat"
+        ],
+        "allergens_may_contain": [],
+        "allergens_free_from": [],
+        "nutrition": {
+            "total_fat": 6.0,
+            "sodium": 140.0,
+            "carbohydrate": 29.0,
+            "protein": 5.0
+        }
+    },
+    {
+        "id": 266,
+        "created_at": "2026-08-31T02:42:32.372311",
+        "product_name": "per Contains",
+        "ingredients": [
+            "vegetable oil",
+            "soybean and palm oil with tbhq flour"
+        ],
+        "allergens": [
+            "Soy",
+            "Wheat"
+        ],
+        "allergens_may_contain": [],
+        "allergens_free_from": [],
+        "nutrition": {
+            "total_fat": 8.0,
+            "sodium": 230.0,
+            "carbohydrate": 17.0,
+            "protein": 3.0
+        }
+    },
+    {
+        "id": 267,
+        "created_at": "2026-08-31T02:43:09.075233",
+        "product_name": "a",
+        "ingredients": [
+            "cocoa beans",
+            "cocoa",
+            "butter"
+        ],
+        "allergens": [
+            "Egg",
+            "Peanut"
+        ],
+        "allergens_may_contain": [],
+        "allergens_free_from": [
+            "Wheat"
+        ],
+        "nutrition": {
+            "total_fat": 22.0,
+            "protein": 5.0
+        }
+    },
+    {
+        "id": 268,
+        "created_at": "2026-08-31T02:43:28.817457",
+        "product_name": "alamy a",
+        "ingredients": [],
+        "allergens": [],
+        "allergens_may_contain": [],
+        "allergens_free_from": [],
+        "nutrition": {
+            "calories": 130.0,
+            "total_fat": 1.0,
+            "sodium": 480.0,
+            "carbohydrate": 25.0,
+            "protein": 6.0
+        }
+    },
+    {
+        "id": 269,
+        "created_at": "2026-08-31T02:43:41.351585",
+        "product_name": "Cereal with",
+        "ingredients": [],
+        "allergens": [
+            "Milk"
+        ],
+        "allergens_may_contain": [],
+        "allergens_free_from": [],
+        "nutrition": {
+            "calories": 240.0,
+            "total_fat": 8.0,
+            "sodium": 50.0,
+            "carbohydrate": 37.0,
+            "protein": 4.0
+        }
+    },
+    {
+        "id": 270,
+        "created_at": "2026-08-31T02:44:17.197204",
+        "product_name": "Milk Chocolate (Sugar, Cocoa",
+        "ingredients": [
+            "milk"
+        ],
+        "allergens": [
+            "Milk",
+            "Soy"
+        ],
+        "allergens_may_contain": [
+            "Peanut",
+            "Tree Nut",
+            "Wheat"
+        ],
+        "allergens_free_from": [],
+        "nutrition": {
+            "total_fat": 9.0,
+            "sodium": 20.0,
+            "carbohydrate": 27.0,
+            "protein": 2.0
+        }
+    },
+    {
+        "id": 271,
+        "created_at": "2026-08-31T02:44:40.841244",
+        "product_name": "NEEE EEEEONN",
+        "ingredients": [],
+        "allergens": [],
+        "allergens_may_contain": [],
+        "allergens_free_from": [],
+        "nutrition": {
+            "total_fat": 0.0,
+            "sodium": 20.0,
+            "carbohydrate": 1.0,
+            "protein": 80.0
+        }
+    },
+    {
+        "id": 272,
+        "created_at": "2026-08-31T02:45:01.018340",
+        "product_name": "DITIBUTED YLE A",
+        "ingredients": [
+            "fat",
+            "ditibuted yle a",
+            "contains",
+            "bertoll d aioe ois an"
+        ],
+        "allergens": [],
+        "allergens_may_contain": [],
+        "allergens_free_from": [],
+        "nutrition": {
+            "total_fat": 14.0,
+            "sodium": 1.0,
+            "carbohydrate": 0.0
+        }
+    },
+    {
+        "id": 273,
+        "created_at": "2026-08-31T02:45:26.414626",
+        "product_name": "Polyunsat. oa Chols. %DV",
+        "ingredients": [
+            "almonds",
+            "contains",
+            "tree",
+            "nuts almonds"
+        ],
+        "allergens": [
+            "Almond",
+            "Milk",
+            "Sesame",
+            "Soy",
+            "Wheat"
+        ],
+        "allergens_may_contain": [
+            "Peanut",
+            "Tree Nut"
+        ],
+        "allergens_free_from": [],
+        "nutrition": {
+            "total_fat": 14.0,
+            "sodium": 0.0,
+            "carbohydrate": 6.0,
+            "protein": 6.0
+        }
+    },
+    {
+        "id": 274,
+        "created_at": "2026-08-31T02:58:51.065832",
+        "product_name": "WHOLE Milk",
+        "ingredients": [
+            "240ml",
+            "milk"
+        ],
+        "allergens": [
+            "Milk"
+        ],
+        "allergens_may_contain": [],
+        "allergens_free_from": [],
+        "nutrition": {
+            "calories": 150.0,
+            "total_fat": 8.0,
+            "sodium": 125.0,
+            "carbohydrate": 12.0,
+            "protein": 8.0
+        }
+    },
+    {
+        "id": 275,
+        "created_at": "2026-08-31T02:59:08.719015",
+        "product_name": "PRESERMITINES OR Flavor",
+        "ingredients": [
+            "whole grain oats",
+            "sugar",
+            "salt",
+            "natural flavor 123-068"
+        ],
+        "allergens": [],
+        "allergens_may_contain": [],
+        "allergens_free_from": [],
+        "nutrition": {
+            "calories": 180.0,
+            "total_fat": 2.5,
+            "sodium": 290.0,
+            "carbohydrate": 13.0,
+            "protein": 4.0
+        }
+    },
+    {
+        "id": 276,
+        "created_at": "2026-08-31T02:59:27.176950",
+        "product_name": "General Milk",
+        "ingredients": [],
+        "allergens": [
+            "Milk"
+        ],
+        "allergens_may_contain": [],
+        "allergens_free_from": [],
+        "nutrition": {
+            "calories": 110.0,
+            "total_fat": 1.5,
+            "sodium": 160.0,
+            "carbohydrate": 23.0,
+            "protein": 3.0
+        }
+    },
+    {
+        "id": 277,
+        "created_at": "2026-08-31T02:59:48.133441",
+        "product_name": "Mi",
+        "ingredients": [
+            "dry roasted peanuts",
+            "germinated yellow corn flour",
+            "soy flour",
+            "sugar",
+            "salt",
+            "soy lelecithin",
+            "rolled oats",
+            "peanut butter",
+            "high oleic canola oil cereal crisp dark refiners syrup",
+            "water",
+            "soy le lelecithin"
+        ],
+        "allergens": [
+            "Almond",
+            "Egg",
+            "Milk",
+            "Peanut",
+            "Soy",
+            "Wheat"
+        ],
+        "allergens_may_contain": [],
+        "allergens_free_from": [],
+        "nutrition": {
+            "total_fat": 6.0,
+            "sodium": 140.0,
+            "carbohydrate": 29.0,
+            "protein": 5.0
+        }
+    },
+    {
+        "id": 278,
+        "created_at": "2026-08-31T02:59:55.724435",
+        "product_name": "per Contains",
+        "ingredients": [
+            "wheat flour",
+            "niacin",
+            "reduced iron",
+            "vitamin b [thiamin mononitrate] vitamin b [riboflavin]",
+            "folic acid",
+            "enriched flour",
+            "vegetable oil soybean and palm oil with tbhq flour"
+        ],
+        "allergens": [
+            "Soy",
+            "Wheat"
+        ],
+        "allergens_may_contain": [],
+        "allergens_free_from": [],
+        "nutrition": {
+            "total_fat": 8.0,
+            "sodium": 230.0,
+            "carbohydrate": 17.0,
+            "protein": 3.0
+        }
+    },
+    {
+        "id": 279,
+        "created_at": "2026-08-31T03:00:23.289002",
+        "product_name": "a",
+        "ingredients": [
+            "cocoa beans",
+            "cocoa butter"
+        ],
+        "allergens": [
+            "Egg",
+            "Peanut"
+        ],
+        "allergens_may_contain": [],
+        "allergens_free_from": [
+            "Wheat"
+        ],
+        "nutrition": {
+            "total_fat": 22.0,
+            "protein": 5.0
+        }
+    },
+    {
+        "id": 280,
+        "created_at": "2026-08-31T03:00:39.562885",
+        "product_name": "alamy a",
+        "ingredients": [],
+        "allergens": [],
+        "allergens_may_contain": [],
+        "allergens_free_from": [],
+        "nutrition": {
+            "calories": 130.0,
+            "total_fat": 1.0,
+            "sodium": 480.0,
+            "carbohydrate": 25.0,
+            "protein": 6.0
+        }
+    },
+    {
+        "id": 281,
+        "created_at": "2026-08-31T03:00:48.524864",
+        "product_name": "Cereal with",
+        "ingredients": [],
+        "allergens": [
+            "Milk"
+        ],
+        "allergens_may_contain": [],
+        "allergens_free_from": [],
+        "nutrition": {
+            "calories": 240.0,
+            "total_fat": 8.0,
+            "sodium": 50.0,
+            "carbohydrate": 37.0,
+            "protein": 4.0
+        }
+    },
+    {
+        "id": 282,
+        "created_at": "2026-08-31T03:01:10.445842",
+        "product_name": "Milk Chocolate (Sugar, Cocoa",
+        "ingredients": [
+            "sugar",
+            "cocoa butter",
+            "whole milk",
+            "chocolate liquor",
+            "butter oil",
+            "soy lelecithin",
+            "vanillin",
+            "salt",
+            "40g",
+            "milk chocolate",
+            "raisins",
+            "dextrin",
+            "maltodextrin",
+            "size pieces confectioner's glaze"
+        ],
+        "allergens": [
+            "Milk",
+            "Soy"
+        ],
+        "allergens_may_contain": [
+            "Peanut",
+            "Tree Nut",
+            "Wheat"
+        ],
+        "allergens_free_from": [],
+        "nutrition": {
+            "total_fat": 9.0,
+            "sodium": 20.0,
+            "carbohydrate": 27.0,
+            "protein": 2.0
+        }
+    },
+    {
+        "id": 283,
+        "created_at": "2026-08-31T03:01:27.425761",
+        "product_name": "NEEE EEEEONN",
+        "ingredients": [],
+        "allergens": [],
+        "allergens_may_contain": [],
+        "allergens_free_from": [],
+        "nutrition": {
+            "total_fat": 0.0,
+            "sodium": 20.0,
+            "carbohydrate": 1.0,
+            "protein": 80.0
+        }
+    },
+    {
+        "id": 284,
+        "created_at": "2026-08-31T03:01:44.343410",
+        "product_name": "DITIBUTED YLE A",
+        "ingredients": [],
+        "allergens": [],
+        "allergens_may_contain": [],
+        "allergens_free_from": [],
+        "nutrition": {
+            "total_fat": 14.0,
+            "sodium": 1.0,
+            "carbohydrate": 0.0
+        }
+    },
+    {
+        "id": 285,
+        "created_at": "2026-08-31T03:02:02.818390",
+        "product_name": "Polyunsat. oa Chols. %DV",
+        "ingredients": [
+            "almonds"
+        ],
+        "allergens": [
+            "Almond",
+            "Milk",
+            "Sesame",
+            "Soy",
+            "Wheat"
+        ],
+        "allergens_may_contain": [
+            "Peanut",
+            "Tree Nut"
+        ],
+        "allergens_free_from": [],
+        "nutrition": {
+            "total_fat": 14.0,
+            "sodium": 0.0,
+            "carbohydrate": 6.0,
+            "protein": 6.0
+        }
+    },
+    {
+        "id": 286,
+        "created_at": "2026-08-31T03:15:14.837970",
+        "product_name": "WHOLE Milk",
+        "ingredients": [
+            "milk"
+        ],
+        "allergens": [
+            "Milk"
+        ],
+        "allergens_may_contain": [],
+        "allergens_free_from": [],
+        "nutrition": {
+            "calories": 150.0,
+            "total_fat": 8.0,
+            "sodium": 125.0,
+            "carbohydrate": 12.0,
+            "protein": 8.0
+        }
+    },
+    {
+        "id": 287,
+        "created_at": "2026-08-31T03:15:27.801722",
+        "product_name": "PRESERMITINES OR Flavor",
+        "ingredients": [
+            "whole grain oats",
+            "sugar",
+            "salt",
+            "natural flavor 123-068"
+        ],
+        "allergens": [],
+        "allergens_may_contain": [],
+        "allergens_free_from": [],
+        "nutrition": {
+            "calories": 180.0,
+            "total_fat": 2.5,
+            "sodium": 290.0,
+            "carbohydrate": 13.0,
+            "protein": 4.0
+        }
+    },
+    {
+        "id": 288,
+        "created_at": "2026-08-31T03:15:45.983195",
+        "product_name": "General Milk",
+        "ingredients": [],
+        "allergens": [
+            "Milk"
+        ],
+        "allergens_may_contain": [],
+        "allergens_free_from": [],
+        "nutrition": {
+            "calories": 110.0,
+            "total_fat": 1.5,
+            "sodium": 160.0,
+            "carbohydrate": 23.0,
+            "protein": 3.0
+        }
+    },
+    {
+        "id": 289,
+        "created_at": "2026-08-31T03:16:13.163595",
+        "product_name": "Mi",
+        "ingredients": [
+            "dry roasted peanuts",
+            "germinated yellow corn flour",
+            "soy flour",
+            "sugar",
+            "salt",
+            "soy lecithin",
+            "rolled oats",
+            "peanut butter",
+            "high oleic canola oil cereal crisp dark refiners syrup",
+            "water"
+        ],
+        "allergens": [
+            "Almond",
+            "Egg",
+            "Milk",
+            "Peanut",
+            "Soy",
+            "Wheat"
+        ],
+        "allergens_may_contain": [],
+        "allergens_free_from": [],
+        "nutrition": {
+            "total_fat": 6.0,
+            "sodium": 140.0,
+            "carbohydrate": 29.0,
+            "protein": 5.0
+        }
+    },
+    {
+        "id": 290,
+        "created_at": "2026-08-31T03:16:24.228072",
+        "product_name": "per Contains",
+        "ingredients": [
+            "wheat flour",
+            "niacin",
+            "reduced iron",
+            "vitamin b [thiamin mononitrate] vitamin b [riboflavin]",
+            "folic acid",
+            "enriched flour",
+            "vegetable oil soybean and palm oil with tbhq flour"
+        ],
+        "allergens": [
+            "Soy",
+            "Wheat"
+        ],
+        "allergens_may_contain": [],
+        "allergens_free_from": [],
+        "nutrition": {
+            "total_fat": 8.0,
+            "sodium": 230.0,
+            "carbohydrate": 17.0,
+            "protein": 3.0
+        }
+    },
+    {
+        "id": 291,
+        "created_at": "2026-08-31T03:17:00.773890",
+        "product_name": "a",
+        "ingredients": [
+            "cocoa beans",
+            "cocoa butter"
+        ],
+        "allergens": [
+            "Egg",
+            "Peanut"
+        ],
+        "allergens_may_contain": [],
+        "allergens_free_from": [
+            "Wheat"
+        ],
+        "nutrition": {
+            "total_fat": 22.0,
+            "protein": 5.0
+        }
+    },
+    {
+        "id": 292,
+        "created_at": "2026-08-31T03:17:19.714050",
+        "product_name": "alamy a",
+        "ingredients": [],
+        "allergens": [],
+        "allergens_may_contain": [],
+        "allergens_free_from": [],
+        "nutrition": {
+            "calories": 130.0,
+            "total_fat": 1.0,
+            "sodium": 480.0,
+            "carbohydrate": 25.0,
+            "protein": 6.0
+        }
+    },
+    {
+        "id": 293,
+        "created_at": "2026-08-31T03:17:28.894283",
+        "product_name": "Cereal with",
+        "ingredients": [],
+        "allergens": [
+            "Milk"
+        ],
+        "allergens_may_contain": [],
+        "allergens_free_from": [],
+        "nutrition": {
+            "calories": 240.0,
+            "total_fat": 8.0,
+            "sodium": 50.0,
+            "carbohydrate": 37.0,
+            "protein": 4.0
+        }
+    },
+    {
+        "id": 294,
+        "created_at": "2026-08-31T03:17:57.486311",
+        "product_name": "Milk Chocolate (Sugar, Cocoa",
+        "ingredients": [
+            "sugar",
+            "cocoa butter",
+            "whole milk",
+            "chocolate liquor",
+            "butter oil",
+            "soy lecithin",
+            "vanillin",
+            "salt",
+            "milk chocolate",
+            "raisins",
+            "dextrin",
+            "maltodextrin",
+            "confectioner's glaze"
+        ],
+        "allergens": [
+            "Milk",
+            "Soy"
+        ],
+        "allergens_may_contain": [
+            "Peanut",
+            "Tree Nut",
+            "Wheat"
+        ],
+        "allergens_free_from": [],
+        "nutrition": {
+            "total_fat": 9.0,
+            "sodium": 20.0,
+            "carbohydrate": 27.0,
+            "protein": 2.0
+        }
+    },
+    {
+        "id": 295,
+        "created_at": "2026-08-31T03:18:17.709428",
+        "product_name": "NEEE EEEEONN",
+        "ingredients": [],
+        "allergens": [],
+        "allergens_may_contain": [],
+        "allergens_free_from": [],
+        "nutrition": {
+            "total_fat": 0.0,
+            "sodium": 20.0,
+            "carbohydrate": 1.0,
+            "protein": 80.0
+        }
+    },
+    {
+        "id": 296,
+        "created_at": "2026-08-31T03:18:38.821482",
+        "product_name": "DITIBUTED YLE A",
+        "ingredients": [],
+        "allergens": [],
+        "allergens_may_contain": [],
+        "allergens_free_from": [],
+        "nutrition": {
+            "total_fat": 14.0,
+            "sodium": 1.0,
+            "carbohydrate": 0.0
+        }
+    },
+    {
+        "id": 297,
+        "created_at": "2026-08-31T03:19:00.839197",
+        "product_name": "Polyunsat. oa Chols. %DV",
+        "ingredients": [
+            "almonds"
+        ],
+        "allergens": [
+            "Almond",
+            "Milk",
+            "Sesame",
+            "Soy",
+            "Wheat"
+        ],
+        "allergens_may_contain": [
+            "Peanut",
+            "Tree Nut"
+        ],
+        "allergens_free_from": [],
+        "nutrition": {
+            "total_fat": 14.0,
+            "sodium": 0.0,
+            "carbohydrate": 6.0,
+            "protein": 6.0
+        }
     }
 ]

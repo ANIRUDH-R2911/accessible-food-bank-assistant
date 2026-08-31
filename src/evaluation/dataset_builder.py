@@ -27,8 +27,6 @@ class EvaluationDataset:
             "ground_truth_ocr",
             "ocr_output",
             "corrected_output",
-            "expected_product",
-            "predicted_product",
             "expected_ingredients",
             "predicted_ingredients",
             "expected_nutrition",

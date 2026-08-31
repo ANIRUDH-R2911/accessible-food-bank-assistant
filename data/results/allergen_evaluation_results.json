@@ -1,12 +1,12 @@
 {
     "metrics": {
-        "images_evaluated": 3,
-        "tp": 5,
-        "fp": 4,
-        "fn": 1,
-        "precision": 0.5555555555555556,
-        "recall": 0.8333333333333334,
-        "f1": 0.6666666666666667
+        "images_evaluated": 5,
+        "tp": 7,
+        "fp": 9,
+        "fn": 2,
+        "precision": 0.4375,
+        "recall": 0.7777777777777778,
+        "f1": 0.56
     },
     "results": [
         {
@@ -57,6 +57,42 @@
                 "milk"
             ],
             "extra": []
+        },
+        {
+            "image_name": "Chocolates.jpeg",
+            "ground_truth": [
+                "milk",
+                "soy"
+            ],
+            "prediction": [
+                "milk",
+                "soy"
+            ],
+            "missed": [],
+            "extra": []
+        },
+        {
+            "image_name": "Almonds.jpeg",
+            "ground_truth": [
+                "tree nuts"
+            ],
+            "prediction": [
+                "almond",
+                "milk",
+                "sesame",
+                "soy",
+                "wheat"
+            ],
+            "missed": [
+                "tree nuts"
+            ],
+            "extra": [
+                "almond",
+                "milk",
+                "sesame",
+                "soy",
+                "wheat"
+            ]
         }
     ]
 }

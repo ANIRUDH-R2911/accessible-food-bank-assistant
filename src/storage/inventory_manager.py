@@ -38,15 +38,6 @@ class InventoryManager:
     def get_all_products(self):
         return self.load_inventory()
     
-    def search_by_name(self, product_name):
-        inventory = self.load_inventory()
-        results = []
-        for product in inventory:
-            if product_name.lower() in product["product_name"].lower():
-                results.append(product)
-        
-        return results
-    
     def search_by_ingredient(self, ingredient):
         inventory = self.load_inventory()
         results = []

@@ -6,15 +6,12 @@
         "ground_truth_ocr": "{WHOLE MILK VITAMIN D\nNutrition Facts\n8 servings per container\nServing size 1 cup (240mL)\nCalories 150\nTotal Fat 8g\nSaturated Fat 5g\nTrans Fat 0g\nCholesterol 35mg\nSodium 125mg\nTotal Carbohydrate 12g\nDietary Fiber 0g\nTotal Sugars 12g\nIncludes 0g Added Sugars\nProtein 8g\nVitamin D 2.5mcg\nCalcium 300mg\nIron 0mg\nPotassium 400mg\nIngredients: Milk, Vitamin D3\nContains Milk}",
         "ocr_output": "WHOLE\nMILK\nVITAMIN D\nNutrition Facts\nINGREDIENTS: MILK.\nVITAMIN D3\n8 servings per container\nCONTAINS MILK.\nServing size\n1 cup (240mL)\nAmount per serving\nCalories\n150\n% Baily Value\"\nTotal Fat 8g\n10%\nSELL BY DATE AND\nSaturated Fat 5g\n25%\nPLANT  STAMPED ON\nTrans Fat Og\nPACKAGE\nCholesterol 35mg\n12%\nSodium 125mg\n5%\nTotal Carbohydrate 12g\nDietary Fiber Og\n0%\nTotal Sugars 12g\nIncludes Og Added Sugars\n0%\nProtein8g\n16%\nVilamin D2 5mcg 10%Caloun 300ng 25%\nIron Omg 0\nPetassium 400ng8%\nCiy WU MS yoUTOV TNOY a RuT\n4tugoc0c0oay2000\ncesadMaM\nMhers",
         "corrected_output": "WHOLE\nMilk\nVitamin D\nNutrition Fat\nIngredients: Milk.\nVitamin D3\n8 Serving per Contains\nContains Milk.\nServing size\n1 cup (240mL)\nAmount per Serving\nCalories\n150\n% Daily Value\"\nTotal Fat 8g\n10%\nSELL BY DATE AND\nSaturated Fat 5g\n25%\nPLANT  STAMPED ON\nTrans Fat Og\nPACKAGE\nCholesterol 35mg\n12%\nSodium 125mg\n5%\nTotal Carbohydrate 12g\nDietary Fiber Og\n0%\nTotal Sugars 12g\nIncludes Og Added Sugars\n0%\nProtein8g\n16%\nVitamin D2 5mcg 10%calcium 300ng 25%\nIron Omg 0\npotassium 400ng8%\nCiy WU MS yoUTOV TNOY a RuT\n4tugoc0c0oay2000\ncesadMaM\nMhers",
-        "expected_product": "Whole Milk Vitamin D",
-        "predicted_product": "WHOLE Milk",
         "expected_ingredients": [
             "milk",
             "vitamin d3"
         ],
         "predicted_ingredients": [
-            "milk",
-            "vitamin d3"
+            "milk"
         ],
         "expected_allergens": [
             "milk"
@@ -45,8 +42,6 @@
         "ground_truth_ocr": "Nutrition Facts\n1 serving per container\nServing size 1 package (48g)\nCalories 180\nTotal Fat 2.5g\nSaturated Fat 0.5g\nTrans Fat 0g\nPolyunsaturated Fat 0.5g\nMonounsaturated Fat 1g\nCholesterol 0mg\nSodium 290mg\nTotal Carbohydrate 37g\nDietary Fiber 3g\nTotal Sugars 14g\nIncludes 14g Added Sugars\nProtein 4g\nVitamin D 0mcg\nCalcium 20mg\nIron 1.3mg\nPotassium 170mg\nIngredients: Whole Grain Oats, Sugar, Salt, Natural Flavor",
         "ocr_output": "NO\n\nARTIFICIAL\nPRESERMITINES\nOR FLAVORS\nNutrition\nFacts\nVitamin D Omcg 0% \u2022 Calcom 2lng\n5\nIron 1.3mg\n6%Potassium 30ong\nserving per\ncontainer\nT\nServing\nsize\n1 package (48g)\nThe % Daly ae(OV) as y hn)\nin a saring of bod contbues ba d d.\ncalorkes a day is used for geres nuiarda\nAmount per serving\n180\nINGREDIENTS: WHOLE GRAN GATS,SISR\nCalories\nSALT, NATURAL FLAVOR\n(123-068\n% Daily Value\"\nDISTRIBUTED BY.\nTotal Fat 2.5g\n3%\nTHE QUAKER OATS COMPANY\nP.O. BOX 049033\nSaturated Fat 0.5g\n3%\nCHICAGO, IL 60604-9003 U.S.A\n\u00a92020 The Quaker Oas Compan\nTrans\nFat Og\nWe're here to help.\nPolyunsaturated Fat 0.5g\nQuakereats.com or 800555.6287\nMonounsaturated Fat 1g\nPlease have package asalable nee alin\nCholesterol\nOmg\n0%\nsmartlobel\"\nSodium\n290mg\n13%\nTotal Carb.\n13%\n37g\nFiber\n3g\n11%\nDietary\nOW\n180\nTotal Sugars\n14g\n27%\nScan here for noe foi\nIncl. 14g Added Sugars\narat\nProtein 4g\n1-800-555-6287\nCURSES\nSE AX",
         "corrected_output": "NO\nARTIFICIAL\nPRESERMITINES\nOR Flavor\nNutrition\nFat\nVitamin D Omcg 0% \u2022 Calcium 2lng\n5\nIron 1.3mg\n6%Potassium 30ong\nServing per\nContains\nT\nServing\nsize\n1 package (48g)\nThe % Daily ae(OV) as y hn)\nin a Serving of bod contbues ba d d.\nCalories a Daily is used Flour geres nuiarda\nAmount per Serving\n180\nIngredients: WHOLE grain oats,sugar\nCalories\nSalt, Natural Flavor\n(123-068\n% Daily Value\"\nDISTRIBUTED BY.\nTotal Fat 2.5g\n3%\nTHE QUAKER Oats COMPANY\nP.O. BOX 049033\nSaturated Fat 0.5g\n3%\nCHICAGO, Oil 60604-9003 U.S.A\n\u00a92020 The Quaker Oats Compan\nTrans\nFat Og\nWe're here to help.\nUnsaturated Fat 0.5g\nQuakereats.corn or 800555.6287\nUnsaturated Fat 1g\nPlease have package asalable nee alin\nCholesterol\nOmg\n0%\nsmartlobel\"\nSodium\n290mg\n13%\nTotal Carb.\n13%\n37g\nFiber\n3g\n11%\nDietary\nOW\n180\nTotal Sugars\n14g\n27%\nScan here Flour noe foi\nIncl. 14g Added Sugars\narat\nProtein 4g\n1-800-555-6287\nCURSES\nSE AX",
-        "expected_product": "Quaker Oatmeal",
-        "predicted_product": "PRESERMITINES OR Flavor",
         "expected_ingredients": [
             "whole grain oats",
             "sugar",
@@ -57,7 +52,7 @@
             "whole grain oats",
             "sugar",
             "salt",
-            "natural flavor"
+            "natural flavor 123-068"
         ],
         "expected_allergens": [],
         "predicted_allergens": [],
@@ -83,8 +78,6 @@
         "ground_truth_ocr": "Honey Nut Cheerios\nMade With Real Honey\nNutrition Facts\nPer 3/4 cup (29g)\nCalories 110\nFat 1.5g\nSaturated Fat 0.3g\nTrans Fat 0g\nCholesterol 0mg\nSodium 160mg\nCarbohydrate 23g\nFibre 2g\nSugars 9g\nProtein 3g\nVitamin A\nVitamin C\nCalcium\nIron\nVitamin D\nNiacin\nVitamin B6\nFolate\nPantothenate\nPhosphorus\nMagnesium\nZinc",
         "ocr_output": "E\n&\nNutrition Facts\nGeneral\nMIl\nPer 3/4 cup (29 g)\nAmount\nCereal\nPlus 125 mL\nOnly\n2% p.s. Milk\nCalories\n110\n170\nHoney Nut\n% Daily Value\nFat\n1.5 g*\n2%\n6 %\nCheerios\nSaturated 0.3 g\n2%\n10 %\nTrans\n0 g\n+\nCholesterol\n0\nmg\nSodium\n160\nmg\n7%\n9 %\nMADE WITH Real Honey\nCarbohydrate\n23\ng\n8 %\n10 %\nFibre\n29\n8%\n8 %\nSugars\n9\ng\nProtein\n3\ng\nVitamin A\n0 %\n6%\nVitamin \n0%\n0%\nCalcium\n10 %\n25 %\n30 %\n30 %\nIron\n0%\n30 %\nVitamin D\nNiacin\n6%\n15\n%\nVitamin B6\n10 %\n15\n%\n8 %\n10 %\nOAT FIBRE\nFolate\nHELPS LOWER\n6%\n10 %\nPantothenate\nCHOLESTEROL\nPhosphorus\n8 %\n20 %\nMagnesium\n10 %\n15 %\nZinc\n6 %\n10 %\nRM OOIFSONYNOHERMCEREALHDE\nWIDH US PRUNIDS ZON OF THE ONLY AMOLNT OF THE\nAmount in cereal",
         "corrected_output": "E\n&\nNutrition Fat\nGeneral\nMilk\nPer 3/4 cup (29 g)\nAmount\nCereal\nPlus 125 mL\nOnly\n2% p.s. Milk\nCalories\n110\n170\nHoney Nut\n% Daily Value\nFat\n1.5 g*\n2%\n6 %\nCheerios\nSaturated 0.3 g\n2%\n10 %\nTrans\n0 g\n+\nCholesterol\n0\nmg\nSodium\n160\nmg\n7%\n9 %\nMADE WITH Real Honey\nCarbohydrate\n23\ng\n8 %\n10 %\nFibre\n29\n8%\n8 %\nSugars\n9\ng\nProtein\n3\ng\nVitamin A\n0 %\n6%\nVitamin\n0%\n0%\nCalcium\n10 %\n25 %\n30 %\n30 %\nIron\n0%\n30 %\nVitamin D\nNiacin\n6%\n15\n%\nVitamin B6\n10 %\n15\n%\n8 %\n10 %\nOats Fibre\nFolate\nHELPS LOWER\n6%\n10 %\nPantothenate\nCholesterol\nPhosphorus\n8 %\n20 %\nMagnesium\n10 %\n15 %\nZinc\n6 %\n10 %\nRM OOIFSONYNOHERMCEREALHDE\nWIDH US PRUNIDS ZON OF THE ONLY AMOLNT OF THE\nAmount in cereal",
-        "expected_product": "Honey Nut Cheerios",
-        "predicted_product": "General Milk",
         "expected_ingredients": [],
         "predicted_ingredients": [],
         "expected_allergens": [],
@@ -113,8 +106,6 @@
         "ground_truth_ocr": "Nutrition Facts\n6 servings per container\nServing size 2 bars (42g)\nCalories 190\nTotal Fat 6g\nSaturated Fat 1g\nTrans Fat 0g\nCholesterol 0mg\nSodium 140mg\nTotal Carbohydrate 29g\nDietary Fiber 3g\nTotal Sugars 11g\nIncludes 11g Added Sugars\nProtein 5g\nVitamin D 0mcg\nCalcium 30mg\nIron 1.3mg\nPotassium 114mg\nIngredients: Rolled Oats, Sugar, Peanut Butter, Dry Roasted Peanuts, High Oleic Canola Oil, Cereal Crisp, Germinated Yellow Corn Flour, Soy Flour, Sugar, Salt, Soy Lecithin, Dark Refiners Syrup, Water, Salt, Soy Lecithin, Sodium Bicarbonate\nContains Peanuts, Soy\nMay Contain Milk, Almonds, Eggs and Wheat",
         "ocr_output": "Nutrition Facts\nMi\n6 servings per container\nServing size 2 bars (42g)\nAmount per serving\n190\nCalories\n% Daily Value*\nTotal Fat 6g\n8%\nSaturated Fat 1g\n5%\nTrans Fat Og\nCholesterol Omg\n0%\nSodium 140mg\n6%\nTotal Carbohydrate 29g\n11%\nDietary Fiber 3g\n11%\nTotal Sugars 11g\nSERVING SUGG\nIncludes 11g Added Sugars 22%\nENLARGED TO SHOW T\nProtein 5g\nVitamin D Omcg\n0%\nCalcium 30mg\n2%\nIron 1.3mg\n8%\nPotassium 114mg\n2%\nThe % Daily Value (DV) tells you how much a nuttient\nin a serving of tood contributes to a daily diet. 2,000\ncakoriet a day is used for general rulrition advice\nINGREDIENTS: ROLLED GATS. SUGAR, PEANUT BUTTER\n(DRY ROASTED PEANUTS), HIGH OLFIC CANOLA OIL CEREAL\nCROSP (DEGERIMNATED YELLOW CORN FLOUR SOY FLOUR\nSUGAR. SALT SOY LECITHIN) DARK RETINERS SYRUP\nWATEH SALT, SOY LE CITHIN, SODUM BICARBONATE\nOI\nTwice\nCOHTAINS: PEANUTS, SOY MAY CONTABL MILK, ALMONDS.\nEOGS AND WNEAT\neNice\nDIST& SOLD EXCLUSIVELY BY\nAI DH\nBATAVALEOSIO",
         "corrected_output": "Nutrition Fat\nMi\n6 Serving per Contains\nServing size 2 bars (42g)\nAmount per Serving\n190\nCalories\n% Daily Value*\nTotal Fat 6g\n8%\nSaturated Fat 1g\n5%\nTrans Fat Og\nCholesterol Omg\n0%\nSodium 140mg\n6%\nTotal Carbohydrate 29g\n11%\nDietary Fiber 3g\n11%\nTotal Sugars 11g\nServing SUGG\nIncludes 11g Added Sugars 22%\nENLARGED TO SHOW T\nProtein 5g\nVitamin D Omcg\n0%\nCalcium 30mg\n2%\nIron 1.3mg\n8%\nPotassium 114mg\n2%\nThe % Daily Value (DV) tells you how much a nuttient\nin a Serving of tood contributes to a Daily diet. 2,000\nCalories a Daily is used Flour general Nutrition advice\nIngredients: ROLLED oats. Sugar, Peanut Butter\n(DRY ROASTED Peanuts), HIGH OLFIC CANOLA Oil CEREAL\nCROSP (DEGERIMNATED YELLOW Corn Flour Soy Flour\nSugar. Salt Soy Lecithin) DARK RETINERS Syrup\nWATEH Salt, Soy LE Lecithin, Sodium BICARBONATE\nOil\nTwice\nContains: Peanuts, Soy MAY CONTABL Milk, ALMONDS.\nEggs AND Wheat\neNice\nDIST& SOLD EXCLUSIVELY BY\nAI DH\nBATAVALEOSIO",
-        "expected_product": "Granola Bar",
-        "predicted_product": "Mi",
         "expected_ingredients": [
             "rolled oats",
             "sugar",
@@ -131,11 +122,16 @@
             "baking soda"
         ],
         "predicted_ingredients": [
-            "rolled oats",
-            "sugar",
-            "peanut butter",
             "dry roasted peanuts",
-            "high oleic canola oil cereal"
+            "germinated yellow corn flour",
+            "soy flour",
+            "sugar",
+            "salt",
+            "soy lecithin",
+            "rolled oats",
+            "peanut butter",
+            "high oleic canola oil cereal crisp dark refiners syrup",
+            "water"
         ],
         "expected_allergens": [
             "peanuts",
@@ -171,12 +167,15 @@
         "ground_truth_ocr": "Nutrition Facts\nAbout 12 servings per container\nServing size 27 Crackers (30g)\nCalories 150\nTotal Fat 8g\nSaturated Fat 2g\nTrans Fat 0g\nPolyunsaturated Fat 4g\nMonounsaturated Fat 2g\nCholesterol 0mg\nSodium 230mg\nTotal Carbohydrate 17g\nDietary Fiber less than 1g\nTotal Sugars 0g\nIncludes 0g Added Sugars\nProtein 3g\nVitamin D 0mcg\nCalcium 40mg\nIron 1.1mg\nPotassium 30mg\nIngredients: Enriched Flour, Vegetable Oil, Soybean Oil, Cheese Made With Skim Milk",
         "ocr_output": "Nutrition Facts\nAbout 12 servings\nper\ncontainer\nServing size\n27\nCrackers (30g)\nAmount per serving\n150\nCalories\n% Daily Value*\nTotal Fat 8g\n10%\nSaturated Fat 2g\n10%\nTrans Fat Og\nPolyunsaturated Fat 4g\nMonounsaturated Fat 2g\nCholesterol\nOmg\n0%\nSodium\n230mg\n10%\nTotal\nCarbohydrate 17g\n6%\nDietary Fiber\n<1g\n2%\nTotal\nSugars\n0g\nIncludes\nOg Added Sugars\n0%\nProtein 3g\nVitamin D Omcg 0%\nCalcium 40mg 2%\nIron 1.1mg 6%\nPotassium 30mg 0%\nT  Day VDV  you  uch a nt n a sving of food\n \nIngredients: Enriched flour (wheat flour, niacin,\nreduced iron, vitamin B [thiamin mononitrate]\nvitamin B [riboflavin], folic acid), vegetable oil\n(soybean and palm oil with TBHQ for",
         "corrected_output": "Nutrition Fat\nAbout 12 Serving\nper\nContains\nServing size\n27\nCrackers (30g)\nAmount per Serving\n150\nCalories\n% Daily Value*\nTotal Fat 8g\n10%\nSaturated Fat 2g\n10%\nTrans Fat Og\nUnsaturated Fat 4g\nUnsaturated Fat 2g\nCholesterol\nOmg\n0%\nSodium\n230mg\n10%\nTotal\nCarbohydrate 17g\n6%\nDietary Fiber\n<1g\n2%\nTotal\nSugars\n0g\nIncludes\nOg Added Sugars\n0%\nProtein 3g\nVitamin D Omcg 0%\nCalcium 40mg 2%\nIron 1.1mg 6%\nPotassium 30mg 0%\nT  Daily VDV  you  uch a nt n a Serving of food\nIngredients: Enriched Flour (Wheat Flour, niacin,\nreduced Iron, Vitamin B [thiamin mononitrate]\nVitamin B [riboflavin], folic acid), vegetable Oil\n(Soybean and Palm Oil with TBHQ Flour",
-        "expected_product": "Crackers",
-        "predicted_product": "per Contains",
         "expected_ingredients": [],
         "predicted_ingredients": [
-            "vegetable oil",
-            "soybean and palm oil with tbhq flour"
+            "wheat flour",
+            "niacin",
+            "reduced iron",
+            "vitamin b [thiamin mononitrate] vitamin b [riboflavin]",
+            "folic acid",
+            "enriched flour",
+            "vegetable oil soybean and palm oil with tbhq flour"
         ],
         "expected_allergens": [
             "milk",
@@ -208,16 +207,13 @@
         "ground_truth_ocr": "Nutrition Facts\n2 servings per bar\nServing size 1/2 bar (42.5g)\nCalories 238\nTotal Fat 22g\nSaturated Fat 12g\nTrans Fat 0g\nCholesterol 0mg\nSodium 0mg\nTotal Carbohydrate 10g\nDietary Fiber 4g\nTotal Sugars 0g\nIncludes 0g Added Sugars\nProtein 5g\nVitamin D\nCalcium\nIron\nPotassium\nIngredients: Cocoa Beans, Cocoa Butter\nMade in a facility free of wheat, peanuts and eggs",
         "ocr_output": "Nutrition Fac\n2 servings per bar\n1/2 bar (42.5g)\nServing size\na\nAmount per serving\n238\nCalories\n% Daily Value\n33%\nTotal Fat 22g\n60%\nSaturated Fat 12g\na\no\nTrans Fat Og\n0%\nCholesterol Omg\n%0\nbwo whpos\n%8\nTrc\n%91\nDaGeee\nTotal Sugars 0g\na\nIncludes Og Added Sugars\nProtein 5g\n0%\nalamy\nVitaminD\na\n4%\nCalcium\n18%\nIron\n14%\nPotassium\na\nThe % Daily Value (DV) tells you how much a nutrient in\na serving of food contributes to a daily diet. 2,000 calories\na day is used for general nutrition advice.\nship\nIngrelients: Cocoa bean? cocoa\nbutter.\nMade in a facility free of wheat.\npeanuts & eggs.a",
         "corrected_output": "Nutrition Fac\n2 Serving per bar\n1/2 bar (42.5g)\nServing size\na\nAmount per Serving\n238\nCalories\n% Daily Value\n33%\nTotal Fat 22g\n60%\nSaturated Fat 12g\na\no\nTrans Fat Og\n0%\nCholesterol Omg\n%0\nbwo whpos\n%8\nTrc\n%91\nDaGeee\nTotal Sugars 0g\na\nIncludes Og Added Sugars\nProtein 5g\n0%\nalamy\nVitamin\na\n4%\nCalcium\n18%\nIron\n14%\nPotassium\na\nThe % Daily Value (DV) tells you how much a nutrient in\na Serving of food contributes to a Daily diet. 2,000 Calories\na Daily is used Flour general Nutrition advice.\nship\nIngredients: Cocoa Beans? Cocoa\nButter.\nMade in a facility free of Wheat.\nPeanuts & Eggs.a",
-        "expected_product": "Chocolate Bar",
-        "predicted_product": "a",
         "expected_ingredients": [
             "cocoa beans",
             "cocoa butter"
         ],
         "predicted_ingredients": [
             "cocoa beans",
-            "cocoa",
-            "butter"
+            "cocoa butter"
         ],
         "expected_allergens": [],
         "predicted_allergens": [
@@ -243,8 +239,6 @@
         "ground_truth_ocr": "Nutrition Facts\nServing Size 1/2 cup (130g)\nServings Per Container about 4.5\nCalories 130\nCalories from Fat 10\nTotal Fat 1g\nSaturated Fat 0g\nTrans Fat 0g\nCholesterol 0mg\nSodium 480mg\nTotal Carbohydrate 25g\nDietary Fiber 5g\nSugars 7g\nProtein 6g\nVitamin A\nVitamin C\nCalcium\nIron",
         "ocr_output": "alamy\na\nFacts\nNutrition\nSize\n1/2\ncup\n(130g)\nServing\n100 years.\nabout\n4.5\nServings\nPer\nContainer\nerjection to\nEASY\nAmount Per Serving\nsweet and\nfrom\nFat 10\nOPEN\nCalories\n130\nCalories\nade toaste,\n% Daily\nValue*\nPOPTOR\n2%\nmained a\nTotal Fat\n1g\nSaturated Fat Og\n0%\n a\n2\nTrans\nFat Og\nCholesterol Omg\n0%\nROSTRCCIONES\nSodium\n480mg\n20%\nRACLENTE, FRIA\nWEGGRATURA\nTotal\nCarbohydrate 25g\n8%\nDietary\nFiber\n5g\n20%\nCOM Giete\nSugars\n7g\ncme\nHOOONOAS\nProtein\n6g\n1nos\nVitamin A 0%\nVitamin C 0%\n sgend\nspinal\nCalcium 6%\nIron 10%\nseh\nPercent Daily Values are based on a 2,000\nmaECE\ncalorie diet. Your daily values may be higher or\ni\nlower depending on your calorie needs:\n1m actao\nCalories:\n2,000\n2,500\n10 tirt\nTotal Fat\nLess than\n65g\n80g\n38\nSat Fat\nLess than\n20g\n25g\nE CORN SYRUP\nCholesterol\nLess than\n300mg\n300mg\nATTOMA P RE\nSodium\nLess than\n2,400mg\n2,400mg\nTotal Carbohydrate\n300g\n375g\nEPPSTACT\nDietary Fiber\n25g\n30g\nAINCN ETRACT\nSatisfaction guaranteed. If you have\nTABTM\nquestions or comments, please call\n1-800-232-6736. Please have code and\ndate information from container. Visit\nour website at: www.campbells.com\nFor great tasting recipes using\nCampbell's\u00ae Pork a Beans,\nvisit our website at\nCampbellskitchen.com\nWHERE FADLITES\nRIACABLE",
         "corrected_output": "alamy\na\nFat\nNutrition\nSize\n1/2\ncup\n(130g)\nServing\n100 years.\nabout\n4.5\nServing\nPer\nContains\nerjection to\nEASY\nAmount Per Serving\nsweet and\nfrom\nFat 10\nOPEN\nCalories\n130\nCalories\nade toaste,\n% Daily\nValue*\nPOPTOR\n2%\nmained a\nTotal Fat\n1g\nSaturated Fat Og\n0%\na\n2\nTrans\nFat Og\nCholesterol Omg\n0%\nROSTRCCIONES\nSodium\n480mg\n20%\nRACLENTE, FRIA\nWEGGRATURA\nTotal\nCarbohydrate 25g\n8%\nDietary\nFiber\n5g\n20%\ncorn Giete\nSugars\n7g\ncme\nHOOONOAS\nProtein\n6g\n1nos\nVitamin A 0%\nVitamin C 0%\nsgend\nspinal\nCalcium 6%\nIron 10%\nseh\nPercent Daily Value are based on a 2,000\nmaECE\nCalories diet. Your Daily Value may be higher or\ni\nlower depending on your Calories needs:\n1m actao\nCalories:\n2,000\n2,500\n10 tirt\nTotal Fat\nLess than\n65g\n80g\n38\nSalt Fat\nLess than\n20g\n25g\nE Corn Syrup\nCholesterol\nLess than\n300mg\n300mg\nATTOMA P RE\nSodium\nLess than\n2,400mg\n2,400mg\nTotal Carbohydrate\n300g\n375g\nEPPSTACT\nDietary Fiber\n25g\n30g\nAINCN ETRACT\nSatisfaction guaranteed. If you have\nTABTM\nquestions or comments, please call\n1-800-232-6736. Please have code and\ndate information from Contains. Visit\nFlour website Fat: www.campbells.corn\nFlour great tasting recipes using\nCampbell's\u00ae Pork a Beans,\nvisit Flour website Fat\nCampbellskitchen.corn\nWHERE FADLITES\nRIACABLE",
-        "expected_product": "Campbell's Pork and Beans",
-        "predicted_product": "alamy a",
         "expected_ingredients": [],
         "predicted_ingredients": [],
         "expected_allergens": [],
@@ -271,8 +265,6 @@
         "ground_truth_ocr": "Nutrition Facts\nServing Size 2/3 cup (51g)\nServings Per Container About 9\nCalories 240\nCalories From Fat 70\nTotal Fat 8g\nSaturated Fat 2.5g\nTrans Fat 0g\nCholesterol 0mg\nSodium 50mg\nTotal Carbohydrate 37g\nDietary Fiber 3g\nSugars 13g\nProtein 4g\nVitamin A\nVitamin C\nCalcium\nIron",
         "ocr_output": "Nutrition\nFacts\nServing\nSize\n213\ncup\n(51g)\nServings Per Container About 9\nCereal with\n1/2 cup\nAmount Per Serving\nCereal\nSkim Mik\nCalories\n240\n280\nCalories from Fat\n70\n70\n% Dally Value*\nTotal Fat 8g*\n12%\n12%\nSaturated\nFat 2.5g 13%\n13%\nTrans Fat Og\nCholesterol\nOmg\n0%\n0%\nSodium\n50mg\n2%\n5%\nTotal\nCarbohydrate 37g 12%\n14%\nDietary\nFiber 3g\n12%\n12%\nSugars 13g\nProtein\n4g\n8%\n16%\nVitamin A\n0%\n4%\nVitamin C\n0%\n0%\nCalcium\n2%\n15%\nIron\n6%\n6%",
         "corrected_output": "Nutrition\nFat\nServing\nSize\n213\ncup\n(51g)\nServing Per Contains About 9\nCereal with\n1/2 cup\nAmount Per Serving\nCereal\nSkim Milk\nCalories\n240\n280\nCalories from Fat\n70\n70\n% Daily Value*\nTotal Fat 8g*\n12%\n12%\nSaturated\nFat 2.5g 13%\n13%\nTrans Fat Og\nCholesterol\nOmg\n0%\n0%\nSodium\n50mg\n2%\n5%\nTotal\nCarbohydrate 37g 12%\n14%\nDietary\nFiber 3g\n12%\n12%\nSugars 13g\nProtein\n4g\n8%\n16%\nVitamin A\n0%\n4%\nVitamin C\n0%\n0%\nCalcium\n2%\n15%\nIron\n6%\n6%",
-        "expected_product": "Cereal",
-        "predicted_product": "Cereal with",
         "expected_ingredients": [],
         "predicted_ingredients": [],
         "expected_allergens": [],
@@ -292,6 +284,165 @@
             "sodium": 50.0,
             "carbohydrate": 37.0,
             "protein": 4.0
+        }
+    },
+    {
+        "image_name": "Chocolates.jpeg",
+        "evaluate_ingredients": true,
+        "evaluate_allergens": true,
+        "ground_truth_ocr": "Nutrition Facts\n38 servings per container\nServing size 25 pieces (40g)\nCalories 190\nTotal Fat 9g\nSaturated Fat 5g\nTrans Fat 0g\nCholesterol <5mg\nSodium 20mg\nTotal Carbohydrate 27g\nDietary Fiber 1g\nTotal Sugars 24g\nIncludes 12g Added Sugars\nProtein 2g\nVitamin D 0mcg\nCalcium 50mg\nIron 1.1mg\nPotassium 170mg\nIngredients: Milk Chocolate (Sugar, Cocoa Butter, Whole Milk, Chocolate Liquor, Nonfat Milk, Butter Oil, Soy Lecithin, Vanillin, Salt), Raisins, Corn Syrup, Dextrin, Maltodextrin, Confectioner's Glaze.\nContains: Milk, Soy.",
+        "ocr_output": "27\n4.06:49\nNutrition\nn Facts\nINGREDIENTS:\nMilk\nChocolate (Sugar, Cocoa\nButter,\nWhole\nMilk,\nChocolate\nLiquor, Nonfat\n38\nservings\nper Container\nMilk,\nButter Oil,\nSoy\nLecithin, Vanillin, Salt),\nRaisins,\nServing\nCorn\nSyrup,\nDextrin, Maltodextrin,\nsize\n25\npieces (40g)\nConfectioner's\nGlaze.\nCONTAINS:\nMilk,\nSoy.\nAmount\nper serving\n190\nDistributed by:\nCalories\nCostco Wholesale Corporation\nP.O. Box 34535\nSeattle, WA 98124-1535 \u2022 U.S.A.\n% Daily Value\nTotal\n1-800-774-2678\nFat\n9g\n12%\nwww.costco.com\nSaturated\nFat\n5g\n25%\nMADE IN THE USA\nContains a Bioengineered Food Ingredient\nTrans\nFat\n0g\nALLERGEN INFORMATION: Processed on equipment\nCholesterol\n<5mg\n1%\nthat also packages products that may contain wheat,\nSodium\n20mg\n1%\npeanuts and tree nuts.\nTotal\nCarbohydrate 27g\nConsumers with food allergies and food sensitivities,\n10%\nplease read the ingredient statement carefully.\nDietary\nFiber\n1g\n4%\nTotal\nSugars\n24g\nIf you're\nnot completely satisfied with this Kirkland\nSignature product, your money will be refunded.\nIncl.\n12g\nAdded\nSugars\n24%\nProtein\n2g\nITM. / ART. 835671\nVitamin\nD\nOmcg\n0%\nCalcium\n50mg\n4%\nIron\n1.1mg\n6%\nPotassium\n170mg\n4%\n1L0060A6\nThe % Dally\nValue\n(DV) tes you how much a nutient in a serving of food\ncontributes to a daly\ndet.\n2,000 calores a yusdforenl niton dvi\n0\n96619\"06716\n9\nn",
+        "corrected_output": "27\n4.06:49\nNutrition\nn Fat\nIngredients:\nMilk\nChocolate (Sugar, Cocoa\nButter,\nWhole\nMilk,\nChocolate\nLiquor, Nonfat\n38\nServing\nper Contains\nMilk,\nButter Oil,\nSoy\nLecithin, Vanillin, Salt),\nRaisins,\nServing\nCorn\nSyrup,\nDextrin, Maltodextrin,\nsize\n25\npieces (40g)\nConfectioner's\nGlaze.\nContains:\nMilk,\nSoy.\nAmount\nper Serving\n190\nDistributed by:\nCalories\nCostco Wholesale Corporation\nP.O. Box 34535\nSeattle, WA 98124-1535 \u2022 U.S.A.\n% Daily Value\nTotal\n1-800-774-2678\nFat\n9g\n12%\nwww.costco.corn\nSaturated\nFat\n5g\n25%\nMADE IN THE USA\nContains a Bioengineered Food Ingredient\nTrans\nFat\n0g\nALLERGEN INFORMATION: Processed on equipment\nCholesterol\n<5mg\n1%\nthat also packages products that may Contains Wheat,\nSodium\n20mg\n1%\nPeanuts and tree nuts.\nTotal\nCarbohydrate 27g\nConsumers with food allergies and food sensitivities,\n10%\nplease read the Ingredient statement carefully.\nDietary\nFiber\n1g\n4%\nTotal\nSugars\n24g\nIf you're\nnot completely satisfied with this Kirkland\nSignature product, your Honey will be refunded.\nIncl.\n12g\nAdded\nSugars\n24%\nProtein\n2g\nITM. / ART. 835671\nVitamin\nD\nOmcg\n0%\nCalcium\n50mg\n4%\nIron\n1.1mg\n6%\nPotassium\n170mg\n4%\n1L0060A6\nThe % Daily\nValue\n(DV) tes you how much a nutient in a Serving of food\ncontributes to a Daily\ndet.\n2,000 Calories a yusdforenl niton dvi\n0\n96619\"06716\n9\nn",
+        "expected_ingredients": [
+            "Sugar",
+            "Cocoa Butter",
+            "Whole Milk",
+            "Chocolate Liquor",
+            "Nonfat Milk",
+            "Butter Oil",
+            "Soy Lecithin",
+            "Vanillin",
+            "Salt",
+            "Raisins",
+            "Corn Syrup",
+            "Dextrin",
+            "Maltodextrin",
+            "Confectioner's Glaze"
+        ],
+        "predicted_ingredients": [
+            "sugar",
+            "cocoa butter",
+            "whole milk",
+            "chocolate liquor",
+            "butter oil",
+            "soy lecithin",
+            "vanillin",
+            "salt",
+            "milk chocolate",
+            "raisins",
+            "dextrin",
+            "maltodextrin",
+            "confectioner's glaze"
+        ],
+        "expected_allergens": [
+            "Milk",
+            "Soy"
+        ],
+        "predicted_allergens": [
+            "Milk",
+            "Soy"
+        ],
+        "expected_nutrition": {
+            "calories": 190,
+            "total_fat": 9,
+            "sodium": 20,
+            "carbohydrate": 27,
+            "protein": 2
+        },
+        "predicted_nutrition": {
+            "total_fat": 9.0,
+            "sodium": 20.0,
+            "carbohydrate": 27.0,
+            "protein": 2.0
+        }
+    },
+    {
+        "image_name": "Lemonade.jpeg",
+        "evaluate_ingredients": true,
+        "evaluate_allergens": false,
+        "ground_truth_ocr": "Nutrition Facts\nAbout 7 servings per container\nServing Size 8 fl oz (240 mL)\nCalories 0\nTotal Fat 0g\nSodium 20mg\nTotal Carbohydrate 1g\nTotal Sugars 0g\nIncludes 0g Added Sugars\nProtein 0g\nVitamin C 80%\nIngredients: Filtered Water, Lemon Juice From Concentrate.\nLess Than 0.5% Of: Natural Flavors, Citric Acid, Vitamin C (Ascorbic Acid), Potassium Citrate, Glycerol Ester Of Rosin, Modified Cornstarch, Aspartame, Acesulfame Potassium.\nContains Phenylalanine.",
+        "ocr_output": "EOIOC %\nN ron\nNEEE EEEEONN\nEEEEEEOWEMN\nJo  s aa\nOOOO SA TN OUOO\n(PROVIDES TARTNESS), VITAMIN C (ASCORBIC\nServing Size\n8 fl oz (240 mL)\nACID), POTASSIUM CITRATE (REGULATES\nTARTNESS), GLYCEROL ESTER OF ROSIN.\nMODIFIED CORNSTARCH, ASPARTAME,\nAmount Per Serving\nACESULFAME POTASSIUM.\nCalories\nADDS A NEGLIGIBLE AMOUNT OF SUGAR\n% Daily Value\nPRODUCED FOR\nTotal Fat Og\nTHE COCA-COLA COMPANY\n0%\nATLANTA, GA 30313 U.S.A.\nSodium 20mg\n1%\nTotal\nCarbohydrate 1g\n1%\nSCAN HERE FOR MORE\nFOOD INFORMATION\nTotal Sugars Og\nOR CALL1-800-888-6488\nIncludes Og Added Sugars 0%\nProtein Og\nVitamin C 80%\n6\nsmartlabel\nPLASTIC\n\nBOTTLE\nrcalci, iron and potassi\nPASTEURIZED\nDO NOT CONSUME IF INNER\nEXCELLENT SOURCE\nSEAL IS BROKEN OR MISSING.\nOF VITAMIN C\nSE HABLA ESPANOL\n12052E\n2025-01956\nwww.minutemaid.com\nKEEP REFRIGERATED\nEEE\nSHAKE WELL\nBEST IF USED WITHIN\n-1G DAYS AFTER OPENING\nHI, ME 5c CTRV\nOOO S E\nMEE\nA3\no  \nCACRV\nThe Cocs-Cae Company.\nPERTUKETONURICS: CONTAINS PHENYLALANINE",
+        "corrected_output": "EOIOC %\nN Iron\nNEEE EEEEONN\nEEEEEEOWEMN\nJo  s aa\nOOOO SA TN OUOO\n(PROVIDES TARTNESS), Vitamin C (ASCORBIC\nServing Size\n8 fl oz (240 mL)\nACID), Potassium CITRATE (REGULATES\nTARTNESS), GLYCEROL ESTER OF ROSIN.\nMODIFIED CORNSTARCH, ASPARTAME,\nAmount Per Serving\nACESULFAME Potassium.\nCalories\nADDS A NEGLIGIBLE AMOUNT OF Sugar\n% Daily Value\nPRODUCED Flour\nTotal Fat Og\nTHE Cocoa-COLA COMPANY\n0%\nATLANTA, GA 30313 U.S.A.\nSodium 20mg\n1%\nTotal\nCarbohydrate 1g\n1%\nSCAN HERE Flour MORE\nFOOD INFORMATION\nTotal Sugars Og\nOR CALL1-800-888-6488\nIncludes Og Added Sugars 0%\nProtein Og\nVitamin C 80%\n6\nsmartlabel\nPLASTIC\nBOTTLE\nCalcium, Iron and Potassium\nPASTEURIZED\nDO NOT CONSUME IF INNER\nEXCELLENT SOURCE\nSalt IS BROKEN OR MISSING.\nOF Vitamin C\nSE HABLA ESPANOL\n12052E\n2025-01956\nwww.minutemaid.corn\nKEEP REFRIGERATED\nEEE\nSHAKE WELL\nBEST IF USED WITHIN\n-1G DAYS AFTER OPENING\nHI, ME 5c CTRV\nOOO S E\nMEE\nA3\no\nCACRV\nThe Cocs-Cae Company.\nPERTUKETONURICS: Contains PHENYLALANINE",
+        "expected_ingredients": [
+            "Filtered Water",
+            "Lemon Juice From Concentrate",
+            "Natural Flavors",
+            "Citric Acid",
+            "Vitamin C (Ascorbic Acid)",
+            "Potassium Citrate",
+            "Glycerol Ester Of Rosin",
+            "Modified Cornstarch",
+            "Aspartame",
+            "Acesulfame Potassium"
+        ],
+        "predicted_ingredients": [],
+        "expected_allergens": [],
+        "predicted_allergens": [],
+        "expected_nutrition": {
+            "calories": 0,
+            "total_fat": 0,
+            "sodium": 20,
+            "carbohydrate": 1,
+            "protein": 0
+        },
+        "predicted_nutrition": {
+            "total_fat": 0.0,
+            "sodium": 20.0,
+            "carbohydrate": 1.0,
+            "protein": 80.0
+        }
+    },
+    {
+        "image_name": "Oil.jpeg",
+        "evaluate_ingredients": true,
+        "evaluate_allergens": false,
+        "ground_truth_ocr": "Nutrition Facts\n33 servings per container\nServing size 1 tbsp (15 mL)\nCalories 120\nTotal Fat 14g\nSaturated Fat 2g\nTrans Fat 0g\nSodium 0mg\nTotal Carbohydrate 0g\nProtein 0g\nIngredients: Extra Virgin Olive Oil.",
+        "ocr_output": "INGDIENTS\nNutrition\nFacts\nDITIBUTED YLE A \nR\n3 servings per\ncontainer\nCOUNTRY OF ORDGIN: (TAT\nServing\nsize\n1 tbsp\n(15\nml.)\n8\nBertoll d aiOe Ois an\nper serviog\n120\nCalories\nba ggt\nMadterrumeon to your\n% Daily value\nded for evy cooking\n18%\ni troort your b\nTotal Fat\n14g\n10%\nPerfect for solods, marnades \nSaturated Fat 2g\nand as a inishing orw\nTrans\nFat\nOg\nQUESTIONS? COMMENTS?\n0%\nBodium\nOmg\nCall 1-800-908-9789 7\nTotal\nCarbohydrate Og 0%\nSho tig\nProtein\nOg\nhso and  \nsource of cholenterol,\naided tugars\ny \ntdt\n3oe\nand potasalunt.\n0.c0\nR\nGHEIET\nOCT.01.26\n152279 H10:59\n24-25\nJUL.01.25\nPORTAE\nBRETE\n1\nNON\nW\nGMO\nVEZIFIED\n0\n41790\"60316\n7\n3",
+        "corrected_output": "Ingredients\nNutrition\nFat\nDITIBUTED YLE A\nR\n3 Serving per\nContains\nCOUNTRY OF ORDGIN: (TAT\nServing\nsize\n1 tbsp\n(15\nml.)\n8\nBertoll d aiOe Ois an\nper Serving\n120\nCalories\nba ggt\nMadterrumeon to your\n% Daily Value\nded Flour evy cooking\n18%\ni troort your b\nTotal Fat\n14g\n10%\nPerfect Flour solods, marnades\nSaturated Fat 2g\nand as a inishing orw\nTrans\nFat\nOg\nQUESTIONS? COMMENTS?\n0%\nSodium\nOmg\nCall 1-800-908-9789 7\nTotal\nCarbohydrate Og 0%\nSho tig\nProtein\nOg\nhso and\nsource of Cholesterol,\naided Sugars\ny\ntdt\n3oe\nand potasalunt.\n0.c0\nR\nGHEIET\nOCT.01.26\n152279 H10:59\n24-25\nJUL.01.25\nPORTAE\nBRETE\n1\nNON\nW\nGMO\nVEZIFIED\n0\n41790\"60316\n7\n3",
+        "expected_ingredients": [
+            "Extra Virgin Olive Oil"
+        ],
+        "predicted_ingredients": [],
+        "expected_allergens": [],
+        "predicted_allergens": [],
+        "expected_nutrition": {
+            "calories": 120,
+            "total_fat": 14,
+            "sodium": 0,
+            "carbohydrate": 0,
+            "protein": 0
+        },
+        "predicted_nutrition": {
+            "total_fat": 14.0,
+            "sodium": 1.0,
+            "carbohydrate": 0.0
+        }
+    },
+    {
+        "image_name": "Almonds.jpeg",
+        "evaluate_ingredients": true,
+        "evaluate_allergens": true,
+        "ground_truth_ocr": "Nutrition Facts\nAbout 40 servings\nServing Size 1 oz (28g/about 25 pieces)\nCalories 160\nTotal Fat 14g\nSaturated Fat 1g\nTrans Fat 0g\nPolyunsaturated Fat 3.5g\nMonounsaturated Fat 9g\nCholesterol 0mg\nSodium 0mg\nTotal Carbohydrate 6g\nFiber 3g\nTotal Sugars 2g\nIncludes 0g Added Sugars\nProtein 6g\nVitamin D 0%\nCalcium 6%\nIron 6%\nPotassium 4%\nIngredients: Almonds.\nContains: Tree Nuts (Almonds).",
+        "ocr_output": "Nutrition Facts Servings: About 40, Serv. size: 1 oz\nabo  0\nTotal Fat 14g (18% DV), Sat. Fat 1g (5% DV), Trans Fat Og,\nPolyunsat.\noa Chols. %DV\nSodium\nOmg\n(0%\nDV),\nTotal Carb. 6g (2% DV), Fiber 3g (10% DV),\nTotal\nSugars\ns 2g\n(Incl.\nOg Added Sugars, 0% DV), \nProtein\n6g,\nVit. D\n(0%\nDV),\nCalcium\n(6%\nDV Io (6% DV) as.%\nDV).\nINGREDIENTS:\nALMONDS.\nCONTAINS:\nTREE\nNUTS (ALMONDS).\nDistributed by:\nBJ's\nWholesale Club, Inc.\n350 Campus Drive, Marlborough, MA 01752\n800-BJS-CLUB\nCAUTION: MAY CONTAIN AN OCCASIONAL SHELL FRAGMENT.\nPROCESSED IN A FACILITY THAT ALSO PROCESSES PEANUTS,\nOTHER TREE NUTS, MILK, SOY, SESAME, WHEAT.\nStore in a cool & dry clean place, avoid direct sunlight.\nBJ# 321147\nVOO\nL4133T88399\nEvery product comes\nwith our 100% Money-\nBack Guarantee.\nQUESTIONS?\n88670\"17385\n8\n5\nCustomerCare@bjs.com",
+        "corrected_output": "Nutrition Fat Serving: About 40, Serv. size: 1 oz\nabo  0\nTotal Fat 14g (18% DV), Salt. Fat 1g (5% DV), Trans Fat Og,\nPolyunsat.\noa Chols. %DV\nSodium\nOmg\n(0%\nDV),\nTotal Carb. 6g (2% DV), Fiber 3g (10% DV),\nTotal\nSugars\ns 2g\n(Incl.\nOg Added Sugars, 0% DV),\nProtein\n6g,\nVit. D\n(0%\nDV),\nCalcium\n(6%\nDV Io (6% DV) as.%\nDV).\nIngredients:\nALMONDS.\nContains:\nTREE\nNUTS (ALMONDS).\nDistributed by:\nBJ's\nWholesale Club, Inc.\n350 Campus Drive, Marlborough, MA 01752\n800-BJS-CLUB\nCAUTION: MAY Contains AN OCCASIONAL SHELL FRAGMENT.\nPROCESSED IN A FACILITY THAT ALSO PROCESSES Peanuts,\nOTHER TREE NUTS, Milk, Soy, SESAME, Wheat.\nStore in a cool & dry clean place, avoid direct sunlight.\nBJ# 321147\nVOO\nL4133T88399\nEvery product comes\nwith Flour 100% Honey-\nBack Guarantee.\nQUESTIONS?\n88670\"17385\n8\n5\nCustomerCare@bjs.corn",
+        "expected_ingredients": [
+            "Almonds"
+        ],
+        "predicted_ingredients": [
+            "almonds"
+        ],
+        "expected_allergens": [
+            "Tree Nuts"
+        ],
+        "predicted_allergens": [
+            "Almond",
+            "Milk",
+            "Sesame",
+            "Soy",
+            "Wheat"
+        ],
+        "expected_nutrition": {
+            "calories": 160,
+            "total_fat": 14,
+            "sodium": 0,
+            "carbohydrate": 6,
+            "protein": 6
+        },
+        "predicted_nutrition": {
+            "total_fat": 14.0,
+            "sodium": 0.0,
+            "carbohydrate": 6.0,
+            "protein": 6.0
         }
     }
 ]
