@@ -24,8 +24,6 @@ class Evaluator:
         correction_char_scores = []
         correction_word_scores = []
 
-        product_scores = []
-
         ingredient_precision_scores = []
         ingredient_recall_scores = []
         ingredient_f1_scores = []
@@ -37,7 +35,6 @@ class Evaluator:
             ocr_word_scores.append(Metrics.word_accuracy(record["ground_truth_ocr"],record["ocr_output"]))
             correction_char_scores.append(Metrics.character_accuracy(record["ground_truth_ocr"],record["corrected_output"]))
             correction_word_scores.append(Metrics.word_accuracy(record["ground_truth_ocr"],record["corrected_output"]))
-            product_scores.append(Metrics.product_accuracy(record["expected_product"],record["predicted_product"]))
             
             if record.get("evaluate_ingredients", False):
                 ingredient_precision = Metrics.precision(record["expected_ingredients"],record["predicted_ingredients"])
@@ -60,8 +57,6 @@ class Evaluator:
                 round(sum(correction_char_scores) / len(correction_char_scores), 2),
             "correction_word_accuracy":
                 round(sum(correction_word_scores) / len(correction_word_scores), 2),
-            "product_accuracy":
-                round(sum(product_scores) / len(product_scores), 4),
             "ingredient_precision": 
                 round(sum(ingredient_precision_scores) / len(ingredient_precision_scores), 4),
             "ingredient_recall":
