@@ -34,7 +34,9 @@ HEADER_VARIANTS = [
     "ingedients",
     "ingreients",
     "ingrdients",
-    "ingredents"
+    "ingredents",
+    "ingdients",
+    "ingdi ents",
 ]
 
 NUTRITION_NOISE_PATTERNS = [
@@ -60,7 +62,11 @@ OCR_INGREDIENT_CORRECTIONS = {
     "retiners": "refiners",
     "wateh": "water",
     "sodum": "sodium",
-    "cithin": "lecithin"
+    "cithin": "lecithin",
+    "lelecithin": "lecithin",
+    "le lecithin": "lecithin",
+    "oleic": "oleic",
+    "bicarbonate": "baking soda"
 }
 
 
@@ -115,6 +121,11 @@ def normalize_ingredient(text):
     text = text.replace(")", "")
     text = re.sub(r"\s+", " ", text)
     text = text.rstrip(".,;:")
+    text = re.sub(r"\b\d+\s*g\b", "", text)
+    text = re.sub(r"\b\d+\s*mg\b", "", text)
+    text = re.sub(r"\b\d+\s*ml\b", "", text)
+    text = re.sub(r"\bpieces?\b", "", text)
+    text = re.sub(r"\bsize\b", "", text)
     return text
 
 
@@ -149,70 +160,59 @@ def extract_ingredients(text):
     start_idx = None
     for i, line in enumerate(lines):
         if looks_like_ingredient_header(line):
-            print("HEADER FOUND:", line)
             start_idx = i
             break
     if start_idx is None:
         return []
     block_lines = []
-    MAX_LINES = 15
+    MAX_LINES = 40
     for idx, line in enumerate(lines[start_idx:start_idx + MAX_LINES]):
         line_lower = line.lower().strip()
+        if "contains:" in line_lower:
+            break
         if looks_like_hard_stop_line(line):
             break
-        if idx >= 3 and looks_like_stop_line(line):
+        if idx >= 5 and looks_like_stop_line(line):
             break
         if any(
             re.search(pattern, line_lower)
             for pattern in NUTRITION_NOISE_PATTERNS
         ):
             continue
-        if re.fullmatch(r"[\(\)\d\-]+", line.strip()):
-            continue
         block_lines.append(line)
-    ingredient_block = ", ".join(block_lines)
+
+    ingredient_block = " ".join(block_lines)
+    ingredient_block = re.sub(r"ingredients?:?","",ingredient_block,flags=re.IGNORECASE)
     ingredient_block = ingredient_block.lower()
     for wrong, correct in OCR_INGREDIENT_CORRECTIONS.items():
-        ingredient_block = ingredient_block.replace(wrong, correct)
-    ingredient_block = re.sub(r"ingredients?:?","",ingredient_block,flags=re.IGNORECASE)
+        ingredient_block = ingredient_block.replace(wrong,correct)
     ingredient_block = ingredient_block.replace("?", ",")
-    ingredient_block = ingredient_block.replace(". ", ", ")
+    ingredient_block = re.sub(r"\s+"," ",ingredient_block)
     ingredient_block = ingredient_block.replace(".", ",")
-    ingredient_block = ingredient_block.replace("cocoa beans cocoa","cocoa beans, cocoa butter")
     ingredients = []
-    current = ""
-    depth = 0
-    for ch in ingredient_block:
-        if ch == "(":
-            depth += 1
-            current += ch
-        elif ch == ")":
-            depth = max(0, depth - 1)
-            current += ch
-        elif ch == "," and depth == 0:
-            item = current.strip()
-            if item:
+    parenthetical_matches = re.findall(r"\((.*?)\)",ingredient_block)
+    for match in parenthetical_matches:
+        for item in match.split(","):
+            item = normalize_ingredient(item)
+            if (len(item) > 1 and not looks_like_noise(item)):
                 ingredients.append(item)
-            current = ""
-        else:
-            current += ch
-    if current.strip():
-        ingredients.append(current.strip())
-    cleaned = []
+    ingredient_block = re.sub(r"\(.*?\)","",ingredient_block)
+    for item in ingredient_block.split(","):
+        item = normalize_ingredient(item)
+        if (len(item) > 1 and not looks_like_noise(item)):
+            ingredients.append(item)
+    expanded = []
     for ingredient in ingredients:
-        ingredient = normalize_ingredient(ingredient)
+        expanded.extend(split_compound_ingredient(ingredient))
+
+    final = []
+    seen = set()
+    for ingredient in expanded:
+        ingredient = ingredient.strip()
         if len(ingredient) < 2:
             continue
-        if looks_like_noise(ingredient):
+        if ingredient in seen:
             continue
-        split_items = split_compound_ingredient(ingredient)
-        cleaned.extend(split_items)
-
-    final_ingredients = []
-    seen = set()
-    for ingredient in cleaned:
-        ingredient = ingredient.strip()
-        if ingredient not in seen:
-            seen.add(ingredient)
-            final_ingredients.append(ingredient)
-    return final_ingredients
+        seen.add(ingredient)
+        final.append(ingredient)
+    return final
