@@ -1,3 +1,4 @@
+'''
 import sys
 from pathlib import Path
 
@@ -41,6 +42,54 @@ class InventoryPipeline:
         
         print("[5] Saving To Inventory...")
         saved_record = self.inventory_manager.add_product(extracted_data)
+        print("[6] Complete!")
+
+        return {
+            "raw_text": raw_text,
+            "corrected_text": corrected_text,
+            "extracted_data": extracted_data,
+            "saved_record": saved_record
+        }
+'''
+import sys
+from pathlib import Path
+
+project_root = Path(__file__).resolve().parent.parent
+sys.path.append(str(project_root))
+
+from src.ocr.paddle_ocr import PaddleOCREngine
+from src.preprocessing.pipeline import preprocess_image
+from src.postprocessing.text_corrector import correct_text
+from src.extraction.extractor import extract_food_information
+from src.storage.inventory_manager import InventoryManager
+
+
+class InventoryPipeline:
+
+    def __init__(self, use_resize=True, use_clahe=True):
+        self.reader = PaddleOCREngine()
+        self.inventory_manager = InventoryManager()
+        self.use_resize = use_resize
+        self.use_clahe = use_clahe
+
+    def process_image(self, image_path):
+
+        print("\n[1] Preprocessing Image...")
+        processed_image = preprocess_image(image_path, use_resize=self.use_resize, use_clahe=self.use_clahe)
+        
+        print("[2] Running OCR...")
+        ocr_results = self.reader.readtext(processed_image)
+        raw_text = "\n".join([result[1] for result in ocr_results])
+
+        print("[3] Correcting OCR Text...")
+        corrected_text = correct_text(raw_text)
+
+        print("[4] Extracting Food Information...")
+        extracted_data = extract_food_information(corrected_text)
+
+        print("[5] Saving To Inventory...")
+        saved_record = self.inventory_manager.add_product(extracted_data)
+
         print("[6] Complete!")
 
         return {

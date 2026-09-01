@@ -1,3 +1,4 @@
+'''
 import cv2
 
 def preprocess_image(image_path):
@@ -15,3 +16,19 @@ def preprocess_image(image_path):
     clahe = cv2.createCLAHE(clipLimit=2.0,tileGridSize=(8, 8))
     enhanced = clahe.apply(resized)
     return enhanced
+'''
+import cv2
+
+def preprocess_image(image_path, use_resize=True, use_clahe=True):
+    image = cv2.imread(image_path)
+
+    gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+    processed = gray
+    if use_resize:
+        processed = cv2.resize(processed, None, fx=2, fy=2, interpolation=cv2.INTER_CUBIC)
+
+    if use_clahe:
+        clahe = cv2.createCLAHE(clipLimit=2.0, tileGridSize=(8,8))
+        processed = clahe.apply(processed)
+
+    return processed
