@@ -1,0 +1,652 @@
+[
+  {
+    "bbox": [
+      72,
+      81,
+      128,
+      123
+    ],
+    "text": "5%",
+    "confidence": 0.9973617196083069
+  },
+  {
+    "bbox": [
+      123,
+      66,
+      238,
+      118
+    ],
+    "text": "JUICE",
+    "confidence": 0.9909104108810425
+  },
+  {
+    "bbox": [
+      329,
+      56,
+      537,
+      111
+    ],
+    "text": "INGREDIENTSFILTEREDWAERLMON",
+    "confidence": 0.8517548441886902
+  },
+  {
+    "bbox": [
+      183,
+      101,
+      312,
+      161
+    ],
+    "text": "Facts",
+    "confidence": 0.9949591755867004
+  },
+  {
+    "bbox": [
+      332,
+      74,
+      539,
+      131
+    ],
+    "text": "JUICEFROMCONCENTRATELESSTHAN",
+    "confidence": 0.8963209986686707
+  },
+  {
+    "bbox": [
+      32,
+      117,
+      187,
+      174
+    ],
+    "text": "Nutrition",
+    "confidence": 0.993977427482605
+  },
+  {
+    "bbox": [
+      332,
+      93,
+      540,
+      151
+    ],
+    "text": "0.5%OF:NATURALFLAVORSCRICACD",
+    "confidence": 0.8360338807106018
+  },
+  {
+    "bbox": [
+      335,
+      106,
+      556,
+      172
+    ],
+    "text": "（RO",
+    "confidence": 0.4870704114437103
+  },
+  {
+    "bbox": [
+      91,
+      165,
+      199,
+      201
+    ],
+    "text": "servingsper",
+    "confidence": 0.9858038425445557
+  },
+  {
+    "bbox": [
+      186,
+      153,
+      282,
+      192
+    ],
+    "text": "container",
+    "confidence": 0.9944561719894409
+  },
+  {
+    "bbox": [
+      41,
+      171,
+      97,
+      203
+    ],
+    "text": "About7",
+    "confidence": 0.836388885974884
+  },
+  {
+    "bbox": [
+      339,
+      128,
+      542,
+      190
+    ],
+    "text": "ACIDT",
+    "confidence": 0.6741275191307068
+  },
+  {
+    "bbox": [
+      220,
+      179,
+      278,
+      222
+    ],
+    "text": "(240",
+    "confidence": 0.9459227919578552
+  },
+  {
+    "bbox": [
+      269,
+      177,
+      316,
+      215
+    ],
+    "text": "mL)",
+    "confidence": 0.917471706867218
+  },
+  {
+    "bbox": [
+      160,
+      187,
+      231,
+      227
+    ],
+    "text": "8floz",
+    "confidence": 0.9188438653945923
+  },
+  {
+    "bbox": [
+      341,
+      146,
+      545,
+      208
+    ],
+    "text": "TARTNESSGLYCEROLESTERROSIN",
+    "confidence": 0.8011502027511597
+  },
+  {
+    "bbox": [
+      45,
+      199,
+      105,
+      233
+    ],
+    "text": "Serving",
+    "confidence": 0.9951080679893494
+  },
+  {
+    "bbox": [
+      99,
+      199,
+      139,
+      229
+    ],
+    "text": "Size",
+    "confidence": 0.9915871620178223
+  },
+  {
+    "bbox": [
+      343,
+      168,
+      535,
+      225
+    ],
+    "text": "MODIFIED CORNSTARCHASPARTAME",
+    "confidence": 0.8912047147750854
+  },
+  {
+    "bbox": [
+      346,
+      196,
+      491,
+      243
+    ],
+    "text": "ACESULFAMEPOTASSIUM.",
+    "confidence": 0.9693255424499512
+  },
+  {
+    "bbox": [
+      284,
+      231,
+      327,
+      292
+    ],
+    "text": "0",
+    "confidence": 0.9470953345298767
+  },
+  {
+    "bbox": [
+      346,
+      196,
+      556,
+      265
+    ],
+    "text": "ADANGIGBLEN",
+    "confidence": 0.6360390782356262
+  },
+  {
+    "bbox": [
+      54,
+      246,
+      166,
+      271
+    ],
+    "text": "Amount Per Serving",
+    "confidence": 0.973112940788269
+  },
+  {
+    "bbox": [
+      56,
+      264,
+      164,
+      307
+    ],
+    "text": "Calories",
+    "confidence": 0.9841621518135071
+  },
+  {
+    "bbox": [
+      352,
+      268,
+      451,
+      306
+    ],
+    "text": "PRODUCED FOR",
+    "confidence": 0.9614489078521729
+  },
+  {
+    "bbox": [
+      225,
+      291,
+      330,
+      326
+    ],
+    "text": "%Daily Value",
+    "confidence": 0.9792807698249817
+  },
+  {
+    "bbox": [
+      355,
+      274,
+      505,
+      324
+    ],
+    "text": "THECOCA-COLACOMPANY",
+    "confidence": 0.9639967083930969
+  },
+  {
+    "bbox": [
+      294,
+      314,
+      333,
+      345
+    ],
+    "text": "0%",
+    "confidence": 0.9985529184341431
+  },
+  {
+    "bbox": [
+      357,
+      294,
+      499,
+      342
+    ],
+    "text": "ATLANTA,GA30313U.S.A.",
+    "confidence": 0.945952296257019
+  },
+  {
+    "bbox": [
+      68,
+      331,
+      149,
+      360
+    ],
+    "text": "Total Fat Og",
+    "confidence": 0.8876476883888245
+  },
+  {
+    "bbox": [
+      298,
+      343,
+      338,
+      377
+    ],
+    "text": "1%",
+    "confidence": 0.9994888305664062
+  },
+  {
+    "bbox": [
+      72,
+      359,
+      165,
+      390
+    ],
+    "text": "Sodium20mg",
+    "confidence": 0.991283118724823
+  },
+  {
+    "bbox": [
+      361,
+      343,
+      476,
+      383
+    ],
+    "text": "SCAN HEREFOR MORE",
+    "confidence": 0.9645698666572571
+  },
+  {
+    "bbox": [
+      302,
+      374,
+      341,
+      407
+    ],
+    "text": "1%",
+    "confidence": 0.9993872046470642
+  },
+  {
+    "bbox": [
+      77,
+      388,
+      233,
+      419
+    ],
+    "text": "Total Carbohydrate1g",
+    "confidence": 0.977420449256897
+  },
+  {
+    "bbox": [
+      363,
+      359,
+      468,
+      397
+    ],
+    "text": "FOOD INFORMATION",
+    "confidence": 0.9592796564102173
+  },
+  {
+    "bbox": [
+      365,
+      370,
+      486,
+      412
+    ],
+    "text": "ORCALL1-800-888-6488",
+    "confidence": 0.983954906463623
+  },
+  {
+    "bbox": [
+      91,
+      417,
+      200,
+      449
+    ],
+    "text": "Total Sugars Og",
+    "confidence": 0.9662006497383118
+  },
+  {
+    "bbox": [
+      107,
+      440,
+      308,
+      480
+    ],
+    "text": "Includes OgAdded Sugars",
+    "confidence": 0.9419492483139038
+  },
+  {
+    "bbox": [
+      309,
+      434,
+      348,
+      466
+    ],
+    "text": "0%",
+    "confidence": 0.998521089553833
+  },
+  {
+    "bbox": [
+      90,
+      472,
+      163,
+      505
+    ],
+    "text": "ProteinOg",
+    "confidence": 0.9786942005157471
+  },
+  {
+    "bbox": [
+      517,
+      470,
+      562,
+      501
+    ],
+    "text": "PLASTIC",
+    "confidence": 0.9318256974220276
+  },
+  {
+    "bbox": [
+      520,
+      484,
+      561,
+      513
+    ],
+    "text": "BOTTLE",
+    "confidence": 0.9782400131225586
+  },
+  {
+    "bbox": [
+      98,
+      514,
+      172,
+      546
+    ],
+    "text": "VitaminC80%",
+    "confidence": 0.9693489670753479
+  },
+  {
+    "bbox": [
+      402,
+      524,
+      420,
+      542
+    ],
+    "text": "司",
+    "confidence": 0.6070751547813416
+  },
+  {
+    "bbox": [
+      418,
+      502,
+      491,
+      539
+    ],
+    "text": "smartlabel",
+    "confidence": 0.9700287580490112
+  },
+  {
+    "bbox": [
+      105,
+      605,
+      232,
+      645
+    ],
+    "text": "PASTEURIZED",
+    "confidence": 0.994297444820404
+  },
+  {
+    "bbox": [
+      108,
+      626,
+      307,
+      673
+    ],
+    "text": "EXCELLENT SOURCE",
+    "confidence": 0.9786317348480225
+  },
+  {
+    "bbox": [
+      112,
+      647,
+      230,
+      688
+    ],
+    "text": "OF VITAMIN C",
+    "confidence": 0.9141924977302551
+  },
+  {
+    "bbox": [
+      474,
+      635,
+      528,
+      672
+    ],
+    "text": "12052E",
+    "confidence": 0.9964515566825867
+  },
+  {
+    "bbox": [
+      116,
+      672,
+      227,
+      711
+    ],
+    "text": "SEHABLA ESPANOL",
+    "confidence": 0.9683877229690552
+  },
+  {
+    "bbox": [
+      123,
+      692,
+      228,
+      725
+    ],
+    "text": "www.minutemaid.com",
+    "confidence": 0.9245572686195374
+  },
+  {
+    "bbox": [
+      455,
+      680,
+      487,
+      737
+    ],
+    "text": "TE",
+    "confidence": 0.24392837285995483
+  },
+  {
+    "bbox": [
+      122,
+      707,
+      259,
+      751
+    ],
+    "text": "KEEPREFRIGERATED",
+    "confidence": 0.9937272667884827
+  },
+  {
+    "bbox": [
+      127,
+      727,
+      206,
+      762
+    ],
+    "text": "SHAKEWELL",
+    "confidence": 0.99098801612854
+  },
+  {
+    "bbox": [
+      461,
+      732,
+      502,
+      870
+    ],
+    "text": "CALLE",
+    "confidence": 0.17140622437000275
+  },
+  {
+    "bbox": [
+      129,
+      746,
+      249,
+      790
+    ],
+    "text": "BEST IFUSEDWITHIN",
+    "confidence": 0.9693032503128052
+  },
+  {
+    "bbox": [
+      131,
+      763,
+      286,
+      809
+    ],
+    "text": "1-1DDAYSAFTEROPENING",
+    "confidence": 0.8877905607223511
+  },
+  {
+    "bbox": [
+      398,
+      763,
+      451,
+      898
+    ],
+    "text": "TAAE I ",
+    "confidence": 0.258213073015213
+  },
+  {
+    "bbox": [
+      147,
+      816,
+      283,
+      863
+    ],
+    "text": "23TheCa-ClaCompany",
+    "confidence": 0.7913982272148132
+  },
+  {
+    "bbox": [
+      437,
+      822,
+      476,
+      889
+    ],
+    "text": "CAACE",
+    "confidence": 0.15649017691612244
+  },
+  {
+    "bbox": [
+      149,
+      845,
+      255,
+      889
+    ],
+    "text": "TeCocaCaiaCompany",
+    "confidence": 0.760495126247406
+  },
+  {
+    "bbox": [
+      150,
+      864,
+      257,
+      908
+    ],
+    "text": "HENYLKEYONURICS:",
+    "confidence": 0.8821318745613098
+  },
+  {
+    "bbox": [
+      247,
+      887,
+      311,
+      912
+    ],
+    "text": "CONTAINS",
+    "confidence": 0.9882543087005615
+  },
+  {
+    "bbox": [
+      305,
+      884,
+      407,
+      910
+    ],
+    "text": "PHENYLALANINE",
+    "confidence": 0.9917343854904175
+  }
+]
