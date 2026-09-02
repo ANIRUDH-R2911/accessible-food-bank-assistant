@@ -51,7 +51,19 @@
         ],
         "predicted_ingredients": [
             "whole grain oats",
-            "sugar"
+            "sugar",
+            "salt",
+            "natural flavor 123-068 distributed by",
+            "total fat 2",
+            "3% the quaker oats company p",
+            "box 049033 saturated fat 0",
+            "3% chicago",
+            "oil 60604-9003 u",
+            "a \u00a92020 the quaker oats compan trans fat og we're here to help",
+            "unsaturated fat 0",
+            "quakereats",
+            "corn or 800555",
+            "6287 unsaturated fat  please have package asalable nee alin cholesterol omg 0% smartlobel\""
         ],
         "expected_allergens": [],
         "predicted_allergens": [],
@@ -131,7 +143,8 @@
             "soy lecithin",
             "rolled oats",
             "peanut butter",
-            "high oleic canola oil cereal crisp dark refiners syrup"
+            "high oleic canola oil cereal crisp dark refiners syrup",
+            "water"
         ],
         "expected_allergens": [
             "peanuts",

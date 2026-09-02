@@ -109,7 +109,7 @@ def looks_like_noise(text):
         "protein",
         "sodium"
     ]
-    if len(text.split()) > 12:
+    if len(text.split()) > 20:
         return True
     if any(term in text for term in noise_terms):
         return True
@@ -172,7 +172,7 @@ def extract_ingredients(text):
             break
         if looks_like_hard_stop_line(line):
             break
-        if idx >= 5 and looks_like_stop_line(line):
+        if idx >= 7 and looks_like_stop_line(line):
             break
         if any(
             re.search(pattern, line_lower)
