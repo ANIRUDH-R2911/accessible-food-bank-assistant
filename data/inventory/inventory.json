@@ -6431,5 +6431,1863 @@
             "carbohydrate": 6.0,
             "protein": 6.0
         }
+    },
+    {
+        "id": 322,
+        "created_at": "2026-09-07T06:23:42.788123",
+        "ingredients": [
+            "milk",
+            "serving per"
+        ],
+        "allergens": [
+            "Milk"
+        ],
+        "allergens_may_contain": [],
+        "allergens_free_from": [],
+        "nutrition": {
+            "calories": 150.0,
+            "total_fat": 8.0,
+            "sodium": 125.0,
+            "carbohydrate": 12.0,
+            "protein": 8.0
+        }
+    },
+    {
+        "id": 323,
+        "created_at": "2026-09-07T06:23:57.409676",
+        "ingredients": [
+            "whole grain oats",
+            "sugar",
+            "salt",
+            "natural flavor 123-068 distributed by",
+            "total fat 2",
+            "3% the quaker oats company p",
+            "box 049033 saturated fat 0",
+            "3% chicago",
+            "oil 60604-9003 u",
+            "a \u00a92020 the quaker oats compan trans fat og we're here to help",
+            "unsaturated fat 0",
+            "quakereats",
+            "corn or 800555",
+            "6287 unsaturated fat  please have package asalable nee alin cholesterol omg 0% smartlobel\"",
+            "corn or"
+        ],
+        "allergens": [],
+        "allergens_may_contain": [],
+        "allergens_free_from": [],
+        "nutrition": {
+            "calories": 180.0,
+            "total_fat": 2.5,
+            "sodium": 290.0,
+            "carbohydrate": 13.0,
+            "protein": 4.0
+        }
+    },
+    {
+        "id": 324,
+        "created_at": "2026-09-07T06:24:18.402189",
+        "ingredients": [],
+        "allergens": [
+            "Milk"
+        ],
+        "allergens_may_contain": [],
+        "allergens_free_from": [],
+        "nutrition": {
+            "calories": 110.0,
+            "total_fat": 1.5,
+            "sodium": 160.0,
+            "carbohydrate": 23.0,
+            "protein": 3.0
+        }
+    },
+    {
+        "id": 325,
+        "created_at": "2026-09-07T06:24:46.623916",
+        "ingredients": [
+            "dry roasted peanuts",
+            "germinated yellow corn flour",
+            "soy flour",
+            "sugar",
+            "salt",
+            "soy lecithin",
+            "rolled oats",
+            "peanut butter",
+            "high oleic canola oil cereal crisp dark refiners syrup",
+            "water",
+            "cereal crosp"
+        ],
+        "allergens": [
+            "Almond",
+            "Egg",
+            "Milk",
+            "Peanut",
+            "Soy",
+            "Wheat"
+        ],
+        "allergens_may_contain": [],
+        "allergens_free_from": [],
+        "nutrition": {
+            "total_fat": 6.0,
+            "sodium": 140.0,
+            "carbohydrate": 29.0,
+            "protein": 5.0
+        }
+    },
+    {
+        "id": 326,
+        "created_at": "2026-09-07T06:24:57.995397",
+        "ingredients": [
+            "wheat flour",
+            "niacin",
+            "reduced iron",
+            "vitamin b [thiamin mononitrate] vitamin b [riboflavin]",
+            "folic acid",
+            "enriched flour",
+            "vegetable oil soybean and palm oil with tbhq flour",
+            "folic acid"
+        ],
+        "allergens": [
+            "Soy",
+            "Wheat"
+        ],
+        "allergens_may_contain": [],
+        "allergens_free_from": [],
+        "nutrition": {
+            "total_fat": 8.0,
+            "sodium": 230.0,
+            "carbohydrate": 17.0,
+            "protein": 3.0
+        }
+    },
+    {
+        "id": 327,
+        "created_at": "2026-09-07T06:25:33.828064",
+        "ingredients": [
+            "cocoa beans",
+            "cocoa butter",
+            "cocoa beans"
+        ],
+        "allergens": [
+            "Egg",
+            "Peanut"
+        ],
+        "allergens_may_contain": [],
+        "allergens_free_from": [
+            "Wheat"
+        ],
+        "nutrition": {
+            "total_fat": 22.0,
+            "protein": 5.0
+        }
+    },
+    {
+        "id": 328,
+        "created_at": "2026-09-07T06:25:51.648668",
+        "ingredients": [],
+        "allergens": [],
+        "allergens_may_contain": [],
+        "allergens_free_from": [],
+        "nutrition": {
+            "calories": 130.0,
+            "total_fat": 1.0,
+            "sodium": 480.0,
+            "carbohydrate": 25.0,
+            "protein": 6.0
+        }
+    },
+    {
+        "id": 329,
+        "created_at": "2026-09-07T06:26:02.073300",
+        "ingredients": [],
+        "allergens": [
+            "Milk"
+        ],
+        "allergens_may_contain": [],
+        "allergens_free_from": [],
+        "nutrition": {
+            "calories": 240.0,
+            "total_fat": 8.0,
+            "sodium": 50.0,
+            "carbohydrate": 37.0,
+            "protein": 4.0
+        }
+    },
+    {
+        "id": 330,
+        "created_at": "2026-09-07T06:26:31.287938",
+        "ingredients": [
+            "sugar",
+            "cocoa butter",
+            "whole milk",
+            "chocolate liquor",
+            "butter oil",
+            "soy lecithin",
+            "vanillin",
+            "salt",
+            "milk chocolate",
+            "raisins",
+            "dextrin",
+            "maltodextrin",
+            "confectioner's glaze",
+            "butter oil"
+        ],
+        "allergens": [
+            "Milk",
+            "Soy"
+        ],
+        "allergens_may_contain": [
+            "Peanut",
+            "Tree Nut",
+            "Wheat"
+        ],
+        "allergens_free_from": [],
+        "nutrition": {
+            "total_fat": 9.0,
+            "sodium": 20.0,
+            "carbohydrate": 27.0,
+            "protein": 2.0
+        }
+    },
+    {
+        "id": 331,
+        "created_at": "2026-09-07T06:26:52.318709",
+        "ingredients": [],
+        "allergens": [],
+        "allergens_may_contain": [],
+        "allergens_free_from": [],
+        "nutrition": {
+            "total_fat": 0.0,
+            "sodium": 20.0,
+            "carbohydrate": 1.0,
+            "protein": 80.0
+        }
+    },
+    {
+        "id": 332,
+        "created_at": "2026-09-07T06:27:10.221500",
+        "ingredients": [
+            "serving per"
+        ],
+        "allergens": [],
+        "allergens_may_contain": [],
+        "allergens_free_from": [],
+        "nutrition": {
+            "total_fat": 14.0,
+            "sodium": 1.0,
+            "carbohydrate": 0.0
+        }
+    },
+    {
+        "id": 333,
+        "created_at": "2026-09-07T06:32:06.781870",
+        "ingredients": [
+            "milk",
+            "vitamin d3",
+            "contains contains",
+            "serving ",
+            "amount per",
+            "serving per"
+        ],
+        "allergens": [
+            "Milk"
+        ],
+        "allergens_may_contain": [],
+        "allergens_free_from": [],
+        "nutrition": {
+            "calories": 150.0,
+            "total_fat": 8.0,
+            "sodium": 125.0,
+            "carbohydrate": 12.0,
+            "protein": 8.0
+        }
+    },
+    {
+        "id": 334,
+        "created_at": "2026-09-07T06:32:18.369081",
+        "ingredients": [
+            "whole grain oats",
+            "sugar",
+            "salt",
+            "natural flavor 123-068 distributed by",
+            "total fat 2",
+            "3% the quaker oats company p",
+            "box 049033 saturated fat 0",
+            "3% chicago",
+            "oil 60604-9003 u",
+            "a \u00a92020 the quaker oats compan trans fat og we're here to help",
+            "unsaturated fat 0",
+            "quakereats",
+            "corn or 800555",
+            "6287 unsaturated fat  please have package asalable nee alin cholesterol omg 0% smartlobel\"",
+            "the quaker",
+            "cholesterol omg",
+            "total fat",
+            "package asalable",
+            "to help",
+            "natural flavor",
+            "distributed by",
+            "sugar salt",
+            "whole grain",
+            "unsaturated fat",
+            "oats company",
+            "trans fat",
+            "nee alin",
+            "saturated fat",
+            "og we",
+            "please have",
+            "oats compan",
+            "corn or",
+            "re here"
+        ],
+        "allergens": [],
+        "allergens_may_contain": [],
+        "allergens_free_from": [],
+        "nutrition": {
+            "calories": 180.0,
+            "total_fat": 2.5,
+            "sodium": 290.0,
+            "carbohydrate": 13.0,
+            "protein": 4.0
+        }
+    },
+    {
+        "id": 335,
+        "created_at": "2026-09-07T06:32:37.443156",
+        "ingredients": [],
+        "allergens": [
+            "Milk"
+        ],
+        "allergens_may_contain": [],
+        "allergens_free_from": [],
+        "nutrition": {
+            "calories": 110.0,
+            "total_fat": 1.5,
+            "sodium": 160.0,
+            "carbohydrate": 23.0,
+            "protein": 3.0
+        }
+    },
+    {
+        "id": 336,
+        "created_at": "2026-09-07T06:33:02.708666",
+        "ingredients": [
+            "dry roasted peanuts",
+            "germinated yellow corn flour",
+            "soy flour",
+            "sugar",
+            "salt",
+            "soy lecithin",
+            "rolled oats",
+            "peanut butter",
+            "high oleic canola oil cereal crisp dark refiners syrup",
+            "water",
+            "syrup wateh",
+            "dry roasted",
+            "corn flour",
+            "high olfic",
+            "soy le",
+            "salt soy",
+            "degerimnated yellow",
+            "oil twice",
+            "canola oil",
+            "sodium bicarbonate",
+            "dark retiners",
+            "cereal crosp"
+        ],
+        "allergens": [
+            "Almond",
+            "Egg",
+            "Milk",
+            "Peanut",
+            "Soy",
+            "Wheat"
+        ],
+        "allergens_may_contain": [],
+        "allergens_free_from": [],
+        "nutrition": {
+            "total_fat": 6.0,
+            "sodium": 140.0,
+            "carbohydrate": 29.0,
+            "protein": 5.0
+        }
+    },
+    {
+        "id": 337,
+        "created_at": "2026-09-07T06:33:11.816320",
+        "ingredients": [
+            "wheat flour",
+            "niacin",
+            "reduced iron",
+            "vitamin b [thiamin mononitrate] vitamin b [riboflavin]",
+            "folic acid",
+            "enriched flour",
+            "vegetable oil soybean and palm oil with tbhq flour",
+            "vitamin b",
+            "thiamin mononitrate",
+            "palm oil",
+            "with tbhq",
+            "vegetable oil",
+            "soybean and"
+        ],
+        "allergens": [
+            "Soy",
+            "Wheat"
+        ],
+        "allergens_may_contain": [],
+        "allergens_free_from": [],
+        "nutrition": {
+            "total_fat": 8.0,
+            "sodium": 230.0,
+            "carbohydrate": 17.0,
+            "protein": 3.0
+        }
+    },
+    {
+        "id": 338,
+        "created_at": "2026-09-07T06:33:49.070167",
+        "ingredients": [
+            "cocoa beans",
+            "cocoa butter"
+        ],
+        "allergens": [
+            "Egg",
+            "Peanut"
+        ],
+        "allergens_may_contain": [],
+        "allergens_free_from": [
+            "Wheat"
+        ],
+        "nutrition": {
+            "total_fat": 22.0,
+            "protein": 5.0
+        }
+    },
+    {
+        "id": 339,
+        "created_at": "2026-09-07T06:34:07.595789",
+        "ingredients": [],
+        "allergens": [],
+        "allergens_may_contain": [],
+        "allergens_free_from": [],
+        "nutrition": {
+            "calories": 130.0,
+            "total_fat": 1.0,
+            "sodium": 480.0,
+            "carbohydrate": 25.0,
+            "protein": 6.0
+        }
+    },
+    {
+        "id": 340,
+        "created_at": "2026-09-07T06:34:18.427613",
+        "ingredients": [],
+        "allergens": [
+            "Milk"
+        ],
+        "allergens_may_contain": [],
+        "allergens_free_from": [],
+        "nutrition": {
+            "calories": 240.0,
+            "total_fat": 8.0,
+            "sodium": 50.0,
+            "carbohydrate": 37.0,
+            "protein": 4.0
+        }
+    },
+    {
+        "id": 341,
+        "created_at": "2026-09-07T06:34:47.738128",
+        "ingredients": [
+            "sugar",
+            "cocoa butter",
+            "whole milk",
+            "chocolate liquor",
+            "butter oil",
+            "soy lecithin",
+            "vanillin",
+            "salt",
+            "milk chocolate",
+            "raisins",
+            "dextrin",
+            "maltodextrin",
+            "confectioner's glaze",
+            "nonfat serving",
+            "serving corn",
+            "per contains"
+        ],
+        "allergens": [
+            "Milk",
+            "Soy"
+        ],
+        "allergens_may_contain": [
+            "Peanut",
+            "Tree Nut",
+            "Wheat"
+        ],
+        "allergens_free_from": [],
+        "nutrition": {
+            "total_fat": 9.0,
+            "sodium": 20.0,
+            "carbohydrate": 27.0,
+            "protein": 2.0
+        }
+    },
+    {
+        "id": 342,
+        "created_at": "2026-09-07T06:35:09.621573",
+        "ingredients": [],
+        "allergens": [],
+        "allergens_may_contain": [],
+        "allergens_free_from": [],
+        "nutrition": {
+            "total_fat": 0.0,
+            "sodium": 20.0,
+            "carbohydrate": 1.0,
+            "protein": 80.0
+        }
+    },
+    {
+        "id": 343,
+        "created_at": "2026-09-07T06:35:27.615332",
+        "ingredients": [
+            "tat serving",
+            "aioe ois",
+            "of ordgin",
+            "an per",
+            "contains country",
+            "serving per",
+            "fat ditibuted",
+            "ingredients nutrition"
+        ],
+        "allergens": [],
+        "allergens_may_contain": [],
+        "allergens_free_from": [],
+        "nutrition": {
+            "total_fat": 14.0,
+            "sodium": 1.0,
+            "carbohydrate": 0.0
+        }
+    },
+    {
+        "id": 344,
+        "created_at": "2026-09-07T06:35:51.038899",
+        "ingredients": [
+            "almonds"
+        ],
+        "allergens": [
+            "Almond",
+            "Milk",
+            "Sesame",
+            "Soy",
+            "Wheat"
+        ],
+        "allergens_may_contain": [
+            "Peanut",
+            "Tree Nut"
+        ],
+        "allergens_free_from": [],
+        "nutrition": {
+            "total_fat": 14.0,
+            "sodium": 0.0,
+            "carbohydrate": 6.0,
+            "protein": 6.0
+        }
+    },
+    {
+        "id": 345,
+        "created_at": "2026-09-07T06:41:06.318781",
+        "ingredients": [
+            "milk"
+        ],
+        "allergens": [
+            "Milk"
+        ],
+        "allergens_may_contain": [],
+        "allergens_free_from": [],
+        "nutrition": {
+            "calories": 150.0,
+            "total_fat": 8.0,
+            "sodium": 125.0,
+            "carbohydrate": 12.0,
+            "protein": 8.0
+        }
+    },
+    {
+        "id": 346,
+        "created_at": "2026-09-07T06:41:26.723176",
+        "ingredients": [
+            "whole grain oats",
+            "sugar",
+            "salt",
+            "natural flavor 123-068 distributed by",
+            "total fat 2",
+            "3% the quaker oats company p",
+            "box 049033 saturated fat 0",
+            "3% chicago",
+            "oil 60604-9003 u",
+            "a \u00a92020 the quaker oats compan trans fat og we're here to help",
+            "unsaturated fat 0",
+            "quakereats",
+            "corn or 800555",
+            "6287 unsaturated fat  please have package asalable nee alin cholesterol omg 0% smartlobel\""
+        ],
+        "allergens": [],
+        "allergens_may_contain": [],
+        "allergens_free_from": [],
+        "nutrition": {
+            "calories": 180.0,
+            "total_fat": 2.5,
+            "sodium": 290.0,
+            "carbohydrate": 13.0,
+            "protein": 4.0
+        }
+    },
+    {
+        "id": 347,
+        "created_at": "2026-09-07T06:42:02.832441",
+        "ingredients": [],
+        "allergens": [
+            "Milk"
+        ],
+        "allergens_may_contain": [],
+        "allergens_free_from": [],
+        "nutrition": {
+            "calories": 110.0,
+            "total_fat": 1.5,
+            "sodium": 160.0,
+            "carbohydrate": 23.0,
+            "protein": 3.0
+        }
+    },
+    {
+        "id": 348,
+        "created_at": "2026-09-07T06:42:53.810992",
+        "ingredients": [
+            "dry roasted peanuts",
+            "germinated yellow corn flour",
+            "soy flour",
+            "sugar",
+            "salt",
+            "soy lecithin",
+            "rolled oats",
+            "peanut butter",
+            "high oleic canola oil cereal crisp dark refiners syrup",
+            "water"
+        ],
+        "allergens": [
+            "Almond",
+            "Egg",
+            "Milk",
+            "Peanut",
+            "Soy",
+            "Wheat"
+        ],
+        "allergens_may_contain": [],
+        "allergens_free_from": [],
+        "nutrition": {
+            "total_fat": 6.0,
+            "sodium": 140.0,
+            "carbohydrate": 29.0,
+            "protein": 5.0
+        }
+    },
+    {
+        "id": 349,
+        "created_at": "2026-09-07T06:43:10.386510",
+        "ingredients": [
+            "wheat flour",
+            "niacin",
+            "reduced iron",
+            "vitamin b [thiamin mononitrate] vitamin b [riboflavin]",
+            "folic acid",
+            "enriched flour",
+            "vegetable oil soybean and palm oil with tbhq flour"
+        ],
+        "allergens": [
+            "Soy",
+            "Wheat"
+        ],
+        "allergens_may_contain": [],
+        "allergens_free_from": [],
+        "nutrition": {
+            "total_fat": 8.0,
+            "sodium": 230.0,
+            "carbohydrate": 17.0,
+            "protein": 3.0
+        }
+    },
+    {
+        "id": 350,
+        "created_at": "2026-09-07T06:44:01.152677",
+        "ingredients": [
+            "cocoa beans",
+            "cocoa butter"
+        ],
+        "allergens": [
+            "Egg",
+            "Peanut"
+        ],
+        "allergens_may_contain": [],
+        "allergens_free_from": [
+            "Wheat"
+        ],
+        "nutrition": {
+            "total_fat": 22.0,
+            "protein": 5.0
+        }
+    },
+    {
+        "id": 351,
+        "created_at": "2026-09-07T06:44:17.688084",
+        "ingredients": [],
+        "allergens": [],
+        "allergens_may_contain": [],
+        "allergens_free_from": [],
+        "nutrition": {
+            "calories": 130.0,
+            "total_fat": 1.0,
+            "sodium": 480.0,
+            "carbohydrate": 25.0,
+            "protein": 6.0
+        }
+    },
+    {
+        "id": 352,
+        "created_at": "2026-09-07T06:44:26.449603",
+        "ingredients": [],
+        "allergens": [
+            "Milk"
+        ],
+        "allergens_may_contain": [],
+        "allergens_free_from": [],
+        "nutrition": {
+            "calories": 240.0,
+            "total_fat": 8.0,
+            "sodium": 50.0,
+            "carbohydrate": 37.0,
+            "protein": 4.0
+        }
+    },
+    {
+        "id": 353,
+        "created_at": "2026-09-07T06:44:47.593947",
+        "ingredients": [
+            "sugar",
+            "cocoa butter",
+            "whole milk",
+            "chocolate liquor",
+            "butter oil",
+            "soy lecithin",
+            "vanillin",
+            "salt",
+            "milk chocolate",
+            "raisins",
+            "dextrin",
+            "maltodextrin",
+            "confectioner's glaze"
+        ],
+        "allergens": [
+            "Milk",
+            "Soy"
+        ],
+        "allergens_may_contain": [
+            "Peanut",
+            "Tree Nut",
+            "Wheat"
+        ],
+        "allergens_free_from": [],
+        "nutrition": {
+            "total_fat": 9.0,
+            "sodium": 20.0,
+            "carbohydrate": 27.0,
+            "protein": 2.0
+        }
+    },
+    {
+        "id": 354,
+        "created_at": "2026-09-07T06:45:04.131951",
+        "ingredients": [],
+        "allergens": [],
+        "allergens_may_contain": [],
+        "allergens_free_from": [],
+        "nutrition": {
+            "total_fat": 0.0,
+            "sodium": 20.0,
+            "carbohydrate": 1.0,
+            "protein": 80.0
+        }
+    },
+    {
+        "id": 355,
+        "created_at": "2026-09-07T06:45:18.580935",
+        "ingredients": [],
+        "allergens": [],
+        "allergens_may_contain": [],
+        "allergens_free_from": [],
+        "nutrition": {
+            "total_fat": 14.0,
+            "sodium": 1.0,
+            "carbohydrate": 0.0
+        }
+    },
+    {
+        "id": 356,
+        "created_at": "2026-09-07T06:45:36.813824",
+        "ingredients": [
+            "almonds"
+        ],
+        "allergens": [
+            "Almond",
+            "Milk",
+            "Sesame",
+            "Soy",
+            "Wheat"
+        ],
+        "allergens_may_contain": [
+            "Peanut",
+            "Tree Nut"
+        ],
+        "allergens_free_from": [],
+        "nutrition": {
+            "total_fat": 14.0,
+            "sodium": 0.0,
+            "carbohydrate": 6.0,
+            "protein": 6.0
+        }
+    },
+    {
+        "id": 357,
+        "created_at": "2026-09-07T06:59:31.531787",
+        "ingredients": [
+            "milk"
+        ],
+        "allergens": [
+            "Milk"
+        ],
+        "allergens_may_contain": [],
+        "allergens_free_from": [],
+        "nutrition": {
+            "calories": 150.0,
+            "total_fat": 8.0,
+            "sodium": 125.0,
+            "carbohydrate": 12.0,
+            "protein": 8.0
+        }
+    },
+    {
+        "id": 358,
+        "created_at": "2026-09-07T06:59:43.222393",
+        "ingredients": [
+            "whole grain oats",
+            "sugar",
+            "salt",
+            "natural flavor 123-068 distributed by",
+            "total fat 2",
+            "3% the quaker oats company p",
+            "box 049033 saturated fat 0",
+            "3% chicago",
+            "oil 60604-9003 u",
+            "a \u00a92020 the quaker oats compan trans fat og we're here to help",
+            "unsaturated fat 0",
+            "quakereats",
+            "corn or 800555",
+            "6287 unsaturated fat  please have package asalable nee alin cholesterol omg 0% smartlobel\""
+        ],
+        "allergens": [],
+        "allergens_may_contain": [],
+        "allergens_free_from": [],
+        "nutrition": {
+            "calories": 180.0,
+            "total_fat": 2.5,
+            "sodium": 290.0,
+            "carbohydrate": 13.0,
+            "protein": 4.0
+        }
+    },
+    {
+        "id": 359,
+        "created_at": "2026-09-07T07:00:02.425274",
+        "ingredients": [],
+        "allergens": [
+            "Milk"
+        ],
+        "allergens_may_contain": [],
+        "allergens_free_from": [],
+        "nutrition": {
+            "calories": 110.0,
+            "total_fat": 1.5,
+            "sodium": 160.0,
+            "carbohydrate": 23.0,
+            "protein": 3.0
+        }
+    },
+    {
+        "id": 360,
+        "created_at": "2026-09-07T07:00:26.593512",
+        "ingredients": [
+            "dry roasted peanuts",
+            "germinated yellow corn flour",
+            "soy flour",
+            "sugar",
+            "salt",
+            "soy lecithin",
+            "rolled oats",
+            "peanut butter",
+            "high oleic canola oil cereal crisp dark refiners syrup",
+            "water"
+        ],
+        "allergens": [
+            "Almond",
+            "Egg",
+            "Milk",
+            "Peanut",
+            "Soy",
+            "Wheat"
+        ],
+        "allergens_may_contain": [],
+        "allergens_free_from": [],
+        "nutrition": {
+            "total_fat": 6.0,
+            "sodium": 140.0,
+            "carbohydrate": 29.0,
+            "protein": 5.0
+        }
+    },
+    {
+        "id": 361,
+        "created_at": "2026-09-07T07:00:35.538398",
+        "ingredients": [
+            "wheat flour",
+            "niacin",
+            "reduced iron",
+            "vitamin b [thiamin mononitrate] vitamin b [riboflavin]",
+            "folic acid",
+            "enriched flour",
+            "vegetable oil soybean and palm oil with tbhq flour"
+        ],
+        "allergens": [
+            "Soy",
+            "Wheat"
+        ],
+        "allergens_may_contain": [],
+        "allergens_free_from": [],
+        "nutrition": {
+            "total_fat": 8.0,
+            "sodium": 230.0,
+            "carbohydrate": 17.0,
+            "protein": 3.0
+        }
+    },
+    {
+        "id": 362,
+        "created_at": "2026-09-07T07:01:08.820820",
+        "ingredients": [
+            "cocoa beans",
+            "cocoa butter"
+        ],
+        "allergens": [
+            "Egg",
+            "Peanut"
+        ],
+        "allergens_may_contain": [],
+        "allergens_free_from": [
+            "Wheat"
+        ],
+        "nutrition": {
+            "total_fat": 22.0,
+            "protein": 5.0
+        }
+    },
+    {
+        "id": 363,
+        "created_at": "2026-09-07T07:01:26.406993",
+        "ingredients": [],
+        "allergens": [],
+        "allergens_may_contain": [],
+        "allergens_free_from": [],
+        "nutrition": {
+            "calories": 130.0,
+            "total_fat": 1.0,
+            "sodium": 480.0,
+            "carbohydrate": 25.0,
+            "protein": 6.0
+        }
+    },
+    {
+        "id": 364,
+        "created_at": "2026-09-07T07:01:35.522054",
+        "ingredients": [],
+        "allergens": [
+            "Milk"
+        ],
+        "allergens_may_contain": [],
+        "allergens_free_from": [],
+        "nutrition": {
+            "calories": 240.0,
+            "total_fat": 8.0,
+            "sodium": 50.0,
+            "carbohydrate": 37.0,
+            "protein": 4.0
+        }
+    },
+    {
+        "id": 365,
+        "created_at": "2026-09-07T07:02:00.098495",
+        "ingredients": [
+            "sugar",
+            "cocoa butter",
+            "whole milk",
+            "chocolate liquor",
+            "butter oil",
+            "soy lecithin",
+            "vanillin",
+            "salt",
+            "milk chocolate",
+            "raisins",
+            "dextrin",
+            "maltodextrin",
+            "confectioner's glaze"
+        ],
+        "allergens": [
+            "Milk",
+            "Soy"
+        ],
+        "allergens_may_contain": [
+            "Peanut",
+            "Tree Nut",
+            "Wheat"
+        ],
+        "allergens_free_from": [],
+        "nutrition": {
+            "total_fat": 9.0,
+            "sodium": 20.0,
+            "carbohydrate": 27.0,
+            "protein": 2.0
+        }
+    },
+    {
+        "id": 366,
+        "created_at": "2026-09-07T07:02:17.798685",
+        "ingredients": [],
+        "allergens": [],
+        "allergens_may_contain": [],
+        "allergens_free_from": [],
+        "nutrition": {
+            "total_fat": 0.0,
+            "sodium": 20.0,
+            "carbohydrate": 1.0,
+            "protein": 80.0
+        }
+    },
+    {
+        "id": 367,
+        "created_at": "2026-09-07T07:02:33.658341",
+        "ingredients": [],
+        "allergens": [],
+        "allergens_may_contain": [],
+        "allergens_free_from": [],
+        "nutrition": {
+            "total_fat": 14.0,
+            "sodium": 1.0,
+            "carbohydrate": 0.0
+        }
+    },
+    {
+        "id": 368,
+        "created_at": "2026-09-07T07:02:53.382592",
+        "ingredients": [
+            "almonds"
+        ],
+        "allergens": [
+            "Almond",
+            "Milk",
+            "Sesame",
+            "Soy",
+            "Wheat"
+        ],
+        "allergens_may_contain": [
+            "Peanut",
+            "Tree Nut"
+        ],
+        "allergens_free_from": [],
+        "nutrition": {
+            "total_fat": 14.0,
+            "sodium": 0.0,
+            "carbohydrate": 6.0,
+            "protein": 6.0
+        }
+    },
+    {
+        "id": 369,
+        "created_at": "2026-09-07T07:08:28.331472",
+        "ingredients": [
+            "milk"
+        ],
+        "allergens": [
+            "Milk"
+        ],
+        "allergens_may_contain": [],
+        "allergens_free_from": [],
+        "nutrition": {
+            "calories": 150.0,
+            "total_fat": 8.0,
+            "sodium": 125.0,
+            "carbohydrate": 12.0,
+            "protein": 8.0
+        }
+    },
+    {
+        "id": 370,
+        "created_at": "2026-09-07T07:08:38.298642",
+        "ingredients": [
+            "whole grain oats",
+            "sugar",
+            "salt",
+            "natural flavor 123-068 distributed by",
+            "total fat 2",
+            "3% the quaker oats company p",
+            "box 049033 saturated fat 0",
+            "3% chicago",
+            "oil 60604-9003 u",
+            "a \u00a92020 the quaker oats compan trans fat og we're here to help",
+            "unsaturated fat 0",
+            "quakereats",
+            "corn or 800555",
+            "6287 unsaturated fat  please have package asalable nee alin cholesterol omg 0% smartlobel\""
+        ],
+        "allergens": [],
+        "allergens_may_contain": [],
+        "allergens_free_from": [],
+        "nutrition": {
+            "calories": 180.0,
+            "total_fat": 2.5,
+            "sodium": 290.0,
+            "carbohydrate": 13.0,
+            "protein": 4.0
+        }
+    },
+    {
+        "id": 371,
+        "created_at": "2026-09-07T07:08:57.353939",
+        "ingredients": [],
+        "allergens": [
+            "Milk"
+        ],
+        "allergens_may_contain": [],
+        "allergens_free_from": [],
+        "nutrition": {
+            "calories": 110.0,
+            "total_fat": 1.5,
+            "sodium": 160.0,
+            "carbohydrate": 23.0,
+            "protein": 3.0
+        }
+    },
+    {
+        "id": 372,
+        "created_at": "2026-09-07T07:09:22.273158",
+        "ingredients": [
+            "dry roasted peanuts",
+            "germinated yellow corn flour",
+            "soy flour",
+            "sugar",
+            "salt",
+            "soy lecithin",
+            "rolled oats",
+            "peanut butter",
+            "high oleic canola oil cereal crisp dark refiners syrup",
+            "water"
+        ],
+        "allergens": [
+            "Almond",
+            "Egg",
+            "Milk",
+            "Peanut",
+            "Soy",
+            "Wheat"
+        ],
+        "allergens_may_contain": [],
+        "allergens_free_from": [],
+        "nutrition": {
+            "total_fat": 6.0,
+            "sodium": 140.0,
+            "carbohydrate": 29.0,
+            "protein": 5.0
+        }
+    },
+    {
+        "id": 373,
+        "created_at": "2026-09-07T07:09:30.580223",
+        "ingredients": [
+            "wheat flour",
+            "niacin",
+            "reduced iron",
+            "vitamin b [thiamin mononitrate] vitamin b [riboflavin]",
+            "folic acid",
+            "enriched flour",
+            "vegetable oil soybean and palm oil with tbhq flour"
+        ],
+        "allergens": [
+            "Soy",
+            "Wheat"
+        ],
+        "allergens_may_contain": [],
+        "allergens_free_from": [],
+        "nutrition": {
+            "total_fat": 8.0,
+            "sodium": 230.0,
+            "carbohydrate": 17.0,
+            "protein": 3.0
+        }
+    },
+    {
+        "id": 374,
+        "created_at": "2026-09-07T07:09:59.056478",
+        "ingredients": [
+            "cocoa beans",
+            "cocoa butter"
+        ],
+        "allergens": [
+            "Egg",
+            "Peanut"
+        ],
+        "allergens_may_contain": [],
+        "allergens_free_from": [
+            "Wheat"
+        ],
+        "nutrition": {
+            "total_fat": 22.0,
+            "protein": 5.0
+        }
+    },
+    {
+        "id": 375,
+        "created_at": "2026-09-07T07:10:15.306427",
+        "ingredients": [],
+        "allergens": [],
+        "allergens_may_contain": [],
+        "allergens_free_from": [],
+        "nutrition": {
+            "calories": 130.0,
+            "total_fat": 1.0,
+            "sodium": 480.0,
+            "carbohydrate": 25.0,
+            "protein": 6.0
+        }
+    },
+    {
+        "id": 376,
+        "created_at": "2026-09-07T07:10:25.483547",
+        "ingredients": [],
+        "allergens": [
+            "Milk"
+        ],
+        "allergens_may_contain": [],
+        "allergens_free_from": [],
+        "nutrition": {
+            "calories": 240.0,
+            "total_fat": 8.0,
+            "sodium": 50.0,
+            "carbohydrate": 37.0,
+            "protein": 4.0
+        }
+    },
+    {
+        "id": 377,
+        "created_at": "2026-09-07T07:10:51.610450",
+        "ingredients": [
+            "sugar",
+            "cocoa butter",
+            "whole milk",
+            "chocolate liquor",
+            "butter oil",
+            "soy lecithin",
+            "vanillin",
+            "salt",
+            "milk chocolate",
+            "raisins",
+            "dextrin",
+            "maltodextrin",
+            "confectioner's glaze"
+        ],
+        "allergens": [
+            "Milk",
+            "Soy"
+        ],
+        "allergens_may_contain": [
+            "Peanut",
+            "Tree Nut",
+            "Wheat"
+        ],
+        "allergens_free_from": [],
+        "nutrition": {
+            "total_fat": 9.0,
+            "sodium": 20.0,
+            "carbohydrate": 27.0,
+            "protein": 2.0
+        }
+    },
+    {
+        "id": 378,
+        "created_at": "2026-09-07T07:11:10.897261",
+        "ingredients": [],
+        "allergens": [],
+        "allergens_may_contain": [],
+        "allergens_free_from": [],
+        "nutrition": {
+            "total_fat": 0.0,
+            "sodium": 20.0,
+            "carbohydrate": 1.0,
+            "protein": 80.0
+        }
+    },
+    {
+        "id": 379,
+        "created_at": "2026-09-07T07:11:28.609581",
+        "ingredients": [],
+        "allergens": [],
+        "allergens_may_contain": [],
+        "allergens_free_from": [],
+        "nutrition": {
+            "total_fat": 14.0,
+            "sodium": 1.0,
+            "carbohydrate": 0.0
+        }
+    },
+    {
+        "id": 380,
+        "created_at": "2026-09-07T07:11:49.174195",
+        "ingredients": [
+            "almonds"
+        ],
+        "allergens": [
+            "Almond",
+            "Milk",
+            "Sesame",
+            "Soy",
+            "Wheat"
+        ],
+        "allergens_may_contain": [
+            "Peanut",
+            "Tree Nut"
+        ],
+        "allergens_free_from": [],
+        "nutrition": {
+            "total_fat": 14.0,
+            "sodium": 0.0,
+            "carbohydrate": 6.0,
+            "protein": 6.0
+        }
+    },
+    {
+        "id": 381,
+        "created_at": "2026-09-07T07:20:06.884696",
+        "ingredients": [
+            "milk"
+        ],
+        "allergens": [
+            "Milk"
+        ],
+        "allergens_may_contain": [],
+        "allergens_free_from": [],
+        "nutrition": {
+            "calories": 150.0,
+            "total_fat": 8.0,
+            "sodium": 125.0,
+            "carbohydrate": 12.0,
+            "protein": 8.0
+        }
+    },
+    {
+        "id": 382,
+        "created_at": "2026-09-07T07:20:16.300501",
+        "ingredients": [
+            "whole grain oats",
+            "sugar",
+            "salt",
+            "natural flavor 123-068"
+        ],
+        "allergens": [],
+        "allergens_may_contain": [],
+        "allergens_free_from": [],
+        "nutrition": {
+            "calories": 180.0,
+            "total_fat": 2.5,
+            "sodium": 290.0,
+            "carbohydrate": 13.0,
+            "protein": 4.0
+        }
+    },
+    {
+        "id": 383,
+        "created_at": "2026-09-07T07:20:32.530016",
+        "ingredients": [],
+        "allergens": [
+            "Milk"
+        ],
+        "allergens_may_contain": [],
+        "allergens_free_from": [],
+        "nutrition": {
+            "calories": 110.0,
+            "total_fat": 1.5,
+            "sodium": 160.0,
+            "carbohydrate": 23.0,
+            "protein": 3.0
+        }
+    },
+    {
+        "id": 384,
+        "created_at": "2026-09-07T07:20:54.664759",
+        "ingredients": [
+            "dry roasted peanuts",
+            "germinated yellow corn flour",
+            "soy flour",
+            "sugar",
+            "salt",
+            "soy lecithin",
+            "rolled oats",
+            "peanut butter",
+            "high oleic canola oil cereal crisp dark refiners syrup",
+            "water"
+        ],
+        "allergens": [
+            "Almond",
+            "Egg",
+            "Milk",
+            "Peanut",
+            "Soy",
+            "Wheat"
+        ],
+        "allergens_may_contain": [],
+        "allergens_free_from": [],
+        "nutrition": {
+            "total_fat": 6.0,
+            "sodium": 140.0,
+            "carbohydrate": 29.0,
+            "protein": 5.0
+        }
+    },
+    {
+        "id": 385,
+        "created_at": "2026-09-07T07:21:02.746617",
+        "ingredients": [
+            "wheat flour",
+            "niacin",
+            "reduced iron",
+            "vitamin b [thiamin mononitrate] vitamin b [riboflavin]",
+            "folic acid",
+            "enriched flour",
+            "vegetable oil soybean and palm oil with tbhq flour"
+        ],
+        "allergens": [
+            "Soy",
+            "Wheat"
+        ],
+        "allergens_may_contain": [],
+        "allergens_free_from": [],
+        "nutrition": {
+            "total_fat": 8.0,
+            "sodium": 230.0,
+            "carbohydrate": 17.0,
+            "protein": 3.0
+        }
+    },
+    {
+        "id": 386,
+        "created_at": "2026-09-07T07:21:36.516075",
+        "ingredients": [
+            "cocoa beans",
+            "cocoa butter"
+        ],
+        "allergens": [
+            "Egg",
+            "Peanut"
+        ],
+        "allergens_may_contain": [],
+        "allergens_free_from": [
+            "Wheat"
+        ],
+        "nutrition": {
+            "total_fat": 22.0,
+            "protein": 5.0
+        }
+    },
+    {
+        "id": 387,
+        "created_at": "2026-09-07T07:21:57.307374",
+        "ingredients": [],
+        "allergens": [],
+        "allergens_may_contain": [],
+        "allergens_free_from": [],
+        "nutrition": {
+            "calories": 130.0,
+            "total_fat": 1.0,
+            "sodium": 480.0,
+            "carbohydrate": 25.0,
+            "protein": 6.0
+        }
+    },
+    {
+        "id": 388,
+        "created_at": "2026-09-07T07:22:07.174396",
+        "ingredients": [],
+        "allergens": [
+            "Milk"
+        ],
+        "allergens_may_contain": [],
+        "allergens_free_from": [],
+        "nutrition": {
+            "calories": 240.0,
+            "total_fat": 8.0,
+            "sodium": 50.0,
+            "carbohydrate": 37.0,
+            "protein": 4.0
+        }
+    },
+    {
+        "id": 389,
+        "created_at": "2026-09-07T07:22:34.637694",
+        "ingredients": [
+            "sugar",
+            "cocoa butter",
+            "whole milk",
+            "chocolate liquor",
+            "butter oil",
+            "soy lecithin",
+            "vanillin",
+            "salt",
+            "milk chocolate",
+            "raisins",
+            "dextrin",
+            "maltodextrin",
+            "confectioner's glaze"
+        ],
+        "allergens": [
+            "Milk",
+            "Soy"
+        ],
+        "allergens_may_contain": [
+            "Peanut",
+            "Tree Nut",
+            "Wheat"
+        ],
+        "allergens_free_from": [],
+        "nutrition": {
+            "total_fat": 9.0,
+            "sodium": 20.0,
+            "carbohydrate": 27.0,
+            "protein": 2.0
+        }
+    },
+    {
+        "id": 390,
+        "created_at": "2026-09-07T07:22:54.812999",
+        "ingredients": [],
+        "allergens": [],
+        "allergens_may_contain": [],
+        "allergens_free_from": [],
+        "nutrition": {
+            "total_fat": 0.0,
+            "sodium": 20.0,
+            "carbohydrate": 1.0,
+            "protein": 80.0
+        }
+    },
+    {
+        "id": 391,
+        "created_at": "2026-09-07T07:23:10.379064",
+        "ingredients": [],
+        "allergens": [],
+        "allergens_may_contain": [],
+        "allergens_free_from": [],
+        "nutrition": {
+            "total_fat": 14.0,
+            "sodium": 1.0,
+            "carbohydrate": 0.0
+        }
+    },
+    {
+        "id": 392,
+        "created_at": "2026-09-07T07:23:30.567317",
+        "ingredients": [
+            "almonds"
+        ],
+        "allergens": [
+            "Almond",
+            "Milk",
+            "Sesame",
+            "Soy",
+            "Wheat"
+        ],
+        "allergens_may_contain": [
+            "Peanut",
+            "Tree Nut"
+        ],
+        "allergens_free_from": [],
+        "nutrition": {
+            "total_fat": 14.0,
+            "sodium": 0.0,
+            "carbohydrate": 6.0,
+            "protein": 6.0
+        }
+    },
+    {
+        "id": 393,
+        "created_at": "2026-09-07T07:29:03.336524",
+        "ingredients": [
+            "milk"
+        ],
+        "allergens": [
+            "Milk"
+        ],
+        "allergens_may_contain": [],
+        "allergens_free_from": [],
+        "nutrition": {
+            "calories": 150.0,
+            "total_fat": 8.0,
+            "sodium": 125.0,
+            "carbohydrate": 12.0,
+            "protein": 8.0
+        }
+    },
+    {
+        "id": 394,
+        "created_at": "2026-09-07T07:29:15.105740",
+        "ingredients": [
+            "whole grain oats",
+            "sugar",
+            "salt",
+            "natural flavor 123-068"
+        ],
+        "allergens": [],
+        "allergens_may_contain": [],
+        "allergens_free_from": [],
+        "nutrition": {
+            "calories": 180.0,
+            "total_fat": 2.5,
+            "sodium": 290.0,
+            "carbohydrate": 13.0,
+            "protein": 4.0
+        }
+    },
+    {
+        "id": 395,
+        "created_at": "2026-09-07T07:29:31.022856",
+        "ingredients": [],
+        "allergens": [
+            "Milk"
+        ],
+        "allergens_may_contain": [],
+        "allergens_free_from": [],
+        "nutrition": {
+            "calories": 110.0,
+            "total_fat": 1.5,
+            "sodium": 160.0,
+            "carbohydrate": 23.0,
+            "protein": 3.0
+        }
+    },
+    {
+        "id": 396,
+        "created_at": "2026-09-07T07:29:54.455944",
+        "ingredients": [
+            "dry roasted peanuts",
+            "germinated yellow corn flour",
+            "soy flour",
+            "sugar",
+            "salt",
+            "soy lecithin",
+            "rolled oats",
+            "peanut butter",
+            "high oleic canola oil cereal crisp dark refiners syrup",
+            "water"
+        ],
+        "allergens": [
+            "Almond",
+            "Egg",
+            "Milk",
+            "Peanut",
+            "Soy",
+            "Wheat"
+        ],
+        "allergens_may_contain": [],
+        "allergens_free_from": [],
+        "nutrition": {
+            "total_fat": 6.0,
+            "sodium": 140.0,
+            "carbohydrate": 29.0,
+            "protein": 5.0
+        }
+    },
+    {
+        "id": 397,
+        "created_at": "2026-09-07T07:30:02.349739",
+        "ingredients": [
+            "wheat flour",
+            "niacin",
+            "reduced iron",
+            "vitamin b [thiamin mononitrate] vitamin b [riboflavin]",
+            "folic acid",
+            "enriched flour",
+            "vegetable oil soybean and palm oil with tbhq flour"
+        ],
+        "allergens": [
+            "Soy",
+            "Wheat"
+        ],
+        "allergens_may_contain": [],
+        "allergens_free_from": [],
+        "nutrition": {
+            "total_fat": 8.0,
+            "sodium": 230.0,
+            "carbohydrate": 17.0,
+            "protein": 3.0
+        }
+    },
+    {
+        "id": 398,
+        "created_at": "2026-09-07T07:30:30.790535",
+        "ingredients": [
+            "cocoa beans",
+            "cocoa butter"
+        ],
+        "allergens": [
+            "Egg",
+            "Peanut"
+        ],
+        "allergens_may_contain": [],
+        "allergens_free_from": [
+            "Wheat"
+        ],
+        "nutrition": {
+            "total_fat": 22.0,
+            "protein": 5.0
+        }
+    },
+    {
+        "id": 399,
+        "created_at": "2026-09-07T07:30:45.888583",
+        "ingredients": [],
+        "allergens": [],
+        "allergens_may_contain": [],
+        "allergens_free_from": [],
+        "nutrition": {
+            "calories": 130.0,
+            "total_fat": 1.0,
+            "sodium": 480.0,
+            "carbohydrate": 25.0,
+            "protein": 6.0
+        }
+    },
+    {
+        "id": 400,
+        "created_at": "2026-09-07T07:30:54.059022",
+        "ingredients": [],
+        "allergens": [
+            "Milk"
+        ],
+        "allergens_may_contain": [],
+        "allergens_free_from": [],
+        "nutrition": {
+            "calories": 240.0,
+            "total_fat": 8.0,
+            "sodium": 50.0,
+            "carbohydrate": 37.0,
+            "protein": 4.0
+        }
+    },
+    {
+        "id": 401,
+        "created_at": "2026-09-07T07:31:15.904570",
+        "ingredients": [
+            "sugar",
+            "cocoa butter",
+            "whole milk",
+            "chocolate liquor",
+            "butter oil",
+            "soy lecithin",
+            "vanillin",
+            "salt",
+            "milk chocolate",
+            "raisins",
+            "dextrin",
+            "maltodextrin",
+            "confectioner's glaze"
+        ],
+        "allergens": [
+            "Milk",
+            "Soy"
+        ],
+        "allergens_may_contain": [
+            "Peanut",
+            "Tree Nut",
+            "Wheat"
+        ],
+        "allergens_free_from": [],
+        "nutrition": {
+            "total_fat": 9.0,
+            "sodium": 20.0,
+            "carbohydrate": 27.0,
+            "protein": 2.0
+        }
+    },
+    {
+        "id": 402,
+        "created_at": "2026-09-07T07:31:49.778400",
+        "ingredients": [
+            "filtered",
+            "water",
+            "high fructose s per contains corn syrup",
+            "natural flavor",
+            "pectin",
+            "sucralose"
+        ],
+        "allergens": [],
+        "allergens_may_contain": [],
+        "allergens_free_from": [],
+        "nutrition": {
+            "total_fat": 0.0,
+            "sodium": 15.0,
+            "carbohydrate": 18.0,
+            "protein": 0.0
+        }
+    },
+    {
+        "id": 403,
+        "created_at": "2026-09-07T07:32:04.645181",
+        "ingredients": [],
+        "allergens": [],
+        "allergens_may_contain": [],
+        "allergens_free_from": [],
+        "nutrition": {
+            "total_fat": 14.0,
+            "sodium": 1.0,
+            "carbohydrate": 0.0
+        }
+    },
+    {
+        "id": 404,
+        "created_at": "2026-09-07T07:32:22.177550",
+        "ingredients": [
+            "almonds"
+        ],
+        "allergens": [
+            "Almond",
+            "Milk",
+            "Sesame",
+            "Soy",
+            "Wheat"
+        ],
+        "allergens_may_contain": [
+            "Peanut",
+            "Tree Nut"
+        ],
+        "allergens_free_from": [],
+        "nutrition": {
+            "total_fat": 14.0,
+            "sodium": 0.0,
+            "carbohydrate": 6.0,
+            "protein": 6.0
+        }
     }
 ]

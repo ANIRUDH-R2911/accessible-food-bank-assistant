@@ -1,15 +1,15 @@
 {
     "summary": {
         "images_evaluated": 12,
-        "total_tp": 28,
-        "total_fp": 3,
-        "total_fn": 19,
-        "macro_precision": 0.6966,
-        "macro_recall": 0.5999,
-        "macro_f1": 0.636,
-        "micro_precision": 0.9032,
-        "micro_recall": 0.5957,
-        "micro_f1": 0.7179,
+        "total_tp": 30,
+        "total_fp": 7,
+        "total_fn": 15,
+        "macro_precision": 0.7383,
+        "macro_recall": 0.6312,
+        "macro_f1": 0.6717,
+        "micro_precision": 0.8108,
+        "micro_recall": 0.6667,
+        "micro_f1": 0.7317,
         "most_common_false_positives": [
             [
                 "natural flavor 123-068",
@@ -21,6 +21,22 @@
             ],
             [
                 "milk chocolate",
+                1
+            ],
+            [
+                "filtered",
+                1
+            ],
+            [
+                "high fructose s per contains corn syrup",
+                1
+            ],
+            [
+                "natural flavor",
+                1
+            ],
+            [
+                "water",
                 1
             ]
         ],
@@ -62,19 +78,11 @@
                 1
             ],
             [
-                "aspartame",
-                1
-            ],
-            [
-                "citric acid",
-                1
-            ],
-            [
                 "filtered water",
                 1
             ],
             [
-                "glycerol ester of rosin",
+                "high fructose corn syrup",
                 1
             ],
             [
@@ -82,19 +90,11 @@
                 1
             ],
             [
-                "modified cornstarch",
+                "lemon pulp",
                 1
             ],
             [
                 "natural flavors",
-                1
-            ],
-            [
-                "potassium citrate",
-                1
-            ],
-            [
-                "vitamin c (ascorbic acid)",
                 1
             ],
             [
@@ -216,25 +216,29 @@
         },
         {
             "image_name": "Lemonade.jpeg",
-            "precision": 0,
-            "recall": 0.0,
-            "f1": 0,
-            "tp_count": 0,
-            "fp_count": 0,
-            "fn_count": 10,
-            "true_positives": [],
-            "false_positives": [],
+            "precision": 0.3333,
+            "recall": 0.25,
+            "f1": 0.2857,
+            "tp_count": 2,
+            "fp_count": 4,
+            "fn_count": 6,
+            "true_positives": [
+                "pectin",
+                "sucralose"
+            ],
+            "false_positives": [
+                "filtered",
+                "high fructose s per contains corn syrup",
+                "natural flavor",
+                "water"
+            ],
             "false_negatives": [
                 "acesulfame potassium",
-                "aspartame",
-                "citric acid",
                 "filtered water",
-                "glycerol ester of rosin",
+                "high fructose corn syrup",
                 "lemon juice from concentrate",
-                "modified cornstarch",
-                "natural flavors",
-                "potassium citrate",
-                "vitamin c (ascorbic acid)"
+                "lemon pulp",
+                "natural flavors"
             ]
         },
         {

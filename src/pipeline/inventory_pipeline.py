@@ -1,4 +1,4 @@
-'''
+
 import sys
 from pathlib import Path
 
@@ -13,13 +13,15 @@ from src.storage.inventory_manager import InventoryManager
 
 
 class InventoryPipeline:
-    def __init__(self):
+    def __init__(self, use_resize=True, use_clahe=True):
         self.reader = PaddleOCREngine()
         self.inventory_manager = InventoryManager()
+        self.use_resize = use_resize
+        self.use_clahe = use_clahe
 
     def process_image(self, image_path):
         print("\n[1] Preprocessing Image...")
-        processed_image = preprocess_image(image_path)
+        processed_image = preprocess_image(image_path, use_resize=self.use_resize, use_clahe=self.use_clahe)
         #print(type(processed_image))
         #try:
         #    print(processed_image.shape)
@@ -50,6 +52,7 @@ class InventoryPipeline:
             "extracted_data": extracted_data,
             "saved_record": saved_record
         }
+
 '''
 import sys
 from pathlib import Path
@@ -98,3 +101,4 @@ class InventoryPipeline:
             "extracted_data": extracted_data,
             "saved_record": saved_record
         }
+'''
