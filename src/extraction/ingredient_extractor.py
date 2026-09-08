@@ -1,5 +1,12 @@
 import re
 from rapidfuzz import fuzz
+import sys
+from pathlib import Path
+
+project_root = Path(__file__).resolve().parent.parent
+sys.path.append(str(project_root))
+
+from src.parser.boundary_recovery import (boundary_recovery_pipeline)
 
 STOP_LINE_PATTERNS = [
     r"^contains:?\s*(wheat|milk|soy|egg|peanut|tree\s*nut|almond|cashew|walnut|fish|shellfish|sesame)",
@@ -205,6 +212,7 @@ def extract_ingredients(text):
     for ingredient in ingredients:
         expanded.extend(split_compound_ingredient(ingredient))
 
+    expanded = boundary_recovery_pipeline(expanded)
     final = []
     seen = set()
     for ingredient in expanded:
