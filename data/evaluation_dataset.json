@@ -133,7 +133,9 @@
             "soy lecithin",
             "rolled oats",
             "peanut butter",
-            "high oleic canola oil cereal crisp dark refiners syrup",
+            "high oleic canola oil",
+            "cereal crisp",
+            "dark refiners syrup",
             "water"
         ],
         "expected_allergens": [
@@ -373,7 +375,6 @@
             "acesulfame potassium"
         ],
         "predicted_ingredients": [
-            "filtered",
             "water",
             "high fructose s per contains corn syrup",
             "natural flavor",

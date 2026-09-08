@@ -1,30 +1,22 @@
 {
     "summary": {
         "images_evaluated": 12,
-        "total_tp": 30,
-        "total_fp": 7,
-        "total_fn": 15,
-        "macro_precision": 0.7383,
-        "macro_recall": 0.6312,
-        "macro_f1": 0.6717,
-        "micro_precision": 0.8108,
-        "micro_recall": 0.6667,
-        "micro_f1": 0.7317,
+        "total_tp": 33,
+        "total_fp": 5,
+        "total_fn": 12,
+        "macro_precision": 0.7591,
+        "macro_recall": 0.66,
+        "macro_f1": 0.6967,
+        "micro_precision": 0.8684,
+        "micro_recall": 0.7333,
+        "micro_f1": 0.7952,
         "most_common_false_positives": [
             [
                 "natural flavor 123-068",
                 1
             ],
             [
-                "high oleic canola oil cereal crisp dark refiners syrup",
-                1
-            ],
-            [
                 "milk chocolate",
-                1
-            ],
-            [
-                "filtered",
                 1
             ],
             [
@@ -51,18 +43,6 @@
             ],
             [
                 "baking soda",
-                1
-            ],
-            [
-                "cereal crisp",
-                1
-            ],
-            [
-                "dark refiners syrup",
-                1
-            ],
-            [
-                "high oleic canola oil",
                 1
             ],
             [
@@ -142,15 +122,18 @@
         },
         {
             "image_name": "Granola_bar.jpg",
-            "precision": 0.9,
-            "recall": 0.6923,
-            "f1": 0.7826,
-            "tp_count": 9,
-            "fp_count": 1,
-            "fn_count": 4,
+            "precision": 1.0,
+            "recall": 0.9231,
+            "f1": 0.96,
+            "tp_count": 12,
+            "fp_count": 0,
+            "fn_count": 1,
             "true_positives": [
+                "cereal crisp",
+                "dark refiners syrup",
                 "dry roasted peanuts",
                 "germinated yellow corn flour",
+                "high oleic canola oil",
                 "peanut butter",
                 "rolled oats",
                 "salt",
@@ -159,14 +142,9 @@
                 "sugar",
                 "water"
             ],
-            "false_positives": [
-                "high oleic canola oil cereal crisp dark refiners syrup"
-            ],
+            "false_positives": [],
             "false_negatives": [
-                "baking soda",
-                "cereal crisp",
-                "dark refiners syrup",
-                "high oleic canola oil"
+                "baking soda"
             ]
         },
         {
@@ -216,18 +194,17 @@
         },
         {
             "image_name": "Lemonade.jpeg",
-            "precision": 0.3333,
+            "precision": 0.4,
             "recall": 0.25,
-            "f1": 0.2857,
+            "f1": 0.3077,
             "tp_count": 2,
-            "fp_count": 4,
+            "fp_count": 3,
             "fn_count": 6,
             "true_positives": [
                 "pectin",
                 "sucralose"
             ],
             "false_positives": [
-                "filtered",
                 "high fructose s per contains corn syrup",
                 "natural flavor",
                 "water"
