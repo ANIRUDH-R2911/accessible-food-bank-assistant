@@ -77,6 +77,12 @@ def run_ingredient_error_analysis(input_file="data/evaluation_dataset.json", out
                 "true_positives": tp,
                 "false_positives": fp,
                 "false_negatives": fn,
+                "ground_truth": expected,
+                "predictions": predicted,
+                "ocr_output": record.get("ocr_output", ""),
+                "corrected_output": record.get("corrected_output", ""),
+                "failure_type": "",
+                "failure_notes": ""
             }
         )
 
@@ -98,6 +104,8 @@ def run_ingredient_error_analysis(input_file="data/evaluation_dataset.json", out
         if (micro_precision + micro_recall)
         else 0
     )
+    
+    top_failure_images = sorted(image_reports, key=lambda x: x["fn_count"], reverse=True)[:15]
 
     report = {
         "summary": {
@@ -116,6 +124,7 @@ def run_ingredient_error_analysis(input_file="data/evaluation_dataset.json", out
             "most_common_false_negatives":
                 fn_counter.most_common(20),
         },
+        "top_failure_images": top_failure_images,
         "image_reports": image_reports
     }
 
@@ -150,71 +159,6 @@ def run_ingredient_error_analysis(input_file="data/evaluation_dataset.json", out
     print("\nMost Common False Negatives")
     for ingredient, count in fn_counter.most_common(20):
         print(f"  {ingredient:<40} {count}")
-
-    print("\n" + "=" * 70)
-    print("IMAGE-LEVEL FAILURE TRACE")
-    print("=" * 70)
-
-    for record in records:
-        if not record.get("evaluate_ingredients", False):
-            continue
-
-        expected = record["expected_ingredients"]
-        predicted = record["predicted_ingredients"]
-
-        gt_set = {
-            x.lower().strip()
-            for x in expected
-        }
-
-        pred_set = {
-            x.lower().strip()
-            for x in predicted
-        }
-
-        fp = sorted(list(pred_set - gt_set))
-        fn = sorted(list(gt_set - pred_set))
-
-        if not fp and not fn:
-            continue
-
-        print("\n" + "-" * 35)
-        print(f"IMAGE: {record['image_name']}")
-        print("-" * 35)
-
-        print("\nGROUND TRUTH")
-        print("-" * 20)
-        for item in expected:
-            print(item)
-
-        print("\nPREDICTED")
-        print("-" * 20)
-        for item in predicted:
-            print(item)
-
-        print("\nFALSE NEGATIVES")
-        print("-" * 20)
-        if fn:
-            for item in fn:
-                print(item)
-        else:
-            print("None")
-
-        print("\nFALSE POSITIVES")
-        print("-" * 20)
-        if fp:
-            for item in fp:
-                print(item)
-        else:
-            print("None")
-
-        print("\nOCR OUTPUT")
-        print("-" * 20)
-        print(record.get("ocr_output", ""))
-
-        print("\nCORRECTED OUTPUT")
-        print("-" * 20)
-        print(record.get("corrected_output", ""))
 
     print("\n" + "-" * 70)
     print(f"Report saved to:\n{output_file}")
