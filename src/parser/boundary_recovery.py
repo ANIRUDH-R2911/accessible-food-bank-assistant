@@ -25,18 +25,23 @@ def recover_boundaries(ingredient_list):
         ingredient = ingredient.strip()
         matches = []
         for keyword in BOUNDARY_KEYWORDS:
-            if keyword in ingredient:
+            pattern = r"\b" + re.escape(keyword) + r"\b"
+            if re.search(pattern, ingredient):
                 matches.append(keyword)
 
         if len(matches) <= 1:
             recovered.append(ingredient)
             continue
 
+        # Replace longest keywords first so a shorter keyword that happens to
+        # be a substring of a longer one (e.g. "soy flour" vs a hypothetical
+        # "soy flour blend") doesn't get split out from underneath it.
         matches = sorted(matches, key=len, reverse=True)
         temp = ingredient
         for idx, match in enumerate(matches):
             marker = f"|||BOUNDARY_{idx}|||"
-            temp = temp.replace(match, marker + match + marker)
+            pattern = r"\b" + re.escape(match) + r"\b"
+            temp = re.sub(pattern, marker + match + marker, temp)
 
         parts = temp.split("|||")
         for part in parts:

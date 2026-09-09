@@ -11,10 +11,10 @@ from src.parser.boundary_recovery import (boundary_recovery_pipeline)
 STOP_LINE_PATTERNS = [
     r"^contains:?\s*(wheat|milk|soy|egg|peanut|tree\s*nut|almond|cashew|walnut|fish|shellfish|sesame)",
     r"nutrition\s+facts",
-    r"calories\b",
-    r"protein\b",
+    r"^calories\b",
+    r"^protein\b",
     r"^total\s+fat\b",
-    r"sodium\b",
+    r"^sodium\b",
     r"%\s*daily\s*value",
     r"distributed\s+by",
     r"manufactured\s+by",
@@ -22,8 +22,8 @@ STOP_LINE_PATTERNS = [
     r"serving\s+size",
     r"servings?\s+per\s+container",
     r"keep\s+refrigerated",
-    r"allergen",
-    r"warning"
+    r"^allergen",
+    r"^warning"
 ]
 
 HARD_STOP_PATTERNS = [
@@ -105,7 +105,7 @@ def looks_like_stop_line(line):
     )
 
 def looks_like_noise(text):
-    text = text.lower()
+    text = text.lower().strip()
     noise_terms = [
         "serving",
         "daily value",
@@ -113,12 +113,14 @@ def looks_like_noise(text):
         "calories",
         "container",
         "amount per serving",
-        "protein",
-        "sodium"
     ]
     if len(text.split()) > 12:
         return True
     if any(term in text for term in noise_terms):
+        return True
+    if re.fullmatch(r"sodium(\s*\d+\s*mg)?", text):
+        return True
+    if re.fullmatch(r"protein(\s*\d+\s*g)?", text):
         return True
     return False
 
@@ -139,18 +141,22 @@ def normalize_ingredient(text):
 def split_compound_ingredient(text):
     parts = [text]
     for keyword in COMMON_INGREDIENT_BREAKS:
+        pattern = r"\b" + re.escape(keyword) + r"\b"
         new_parts = []
         for part in parts:
-            if keyword in part and part != keyword:
-                chunks = part.split(keyword)
-                for i, chunk in enumerate(chunks):
-                    chunk = chunk.strip()
-                    if chunk:
-                        new_parts.append(chunk)
-                    if i < len(chunks) - 1:
-                        new_parts.append(keyword)
-            else:
+            if part == keyword:
                 new_parts.append(part)
+                continue
+            if not re.search(pattern, part):
+                new_parts.append(part)
+                continue
+            chunks = re.split(pattern, part)
+            for i, chunk in enumerate(chunks):
+                chunk = chunk.strip()
+                if chunk:
+                    new_parts.append(chunk)
+                if i < len(chunks) - 1:
+                    new_parts.append(keyword)
         parts = new_parts
     return [
         p.strip()
@@ -179,7 +185,7 @@ def extract_ingredients(text):
             break
         if looks_like_hard_stop_line(line):
             break
-        if idx >= 5 and looks_like_stop_line(line):
+        if idx > 0 and looks_like_stop_line(line):
             break
         if any(
             re.search(pattern, line_lower)
