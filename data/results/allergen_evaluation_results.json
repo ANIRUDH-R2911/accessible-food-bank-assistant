@@ -1,12 +1,12 @@
 {
     "metrics": {
-        "images_evaluated": 25,
-        "tp": 28,
-        "fp": 17,
-        "fn": 22,
-        "precision": 0.6222222222222222,
-        "recall": 0.56,
-        "f1": 0.5894736842105264
+        "images_evaluated": 27,
+        "tp": 33,
+        "fp": 15,
+        "fn": 21,
+        "precision": 0.6875,
+        "recall": 0.6111111111111112,
+        "f1": 0.6470588235294118
     },
     "results": [
         {
@@ -116,35 +116,37 @@
         {
             "image_name": "bagel.jpg",
             "ground_truth": [
+                "egg",
+                "milk",
+                "sesame",
+                "soy",
+                "tree nuts",
+                "wheat"
+            ],
+            "prediction": [
+                "egg",
+                "milk",
                 "sesame",
                 "soy",
                 "wheat"
             ],
-            "prediction": [
-                "wheat"
-            ],
             "missed": [
-                "sesame",
-                "soy"
+                "tree nuts"
             ],
             "extra": []
         },
         {
             "image_name": "bread_loaf.jpg",
             "ground_truth": [
-                "sesame",
-                "wheat"
-            ],
-            "prediction": [
                 "soy",
                 "wheat"
             ],
+            "prediction": [],
             "missed": [
-                "sesame"
+                "soy",
+                "wheat"
             ],
-            "extra": [
-                "soy"
-            ]
+            "extra": []
         },
         {
             "image_name": "cheese_block.jpg",
@@ -158,12 +160,38 @@
             "extra": []
         },
         {
+            "image_name": "Cookies.jpeg",
+            "ground_truth": [
+                "milk",
+                "soy",
+                "wheat"
+            ],
+            "prediction": [
+                "milk",
+                "soy",
+                "wheat"
+            ],
+            "missed": [],
+            "extra": []
+        },
+        {
             "image_name": "cream_cheese.jpg",
             "ground_truth": [
                 "milk"
             ],
             "prediction": [
                 "milk"
+            ],
+            "missed": [],
+            "extra": []
+        },
+        {
+            "image_name": "eggs.jpeg",
+            "ground_truth": [
+                "egg"
+            ],
+            "prediction": [
+                "egg"
             ],
             "missed": [],
             "extra": []
@@ -192,6 +220,19 @@
                 "almond",
                 "milk",
                 "soy",
+                "wheat"
+            ],
+            "extra": []
+        },
+        {
+            "image_name": "gummy_bears.jpg",
+            "ground_truth": [
+                "milk",
+                "wheat"
+            ],
+            "prediction": [],
+            "missed": [
+                "milk",
                 "wheat"
             ],
             "extra": []
@@ -301,23 +342,17 @@
             ]
         },
         {
-            "image_name": "noodles.jpg",
+            "image_name": "pasta.jpeg",
             "ground_truth": [
-                "sesame",
-                "soy",
+                "egg",
                 "wheat"
             ],
             "prediction": [
                 "egg",
-                "soy",
                 "wheat"
             ],
-            "missed": [
-                "sesame"
-            ],
-            "extra": [
-                "egg"
-            ]
+            "missed": [],
+            "extra": []
         },
         {
             "image_name": "peanut_butter.jpg",
@@ -335,24 +370,6 @@
             "extra": [
                 "soy"
             ]
-        },
-        {
-            "image_name": "Ramen_cup.jpg",
-            "ground_truth": [
-                "coconut",
-                "milk",
-                "soy",
-                "wheat"
-            ],
-            "prediction": [
-                "milk",
-                "wheat"
-            ],
-            "missed": [
-                "coconut",
-                "soy"
-            ],
-            "extra": []
         },
         {
             "image_name": "shredded_cheese.jpg",
@@ -377,7 +394,7 @@
             "extra": []
         },
         {
-            "image_name": "yogurt.jpg",
+            "image_name": "yougrt_cup.jpg",
             "ground_truth": [
                 "milk"
             ],
