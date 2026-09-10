@@ -1,12 +1,12 @@
 {
     "metrics": {
-        "images_evaluated": 5,
-        "tp": 7,
-        "fp": 9,
-        "fn": 2,
-        "precision": 0.4375,
-        "recall": 0.7777777777777778,
-        "f1": 0.56
+        "images_evaluated": 25,
+        "tp": 28,
+        "fp": 17,
+        "fn": 22,
+        "precision": 0.6222222222222222,
+        "recall": 0.56,
+        "f1": 0.5894736842105264
     },
     "results": [
         {
@@ -43,10 +43,10 @@
             ]
         },
         {
-            "image_name": "Crackers.jpg",
+            "image_name": "crackers.jpg",
             "ground_truth": [
                 "milk",
-                "soy",
+                "soybean",
                 "wheat"
             ],
             "prediction": [
@@ -54,9 +54,12 @@
                 "wheat"
             ],
             "missed": [
-                "milk"
+                "milk",
+                "soybean"
             ],
-            "extra": []
+            "extra": [
+                "soy"
+            ]
         },
         {
             "image_name": "Chocolates.jpeg",
@@ -93,6 +96,296 @@
                 "soy",
                 "wheat"
             ]
+        },
+        {
+            "image_name": "almond_milk.jpg",
+            "ground_truth": [
+                "almond"
+            ],
+            "prediction": [
+                "almond",
+                "milk",
+                "soy"
+            ],
+            "missed": [],
+            "extra": [
+                "milk",
+                "soy"
+            ]
+        },
+        {
+            "image_name": "bagel.jpg",
+            "ground_truth": [
+                "sesame",
+                "soy",
+                "wheat"
+            ],
+            "prediction": [
+                "wheat"
+            ],
+            "missed": [
+                "sesame",
+                "soy"
+            ],
+            "extra": []
+        },
+        {
+            "image_name": "bread_loaf.jpg",
+            "ground_truth": [
+                "sesame",
+                "wheat"
+            ],
+            "prediction": [
+                "soy",
+                "wheat"
+            ],
+            "missed": [
+                "sesame"
+            ],
+            "extra": [
+                "soy"
+            ]
+        },
+        {
+            "image_name": "cheese_block.jpg",
+            "ground_truth": [
+                "milk"
+            ],
+            "prediction": [
+                "milk"
+            ],
+            "missed": [],
+            "extra": []
+        },
+        {
+            "image_name": "cream_cheese.jpg",
+            "ground_truth": [
+                "milk"
+            ],
+            "prediction": [
+                "milk"
+            ],
+            "missed": [],
+            "extra": []
+        },
+        {
+            "image_name": "flour.jpg",
+            "ground_truth": [
+                "wheat"
+            ],
+            "prediction": [
+                "wheat"
+            ],
+            "missed": [],
+            "extra": []
+        },
+        {
+            "image_name": "Frozen_veggies.jpg",
+            "ground_truth": [
+                "almond",
+                "milk",
+                "soy",
+                "wheat"
+            ],
+            "prediction": [],
+            "missed": [
+                "almond",
+                "milk",
+                "soy",
+                "wheat"
+            ],
+            "extra": []
+        },
+        {
+            "image_name": "Hummus.jpg",
+            "ground_truth": [
+                "pine nuts",
+                "sesame"
+            ],
+            "prediction": [
+                "egg"
+            ],
+            "missed": [
+                "pine nuts",
+                "sesame"
+            ],
+            "extra": [
+                "egg"
+            ]
+        },
+        {
+            "image_name": "Ice_cream.jpg",
+            "ground_truth": [
+                "egg",
+                "milk",
+                "peanut",
+                "soy",
+                "tree nuts",
+                "wheat"
+            ],
+            "prediction": [
+                "egg",
+                "milk",
+                "peanut",
+                "soy"
+            ],
+            "missed": [
+                "tree nuts",
+                "wheat"
+            ],
+            "extra": []
+        },
+        {
+            "image_name": "Juice.jpg",
+            "ground_truth": [
+                "phenylalanine"
+            ],
+            "prediction": [],
+            "missed": [
+                "phenylalanine"
+            ],
+            "extra": []
+        },
+        {
+            "image_name": "lentils.jpg",
+            "ground_truth": [
+                "wheat"
+            ],
+            "prediction": [
+                "wheat"
+            ],
+            "missed": [],
+            "extra": []
+        },
+        {
+            "image_name": "m&m.jpg",
+            "ground_truth": [
+                "milk",
+                "peanut",
+                "soy"
+            ],
+            "prediction": [
+                "soy"
+            ],
+            "missed": [
+                "milk",
+                "peanut"
+            ],
+            "extra": []
+        },
+        {
+            "image_name": "mac_n_cheese.jpg",
+            "ground_truth": [
+                "milk",
+                "wheat"
+            ],
+            "prediction": [
+                "milk",
+                "wheat"
+            ],
+            "missed": [],
+            "extra": []
+        },
+        {
+            "image_name": "Mayo.jpg",
+            "ground_truth": [
+                "egg"
+            ],
+            "prediction": [
+                "egg",
+                "soy"
+            ],
+            "missed": [],
+            "extra": [
+                "soy"
+            ]
+        },
+        {
+            "image_name": "noodles.jpg",
+            "ground_truth": [
+                "sesame",
+                "soy",
+                "wheat"
+            ],
+            "prediction": [
+                "egg",
+                "soy",
+                "wheat"
+            ],
+            "missed": [
+                "sesame"
+            ],
+            "extra": [
+                "egg"
+            ]
+        },
+        {
+            "image_name": "peanut_butter.jpg",
+            "ground_truth": [
+                "peanut",
+                "soybean"
+            ],
+            "prediction": [
+                "peanut",
+                "soy"
+            ],
+            "missed": [
+                "soybean"
+            ],
+            "extra": [
+                "soy"
+            ]
+        },
+        {
+            "image_name": "Ramen_cup.jpg",
+            "ground_truth": [
+                "coconut",
+                "milk",
+                "soy",
+                "wheat"
+            ],
+            "prediction": [
+                "milk",
+                "wheat"
+            ],
+            "missed": [
+                "coconut",
+                "soy"
+            ],
+            "extra": []
+        },
+        {
+            "image_name": "shredded_cheese.jpg",
+            "ground_truth": [
+                "milk"
+            ],
+            "prediction": [],
+            "missed": [
+                "milk"
+            ],
+            "extra": []
+        },
+        {
+            "image_name": "yogurt.jpg",
+            "ground_truth": [
+                "milk"
+            ],
+            "prediction": [
+                "milk"
+            ],
+            "missed": [],
+            "extra": []
+        },
+        {
+            "image_name": "yogurt.jpg",
+            "ground_truth": [
+                "milk"
+            ],
+            "prediction": [
+                "milk"
+            ],
+            "missed": [],
+            "extra": []
         }
     ]
 }
