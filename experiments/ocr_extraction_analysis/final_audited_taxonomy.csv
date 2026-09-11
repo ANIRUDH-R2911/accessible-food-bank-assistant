@@ -1,0 +1,20 @@
+image_name,ingredient,final_category
+Whole_milk.jpg,vitamin d3,PARSER_FAILURE
+Oatmeal.jpg,natural flavor,BOUNDARY_FAILURE
+Granola_bar.jpg,high oleic canola oil,BOUNDARY_FAILURE
+Granola_bar.jpg,cereal crisp,BOUNDARY_FAILURE
+Granola_bar.jpg,dark refiners syrup,BOUNDARY_FAILURE
+Granola_bar.jpg,baking soda,PARSER_FAILURE
+Chocolates.jpeg,nonfat milk,PARSER_FAILURE
+Chocolates.jpeg,corn syrup,OCR_CORRUPTION
+Lemonade.jpeg,vitamin c (ascorbic acid),OCR_CORRUPTION
+Lemonade.jpeg,glycerol ester of rosin,PARSER_FAILURE
+Lemonade.jpeg,potassium citrate,PARSER_FAILURE
+Lemonade.jpeg,modified cornstarch,PARSER_FAILURE
+Lemonade.jpeg,acesulfame potassium,PARSER_FAILURE
+Lemonade.jpeg,aspartame,PARSER_FAILURE
+Lemonade.jpeg,filtered water,OCR_ABSENCE
+Lemonade.jpeg,citric acid,OCR_ABSENCE
+Lemonade.jpeg,natural flavors,OCR_ABSENCE
+Lemonade.jpeg,lemon juice from concentrate,OCR_ABSENCE
+Oil.jpeg,extra virgin olive oil,OCR_ABSENCE
