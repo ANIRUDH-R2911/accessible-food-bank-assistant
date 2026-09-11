@@ -1,0 +1,14 @@
+[
+    {
+        "image_name": "Sports_drink.jpg",
+        "raw_response": "```json\n{\n  \"ingredients\": [\n    \"Filtered Water\",\n    \"Allulose\",\n    \"Citric Acid\",\n    \"Coconut Water Concentrate\",\n    \"Dipotassium Phosphate\",\n    \"Calcium Carbonate\",\n    \"Magnesium Oxide\",\n    \"Zinc Oxide\",\n    \"Fruit Juice (Color)\",\n    \"Ascorbic Acid [Vitamin C]\",\n    \"Calcium D-Pantothenate [Vitamin B5]\",\n    \"Niacinamide [Vitamin B3]\",\n    \"alpha-Tocopheryl Acetate [Vitamin E]\",\n    \"Pyridoxine Hydrochloride [Vitamin B6]\",\n    \"Vitamin A Palmitate [Vitamin A]\",\n    \"Folic Acid [Vitamin B9]\",\n    \"Cholecalciferol [Vitamin D3]\",\n    \"Cyanocobalamin [Vitamin B12]\",\n    \"Malic Acid\",\n    \"Steviol Glycosides (Stevia Sweetener)\",\n    \"Natural Blueberry Pomegranate Flavor with other Natural Flavors\",\n    \"Gum Arabic\",\n    \"Ester Gum\",\n    \"beta-Carotene (Color)\"\n  ]\n}\n```"
+    },
+    {
+        "image_name": "m&m.jpg",
+        "raw_response": "```json\n{\n  \"ingredients\": [\n    \"Milk Chocolate\",\n    \"Sugar\",\n    \"Chocolate\",\n    \"Skim Milk\",\n    \"Cocoa Butter\",\n    \"Lactose\",\n    \"Milkfat\",\n    \"Soy Lecithin\",\n    \"Salt\",\n    \"Artificial and Natural Flavors\",\n    \"Sugar\",\n    \"Cornstarch\",\n    \"Corn Syrup\",\n    \"Dextrin\",\n    \"Coloring\",\n    \"Blue 1 Lake\",\n    \"Yellow 6\",\n    \"Red 40\",\n    \"Yellow 5\",\n    \"Blue 1\",\n    \"Yellow 6 Lake\",\n    \"Red 40 Lake\",\n    \"Yellow 5 Lake\",\n    \"Blue 2 Lake\",\n    \"Blue 2\",\n    \"Carnauba Wax\",\n    \"Gum Acacia\"\n  ]\n}\n```"
+    },
+    {
+        "image_name": "mac_n_cheese.jpg",
+        "raw_response": "```json\n{\n  \"ingredients\": [\n    \"CHEESE SAUCE\",\n    \"WHEY\",\n    \"CHEDDAR CHEESE\",\n    \"MILK\",\n    \"CHEESE CULTURE\",\n    \"SALT\",\n    \"ENZYMES\",\n    \"CANOLA OIL\",\n    \"PARMESAN CHEESE\",\n    \"PART-SKIM MILK\",\n    \"COLBY CHEESE\",\n    \"HAVARTI CHEESE\",\n    \"MILK PROTEIN CONCENTRATE\",\n    \"SODIUM PHOSPHATE\",\n    \"LACTIC ACID\",\n    \"SODIUM ALGINATE\",\n    \"SORBIC ACID AS A PRESERVATIVE\",\n    \"WHEY PROTEIN CONCENTRATE\",\n    \"MILKFAT\",\n    \"OLEORESIN PAPRIKA (COLOR)\",\n    \"SILICON DIOXIDE\",\n    \"ANNATTO (COLOR)\",\n    \"ENRICHED MACARONI PRODUCT\",\n    \"WHEAT FLOUR\",\n    \"NIACIN\",\n    \"FERROUS SULFATE (IRON)\",\n    \"THIAMIN MONONITRATE (VITAMIN B1)\",\n    \"RIBOFLAVIN (VITAMIN B2)\",\n    \"FOLIC ACID\"\n  ]\n}\n```"
+    }
+]
