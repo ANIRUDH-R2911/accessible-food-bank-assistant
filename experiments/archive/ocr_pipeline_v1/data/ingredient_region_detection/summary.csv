@@ -1,0 +1,13 @@
+image,header_found,header_text,full_lines,region_lines
+Almonds.jpeg,True,INGREDIENTS: ALMONDS.,34,21
+cereal_box.jpg,False,,53,0
+chocolate_bar.jpg,False,,93,0
+Chocolates.jpeg,True,"INGREDIENTS: Milk Chocolate (Sugar, Cocoa",81,68
+crackers.jpg,True,"Ingredients: Enriched flour (wheat flour, niacin,",38,5
+Granola_bar.jpg,True,"INGREDIENTS: ROLLED GATS. SUGAR, PEANUT BUTTER",81,14
+Honey_Nut_Cheerios.jpg,False,,76,0
+Lemonade.jpeg,True,"INGREDIENTS: FLTERED WATE, LEMON",76,46
+Oatmeal.jpg,True,INGREDIENTS: WHOLE GRAN OATS SI5R,59,48
+Oil.jpeg,True,INGREDIENTS: EXTAVRSNOE,46,44
+Soup_Can.jpg,False,,105,0
+Whole_milk.jpg,True,INGREDIENTS: MILK.,42,40

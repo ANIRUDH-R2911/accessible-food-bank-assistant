@@ -1,0 +1,14 @@
+{
+    "num_samples": 12,
+    "ocr_character_accuracy": 23.78,
+    "ocr_word_accuracy": 86.13,
+    "correction_character_accuracy": 23.13,
+    "correction_word_accuracy": 82.82,
+    "ingredient_precision": 0.6966,
+    "ingredient_recall": 0.5999,
+    "ingredient_f1": 0.636,
+    "allergen_precision": 0.4375,
+    "allergen_recall": 0.7778,
+    "allergen_f1": 0.56,
+    "nutrition_accuracy": 0.7583
+}
