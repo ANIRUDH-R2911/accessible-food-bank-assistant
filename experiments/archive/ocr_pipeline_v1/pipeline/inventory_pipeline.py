@@ -9,7 +9,7 @@ from src.ocr.paddle_ocr import PaddleOCREngine
 from src.preprocessing.pipeline import preprocess_image
 from src.postprocessing.text_corrector import correct_text
 from src.extraction.extractor import extract_food_information
-from src.storage.inventory_manager import InventoryManager
+from src.Inventory.inventory_manager import InventoryManager
 
 
 class InventoryPipeline:
