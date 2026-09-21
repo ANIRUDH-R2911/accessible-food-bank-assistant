@@ -50,7 +50,6 @@ class GeminiExtractor:
     9. Extract only information visible in the image.
     10. Do not hallucinate ingredients or nutrition values.
 """
-
     def extract(self, image_path: str) -> dict:
         image_path = Path(image_path)
         if not image_path.exists():
