@@ -31,11 +31,11 @@ class GeminiExtractor:
         "may_contain": [],
         "nutrition": {
             "calories": null,
-            "fat_g": null,
-            "carbohydrates_g": null,
-            "protein_g": null,
-            "sodium_mg": null,
-            "sugar_g": null
+            "fat": null,
+            "carbohydrates": null,
+            "protein": null,
+            "sodium": null,
+            "sugar": null
             }
     }
     Rules:

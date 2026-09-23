@@ -19,11 +19,11 @@
             "may_contain": [],
             "nutrition": {
                 "calories": 30,
-                "fat_g": 2.5,
-                "carbohydrates_g": 1.0,
-                "protein_g": 1.0,
-                "sodium_mg": 170.0,
-                "sugar_g": 0.0
+                "fat": 2.5,
+                "carbohydrates": 1.0,
+                "protein": 1.0,
+                "sodium": 170.0,
+                "sugar": 0.0
             }
         },
         {
@@ -46,11 +46,11 @@
             "may_contain": [],
             "nutrition": {
                 "calories": 30,
-                "fat_g": 2.5,
-                "carbohydrates_g": 1,
-                "protein_g": 1,
-                "sodium_mg": 170,
-                "sugar_g": 0
+                "fat": 2.5,
+                "carbohydrates": 1,
+                "protein": 1,
+                "sodium": 170,
+                "sugar": 0
             }
         },
         {
@@ -89,11 +89,11 @@
             ],
             "nutrition": {
                 "calories": 250,
-                "fat_g": 2.0,
-                "carbohydrates_g": 50.0,
-                "protein_g": 11.0,
-                "sodium_mg": 350.0,
-                "sugar_g": 7.0
+                "fat": 2.0,
+                "carbohydrates": 50.0,
+                "protein": 11.0,
+                "sodium": 350.0,
+                "sugar": 7.0
             }
         },
         {
@@ -121,11 +121,11 @@
             "may_contain": [],
             "nutrition": {
                 "calories": 35,
-                "fat_g": 1.0,
-                "carbohydrates_g": 10.0,
-                "protein_g": 4.0,
-                "sodium_mg": 115,
-                "sugar_g": 0.0
+                "fat": 1.0,
+                "carbohydrates": 10.0,
+                "protein": 4.0,
+                "sodium": 115,
+                "sugar": 0.0
             }
         },
         {
@@ -152,11 +152,11 @@
             "may_contain": [],
             "nutrition": {
                 "calories": 110,
-                "fat_g": 0,
-                "carbohydrates_g": 27,
-                "protein_g": 0,
-                "sodium_mg": 10,
-                "sugar_g": 18
+                "fat": 0,
+                "carbohydrates": 27,
+                "protein": 0,
+                "sodium": 10,
+                "sugar": 18
             }
         },
         {
@@ -170,11 +170,11 @@
             "may_contain": [],
             "nutrition": {
                 "calories": 20,
-                "fat_g": 0.0,
-                "carbohydrates_g": 4.0,
-                "protein_g": 1.0,
-                "sodium_mg": 290.0,
-                "sugar_g": 2.0
+                "fat": 0.0,
+                "carbohydrates": 4.0,
+                "protein": 1.0,
+                "sodium": 290.0,
+                "sugar": 2.0
             }
         },
         {
@@ -184,11 +184,11 @@
             "may_contain": [],
             "nutrition": {
                 "calories": 240,
-                "fat_g": 8.0,
-                "carbohydrates_g": 37.0,
-                "protein_g": 4.0,
-                "sodium_mg": 50.0,
-                "sugar_g": 13.0
+                "fat": 8.0,
+                "carbohydrates": 37.0,
+                "protein": 4.0,
+                "sodium": 50.0,
+                "sugar": 13.0
             }
         },
         {
@@ -206,11 +206,11 @@
             "may_contain": [],
             "nutrition": {
                 "calories": 100,
-                "fat_g": 8.0,
-                "carbohydrates_g": 0.0,
-                "protein_g": 7.0,
-                "sodium_mg": 180.0,
-                "sugar_g": 0.0
+                "fat": 8.0,
+                "carbohydrates": 0.0,
+                "protein": 7.0,
+                "sodium": 180.0,
+                "sugar": 0.0
             }
         },
         {
@@ -223,11 +223,11 @@
             "may_contain": [],
             "nutrition": {
                 "calories": 238,
-                "fat_g": 22.0,
-                "carbohydrates_g": 10.0,
-                "protein_g": 5.0,
-                "sodium_mg": 0.0,
-                "sugar_g": 0.0
+                "fat": 22.0,
+                "carbohydrates": 10.0,
+                "protein": 5.0,
+                "sodium": 0.0,
+                "sugar": 0.0
             }
         },
         {
@@ -241,11 +241,11 @@
             "may_contain": [],
             "nutrition": {
                 "calories": 150,
-                "fat_g": 8,
-                "carbohydrates_g": 17,
-                "protein_g": 3,
-                "sodium_mg": 230,
-                "sugar_g": 0
+                "fat": 8,
+                "carbohydrates": 17,
+                "protein": 3,
+                "sodium": 230,
+                "sugar": 0
             }
         },
         {
@@ -263,11 +263,11 @@
             "may_contain": [],
             "nutrition": {
                 "calories": 80,
-                "fat_g": 7.0,
-                "carbohydrates_g": 2.0,
-                "protein_g": 2.0,
-                "sodium_mg": 125.0,
-                "sugar_g": 1.0
+                "fat": 7.0,
+                "carbohydrates": 2.0,
+                "protein": 2.0,
+                "sodium": 125.0,
+                "sugar": 1.0
             }
         },
         {
@@ -287,11 +287,11 @@
             "may_contain": [],
             "nutrition": {
                 "calories": 110,
-                "fat_g": 0,
-                "carbohydrates_g": 23,
-                "protein_g": 3,
-                "sodium_mg": 0,
-                "sugar_g": 0
+                "fat": 0,
+                "carbohydrates": 23,
+                "protein": 3,
+                "sodium": 0,
+                "sugar": 0
             }
         },
         {
@@ -311,11 +311,11 @@
             ],
             "nutrition": {
                 "calories": 50,
-                "fat_g": 0.0,
-                "carbohydrates_g": 11.0,
-                "protein_g": 2.0,
-                "sodium_mg": 15.0,
-                "sugar_g": 3.0
+                "fat": 0.0,
+                "carbohydrates": 11.0,
+                "protein": 2.0,
+                "sodium": 15.0,
+                "sugar": 3.0
             }
         },
         {
@@ -337,11 +337,11 @@
             "may_contain": [],
             "nutrition": {
                 "calories": 30,
-                "fat_g": 2.5,
-                "carbohydrates_g": 1.0,
-                "protein_g": 1.0,
-                "sodium_mg": 170.0,
-                "sugar_g": 0.0
+                "fat": 2.5,
+                "carbohydrates": 1.0,
+                "protein": 1.0,
+                "sodium": 170.0,
+                "sugar": 0.0
             }
         },
         {
@@ -380,11 +380,11 @@
             ],
             "nutrition": {
                 "calories": 250,
-                "fat_g": 2.0,
-                "carbohydrates_g": 50.0,
-                "protein_g": 11.0,
-                "sodium_mg": 350.0,
-                "sugar_g": 7.0
+                "fat": 2.0,
+                "carbohydrates": 50.0,
+                "protein": 11.0,
+                "sodium": 350.0,
+                "sugar": 7.0
             }
         },
         {
@@ -410,11 +410,11 @@
             "may_contain": [],
             "nutrition": {
                 "calories": 35,
-                "fat_g": 1.0,
-                "carbohydrates_g": 10.0,
-                "protein_g": 4.0,
-                "sodium_mg": 115,
-                "sugar_g": 0.0
+                "fat": 1.0,
+                "carbohydrates": 10.0,
+                "protein": 4.0,
+                "sodium": 115,
+                "sugar": 0.0
             }
         },
         {
@@ -441,11 +441,11 @@
             "may_contain": [],
             "nutrition": {
                 "calories": 110,
-                "fat_g": 0.0,
-                "carbohydrates_g": 27.0,
-                "protein_g": 0.0,
-                "sodium_mg": 10.0,
-                "sugar_g": 18.0
+                "fat": 0.0,
+                "carbohydrates": 27.0,
+                "protein": 0.0,
+                "sodium": 10.0,
+                "sugar": 18.0
             }
         },
         {
@@ -459,11 +459,11 @@
             "may_contain": [],
             "nutrition": {
                 "calories": 20,
-                "fat_g": 0.0,
-                "carbohydrates_g": 4.0,
-                "protein_g": 1.0,
-                "sodium_mg": 290.0,
-                "sugar_g": 2.0
+                "fat": 0.0,
+                "carbohydrates": 4.0,
+                "protein": 1.0,
+                "sodium": 290.0,
+                "sugar": 2.0
             }
         },
         {
@@ -473,11 +473,11 @@
             "may_contain": [],
             "nutrition": {
                 "calories": 240,
-                "fat_g": 8,
-                "carbohydrates_g": 37,
-                "protein_g": 4,
-                "sodium_mg": 50,
-                "sugar_g": 13
+                "fat": 8,
+                "carbohydrates": 37,
+                "protein": 4,
+                "sodium": 50,
+                "sugar": 13
             }
         },
         {
@@ -495,11 +495,11 @@
             "may_contain": [],
             "nutrition": {
                 "calories": 100,
-                "fat_g": 8,
-                "carbohydrates_g": 1.0,
-                "protein_g": 7,
-                "sodium_mg": 180,
-                "sugar_g": 0
+                "fat": 8,
+                "carbohydrates": 1.0,
+                "protein": 7,
+                "sodium": 180,
+                "sugar": 0
             }
         },
         {
@@ -516,11 +516,11 @@
             ],
             "nutrition": {
                 "calories": 238,
-                "fat_g": 22.0,
-                "carbohydrates_g": 10.0,
-                "protein_g": 5.0,
-                "sodium_mg": 0.0,
-                "sugar_g": 0.0
+                "fat": 22.0,
+                "carbohydrates": 10.0,
+                "protein": 5.0,
+                "sodium": 0.0,
+                "sugar": 0.0
             }
         },
         {
@@ -534,11 +534,11 @@
             "may_contain": [],
             "nutrition": {
                 "calories": 150,
-                "fat_g": 8,
-                "carbohydrates_g": 17,
-                "protein_g": 3,
-                "sodium_mg": 230,
-                "sugar_g": 0
+                "fat": 8,
+                "carbohydrates": 17,
+                "protein": 3,
+                "sodium": 230,
+                "sugar": 0
             }
         },
         {
@@ -556,11 +556,11 @@
             "may_contain": [],
             "nutrition": {
                 "calories": 80,
-                "fat_g": 7.0,
-                "carbohydrates_g": 2.0,
-                "protein_g": 2.0,
-                "sodium_mg": 125.0,
-                "sugar_g": 1.0
+                "fat": 7.0,
+                "carbohydrates": 2.0,
+                "protein": 2.0,
+                "sodium": 125.0,
+                "sugar": 1.0
             }
         },
         {
@@ -580,11 +580,11 @@
             "may_contain": [],
             "nutrition": {
                 "calories": 110,
-                "fat_g": 0,
-                "carbohydrates_g": 23,
-                "protein_g": 3,
-                "sodium_mg": 0,
-                "sugar_g": 0
+                "fat": 0,
+                "carbohydrates": 23,
+                "protein": 3,
+                "sodium": 0,
+                "sugar": 0
             }
         },
         {
@@ -604,11 +604,11 @@
             ],
             "nutrition": {
                 "calories": 50,
-                "fat_g": 0.0,
-                "carbohydrates_g": 11.0,
-                "protein_g": 2.0,
-                "sodium_mg": 15.0,
-                "sugar_g": 3.0
+                "fat": 0.0,
+                "carbohydrates": 11.0,
+                "protein": 2.0,
+                "sodium": 15.0,
+                "sugar": 3.0
             }
         },
         {
@@ -637,11 +637,11 @@
             ],
             "nutrition": {
                 "calories": 190,
-                "fat_g": 6.0,
-                "carbohydrates_g": 29.0,
-                "protein_g": 5.0,
-                "sodium_mg": 140.0,
-                "sugar_g": 11.0
+                "fat": 6.0,
+                "carbohydrates": 29.0,
+                "protein": 5.0,
+                "sodium": 140.0,
+                "sugar": 11.0
             }
         },
         {
@@ -667,11 +667,11 @@
             ],
             "nutrition": {
                 "calories": 100,
-                "fat_g": 0.0,
-                "carbohydrates_g": 23.0,
-                "protein_g": 2.0,
-                "sodium_mg": 0.0,
-                "sugar_g": 14.0
+                "fat": 0.0,
+                "carbohydrates": 23.0,
+                "protein": 2.0,
+                "sodium": 0.0,
+                "sugar": 14.0
             }
         },
         {
@@ -700,11 +700,11 @@
             "may_contain": [],
             "nutrition": {
                 "calories": 80,
-                "fat_g": 6.0,
-                "carbohydrates_g": 4.0,
-                "protein_g": 2.0,
-                "sodium_mg": 115.0,
-                "sugar_g": 1.0
+                "fat": 6.0,
+                "carbohydrates": 4.0,
+                "protein": 2.0,
+                "sodium": 115.0,
+                "sugar": 1.0
             }
         },
         {
@@ -743,11 +743,11 @@
             ],
             "nutrition": {
                 "calories": 390,
-                "fat_g": 24.0,
-                "carbohydrates_g": 38.0,
-                "protein_g": 7.0,
-                "sodium_mg": 75.0,
-                "sugar_g": 35.0
+                "fat": 24.0,
+                "carbohydrates": 38.0,
+                "protein": 7.0,
+                "sodium": 75.0,
+                "sugar": 35.0
             }
         },
         {
@@ -768,11 +768,11 @@
             "may_contain": [],
             "nutrition": {
                 "calories": 5,
-                "fat_g": 0,
-                "carbohydrates_g": 1,
-                "protein_g": 0,
-                "sodium_mg": 15,
-                "sugar_g": 0
+                "fat": 0,
+                "carbohydrates": 1,
+                "protein": 0,
+                "sodium": 15,
+                "sugar": 0
             }
         },
         {
@@ -790,11 +790,11 @@
             "may_contain": [],
             "nutrition": {
                 "calories": 20,
-                "fat_g": 0.0,
-                "carbohydrates_g": 4.0,
-                "protein_g": 0.0,
-                "sodium_mg": 170.0,
-                "sugar_g": 4.0
+                "fat": 0.0,
+                "carbohydrates": 4.0,
+                "protein": 0.0,
+                "sodium": 170.0,
+                "sugar": 4.0
             }
         },
         {
@@ -808,11 +808,11 @@
             ],
             "nutrition": {
                 "calories": 100,
-                "fat_g": 0.5,
-                "carbohydrates_g": 23.0,
-                "protein_g": 8.0,
-                "sodium_mg": 10.0,
-                "sugar_g": 0.0
+                "fat": 0.5,
+                "carbohydrates": 23.0,
+                "protein": 8.0,
+                "sodium": 10.0,
+                "sugar": 0.0
             }
         },
         {
@@ -836,11 +836,11 @@
             ],
             "nutrition": {
                 "calories": 140,
-                "fat_g": 6.0,
-                "carbohydrates_g": 21.0,
-                "protein_g": 1.0,
-                "sodium_mg": 20.0,
-                "sugar_g": 19.0
+                "fat": 6.0,
+                "carbohydrates": 21.0,
+                "protein": 1.0,
+                "sodium": 20.0,
+                "sugar": 19.0
             }
         },
         {
@@ -882,11 +882,11 @@
             "may_contain": [],
             "nutrition": {
                 "calories": 320,
-                "fat_g": 12,
-                "carbohydrates_g": 40,
-                "protein_g": 12,
-                "sodium_mg": 870,
-                "sugar_g": 3
+                "fat": 12,
+                "carbohydrates": 40,
+                "protein": 12,
+                "sodium": 870,
+                "sugar": 3
             }
         },
         {
@@ -910,11 +910,11 @@
             "may_contain": [],
             "nutrition": {
                 "calories": 90,
-                "fat_g": 10.0,
-                "carbohydrates_g": 0.0,
-                "protein_g": 0.0,
-                "sodium_mg": 70.0,
-                "sugar_g": null
+                "fat": 10.0,
+                "carbohydrates": 0.0,
+                "protein": 0.0,
+                "sodium": 70.0,
+                "sugar": null
             }
         },
         {
@@ -929,11 +929,11 @@
             "may_contain": [],
             "nutrition": {
                 "calories": 10,
-                "fat_g": 0,
-                "carbohydrates_g": 2,
-                "protein_g": 0,
-                "sodium_mg": 0,
-                "sugar_g": 2
+                "fat": 0,
+                "carbohydrates": 2,
+                "protein": 0,
+                "sodium": 0,
+                "sugar": 2
             }
         },
         {
@@ -948,11 +948,11 @@
             "may_contain": [],
             "nutrition": {
                 "calories": 180,
-                "fat_g": 2.5,
-                "carbohydrates_g": 37.0,
-                "protein_g": 4.0,
-                "sodium_mg": 290.0,
-                "sugar_g": 14.0
+                "fat": 2.5,
+                "carbohydrates": 37.0,
+                "protein": 4.0,
+                "sodium": 290.0,
+                "sugar": 14.0
             }
         },
         {
@@ -972,11 +972,11 @@
             "may_contain": [],
             "nutrition": {
                 "calories": 45,
-                "fat_g": 1,
-                "carbohydrates_g": 8,
-                "protein_g": 2,
-                "sodium_mg": 340,
-                "sugar_g": 5
+                "fat": 1,
+                "carbohydrates": 8,
+                "protein": 2,
+                "sodium": 340,
+                "sugar": 5
             }
         },
         {
@@ -991,11 +991,11 @@
             "may_contain": [],
             "nutrition": {
                 "calories": 190,
-                "fat_g": 16,
-                "carbohydrates_g": 6,
-                "protein_g": 7,
-                "sodium_mg": 150,
-                "sugar_g": 3
+                "fat": 16,
+                "carbohydrates": 6,
+                "protein": 7,
+                "sodium": 150,
+                "sugar": 3
             }
         },
         {
@@ -1009,11 +1009,11 @@
             "may_contain": [],
             "nutrition": {
                 "calories": 160,
-                "fat_g": 10.0,
-                "carbohydrates_g": 15.0,
-                "protein_g": 2.0,
-                "sodium_mg": 150.0,
-                "sugar_g": 1.0
+                "fat": 10.0,
+                "carbohydrates": 15.0,
+                "protein": 2.0,
+                "sodium": 150.0,
+                "sugar": 1.0
             }
         },
         {
@@ -1039,11 +1039,11 @@
             "may_contain": [],
             "nutrition": {
                 "calories": 10,
-                "fat_g": 0.0,
-                "carbohydrates_g": 2.0,
-                "protein_g": 0.0,
-                "sodium_mg": 190.0,
-                "sugar_g": 2.0
+                "fat": 0.0,
+                "carbohydrates": 2.0,
+                "protein": 0.0,
+                "sodium": 190.0,
+                "sugar": 2.0
             }
         },
         {
@@ -1058,11 +1058,11 @@
             "may_contain": [],
             "nutrition": {
                 "calories": 0,
-                "fat_g": 0,
-                "carbohydrates_g": 0,
-                "protein_g": 0,
-                "sodium_mg": 590,
-                "sugar_g": null
+                "fat": 0,
+                "carbohydrates": 0,
+                "protein": 0,
+                "sodium": 590,
+                "sugar": null
             }
         },
         {
@@ -1078,11 +1078,11 @@
             "may_contain": [],
             "nutrition": {
                 "calories": 90,
-                "fat_g": 6.0,
-                "carbohydrates_g": 0.0,
-                "protein_g": 7.0,
-                "sodium_mg": 230,
-                "sugar_g": 0.0
+                "fat": 6.0,
+                "carbohydrates": 0.0,
+                "protein": 7.0,
+                "sodium": 230,
+                "sugar": 0.0
             }
         },
         {
@@ -1106,11 +1106,11 @@
             "may_contain": [],
             "nutrition": {
                 "calories": 170,
-                "fat_g": 0,
-                "carbohydrates_g": 46,
-                "protein_g": 0,
-                "sodium_mg": 65,
-                "sugar_g": 46
+                "fat": 0,
+                "carbohydrates": 46,
+                "protein": 0,
+                "sodium": 65,
+                "sugar": 46
             }
         },
         {
@@ -1120,11 +1120,11 @@
             "may_contain": [],
             "nutrition": {
                 "calories": 130,
-                "fat_g": 1,
-                "carbohydrates_g": 25,
-                "protein_g": 6,
-                "sodium_mg": 480,
-                "sugar_g": 7
+                "fat": 1,
+                "carbohydrates": 25,
+                "protein": 6,
+                "sodium": 480,
+                "sugar": 7
             }
         },
         {
@@ -1138,11 +1138,11 @@
             "may_contain": [],
             "nutrition": {
                 "calories": 60,
-                "fat_g": 5,
-                "carbohydrates_g": 1,
-                "protein_g": 1,
-                "sodium_mg": 15,
-                "sugar_g": 1
+                "fat": 5,
+                "carbohydrates": 1,
+                "protein": 1,
+                "sodium": 15,
+                "sugar": 1
             }
         },
         {
@@ -1166,11 +1166,11 @@
             "may_contain": [],
             "nutrition": {
                 "calories": 20,
-                "fat_g": 0.0,
-                "carbohydrates_g": 5.0,
-                "protein_g": 0.0,
-                "sodium_mg": 30.0,
-                "sugar_g": 2.0
+                "fat": 0.0,
+                "carbohydrates": 5.0,
+                "protein": 0.0,
+                "sodium": 30.0,
+                "sugar": 2.0
             }
         },
         {
@@ -1182,11 +1182,11 @@
             "may_contain": [],
             "nutrition": {
                 "calories": 30,
-                "fat_g": 0,
-                "carbohydrates_g": 8,
-                "protein_g": 0,
-                "sodium_mg": 0,
-                "sugar_g": 8
+                "fat": 0,
+                "carbohydrates": 8,
+                "protein": 0,
+                "sodium": 0,
+                "sugar": 8
             }
         },
         {
@@ -1202,11 +1202,11 @@
             "may_contain": [],
             "nutrition": {
                 "calories": 160,
-                "fat_g": 0.0,
-                "carbohydrates_g": 36.0,
-                "protein_g": 3.0,
-                "sodium_mg": 10.0,
-                "sugar_g": 0.0
+                "fat": 0.0,
+                "carbohydrates": 36.0,
+                "protein": 3.0,
+                "sodium": 10.0,
+                "sugar": 0.0
             }
         },
         {
@@ -1221,11 +1221,11 @@
             "may_contain": [],
             "nutrition": {
                 "calories": 150,
-                "fat_g": 8,
-                "carbohydrates_g": 12,
-                "protein_g": 8,
-                "sodium_mg": 125,
-                "sugar_g": 12
+                "fat": 8,
+                "carbohydrates": 12,
+                "protein": 8,
+                "sodium": 125,
+                "sugar": 12
             }
         },
         {
@@ -1245,11 +1245,11 @@
             "may_contain": [],
             "nutrition": {
                 "calories": 230,
-                "fat_g": 16.0,
-                "carbohydrates_g": 9.0,
-                "protein_g": 14.0,
-                "sodium_mg": 80.0,
-                "sugar_g": 4.0
+                "fat": 16.0,
+                "carbohydrates": 9.0,
+                "protein": 14.0,
+                "sodium": 80.0,
+                "sugar": 4.0
             }
         },
         {
@@ -1273,11 +1273,11 @@
             "may_contain": [],
             "nutrition": {
                 "calories": 70,
-                "fat_g": 0,
-                "carbohydrates_g": 13,
-                "protein_g": 5,
-                "sodium_mg": 75,
-                "sugar_g": 8
+                "fat": 0,
+                "carbohydrates": 13,
+                "protein": 5,
+                "sodium": 75,
+                "sugar": 8
             }
         },
         {
@@ -1298,11 +1298,11 @@
             ],
             "nutrition": {
                 "calories": 160,
-                "fat_g": 14,
-                "carbohydrates_g": 6,
-                "protein_g": 6,
-                "sodium_mg": 0,
-                "sugar_g": 2
+                "fat": 14,
+                "carbohydrates": 6,
+                "protein": 6,
+                "sodium": 0,
+                "sugar": 2
             }
         },
         {
@@ -1335,11 +1335,11 @@
             ],
             "nutrition": {
                 "calories": 190,
-                "fat_g": 9,
-                "carbohydrates_g": 27,
-                "protein_g": 2,
-                "sodium_mg": 20,
-                "sugar_g": 24
+                "fat": 9,
+                "carbohydrates": 27,
+                "protein": 2,
+                "sodium": 20,
+                "sugar": 24
             }
         },
         {
@@ -1362,11 +1362,11 @@
             "may_contain": [],
             "nutrition": {
                 "calories": 140,
-                "fat_g": 7.0,
-                "carbohydrates_g": 19.0,
-                "protein_g": 1.0,
-                "sodium_mg": 80.0,
-                "sugar_g": 8.0
+                "fat": 7.0,
+                "carbohydrates": 19.0,
+                "protein": 1.0,
+                "sodium": 80.0,
+                "sugar": 8.0
             }
         },
         {
@@ -1380,11 +1380,11 @@
             "may_contain": [],
             "nutrition": {
                 "calories": 70,
-                "fat_g": 5.0,
-                "carbohydrates_g": 0.0,
-                "protein_g": 6.0,
-                "sodium_mg": 70,
-                "sugar_g": 0.0
+                "fat": 5.0,
+                "carbohydrates": 0.0,
+                "protein": 6.0,
+                "sodium": 70,
+                "sugar": 0.0
             }
         },
         {
@@ -1403,11 +1403,11 @@
             "may_contain": [],
             "nutrition": {
                 "calories": 70,
-                "fat_g": 0.0,
-                "carbohydrates_g": 18.0,
-                "protein_g": 0.0,
-                "sodium_mg": 15.0,
-                "sugar_g": 17.0
+                "fat": 0.0,
+                "carbohydrates": 18.0,
+                "protein": 0.0,
+                "sodium": 15.0,
+                "sugar": 17.0
             }
         },
         {
@@ -1419,11 +1419,11 @@
             "may_contain": [],
             "nutrition": {
                 "calories": 120,
-                "fat_g": 14,
-                "carbohydrates_g": 0,
-                "protein_g": 0,
-                "sodium_mg": 0,
-                "sugar_g": 0
+                "fat": 14,
+                "carbohydrates": 0,
+                "protein": 0,
+                "sodium": 0,
+                "sugar": 0
             }
         },
         {
@@ -1445,11 +1445,11 @@
             ],
             "nutrition": {
                 "calories": 200,
-                "fat_g": 1.0,
-                "carbohydrates_g": 42.0,
-                "protein_g": 7.0,
-                "sodium_mg": 0.0,
-                "sugar_g": 2.0
+                "fat": 1.0,
+                "carbohydrates": 42.0,
+                "protein": 7.0,
+                "sodium": 0.0,
+                "sugar": 2.0
             }
         },
         {
@@ -1465,11 +1465,11 @@
             "may_contain": [],
             "nutrition": {
                 "calories": 0,
-                "fat_g": 0,
-                "carbohydrates_g": 0,
-                "protein_g": 0,
-                "sodium_mg": 10,
-                "sugar_g": null
+                "fat": 0,
+                "carbohydrates": 0,
+                "protein": 0,
+                "sodium": 10,
+                "sugar": null
             }
         }
     ]
