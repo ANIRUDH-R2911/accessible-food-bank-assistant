@@ -2,6 +2,8 @@ import json
 from pathlib import Path
 from typing import Dict, List, Optional
 
+from src.validation.schema_validator import SchemaValidator
+
 
 class InventoryRetriever:
     def __init__(self,inventory_path: str = "data/inventory/inventory.json"):
@@ -40,13 +42,67 @@ class InventoryRetriever:
         return matches
 
     def search_by_allergen(self, allergen: str) -> List[Dict]:
-        allergen = allergen.lower().strip()
+        search_term = SchemaValidator.normalize_allergen(allergen)
         matches = []
         for item in self.inventory:
-            allergens = item.get("contains_allergens", [])
-            if any(
-                allergen in entry.lower()
-                for entry in allergens
-            ):
+            allergens = [
+                SchemaValidator.normalize_allergen(a)
+                for a in item.get("contains_allergens", [])
+        ]
+            if search_term in allergens:
                 matches.append(item)
         return matches
+    
+    def search_by_nutrition(self, nutrient, operator, value):
+        results = []
+        for item in self.inventory:
+            nutrition = item.get("nutrition", {})
+            if nutrient not in nutrition:
+                continue
+            nutrient_value = nutrition[nutrient]
+            match = False
+            if operator == ">":
+                match = nutrient_value > value
+            elif operator == ">=":
+                match = nutrient_value >= value
+            elif operator == "<":
+                match = nutrient_value < value
+            elif operator == "<=":
+                match = nutrient_value <= value
+            elif operator == "==":
+                match = nutrient_value == value
+            if match:
+                results.append(item)
+        return results
+    
+    def search_by_multiple_filters(self, ingredient=None, allergen=None, nutrient=None, operator=None, value=None):
+        results = []
+        for item in self.inventory:
+            match = True
+            if ingredient:
+                ingredients = [i.lower() for i in item.get("ingredients", [])]
+                if ingredient.lower() not in ingredients:
+                    match = False
+            if allergen:
+                allergens = [a.lower() for a in item.get("contains_allergens", [])]
+                if allergen.lower() not in allergens:
+                    match = False
+            if nutrient:
+                nutrition = item.get("nutrition",{})
+                if nutrient not in nutrition:
+                    match = False
+                else:
+                    nutrient_value = nutrition[nutrient]
+                    if operator == ">":
+                        match = match and (nutrient_value > value)
+                    elif operator == ">=":
+                        match = match and (nutrient_value >= value)
+                    elif operator == "<":
+                        match = match and (nutrient_value < value)
+                    elif operator == "<=":
+                        match = match and (nutrient_value <= value)
+                    elif operator == "==":
+                        match = match and (nutrient_value == value)
+            if match:
+                results.append(item)
+        return results
