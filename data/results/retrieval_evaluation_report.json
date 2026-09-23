@@ -1,0 +1,129 @@
+{
+    "total_queries": 13,
+    "average_latency_seconds": 0.00010671538461538096,
+    "results": [
+        {
+            "query_type": "ingredient",
+            "query": {
+                "query_type": "ingredient",
+                "query": "milk"
+            },
+            "results_count": 18,
+            "latency_seconds": 0.0001764999999999961
+        },
+        {
+            "query_type": "ingredient",
+            "query": {
+                "query_type": "ingredient",
+                "query": "sugar"
+            },
+            "results_count": 17,
+            "latency_seconds": 0.0001719000000000026
+        },
+        {
+            "query_type": "ingredient",
+            "query": {
+                "query_type": "ingredient",
+                "query": "salt"
+            },
+            "results_count": 29,
+            "latency_seconds": 0.0001750999999999836
+        },
+        {
+            "query_type": "ingredient",
+            "query": {
+                "query_type": "ingredient",
+                "query": "soy"
+            },
+            "results_count": 14,
+            "latency_seconds": 0.00017339999999999023
+        },
+        {
+            "query_type": "ingredient",
+            "query": {
+                "query_type": "ingredient",
+                "query": "oats"
+            },
+            "results_count": 2,
+            "latency_seconds": 0.0001885000000000081
+        },
+        {
+            "query_type": "allergen",
+            "query": {
+                "query_type": "allergen",
+                "query": "soy"
+            },
+            "results_count": 7,
+            "latency_seconds": 8.690000000000087e-05
+        },
+        {
+            "query_type": "allergen",
+            "query": {
+                "query_type": "allergen",
+                "query": "almond"
+            },
+            "results_count": 4,
+            "latency_seconds": 7.360000000000699e-05
+        },
+        {
+            "query_type": "allergen",
+            "query": {
+                "query_type": "allergen",
+                "query": "walnut"
+            },
+            "results_count": 4,
+            "latency_seconds": 8.039999999998049e-05
+        },
+        {
+            "query_type": "allergen",
+            "query": {
+                "query_type": "allergen",
+                "query": "cashew"
+            },
+            "results_count": 4,
+            "latency_seconds": 7.109999999999062e-05
+        },
+        {
+            "query_type": "allergen",
+            "query": {
+                "query_type": "allergen",
+                "query": "milk"
+            },
+            "results_count": 14,
+            "latency_seconds": 7.599999999999274e-05
+        },
+        {
+            "query_type": "nutrition",
+            "query": {
+                "query_type": "nutrition",
+                "nutrient": "protein",
+                "operator": ">",
+                "value": 10
+            },
+            "results_count": 4,
+            "latency_seconds": 4.18000000000085e-05
+        },
+        {
+            "query_type": "nutrition",
+            "query": {
+                "query_type": "nutrition",
+                "nutrient": "calories",
+                "operator": ">",
+                "value": 200
+            },
+            "results_count": 9,
+            "latency_seconds": 3.4599999999995745e-05
+        },
+        {
+            "query_type": "nutrition",
+            "query": {
+                "query_type": "nutrition",
+                "nutrient": "sodium",
+                "operator": ">",
+                "value": 100
+            },
+            "results_count": 28,
+            "latency_seconds": 3.749999999999587e-05
+        }
+    ]
+}
