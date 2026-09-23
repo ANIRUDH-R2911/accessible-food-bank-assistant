@@ -1,0 +1,60 @@
+[
+    {
+        "query_type": "ingredient",
+        "query": "milk"
+    },
+    {
+        "query_type": "ingredient",
+        "query": "sugar"
+    },
+    {
+        "query_type": "ingredient",
+        "query": "salt"
+    },
+    {
+        "query_type": "ingredient",
+        "query": "soy"
+    },
+    {
+        "query_type": "ingredient",
+        "query": "oats"
+    },
+    {
+        "query_type": "allergen",
+        "query": "soy"
+    },
+    {
+        "query_type": "allergen",
+        "query": "almond"
+    },
+    {
+        "query_type": "allergen",
+        "query": "walnut"
+    },
+    {
+        "query_type": "allergen",
+        "query": "cashew"
+    },
+    {
+        "query_type": "allergen",
+        "query": "milk"
+    },
+    {
+        "query_type": "nutrition",
+        "nutrient": "protein",
+        "operator": ">",
+        "value": 10
+    },
+    {
+        "query_type": "nutrition",
+        "nutrient": "calories",
+        "operator": ">",
+        "value": 200
+    },
+    {
+        "query_type": "nutrition",
+        "nutrient": "sodium",
+        "operator": ">",
+        "value": 100
+    }
+]
