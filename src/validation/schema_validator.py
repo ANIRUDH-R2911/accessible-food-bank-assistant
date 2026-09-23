@@ -90,7 +90,7 @@ class SchemaValidator:
             allergen = allergen.strip().lower()
             if not allergen:
                 continue
-            allergen = self.ALLERGEN_MAP.get(allergen, allergen)
+            allergen = self.normalize_allergen(allergen)
             normalized.append(allergen)
         return sorted(list(set(normalized)))
 
@@ -98,3 +98,10 @@ class SchemaValidator:
         if isinstance(nutrition, dict):
             return nutrition
         return {}
+    
+    @classmethod
+    def normalize_allergen(cls, allergen):
+        if not isinstance(allergen, str): 
+            return ""
+        allergen = allergen.lower().strip()
+        return cls.ALLERGEN_MAP.get(allergen, allergen)
