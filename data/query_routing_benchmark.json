@@ -1,0 +1,82 @@
+[
+    {
+        "query": "show foods with rice",
+        "expected_type": "ingredient"
+    },
+    {
+        "query": "find items containing beans",
+        "expected_type": "ingredient"
+    },
+    {
+        "query": "show foods with peanuts",
+        "expected_type": "allergen"
+    },
+    {
+        "query": "find foods containing milk",
+        "expected_type": "allergen"
+    },
+    {
+        "query": "show dairy products",
+        "expected_type": "allergen"
+    },
+    {
+        "query": "high protein foods",
+        "expected_type": "nutrition"
+    },
+    {
+        "query": "low sodium foods",
+        "expected_type": "nutrition"
+    },
+    {
+        "query": "foods with more than 15 protein",
+        "expected_type": "nutrition"
+    },
+    {
+        "query": "foods with less than 5 sugar",
+        "expected_type": "nutrition"
+    },
+    {
+        "query": "find high fiber foods",
+        "expected_type": "nutrition"
+    },
+    {
+        "query": "foods with almonds",
+        "expected_type": "allergen"
+    },
+    {
+        "query": "show foods containing soy",
+        "expected_type": "allergen"
+    },
+    {
+        "query": "foods with chicken",
+        "expected_type": "ingredient"
+    },
+    {
+        "query": "foods with oats",
+        "expected_type": "ingredient"
+    },
+    {
+        "query": "high calorie foods",
+        "expected_type": "nutrition"
+    },
+    {
+        "query": "low fat foods",
+        "expected_type": "nutrition"
+    },
+    {
+        "query": "foods with eggs",
+        "expected_type": "allergen"
+    },
+    {
+        "query": "foods containing wheat",
+        "expected_type": "allergen"
+    },
+    {
+        "query": "foods with tuna",
+        "expected_type": "ingredient"
+    },
+    {
+        "query": "foods with protein above 20",
+        "expected_type": "nutrition"
+    }
+]
