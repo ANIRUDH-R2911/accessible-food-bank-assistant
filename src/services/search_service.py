@@ -11,7 +11,7 @@ class SearchService:
         self.router = QueryRouter()
         self.retriever = InventoryRetriever(inventory_path)
         logging.basicConfig(
-            filename="search_service.log",
+            filename="logs/search_service.log",
             level=logging.INFO,
             format="%(asctime)s - %(levelname)s - %(message)s"
         )
