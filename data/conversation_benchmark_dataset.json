@@ -1,0 +1,58 @@
+[
+    {
+        "query": "foods with milk",
+        "expected_type": "results"
+    },
+    {
+        "query": "foods containing soy",
+        "expected_type": "results"
+    },
+    {
+        "query": "foods with high protein",
+        "expected_type": "results"
+    },
+    {
+        "query": "foods containing dragonfruitxyz",
+        "expected_type": "no_results"
+    },
+    {
+        "query": "",
+        "expected_type": "invalid"
+    },
+    {
+        "query": "show foods with rice",
+        "expected_type": "results"
+    },
+    {
+        "query": "find items containing beans",
+        "expected_type": "results"
+    },
+    {
+        "query": "show foods with peanuts",
+        "expected_type": "results"
+    },
+    {
+        "query": "foods with more than 10g protein",
+        "expected_type": "results"
+    },
+    {
+        "query": "foods with less than 5g sugar",
+        "expected_type": "results"
+    },
+    {
+        "query": "high calories foods",
+        "expected_type": "results"
+    },
+    {
+        "query": "low fat foods",
+        "expected_type": "results"
+    },
+    {
+        "query": "foods with eggs",
+        "expected_type": "results"
+    },
+    {
+        "query": "How to cook",
+        "expected_type": "no_results"
+    }
+]
