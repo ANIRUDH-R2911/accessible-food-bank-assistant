@@ -59,7 +59,9 @@ class InventoryRetriever:
             nutrition = item.get("nutrition", {})
             if nutrient not in nutrition:
                 continue
-            nutrient_value = nutrition[nutrient]
+            nutrient_value = nutrition.get(nutrient)
+            if nutrient_value is None:
+                continue
             match = False
             if operator == ">":
                 match = nutrient_value > value
