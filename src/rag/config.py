@@ -1,0 +1,9 @@
+EMBEDDING_MODEL_NAME = "all-MiniLM-L6-v2"
+
+VECTOR_DB_DIRECTORY = "data/chroma_db"
+
+COLLECTION_NAME = "inventory_items"
+
+TOP_K_RESULTS = 5
+
+DEFAULT_SIMILARITY_THRESHOLD = 0.50
