@@ -30,13 +30,52 @@ class QueryRouter:
         "calorie"
     }
 
+    SEMANTIC_TERMS = {
+        "healthy",
+        "snack",
+        "snacks",
+        "meal",
+        "breakfast",
+        "lunch",
+        "dinner",
+        "energy",
+        "foods",
+        "food",
+        "similar",
+        "recommend",
+        "options"
+    }
+
+    CONSTRAINT_TERMS = {
+        "without",
+        "free",
+        "free from",
+        "safe",
+        "allergy",
+        "allergic",
+        "avoid",
+        "exclude"
+    }
+
+
     def detect_query_type(self, query: str) -> str:
         query = query.lower()
-        if any(word in query for word in self.NUTRIENTS):
+        
+        has_constraint = any(term in query for term in self.CONSTRAINT_TERMS)
+        has_allergen = any(allergen in query for allergen in self.ALLERGENS)
+        has_semantic = any(term in query for term in self.SEMANTIC_TERMS)
+        has_nutrient = any(nutrient in query for nutrient in self.NUTRIENTS)
+
+        if (has_constraint and (has_allergen or has_semantic or has_nutrient)):
+            return "hybrid"
+        if has_nutrient:
             return "nutrition"
-        if any(word in query for word in self.ALLERGENS):
+        if has_allergen:
             return "allergen"
+        if has_semantic:
+            return "semantic"
         return "ingredient"
+
 
     def parse_ingredient_query(self, query: str) -> Dict:
         query = query.lower()
@@ -136,6 +175,35 @@ class QueryRouter:
             }
         }
 
+    def parse_hybrid_query(self, query: str) -> Dict:
+        query = query.lower()
+        allergens = [
+            allergen
+            for allergen in self.ALLERGENS
+            if allergen in query
+        ]
+        nutrients = [
+            nutrient
+            for nutrient in self.NUTRIENTS
+            if nutrient in query
+        ]
+        return {
+            "query_type": "hybrid",
+            "filters": {
+                "allergens": allergens,
+                "nutrients": nutrients,
+                "query": query
+            }
+        }
+
+    def parse_semantic_query(self, query: str) -> Dict:
+        return {
+            "query_type": "semantic",
+            "filters": {
+                "query": query.lower()
+            }
+        }
+
     def route(self, query: str) -> Dict:
         query_type = self.detect_query_type(query)
         if query_type == "ingredient":
@@ -144,6 +212,11 @@ class QueryRouter:
             return self.parse_allergen_query(query)
         if query_type == "nutrition":
             return self.parse_nutrition_query(query)
+        if query_type == "hybrid":
+            return self.parse_hybrid_query(query)
+        if query_type == "semantic":
+            return self.parse_semantic_query(query)
+
         return {
             "query_type": "unknown",
             "filters": {}
