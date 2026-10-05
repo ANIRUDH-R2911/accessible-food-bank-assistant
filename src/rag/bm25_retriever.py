@@ -1,5 +1,6 @@
 from rank_bm25 import BM25Okapi
 import sys
+import re
 from pathlib import Path
 
 project_root = Path(__file__).resolve().parent.parent
@@ -20,7 +21,16 @@ class BM25Retriever:
 
     def _build_index(self):
         inventory_items = self.inventory_manager.get_all_items()
-        self.documents = self.document_builder.build_documents(inventory_items)
+        self.documents = []
+        for item in inventory_items:
+            bm25_text = self.build_bm25_document(item)                 
+            self.documents.append({
+                "id": item["item_id"],
+                "document": bm25_text,
+                "metadata": {
+                    "item_id": item["item_id"]
+                    }
+                })
         self.corpus = [
             self._tokenize(doc["document"])
             for doc in self.documents
@@ -30,7 +40,7 @@ class BM25Retriever:
         print(f"[BM25Retriever] Indexed {len(self.documents)} documents.")
 
     def _tokenize(self, text):
-        return text.lower().split()
+        return re.findall(r"\b[a-zA-Z0-9]+\b", text.lower())
 
     def search(self, query, top_k=5):
         if not self.bm25:
@@ -56,3 +66,17 @@ class BM25Retriever:
 
     def rebuild_index(self):
         self._build_index()
+    
+    def build_bm25_document(self, item):
+        ingredients = item.get("ingredients", [])
+        allergens = item.get("contains_allergens", [])
+        nutrition = item.get("nutrition", {})
+        document_parts = []
+        if ingredients:
+            document_parts.extend(ingredients)
+        if allergens:
+            document_parts.extend(allergens)
+        for nutrient, value in nutrition.items():
+            document_parts.append(f"{nutrient}")
+            document_parts.append(str(value))
+        return " ".join(document_parts)
