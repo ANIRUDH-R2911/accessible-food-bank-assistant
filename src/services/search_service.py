@@ -8,7 +8,7 @@ from src.rag.document_builder import DocumentBuilder
 from src.rag.embedding_generator import EmbeddingGenerator
 from src.rag.chroma_manager import ChromaManager
 from src.rag.semantic_retriever import SemanticRetriever
-from src.rag.hybrid_retriever import HybridRetriever
+from src.rag.production_hybrid_retriever import ProductionHybridRetriever
 
 class SearchService:
     def __init__(self, inventory_path: str = "data/inventory/inventory.json"):
@@ -18,7 +18,7 @@ class SearchService:
         self.embedding_generator = EmbeddingGenerator()
         self.chroma_manager = ChromaManager()
         self.semantic_retriever = SemanticRetriever()
-        self.hybrid_retriever = HybridRetriever(inventory_retriever=self.retriever, semantic_retriever=self.semantic_retriever)
+        self.hybrid_retriever = ProductionHybridRetriever()
         logging.basicConfig(
             filename="logs/search_service.log",
             level=logging.INFO,
@@ -30,7 +30,8 @@ class SearchService:
         route_info = self.router.route(query)
         query_type = route_info.get("query_type")
         filters = route_info.get("filters", {})
-        results = self._execute_retrieval(query=query, query_type=query_type, filters=filters)
+        constraints = route_info.get("constraints", {})
+        results = self._execute_retrieval(query=query, query_type=query_type, filters=filters, constraints=constraints)
         self._log_search(query, query_type, len(results))
         return results
 
@@ -44,7 +45,7 @@ class SearchService:
         if not query.strip():
             raise ValueError("Query cannot be empty.")
         
-    def _execute_retrieval(self, query: str, query_type: str, filters: dict):
+    def _execute_retrieval(self, query: str, query_type: str, filters: dict, constraints: dict = None):
         if query_type == "ingredient":
             return self.retriever.search_by_ingredient(filters["ingredient"])
         elif query_type == "allergen":
@@ -64,19 +65,7 @@ class SearchService:
         elif query_type == "semantic":
             return (self.semantic_retriever.search(query= query, top_k=5))
         elif query_type == "hybrid":
-            allergens = filters.get("allergens", [])
-            nutrients = filters.get("nutrients", [])
-            allergen = (
-                allergens[0]
-                if allergens
-                else None
-            )
-            nutrient = (
-                nutrients[0]
-                if nutrients
-                else None
-            )
-            return (self.hybrid_retriever.search(query=query, allergen=allergen, top_k=5))
+            return self.hybrid_retriever.search(query=query, constraints=constraints, top_k=5)
 
         return []
 
