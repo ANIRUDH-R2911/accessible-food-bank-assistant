@@ -6,11 +6,27 @@ HIGH_CALORIE_THRESHOLD = 400
 LOW_SODIUM_THRESHOLD = 140
 HIGH_SODIUM_THRESHOLD = 400
 
-
+ALLERGEN_NORMALIZATION = {
+    "peanut": "peanut",
+    "peanuts": "peanut",
+    "milk": "milk",
+    "dairy": "milk",
+    "egg": "egg",
+    "eggs": "egg",
+    "almond": "tree nuts",
+    "almonds": "tree nuts",
+    "tree nut": "tree nuts",
+    "tree nuts": "tree nuts",
+    "soy": "soy",
+    "wheat": "wheat",
+    "fish": "fish",
+    "shellfish": "shellfish",
+    "sesame": "sesame"
+}
 class ConstraintFilter:
     def apply_constraints(self, results, constraints):
         filtered_results = results
-        excluded_allergens = constraints.get("exclude_allergens", [])
+        excluded_allergens = constraints.get("allergen_exclude", [])
         if excluded_allergens:
             filtered_results = self.filter_allergens(filtered_results, excluded_allergens)
 
@@ -32,13 +48,17 @@ class ConstraintFilter:
         filtered = []
         for item in results:
             item_allergens = [
-                allergen.lower()
+                ALLERGEN_NORMALIZATION.get(allergen.lower(), allergen.lower())
                 for allergen in item.get("contains_allergens", [])
             ]
 
-            contains_excluded = any(
-                allergen.lower() in item_allergens
+            normalized_excluded = [
+                ALLERGEN_NORMALIZATION.get(allergen.lower(), allergen.lower())
                 for allergen in excluded_allergens
+            ]
+            contains_excluded = any(
+                allergen in item_allergens
+                for allergen in normalized_excluded
             )
 
             if not contains_excluded:
