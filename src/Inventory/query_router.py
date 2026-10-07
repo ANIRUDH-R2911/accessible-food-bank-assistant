@@ -56,10 +56,39 @@ class QueryRouter:
         "avoid",
         "exclude"
     }
+    
+    ALLERGEN_EXCLUSION_PATTERNS = {
+        "without",
+        "free",
+        "free from",
+        "avoid",
+        "exclude"
+    }
+    
+    ALLERGEN_NORMALIZATION = {
+        "peanut": "peanuts",
+        "peanuts": "peanuts",
+        "milk": "milk",
+        "dairy": "milk",
+        "egg": "eggs",
+        "eggs": "eggs",
+        "almond": "tree nuts",
+        "almonds": "tree nuts",
+        "tree nut": "tree nuts",
+        "tree nuts": "tree nuts",
+        "soy": "soy",
+        "wheat": "wheat",
+        "fish": "fish",
+        "shellfish": "shellfish",
+        "sesame": "sesame"
+    }
 
 
     def detect_query_type(self, query: str) -> str:
         query = query.lower()
+        constraints = self.extract_constraints(query)
+        if any(value for value in constraints.values()):
+            return "hybrid"
         
         has_constraint = any(term in query for term in self.CONSTRAINT_TERMS)
         has_allergen = any(allergen in query for allergen in self.ALLERGENS)
@@ -190,10 +219,9 @@ class QueryRouter:
         return {
             "query_type": "hybrid",
             "filters": {
-                "allergens": allergens,
-                "nutrients": nutrients,
                 "query": query
-            }
+            },
+            "constraints": self.extract_constraints(query)
         }
 
     def parse_semantic_query(self, query: str) -> Dict:
@@ -203,6 +231,50 @@ class QueryRouter:
                 "query": query.lower()
             }
         }
+        
+    def extract_constraints(self, query: str) -> Dict:
+        query = query.lower()
+        constraints = {
+            "allergen_exclude": [],
+            "protein": None,
+            "calories": None,
+            "sodium": None
+            }
+        has_exclusion_pattern = any(
+            pattern in query
+            for pattern in self.ALLERGEN_EXCLUSION_PATTERNS
+            )
+        if has_exclusion_pattern:
+            detected_allergens = set()
+            for allergen in self.ALLERGENS:
+                if allergen in query:
+                    canonical = self.ALLERGEN_NORMALIZATION.get(allergen, allergen)
+                    detected_allergens.add(canonical)
+            constraints["allergen_exclude"] = list(detected_allergens)
+                    
+        if "high protein" in query:
+            constraints["protein"] = "high"
+        elif "low protein" in query:
+            constraints["protein"] = "low"
+    
+        if "high calorie" in query:
+            constraints["calories"] = "high"
+        elif "low calorie" in query:
+            constraints["calories"] = "low"
+            
+        if "high sodium" in query:
+            constraints["sodium"] = "high"
+        elif "low sodium" in query:
+            constraints["sodium"] = "low"
+        
+        return constraints
+    
+    def has_constraints(self, query: str) -> bool:
+        constraints = self.extract_constraints(query)
+        return any(
+            value
+            for value in constraints.values()
+            )
 
     def route(self, query: str) -> Dict:
         query_type = self.detect_query_type(query)
