@@ -1,5 +1,6 @@
 import re
 from typing import Dict
+from src.rag.nutrient_config import (NUTRIENT_CONFIG)
 
 class QueryRouter:
     ALLERGENS = {
@@ -18,16 +19,6 @@ class QueryRouter:
         "fish",
         "shellfish",
         "sesame"
-    }
-
-    NUTRIENTS = {
-        "protein",
-        "sodium",
-        "fiber",
-        "fat",
-        "sugar",
-        "calories",
-        "calorie"
     }
 
     SEMANTIC_TERMS = {
@@ -93,7 +84,15 @@ class QueryRouter:
         has_constraint = any(term in query for term in self.CONSTRAINT_TERMS)
         has_allergen = any(allergen in query for allergen in self.ALLERGENS)
         has_semantic = any(term in query for term in self.SEMANTIC_TERMS)
-        has_nutrient = any(nutrient in query for nutrient in self.NUTRIENTS)
+        has_nutrient = False
+        for canonical_name, config in NUTRIENT_CONFIG.items():
+            aliases = config.get("aliases", [])
+            candidate_terms = [canonical_name] + aliases
+            if any(
+                term in query
+                for term in candidate_terms):
+                has_nutrient = True
+                break
 
         if (has_constraint and (has_allergen or has_semantic or has_nutrient)):
             return "hybrid"
@@ -150,9 +149,11 @@ class QueryRouter:
     def parse_nutrition_query(self, query: str) -> Dict:
         query = query.lower()
         nutrient = None
-        for n in self.NUTRIENTS:
-            if n in query:
-                nutrient = n
+        for canonical_name, config in NUTRIENT_CONFIG.items():
+            aliases = config.get("aliases", [])
+            candidate_terms = [canonical_name] + aliases
+            if any(term in query for term in candidate_terms):
+                nutrient = canonical_name
                 break
 
         if nutrient is None:
@@ -206,23 +207,13 @@ class QueryRouter:
 
     def parse_hybrid_query(self, query: str) -> Dict:
         query = query.lower()
-        allergens = [
-            allergen
-            for allergen in self.ALLERGENS
-            if allergen in query
-        ]
-        nutrients = [
-            nutrient
-            for nutrient in self.NUTRIENTS
-            if nutrient in query
-        ]
         return {
-            "query_type": "hybrid",
-            "filters": {
-                "query": query
-            },
-            "constraints": self.extract_constraints(query)
-        }
+        "query_type": "hybrid",
+        "filters": {
+            "query": query
+        },
+        "constraints": self.extract_constraints(query)
+    }
 
     def parse_semantic_query(self, query: str) -> Dict:
         return {
@@ -232,13 +223,32 @@ class QueryRouter:
             }
         }
         
+    def extract_nutrient_constraints(self, query: str):
+        query = query.lower()
+        constraints = []
+        levels = ["high", "low"]
+        for canonical_name, config in NUTRIENT_CONFIG.items():
+            aliases = config.get("aliases", [])
+            candidate_terms = [canonical_name] + aliases
+            for term in candidate_terms:
+                for level in levels:
+                    pattern = f"{level} {term}"
+                    if pattern in query:
+                        constraint = {
+                            "nutrient": canonical_name,
+                            "level": level
+                            }
+                        if constraint not in constraints:
+                            constraints.append(constraint)
+                        break
+        return constraints
+
+
     def extract_constraints(self, query: str) -> Dict:
         query = query.lower()
         constraints = {
             "allergen_exclude": [],
-            "protein": None,
-            "calories": None,
-            "sodium": None
+            "nutrient_constraints": []
             }
         has_exclusion_pattern = any(
             pattern in query
@@ -251,22 +261,8 @@ class QueryRouter:
                     canonical = self.ALLERGEN_NORMALIZATION.get(allergen, allergen)
                     detected_allergens.add(canonical)
             constraints["allergen_exclude"] = list(detected_allergens)
-                    
-        if "high protein" in query:
-            constraints["protein"] = "high"
-        elif "low protein" in query:
-            constraints["protein"] = "low"
-    
-        if "high calorie" in query:
-            constraints["calories"] = "high"
-        elif "low calorie" in query:
-            constraints["calories"] = "low"
-            
-        if "high sodium" in query:
-            constraints["sodium"] = "high"
-        elif "low sodium" in query:
-            constraints["sodium"] = "low"
         
+        constraints["nutrient_constraints"] = self.extract_nutrient_constraints(query)      
         return constraints
     
     def has_constraints(self, query: str) -> bool:
