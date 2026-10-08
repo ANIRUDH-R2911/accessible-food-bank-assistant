@@ -1,10 +1,4 @@
-HIGH_PROTEIN_THRESHOLD = 10
-
-LOW_CALORIE_THRESHOLD = 200
-HIGH_CALORIE_THRESHOLD = 400
-
-LOW_SODIUM_THRESHOLD = 140
-HIGH_SODIUM_THRESHOLD = 400
+from src.rag.nutrient_config import (get_nutrient_threshold)
 
 ALLERGEN_NORMALIZATION = {
     "peanut": "peanut",
@@ -29,19 +23,9 @@ class ConstraintFilter:
         excluded_allergens = constraints.get("allergen_exclude", [])
         if excluded_allergens:
             filtered_results = self.filter_allergens(filtered_results, excluded_allergens)
-
-        protein_constraint = constraints.get("protein")
-        if protein_constraint:
-            filtered_results = self.filter_protein(filtered_results, protein_constraint)
-
-        calorie_constraint = constraints.get("calories")
-        if calorie_constraint:
-            filtered_results = self.filter_calories(filtered_results, calorie_constraint)
-
-        sodium_constraint = constraints.get("sodium")
-        if sodium_constraint:
-            filtered_results = self.filter_sodium(filtered_results, sodium_constraint)
-
+        nutrient_constraints = constraints.get("nutrient_constraints", [])
+        if nutrient_constraints:
+            filtered_results = self.filter_nutrients(filtered_results, nutrient_constraints)
         return filtered_results
 
     def filter_allergens(self, results, excluded_allergens):
@@ -65,40 +49,43 @@ class ConstraintFilter:
                 filtered.append(item)
 
         return filtered
+    
+    def filter_nutrients(self, results, nutrient_constraints):
+        filtered_results = results
+        for constraint in nutrient_constraints:
+            filtered_results = self.filter_single_nutrient(filtered_results, constraint)
+        return filtered_results
 
-    def filter_protein(self, results, level):
+    def filter_single_nutrient(self, results, constraint):
+        nutrient = constraint["nutrient"]
+        level = constraint["level"]
+        threshold = get_nutrient_threshold(nutrient, level)
+        if threshold is None:
+            return results
+        operator = threshold["operator"]
+        value = threshold["value"]
         filtered = []
         for item in results:
-            protein = (item.get("nutrition", {}).get("protein", 0))
-            if level == "high":
-                if protein >= HIGH_PROTEIN_THRESHOLD:
-                    filtered.append(item)
+            nutrient_value = (item.get("nutrition", {}).get(nutrient))
+            if nutrient_value is None:
+                continue
+            try:
+                nutrient_value = float(nutrient_value)
+            except (TypeError, ValueError):
+                continue
+            if self.evaluate_operator(nutrient_value, operator, value):
+                filtered.append(item)
         return filtered
-
-    def filter_calories(self, results, level):
-        filtered = []
-        for item in results:
-            calories = (item.get("nutrition", {}).get("calories", 0))
-            if level == "low":
-                if calories <= LOW_CALORIE_THRESHOLD:
-                    filtered.append(item)
-
-            elif level == "high":
-                if calories >= HIGH_CALORIE_THRESHOLD:
-                    filtered.append(item)
-
-        return filtered
-
-    def filter_sodium(self, results, level):
-        filtered = []
-        for item in results:
-            sodium = (item.get("nutrition", {}).get("sodium", 0))
-            if level == "low":
-                if sodium <= LOW_SODIUM_THRESHOLD:
-                    filtered.append(item)
-
-            elif level == "high":
-                if sodium >= HIGH_SODIUM_THRESHOLD:
-                    filtered.append(item)
-
-        return filtered
+    
+    def evaluate_operator(self, actual_value, operator, threshold):
+        if operator == ">=":
+            return actual_value >= threshold
+        if operator == "<=":
+            return actual_value <= threshold
+        if operator == ">":
+            return actual_value > threshold
+        if operator == "<":
+            return actual_value < threshold
+        if operator == "==":
+            return actual_value == threshold
+        return False
