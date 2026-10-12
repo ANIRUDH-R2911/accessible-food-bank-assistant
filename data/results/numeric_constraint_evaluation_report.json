@@ -1,0 +1,268 @@
+{
+  "benchmark": "Numeric Nutrient Constraints",
+  "total_queries": 9,
+  "queries": [
+    {
+      "query": "protein > 20g",
+      "query_type": "hybrid",
+      "extraction_pass": true,
+      "expected_numeric_constraints": [
+        {
+          "nutrient": "protein",
+          "operator": "gt",
+          "value": 20.0,
+          "unit": "g"
+        }
+      ],
+      "extracted_numeric_constraints": [
+        {
+          "nutrient": "protein",
+          "operator": "gt",
+          "value": 20.0,
+          "unit": "g",
+          "source": "numeric"
+        }
+      ],
+      "result_count": 0,
+      "compliant_count": 0,
+      "compliance_rate": null,
+      "latency_seconds": 3.07644,
+      "status": "NO_RESULTS"
+    },
+    {
+      "query": "sugar <= 5g",
+      "query_type": "hybrid",
+      "extraction_pass": true,
+      "expected_numeric_constraints": [
+        {
+          "nutrient": "sugar",
+          "operator": "lte",
+          "value": 5.0,
+          "unit": "g"
+        }
+      ],
+      "extracted_numeric_constraints": [
+        {
+          "nutrient": "sugar",
+          "operator": "lte",
+          "value": 5.0,
+          "unit": "g",
+          "source": "numeric"
+        }
+      ],
+      "result_count": 10,
+      "compliant_count": 10,
+      "compliance_rate": 1.0,
+      "latency_seconds": 0.309871,
+      "status": "PASS"
+    },
+    {
+      "query": "sodium < 100mg",
+      "query_type": "hybrid",
+      "extraction_pass": true,
+      "expected_numeric_constraints": [
+        {
+          "nutrient": "sodium",
+          "operator": "lt",
+          "value": 100.0,
+          "unit": "mg"
+        }
+      ],
+      "extracted_numeric_constraints": [
+        {
+          "nutrient": "sodium",
+          "operator": "lt",
+          "value": 100.0,
+          "unit": "mg",
+          "source": "numeric"
+        }
+      ],
+      "result_count": 10,
+      "compliant_count": 10,
+      "compliance_rate": 1.0,
+      "latency_seconds": 0.263951,
+      "status": "PASS"
+    },
+    {
+      "query": "calories under 250",
+      "query_type": "hybrid",
+      "extraction_pass": true,
+      "expected_numeric_constraints": [
+        {
+          "nutrient": "calories",
+          "operator": "lt",
+          "value": 250.0,
+          "unit": "kcal"
+        }
+      ],
+      "extracted_numeric_constraints": [
+        {
+          "nutrient": "calories",
+          "operator": "lt",
+          "value": 250.0,
+          "unit": "kcal",
+          "source": "numeric"
+        }
+      ],
+      "result_count": 10,
+      "compliant_count": 10,
+      "compliance_rate": 1.0,
+      "latency_seconds": 0.263741,
+      "status": "PASS"
+    },
+    {
+      "query": "fiber at least 3 grams",
+      "query_type": "hybrid",
+      "extraction_pass": true,
+      "expected_numeric_constraints": [
+        {
+          "nutrient": "fiber",
+          "operator": "gte",
+          "value": 3.0,
+          "unit": "g"
+        }
+      ],
+      "extracted_numeric_constraints": [
+        {
+          "nutrient": "fiber",
+          "operator": "gte",
+          "value": 3.0,
+          "unit": "g",
+          "source": "numeric"
+        }
+      ],
+      "result_count": 0,
+      "compliant_count": 0,
+      "compliance_rate": null,
+      "latency_seconds": 0.238052,
+      "status": "NO_RESULTS"
+    },
+    {
+      "query": "sodium below 0.1g",
+      "query_type": "hybrid",
+      "extraction_pass": true,
+      "expected_numeric_constraints": [
+        {
+          "nutrient": "sodium",
+          "operator": "lt",
+          "value": 100.0,
+          "unit": "mg"
+        }
+      ],
+      "extracted_numeric_constraints": [
+        {
+          "nutrient": "sodium",
+          "operator": "lt",
+          "value": 100.0,
+          "unit": "mg",
+          "source": "numeric"
+        }
+      ],
+      "result_count": 10,
+      "compliant_count": 10,
+      "compliance_rate": 1.0,
+      "latency_seconds": 0.228479,
+      "status": "PASS"
+    },
+    {
+      "query": "high protein foods with sugar under 5g",
+      "query_type": "hybrid",
+      "extraction_pass": true,
+      "expected_numeric_constraints": [
+        {
+          "nutrient": "sugar",
+          "operator": "lt",
+          "value": 5.0,
+          "unit": "g"
+        }
+      ],
+      "extracted_numeric_constraints": [
+        {
+          "nutrient": "protein",
+          "level": "high"
+        },
+        {
+          "nutrient": "sugar",
+          "operator": "lt",
+          "value": 5.0,
+          "unit": "g",
+          "source": "numeric"
+        }
+      ],
+      "result_count": 3,
+      "compliant_count": 3,
+      "compliance_rate": 1.0,
+      "latency_seconds": 0.288691,
+      "status": "PASS"
+    },
+    {
+      "query": "high protein foods with sugar under 5g without peanuts",
+      "query_type": "hybrid",
+      "extraction_pass": true,
+      "expected_numeric_constraints": [
+        {
+          "nutrient": "sugar",
+          "operator": "lt",
+          "value": 5.0,
+          "unit": "g"
+        }
+      ],
+      "extracted_numeric_constraints": [
+        {
+          "nutrient": "protein",
+          "level": "high"
+        },
+        {
+          "nutrient": "sugar",
+          "operator": "lt",
+          "value": 5.0,
+          "unit": "g",
+          "source": "numeric"
+        }
+      ],
+      "result_count": 3,
+      "compliant_count": 3,
+      "compliance_rate": 1.0,
+      "latency_seconds": 0.209586,
+      "status": "PASS"
+    },
+    {
+      "query": "low sugar snacks with protein >= 10g",
+      "query_type": "hybrid",
+      "extraction_pass": true,
+      "expected_numeric_constraints": [
+        {
+          "nutrient": "protein",
+          "operator": "gte",
+          "value": 10.0,
+          "unit": "g"
+        }
+      ],
+      "extracted_numeric_constraints": [
+        {
+          "nutrient": "sugar",
+          "level": "low"
+        },
+        {
+          "nutrient": "protein",
+          "operator": "gte",
+          "value": 10.0,
+          "unit": "g",
+          "source": "numeric"
+        }
+      ],
+      "result_count": 3,
+      "compliant_count": 3,
+      "compliance_rate": 1.0,
+      "latency_seconds": 0.198287,
+      "status": "PASS"
+    }
+  ],
+  "extraction_accuracy": 1.0,
+  "total_returned_items": 49,
+  "total_compliant_items": 49,
+  "overall_result_compliance": 1.0,
+  "passed_queries": 7,
+  "no_result_queries": 2,
+  "failed_queries": 2
+}
