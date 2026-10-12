@@ -1471,6 +1471,1098 @@
                 "sodium": 10,
                 "sugar": null
             }
+        },
+        {
+            "item_id": "FBA-888D70B8",
+            "ingredients": [
+                "almondmilk (water, almonds)",
+                "calcium carbonate",
+                "gellan gum",
+                "natural vanilla flavor with other natural flavors",
+                "potassium citrate",
+                "sea salt",
+                "sunflower lecithin",
+                "vitamin a palmitate",
+                "vitamin d2 and d-alpha-tocopherol (natural, vitamin e)"
+            ],
+            "contains_allergens": [
+                "tree nuts"
+            ],
+            "may_contain": [],
+            "nutrition": {
+                "calories": 30.0,
+                "fat": 2.5,
+                "carbohydrates": 1.0,
+                "protein": 1.0,
+                "sodium": 170.0,
+                "sugar": 0.0
+            }
+        },
+        {
+            "item_id": "FBA-AE4A1E21",
+            "ingredients": [
+                "calcium propionate",
+                "citric acid",
+                "cornmeal",
+                "datem",
+                "guar gum",
+                "maltodextrin",
+                "monoglycerides",
+                "salt",
+                "sesame seeds",
+                "sorbic acid",
+                "soy lecithin",
+                "sugar",
+                "vegetable oil",
+                "water",
+                "wheat bran",
+                "wheat gluten",
+                "whole wheat flour",
+                "yeast"
+            ],
+            "contains_allergens": [
+                "sesame",
+                "soy",
+                "wheat"
+            ],
+            "may_contain": [
+                "egg",
+                "milk",
+                "tree nuts"
+            ],
+            "nutrition": {
+                "calories": 250,
+                "fat": 2.0,
+                "carbohydrates": 50.0,
+                "protein": 11.0,
+                "sodium": 350.0,
+                "sugar": 7.0
+            }
+        },
+        {
+            "item_id": "FBA-1FFE34BF",
+            "ingredients": [
+                "inulin",
+                "modified wheat starch",
+                "monoglycerides",
+                "oat fiber",
+                "preservatives (sorbic acid, calcium propionate)",
+                "salt",
+                "soybean oil",
+                "vinegar",
+                "water",
+                "wheat gluten",
+                "wheat protein isolate",
+                "yeast"
+            ],
+            "contains_allergens": [
+                "sesame",
+                "wheat"
+            ],
+            "may_contain": [],
+            "nutrition": {
+                "calories": 35,
+                "fat": 1,
+                "carbohydrates": 10,
+                "protein": 4,
+                "sodium": 115,
+                "sugar": 0
+            }
+        },
+        {
+            "item_id": "FBA-41DA4966",
+            "ingredients": [
+                "blue #1",
+                "carnauba wax",
+                "confectioners glaze",
+                "contains less than 0.5% of the following: citric acid",
+                "corn syrup",
+                "dextrin",
+                "fumaric acid",
+                "malic acid",
+                "medium chain triglycerides",
+                "modified food starch",
+                "natural and artificial flavors",
+                "red #40",
+                "sodium citrate",
+                "sugar",
+                "yellow #5 (tartrazine)",
+                "yellow #6"
+            ],
+            "contains_allergens": [],
+            "may_contain": [],
+            "nutrition": {
+                "calories": 110,
+                "fat": 0.0,
+                "carbohydrates": 27.0,
+                "protein": 0.0,
+                "sodium": 10.0,
+                "sugar": 18.0
+            }
+        },
+        {
+            "item_id": "FBA-27A60B59",
+            "ingredients": [
+                "green beans",
+                "salt",
+                "water"
+            ],
+            "contains_allergens": [],
+            "may_contain": [],
+            "nutrition": {
+                "calories": 20,
+                "fat": 0.0,
+                "carbohydrates": 4.0,
+                "protein": 1.0,
+                "sodium": 290.0,
+                "sugar": 2.0
+            }
+        },
+        {
+            "item_id": "FBA-5E7DC4EC",
+            "ingredients": [
+                "cheese culture",
+                "enzymes",
+                "pasteurized milk",
+                "red and green jalape\u00f1o peppers",
+                "salt"
+            ],
+            "contains_allergens": [
+                "milk"
+            ],
+            "may_contain": [],
+            "nutrition": {
+                "calories": 100.0,
+                "fat": 8.0,
+                "carbohydrates": 0.0,
+                "protein": 7.0,
+                "sodium": 180.0,
+                "sugar": 0.0
+            }
+        },
+        {
+            "item_id": "FBA-D05FA6FF",
+            "ingredients": [
+                "cocoa beans",
+                "cocoa butter"
+            ],
+            "contains_allergens": [],
+            "may_contain": [],
+            "nutrition": {
+                "calories": 238,
+                "fat": 22,
+                "carbohydrates": 10,
+                "protein": 5,
+                "sodium": 0,
+                "sugar": 0
+            }
+        },
+        {
+            "item_id": "FBA-C566A607",
+            "ingredients": [
+                "cheese made with skim milk (skim milk",
+                "enriched flour (wheat flour, niacin, reduced iron, vitamin b1 [thiamin mononitrate], vitamin b2 [riboflavin], folic acid)",
+                "vegetable oil (soybean and palm oil with tbhq for freshness)"
+            ],
+            "contains_allergens": [],
+            "may_contain": [],
+            "nutrition": {
+                "calories": 150,
+                "fat": 8,
+                "carbohydrates": 17,
+                "protein": 3,
+                "sodium": 230,
+                "sugar": 0
+            }
+        },
+        {
+            "item_id": "FBA-6230A2A1",
+            "ingredients": [
+                "cheese culture",
+                "guar gum",
+                "natamycin (a natural mold inhibitor)",
+                "pasteurized milk and cream",
+                "salt"
+            ],
+            "contains_allergens": [
+                "milk"
+            ],
+            "may_contain": [],
+            "nutrition": {
+                "calories": 80,
+                "fat": 7.0,
+                "carbohydrates": 2.0,
+                "protein": 2.0,
+                "sodium": 125.0,
+                "sugar": 1.0
+            }
+        },
+        {
+            "item_id": "FBA-22C272A9",
+            "ingredients": [
+                "bleached wheat flour",
+                "folic acid",
+                "malted barley flour",
+                "niacin",
+                "reduced iron",
+                "riboflavin",
+                "thiamine mononitrate"
+            ],
+            "contains_allergens": [
+                "wheat"
+            ],
+            "may_contain": [],
+            "nutrition": {
+                "calories": 110,
+                "fat": 0,
+                "carbohydrates": 23,
+                "protein": 3,
+                "sodium": 0,
+                "sugar": 0
+            }
+        },
+        {
+            "item_id": "FBA-9CC06EAE",
+            "ingredients": [
+                "carrots",
+                "green beans",
+                "peas",
+                "super sweet corn"
+            ],
+            "contains_allergens": [],
+            "may_contain": [
+                "milk",
+                "soy",
+                "tree nuts",
+                "wheat"
+            ],
+            "nutrition": {
+                "calories": 50,
+                "fat": 0.0,
+                "carbohydrates": 11.0,
+                "protein": 2.0,
+                "sodium": 15.0,
+                "sugar": 3.0
+            }
+        },
+        {
+            "item_id": "FBA-AF4E2E5F",
+            "ingredients": [
+                "cereal crisp (degerminated yellow corn flour, soy flour, sugar, salt, soy lecithin)",
+                "dark refiners syrup",
+                "high oleic canola oil",
+                "peanut butter (dry roasted peanuts)",
+                "rolled oats",
+                "salt",
+                "sodium bicarbonate",
+                "soy lecithin",
+                "sugar",
+                "water"
+            ],
+            "contains_allergens": [
+                "peanut",
+                "soy"
+            ],
+            "may_contain": [
+                "egg",
+                "milk",
+                "tree nuts",
+                "wheat"
+            ],
+            "nutrition": {
+                "calories": 190,
+                "fat": 6,
+                "carbohydrates": 29,
+                "protein": 5,
+                "sodium": 140,
+                "sugar": 11
+            }
+        },
+        {
+            "item_id": "FBA-5968145D",
+            "ingredients": [
+                "artificial and natural flavors",
+                "blue 1",
+                "contains less than 2% of: citric acid",
+                "dextrose (from wheat or corn)",
+                "gelatin",
+                "glucose syrup (from wheat or corn)",
+                "red 40",
+                "sugar",
+                "sunflower oil",
+                "white beeswax",
+                "yellow 5",
+                "yellow beeswax"
+            ],
+            "contains_allergens": [],
+            "may_contain": [
+                "traces of milk",
+                "wheat"
+            ],
+            "nutrition": {
+                "calories": 100,
+                "fat": 0.0,
+                "carbohydrates": 23.0,
+                "protein": 2.0,
+                "sodium": 0.0,
+                "sugar": 14.0
+            }
+        },
+        {
+            "item_id": "FBA-292E509C",
+            "ingredients": [
+                "citric acid",
+                "organic chickpeas",
+                "organic cumin",
+                "organic garlic",
+                "organic lemon juice",
+                "organic minced garlic",
+                "organic onion",
+                "organic parsley",
+                "organic pine nuts",
+                "organic red pepper",
+                "organic sesame tahini",
+                "organic sunflower oil",
+                "sea salt",
+                "water"
+            ],
+            "contains_allergens": [
+                "pine nuts",
+                "sesame"
+            ],
+            "may_contain": [],
+            "nutrition": {
+                "calories": 80,
+                "fat": 6.0,
+                "carbohydrates": 4.0,
+                "protein": 2.0,
+                "sodium": 115.0,
+                "sugar": 1.0
+            }
+        },
+        {
+            "item_id": "FBA-37E11373",
+            "ingredients": [
+                "banana puree",
+                "carrageenan",
+                "cocoa",
+                "cocoa (processed with alkali)",
+                "coconut oil",
+                "cream",
+                "egg yolks",
+                "guar gum",
+                "lemon juice concentrate",
+                "liquid sugar (sugar, water)",
+                "milk",
+                "natural flavors",
+                "nonfat milk",
+                "peanuts",
+                "salt",
+                "skim milk",
+                "soy lecithin",
+                "sugar",
+                "vanilla extract",
+                "water"
+            ],
+            "contains_allergens": [
+                "egg",
+                "milk",
+                "peanut",
+                "soy"
+            ],
+            "may_contain": [
+                "tree nuts",
+                "wheat"
+            ],
+            "nutrition": {
+                "calories": 390,
+                "fat": 24,
+                "carbohydrates": 38,
+                "protein": 7,
+                "sodium": 75,
+                "sugar": 35
+            }
+        },
+        {
+            "item_id": "FBA-9924A8FA",
+            "ingredients": [
+                "acesulfame potassium",
+                "apple pur\u00e9e from concentrate",
+                "aspartame",
+                "citric acid (provides tartness)",
+                "filtered water",
+                "grape skin extract (for color)",
+                "lemon juice from concentrate",
+                "less than 2% of: grape and pineapple juices from concentrate",
+                "natural flavors",
+                "vitamin c (ascorbic acid)"
+            ],
+            "contains_allergens": [],
+            "may_contain": [],
+            "nutrition": {
+                "calories": 5,
+                "fat": 0,
+                "carbohydrates": 1,
+                "protein": 0,
+                "sodium": 15,
+                "sugar": 0
+            }
+        },
+        {
+            "item_id": "FBA-1A59396D",
+            "ingredients": [
+                "cane sugar",
+                "distilled vinegar",
+                "natural flavoring",
+                "onion powder",
+                "salt",
+                "spice",
+                "tomato concentrate from red ripe tomatoes"
+            ],
+            "contains_allergens": [],
+            "may_contain": [],
+            "nutrition": {
+                "calories": 20,
+                "fat": 0,
+                "carbohydrates": 4,
+                "protein": 0,
+                "sodium": 170,
+                "sugar": 4
+            }
+        },
+        {
+            "item_id": "FBA-151D74D8",
+            "ingredients": [
+                "lentils"
+            ],
+            "contains_allergens": [],
+            "may_contain": [
+                "wheat"
+            ],
+            "nutrition": {
+                "calories": 100,
+                "fat": 0.5,
+                "carbohydrates": 23.0,
+                "protein": 8.0,
+                "sodium": 10.0,
+                "sugar": 0.0
+            }
+        },
+        {
+            "item_id": "FBA-0C7907A0",
+            "ingredients": [
+                "carnauba wax",
+                "coloring (includes blue 1 lake, yellow 6, red 40, yellow 5, blue 1, yellow 6 lake, red 40 lake, yellow 5 lake, blue 2 lake, blue 2)",
+                "cornstarch",
+                "dextrin",
+                "gum acacia",
+                "less than 1% - corn syrup",
+                "milk chocolate (sugar, chocolate, skim milk, cocoa butter, lactose, milkfat, soy lecithin, salt, artificial and natural flavors)",
+                "sugar"
+            ],
+            "contains_allergens": [
+                "milk",
+                "soy"
+            ],
+            "may_contain": [
+                "peanut"
+            ],
+            "nutrition": {
+                "calories": 140,
+                "fat": 6,
+                "carbohydrates": 21,
+                "protein": 1,
+                "sodium": 20,
+                "sugar": 19
+            }
+        },
+        {
+            "item_id": "FBA-8E0711B1",
+            "ingredients": [
+                "cheese sauce (whey, cheddar cheese [milk, cheese culture, salt, enzymes], canola oil, parmesan cheese [part-skim milk, cheese culture, salt, enzymes], colby cheese [milk, cheese culture, salt, enzymes], havarti cheese [milk, cheese culture, salt, enzymes], milk protein concentrate, sodium phosphate, contains less than 2% of salt, milk, lactic acid, sodium alginate, sorbic acid as a preservative, whey protein concentrate, milkfat, oleoresin paprika [color], cheese culture, enzymes, silicon dioxide, annatto [color])",
+                "enriched macaroni product (wheat flour, niacin, ferrous sulfate [iron], thiamin mononitrate [vitamin b1], riboflavin [vitamin b2], folic acid)"
+            ],
+            "contains_allergens": [
+                "milk",
+                "wheat"
+            ],
+            "may_contain": [],
+            "nutrition": {
+                "calories": 320,
+                "fat": 12,
+                "carbohydrates": 40,
+                "protein": 12,
+                "sodium": 870,
+                "sugar": 3
+            }
+        },
+        {
+            "item_id": "FBA-4E5257BD",
+            "ingredients": [
+                "calcium disodium edta (to protect flavor)",
+                "egg yolks",
+                "lemon juice concentrate",
+                "natural flavors",
+                "oleoresin paprika",
+                "salt",
+                "soybean oil",
+                "sugar",
+                "vinegar",
+                "water",
+                "whole eggs"
+            ],
+            "contains_allergens": [
+                "egg"
+            ],
+            "may_contain": [],
+            "nutrition": {
+                "calories": 90,
+                "fat": 10,
+                "carbohydrates": 0,
+                "protein": 0,
+                "sodium": 70,
+                "sugar": 0
+            }
+        },
+        {
+            "item_id": "FBA-215280D3",
+            "ingredients": [
+                "gelatin",
+                "gum arabic",
+                "natural flavor (oil of peppermint)",
+                "sugar"
+            ],
+            "contains_allergens": [],
+            "may_contain": [],
+            "nutrition": {
+                "calories": 10,
+                "fat": 0,
+                "carbohydrates": 2,
+                "protein": 0,
+                "sodium": 0,
+                "sugar": 2
+            }
+        },
+        {
+            "item_id": "FBA-1FD2C696",
+            "ingredients": [
+                "natural flavor",
+                "salt",
+                "sugar",
+                "whole grain oats"
+            ],
+            "contains_allergens": [],
+            "may_contain": [],
+            "nutrition": {
+                "calories": 180,
+                "fat": 2.5,
+                "carbohydrates": 37.0,
+                "protein": 4.0,
+                "sodium": 290.0,
+                "sugar": 14.0
+            }
+        },
+        {
+            "item_id": "FBA-34C67DE8",
+            "ingredients": [
+                "diced tomatoes in juice (tomatoes, tomato juice, citric acid, calcium chloride)",
+                "garlic",
+                "granulated roasted garlic",
+                "olive oil",
+                "onions",
+                "roasted garlic",
+                "salt",
+                "spices",
+                "tomato puree (water, tomato paste)"
+            ],
+            "contains_allergens": [],
+            "may_contain": [],
+            "nutrition": {
+                "calories": 45,
+                "fat": 1,
+                "carbohydrates": 8,
+                "protein": 2,
+                "sodium": 340,
+                "sugar": 5
+            }
+        },
+        {
+            "item_id": "FBA-0C9A9957",
+            "ingredients": [
+                "hydrogenated vegetable oil (cottonseed, soybean and rapeseed oil) to prevent separation",
+                "roasted peanuts",
+                "salt",
+                "sugar"
+            ],
+            "contains_allergens": [],
+            "may_contain": [],
+            "nutrition": {
+                "calories": 190,
+                "fat": 16.0,
+                "carbohydrates": 6.0,
+                "protein": 7.0,
+                "sodium": 150.0,
+                "sugar": 3.0
+            }
+        },
+        {
+            "item_id": "FBA-F0A19697",
+            "ingredients": [
+                "potatoes",
+                "salt",
+                "vegetable oil (canola, corn, soybean, and/or sunflower oil)"
+            ],
+            "contains_allergens": [],
+            "may_contain": [],
+            "nutrition": {
+                "calories": 160,
+                "fat": 10,
+                "carbohydrates": 15,
+                "protein": 2,
+                "sodium": 150,
+                "sugar": 1
+            }
+        },
+        {
+            "item_id": "FBA-62C3EAB3",
+            "ingredients": [
+                "citric acid",
+                "organic cayenne pepper",
+                "organic chili pepper",
+                "organic cilantro",
+                "organic concentrated crushed tomatoes",
+                "organic distilled vinegar",
+                "organic garlic",
+                "organic garlic powder",
+                "organic green bell peppers",
+                "organic green chilies",
+                "organic jalape\u00f1o peppers",
+                "organic onions",
+                "organic tomatoes in organic tomato juice",
+                "salt",
+                "water"
+            ],
+            "contains_allergens": [],
+            "may_contain": [],
+            "nutrition": {
+                "calories": 10,
+                "fat": 0,
+                "carbohydrates": 2,
+                "protein": 0,
+                "sodium": 190,
+                "sugar": 2
+            }
+        },
+        {
+            "item_id": "FBA-AE293504",
+            "ingredients": [
+                "calcium silicate (an anti-caking agent)",
+                "dextrose",
+                "potassium iodide",
+                "salt"
+            ],
+            "contains_allergens": [],
+            "may_contain": [],
+            "nutrition": {
+                "calories": 0,
+                "fat": 0,
+                "carbohydrates": 0,
+                "protein": 0,
+                "sodium": 590,
+                "sugar": null
+            }
+        },
+        {
+            "item_id": "FBA-F8740768",
+            "ingredients": [
+                "a natural mold inhibitor",
+                "annatto color",
+                "cheese culture",
+                "enzymes",
+                "natamycin",
+                "pasteurized part-skim milk",
+                "potato starch",
+                "powdered cellulose",
+                "reduced fat cheddar cheese",
+                "salt",
+                "vitamin a palmitate"
+            ],
+            "contains_allergens": [
+                "milk"
+            ],
+            "may_contain": [],
+            "nutrition": {
+                "calories": 90,
+                "fat": 7,
+                "carbohydrates": 2,
+                "protein": 7,
+                "sodium": 230,
+                "sugar": 0
+            }
+        },
+        {
+            "item_id": "FBA-FE491299",
+            "ingredients": [
+                "brominated vegetable oil",
+                "caffeine",
+                "calcium disodium edta (to protect flavor)",
+                "carbonated water",
+                "citric acid",
+                "concentrated orange juice",
+                "erythorbic acid (preserves freshness)",
+                "gum arabic",
+                "high fructose corn syrup",
+                "natural flavor",
+                "sodium benzoate (preserves freshness)",
+                "sodium citrate",
+                "yellow 5"
+            ],
+            "contains_allergens": [],
+            "may_contain": [],
+            "nutrition": {
+                "calories": 170,
+                "fat": 0,
+                "carbohydrates": 46,
+                "protein": 0,
+                "sodium": 65,
+                "sugar": 46
+            }
+        },
+        {
+            "item_id": "FBA-33FE05AE",
+            "ingredients": [
+                "cultured cream"
+            ],
+            "contains_allergens": [
+                "milk"
+            ],
+            "may_contain": [],
+            "nutrition": {
+                "calories": 60,
+                "fat": 5.0,
+                "carbohydrates": 1.0,
+                "protein": 1.0,
+                "sodium": 15.0,
+                "sugar": 1.0
+            }
+        },
+        {
+            "item_id": "FBA-C714B245",
+            "ingredients": [
+                "allulose",
+                "beta-carotene (color)",
+                "citric acid",
+                "coconut water concentrate",
+                "electrolyte blend (dipotassium phosphate, calcium carbonate, magnesium oxide, zinc oxide)",
+                "ester gum",
+                "filtered water",
+                "fruit juice (color)",
+                "gum arabic",
+                "malic acid",
+                "natural blueberry pomegranate flavor with other natural flavors",
+                "steviol glycosides (stevia sweetener)",
+                "vitamins (ascorbic acid [vitamin c], calcium d-pantothenate [vitamin b5], niacinamide [vitamin b3], alpha-tocopheryl acetate [vitamin e], pyridoxine hydrochloride [vitamin b6], vitamin a palmitate [vitamin a], folic acid [vitamin b9], cholecalciferol [vitamin d3], cyanocobalamin [vitamin b12])"
+            ],
+            "contains_allergens": [],
+            "may_contain": [],
+            "nutrition": {
+                "calories": 20,
+                "fat": 0,
+                "carbohydrates": 5,
+                "protein": 0,
+                "sodium": 30,
+                "sugar": 2
+            }
+        },
+        {
+            "item_id": "FBA-319B1C80",
+            "ingredients": [
+                "cane sugar"
+            ],
+            "contains_allergens": [],
+            "may_contain": [],
+            "nutrition": {
+                "calories": 30,
+                "fat": 0.0,
+                "carbohydrates": 8.0,
+                "protein": 0.0,
+                "sodium": 0.0,
+                "sugar": 8.0
+            }
+        },
+        {
+            "item_id": "FBA-BB8D331E",
+            "ingredients": [
+                "and folic acid (a b vitamin)",
+                "ferric phosphate",
+                "long grain rice",
+                "niacin",
+                "thiamine mononrate"
+            ],
+            "contains_allergens": [],
+            "may_contain": [],
+            "nutrition": {
+                "calories": 160,
+                "fat": 0.0,
+                "carbohydrates": 36.0,
+                "protein": 3.0,
+                "sodium": 10.0,
+                "sugar": 0.0
+            }
+        },
+        {
+            "item_id": "FBA-2766598E",
+            "ingredients": [
+                "milk",
+                "vitamin d3"
+            ],
+            "contains_allergens": [
+                "milk"
+            ],
+            "may_contain": [],
+            "nutrition": {
+                "calories": 150,
+                "fat": 8,
+                "carbohydrates": 12,
+                "protein": 8,
+                "sodium": 125,
+                "sugar": 12
+            }
+        },
+        {
+            "item_id": "FBA-8F56616E",
+            "ingredients": [
+                "cream",
+                "live active yogurt cultures (acidophilus, bifidus, l. bulgaricus and s. thermophilus)",
+                "milk protein concentrate",
+                "pasteurized milk",
+                "vitamin a palmitate",
+                "vitamin d3",
+                "whey protein concentrate"
+            ],
+            "contains_allergens": [
+                "milk"
+            ],
+            "may_contain": [],
+            "nutrition": {
+                "calories": 230,
+                "fat": 16.0,
+                "carbohydrates": 9.0,
+                "protein": 14.0,
+                "sodium": 80.0,
+                "sugar": 4.0
+            }
+        },
+        {
+            "item_id": "FBA-A9B0FB90",
+            "ingredients": [
+                "acesulfame potassium",
+                "cane sugar",
+                "citric acid",
+                "cultured grade a non fat milk",
+                "kosher gelatin",
+                "modified food starch",
+                "natural and artificial flavors",
+                "sodium citrate",
+                "sucralose",
+                "water",
+                "yogurt cultures l. bulgaricus & s. thermophilus"
+            ],
+            "contains_allergens": [
+                "milk"
+            ],
+            "may_contain": [],
+            "nutrition": {
+                "calories": 70,
+                "fat": 0,
+                "carbohydrates": 13,
+                "protein": 5,
+                "sodium": 75,
+                "sugar": 8
+            }
+        },
+        {
+            "item_id": "FBA-C48A75DB",
+            "ingredients": [
+                "almonds"
+            ],
+            "contains_allergens": [
+                "tree nuts (almonds)"
+            ],
+            "may_contain": [
+                "milk",
+                "other tree nuts",
+                "peanut",
+                "sesame",
+                "soy",
+                "wheat"
+            ],
+            "nutrition": {
+                "calories": 160,
+                "fat": 14.0,
+                "carbohydrates": 6.0,
+                "protein": 6.0,
+                "sodium": 0.0,
+                "sugar": 2.0
+            }
+        },
+        {
+            "item_id": "FBA-2F498658",
+            "ingredients": [
+                "confectioner's glaze",
+                "corn syrup",
+                "dextrin",
+                "maltodextrin",
+                "milk chocolate (sugar, cocoa butter, whole milk, chocolate liquor, nonfat milk, butter oil, soy lecithin, vanillin, salt)",
+                "raisins"
+            ],
+            "contains_allergens": [
+                "milk",
+                "soy"
+            ],
+            "may_contain": [
+                "peanut",
+                "tree nuts",
+                "wheat"
+            ],
+            "nutrition": {
+                "calories": 190,
+                "fat": 9,
+                "carbohydrates": 27,
+                "protein": 2,
+                "sodium": 20,
+                "sugar": 24
+            }
+        },
+        {
+            "item_id": "FBA-1E0E3FF2",
+            "ingredients": [
+                "baking soda",
+                "caramel color",
+                "fudge chips (sugar, hydrogenated vegetable oil (palm kernel and/or palm oil), cocoa (processed with alkali), dextrose, soy lecithin, artificial flavor, nonfat milk, soybean and/or canola oil)",
+                "high fructose corn syrup",
+                "natural and artificial flavor",
+                "salt",
+                "sugar",
+                "unbleached enriched flour (wheat flour, niacin, reduced iron, thiamine mononitrate [vitamin b1], riboflavin [vitamin b2], folic acid)"
+            ],
+            "contains_allergens": [
+                "milk",
+                "soy",
+                "wheat"
+            ],
+            "may_contain": [],
+            "nutrition": {
+                "calories": 140,
+                "fat": 7.0,
+                "carbohydrates": 19.0,
+                "protein": 1.0,
+                "sodium": 80,
+                "sugar": 8.0
+            }
+        },
+        {
+            "item_id": "FBA-133D2D5A",
+            "ingredients": [
+                "eggs"
+            ],
+            "contains_allergens": [
+                "egg"
+            ],
+            "may_contain": [],
+            "nutrition": {
+                "calories": 70,
+                "fat": 5.0,
+                "carbohydrates": 0.0,
+                "protein": 6.0,
+                "sodium": 70.0,
+                "sugar": 0.0
+            }
+        },
+        {
+            "item_id": "FBA-150CE5B4",
+            "ingredients": [
+                "acesulfame potassium",
+                "filtered water",
+                "high fructose corn syrup",
+                "lemon juice from concentrate",
+                "less than 1% of: lemon pulp",
+                "natural flavors",
+                "pectin",
+                "sucralose"
+            ],
+            "contains_allergens": [],
+            "may_contain": [],
+            "nutrition": {
+                "calories": 70,
+                "fat": 0.0,
+                "carbohydrates": 18.0,
+                "protein": 0.0,
+                "sodium": 15.0,
+                "sugar": 17.0
+            }
+        },
+        {
+            "item_id": "FBA-C840E0F0",
+            "ingredients": [
+                "extra virgin olive oil"
+            ],
+            "contains_allergens": [],
+            "may_contain": [],
+            "nutrition": {
+                "calories": 120,
+                "fat": 14.0,
+                "carbohydrates": 0.0,
+                "protein": 0.0,
+                "sodium": 0.0,
+                "sugar": 0.0
+            }
+        },
+        {
+            "item_id": "FBA-84214F16",
+            "ingredients": [
+                "durum wheat flour",
+                "durum wheat semolina",
+                "folic acid",
+                "iron (ferrous sulfate)",
+                "niacin",
+                "riboflavin",
+                "thiamine mononitrate"
+            ],
+            "contains_allergens": [
+                "wheat"
+            ],
+            "may_contain": [
+                "egg"
+            ],
+            "nutrition": {
+                "calories": 200,
+                "fat": 1.0,
+                "carbohydrates": 42.0,
+                "protein": 7.0,
+                "sodium": 0.0,
+                "sugar": 2.0
+            }
+        },
+        {
+            "item_id": "FBA-75E09BD6",
+            "ingredients": [
+                "calcium chloride",
+                "dipotassium phosphate",
+                "magnesium sulfate",
+                "purified water",
+                "sodium bicarbonate"
+            ],
+            "contains_allergens": [],
+            "may_contain": [],
+            "nutrition": {
+                "calories": 0,
+                "fat": 0,
+                "carbohydrates": 0,
+                "protein": 0,
+                "sodium": 10,
+                "sugar": 0
+            }
         }
     ]
 }
