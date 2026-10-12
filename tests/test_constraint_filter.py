@@ -28,19 +28,24 @@ def test_high_protein_filter():
     results = [
         {
             "item_id": "1",
-            "nutrition": {
-                "protein": 15
-            }
+            "nutrition": {"protein": 15},
         },
         {
             "item_id": "2",
-            "nutrition": {
-                "protein": 4
-            }
-        }
+            "nutrition": {"protein": 4},
+        },
     ]
 
     filterer = ConstraintFilter()
-    filtered = filterer.filter_protein(results, "high")
+    filtered = filterer.filter_nutrients(
+        results,
+        [
+            {
+                "nutrient": "protein",
+                "level": "high",
+            }
+        ],
+    )
+
     assert len(filtered) == 1
     assert filtered[0]["item_id"] == "1"
