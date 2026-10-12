@@ -30,11 +30,14 @@ class ConstraintFilter:
 
     def filter_allergens(self, results, excluded_allergens):
         filtered = []
+        normalized_excluded = {
+            ALLERGEN_NORMALIZATION.get(allergen.lower().strip(), allergen.lower().strip())
+            for allergen in excluded_allergens
+            }
         for item in results:
-            item_allergens = [
-                ALLERGEN_NORMALIZATION.get(allergen.lower(), allergen.lower())
-                for allergen in item.get("contains_allergens", [])
-            ]
+            item_allergens = item.get("contains_allergens")
+            if item_allergens is None:
+                item_allergens = item.get("allergens", [])
 
             normalized_excluded = [
                 ALLERGEN_NORMALIZATION.get(allergen.lower(), allergen.lower())
@@ -58,12 +61,25 @@ class ConstraintFilter:
 
     def filter_single_nutrient(self, results, constraint):
         nutrient = constraint["nutrient"]
-        level = constraint["level"]
-        threshold = get_nutrient_threshold(nutrient, level)
-        if threshold is None:
-            return results
-        operator = threshold["operator"]
-        value = threshold["value"]
+        if (constraint.get("source") == "numeric" or ("operator" in constraint and "value" in constraint)):
+            operator_aliases = {
+                "gt": ">",
+                "lt": "<",
+                "gte": ">=",
+                "lte": "<=",
+                }
+            operator = operator_aliases.get(constraint["operator"], constraint["operator"])
+            value = constraint["value"]
+        else:
+            level = constraint.get("level")
+            if level is None:
+                return []
+            threshold = get_nutrient_threshold(nutrient, level)
+            if threshold is None:
+                return []
+            operator = threshold["operator"]
+            value = threshold["value"]
+        
         filtered = []
         for item in results:
             nutrient_value = (item.get("nutrition", {}).get(nutrient))
@@ -71,9 +87,10 @@ class ConstraintFilter:
                 continue
             try:
                 nutrient_value = float(nutrient_value)
+                threshold_value = float(value)
             except (TypeError, ValueError):
                 continue
-            if self.evaluate_operator(nutrient_value, operator, value):
+            if self.evaluate_operator(nutrient_value, operator, threshold_value):
                 filtered.append(item)
         return filtered
     

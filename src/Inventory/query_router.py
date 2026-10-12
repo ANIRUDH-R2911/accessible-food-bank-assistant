@@ -1,6 +1,7 @@
 import re
 from typing import Dict
 from src.rag.nutrient_config import (NUTRIENT_CONFIG)
+from src.rag.numeric_constraint_parser import (NumericConstraintParser)
 
 class QueryRouter:
     ALLERGENS = {
@@ -74,7 +75,9 @@ class QueryRouter:
         "sesame": "sesame"
     }
 
-
+    def __init__(self):
+        self.numeric_constraint_parser = NumericConstraintParser()
+        
     def detect_query_type(self, query: str) -> str:
         query = query.lower()
         constraints = self.extract_constraints(query)
@@ -262,7 +265,9 @@ class QueryRouter:
                     detected_allergens.add(canonical)
             constraints["allergen_exclude"] = list(detected_allergens)
         
-        constraints["nutrient_constraints"] = self.extract_nutrient_constraints(query)      
+        qualitative_constraints = self.extract_nutrient_constraints(query)
+        numeric_constraints = self.numeric_constraint_parser.parse(query)
+        constraints["nutrient_constraints"] = (qualitative_constraints + numeric_constraints)  
         return constraints
     
     def has_constraints(self, query: str) -> bool:
