@@ -1,0 +1,2921 @@
+{
+  "benchmark": "retrieval_judgment_candidates",
+  "generated_at_utc": "2026-10-13T15:46:27.158447+00:00",
+  "configuration": {
+    "top_k": 10,
+    "hybrid_retrieval_k": 20,
+    "query_count": 10,
+    "inventory_record_count": 105,
+    "unique_valid_inventory_ids": 105
+  },
+  "input_hashes": {
+    "queries_sha256": "ced2623ae628931de9b71f88b87f017fb9227764b3c8c8cd25cadc30859be860",
+    "inventory_sha256": "ad8e5e4498f85d983a89052db70e70f64ce778f6fc178449f9e7acdca34be73f"
+  },
+  "initialization_errors": {},
+  "inventory_issues": [],
+  "queries": [
+    {
+      "query": "foods containing soy",
+      "methods": {
+        "bm25": {
+          "latency_seconds": 0.00021029999999910842,
+          "raw_result_count": 10,
+          "results": [
+            {
+              "item_id": "FBA-AF4E2E5F",
+              "document_preview": "cereal crisp (degerminated yellow corn flour, soy flour, sugar, salt, soy lecithin) dark refiners syrup high oleic canola oil peanut butter (dry roasted peanuts) rolled oats salt sodium bicarbonate soy lecithin sugar water peanut soy calori",
+              "metadata": {
+                "item_id": "FBA-AF4E2E5F"
+              },
+              "rank": 1
+            },
+            {
+              "item_id": "FBA-D92E4239",
+              "document_preview": "cereal crisp (degerminated yellow corn flour, soy flour, sugar, salt, soy lecithin) dark refiners syrup high oleic canola oil peanut butter (dry roasted peanuts) rolled oats salt sodium bicarbonate soy lecithin sugar water peanut soy calori",
+              "metadata": {
+                "item_id": "FBA-D92E4239"
+              },
+              "rank": 2
+            },
+            {
+              "item_id": "FBA-899FCD38",
+              "document_preview": "calcium propionate citric acid cornmeal cornstarch datem guar gum maltodextrin monoglycerides salt sesame seeds sorbic acid soy cellulose gum soy lecithin sugar vegetable oil water wheat bran wheat gluten whole wheat flour yeast sesame soy ",
+              "metadata": {
+                "item_id": "FBA-899FCD38"
+              },
+              "rank": 3
+            },
+            {
+              "item_id": "FBA-AAF7C579",
+              "document_preview": "butter oil chocolate liquor cocoa butter confectioner's glaze corn syrup dextrin maltodextrin milk chocolate nonfat milk raisins salt soy lecithin sugar vanillin whole milk milk soy calories 190 fat 9 carbohydrates 27 protein 2 sodium 20 su",
+              "metadata": {
+                "item_id": "FBA-AAF7C579"
+              },
+              "rank": 4
+            },
+            {
+              "item_id": "FBA-2F498658",
+              "document_preview": "confectioner's glaze corn syrup dextrin maltodextrin milk chocolate (sugar, cocoa butter, whole milk, chocolate liquor, nonfat milk, butter oil, soy lecithin, vanillin, salt) raisins milk soy calories 190 fat 9 carbohydrates 27 protein 2 so",
+              "metadata": {
+                "item_id": "FBA-2F498658"
+              },
+              "rank": 5
+            },
+            {
+              "item_id": "FBA-AE4A1E21",
+              "document_preview": "calcium propionate citric acid cornmeal datem guar gum maltodextrin monoglycerides salt sesame seeds sorbic acid soy lecithin sugar vegetable oil water wheat bran wheat gluten whole wheat flour yeast sesame soy wheat calories 250 fat 2.0 ca",
+              "metadata": {
+                "item_id": "FBA-AE4A1E21"
+              },
+              "rank": 6
+            },
+            {
+              "item_id": "FBA-FC93E110",
+              "document_preview": "calcium propionate cellulose gum citric acid cornmeal cornstarch datem guar gum maltodextrin monoglycerides salt sesame seeds sorbic acid soy lecithin sugar vegetable oil (soybean) water wheat bran wheat gluten whole wheat flour yeast sesam",
+              "metadata": {
+                "item_id": "FBA-FC93E110"
+              },
+              "rank": 7
+            },
+            {
+              "item_id": "FBA-37E11373",
+              "document_preview": "banana puree carrageenan cocoa cocoa (processed with alkali) coconut oil cream egg yolks guar gum lemon juice concentrate liquid sugar (sugar, water) milk natural flavors nonfat milk peanuts salt skim milk soy lecithin sugar vanilla extract",
+              "metadata": {
+                "item_id": "FBA-37E11373"
+              },
+              "rank": 8
+            },
+            {
+              "item_id": "FBA-45E5862F",
+              "document_preview": "banana puree carrageenan cocoa cocoa (processed with alkali) coconut oil cream egg yolks guar gum lemon juice concentrate liquid sugar (sugar, water) milk natural flavors nonfat milk peanuts salt skim milk soy lecithin sugar vanilla extract",
+              "metadata": {
+                "item_id": "FBA-45E5862F"
+              },
+              "rank": 9
+            },
+            {
+              "item_id": "FBA-0C7907A0",
+              "document_preview": "carnauba wax coloring (includes blue 1 lake, yellow 6, red 40, yellow 5, blue 1, yellow 6 lake, red 40 lake, yellow 5 lake, blue 2 lake, blue 2) cornstarch dextrin gum acacia less than 1% - corn syrup milk chocolate (sugar, chocolate, skim ",
+              "metadata": {
+                "item_id": "FBA-0C7907A0"
+              },
+              "rank": 10
+            }
+          ],
+          "issues": [],
+          "error": null
+        },
+        "semantic": {
+          "latency_seconds": 1.4197188,
+          "raw_result_count": 10,
+          "results": [
+            {
+              "item_id": "FBA-D92E4239",
+              "document_preview": "Item ID: FBA-D92E4239\n\nIngredients:\ncereal crisp (degerminated yellow corn flour, soy flour, sugar, salt, soy lecithin), dark refiners syrup, high oleic canola oil, peanut butter (dry roasted peanuts), rolled oats, salt, sodium bicarbonate,",
+              "metadata": {
+                "ingredient_count": 10,
+                "allergen_count": 2,
+                "item_id": "FBA-D92E4239"
+              },
+              "rank": 1
+            },
+            {
+              "item_id": "FBA-45E5862F",
+              "document_preview": "Item ID: FBA-45E5862F\n\nIngredients:\nbanana puree, carrageenan, cocoa, cocoa (processed with alkali), coconut oil, cream, egg yolks, guar gum, lemon juice concentrate, liquid sugar (sugar, water), milk, natural flavors, nonfat milk, peanuts,",
+              "metadata": {
+                "allergen_count": 4,
+                "ingredient_count": 20,
+                "item_id": "FBA-45E5862F"
+              },
+              "rank": 2
+            },
+            {
+              "item_id": "FBA-899FCD38",
+              "document_preview": "Item ID: FBA-899FCD38\n\nIngredients:\ncalcium propionate, citric acid, cornmeal, cornstarch, datem, guar gum, maltodextrin, monoglycerides, salt, sesame seeds, sorbic acid, soy cellulose gum, soy lecithin, sugar, vegetable oil, water, wheat b",
+              "metadata": {
+                "item_id": "FBA-899FCD38",
+                "allergen_count": 3,
+                "ingredient_count": 20
+              },
+              "rank": 3
+            },
+            {
+              "item_id": "FBA-D139608E",
+              "document_preview": "Item ID: FBA-D139608E\n\nIngredients:\nannatto (color), canola oil, cheddar cheese (milk, cheese culture, cheese sauce (whey, colby cheese (milk, contains less than 2% of salt, enriched macaroni product (wheat flour, enzymes, enzymes), ferrous",
+              "metadata": {
+                "ingredient_count": 28,
+                "allergen_count": 2,
+                "item_id": "FBA-D139608E"
+              },
+              "rank": 4
+            },
+            {
+              "item_id": "FBA-97C8BF53",
+              "document_preview": "Item ID: FBA-97C8BF53\n\nIngredients:\ncheese culture, enzymes, pasteurized milk, red and green jalapeño peppers, salt\n\nAllergens:\nmilk\n\nNutrition:\ncalories: 100\nfat: 8.0\ncarbohydrates: 0.0\nprotein: 7.0\nsodium: 180.0\nsugar: 0.0\n\nFood Character",
+              "metadata": {
+                "item_id": "FBA-97C8BF53",
+                "ingredient_count": 5,
+                "allergen_count": 1
+              },
+              "rank": 5
+            },
+            {
+              "item_id": "FBA-0EA01950",
+              "document_preview": "Item ID: FBA-0EA01950\n\nIngredients:\nbaking soda, caramel color, fudge chips (sugar, hydrogenated vegetable oil [palm kernel and/or palm oil], cocoa [processed with alkali], dextrose, soy lecithin, artificial flavor, nonfat milk), high fruct",
+              "metadata": {
+                "ingredient_count": 8,
+                "allergen_count": 3,
+                "item_id": "FBA-0EA01950"
+              },
+              "rank": 6
+            },
+            {
+              "item_id": "FBA-95E4F389",
+              "document_preview": "Item ID: FBA-95E4F389\n\nIngredients:\ninulin, modified wheat starch, monoglycerides, oat fiber, preservatives (sorbic acid, calcium propionate), salt, soybean oil, vinegar, water, wheat gluten, wheat protein isolate, yeast\n\nAllergens:\nsesame ",
+              "metadata": {
+                "allergen_count": 2,
+                "ingredient_count": 12,
+                "item_id": "FBA-95E4F389"
+              },
+              "rank": 7
+            },
+            {
+              "item_id": "FBA-AAF7C579",
+              "document_preview": "Item ID: FBA-AAF7C579\n\nIngredients:\nbutter oil, chocolate liquor, cocoa butter, confectioner's glaze, corn syrup, dextrin, maltodextrin, milk chocolate, nonfat milk, raisins, salt, soy lecithin, sugar, vanillin, whole milk\n\nAllergens:\nmilk,",
+              "metadata": {
+                "item_id": "FBA-AAF7C579",
+                "ingredient_count": 15,
+                "allergen_count": 2
+              },
+              "rank": 8
+            },
+            {
+              "item_id": "FBA-52018693",
+              "document_preview": "Item ID: FBA-52018693\n\nIngredients:\ncarnauba wax, coloring (includes blue 1 lake, yellow 6, red 40, yellow 5, blue 1, yellow 6 lake, red 40 lake, yellow 5 lake, blue 2 lake, blue 2), cornstarch, dextrin, gum acacia, less than 1% - corn syru",
+              "metadata": {
+                "allergen_count": 2,
+                "item_id": "FBA-52018693",
+                "ingredient_count": 8
+              },
+              "rank": 9
+            },
+            {
+              "item_id": "FBA-55C678B8",
+              "document_preview": "Item ID: FBA-55C678B8\n\nIngredients:\npotatoes, salt, vegetable oil (canola, corn, soybean, and/or sunflower oil)\n\nAllergens:\nNone\n\nNutrition:\ncalories: 160\nfat: 10.0\ncarbohydrates: 15.0\nprotein: 2.0\nsodium: 150.0\nsugar: 1.0\n\nFood Characteris",
+              "metadata": {
+                "allergen_count": 0,
+                "ingredient_count": 3,
+                "item_id": "FBA-55C678B8"
+              },
+              "rank": 10
+            }
+          ],
+          "issues": [],
+          "error": null
+        },
+        "hybrid": {
+          "latency_seconds": 0.33128699999999967,
+          "raw_result_count": 10,
+          "results": [
+            {
+              "item_id": "FBA-D92E4239",
+              "document_preview": "cereal crisp (degerminated yellow corn flour, soy flour, sugar, salt, soy lecithin) dark refiners syrup high oleic canola oil peanut butter (dry roasted peanuts) rolled oats salt sodium bicarbonate soy lecithin sugar water peanut soy calori",
+              "metadata": {
+                "item_id": "FBA-D92E4239"
+              },
+              "rank": 1
+            },
+            {
+              "item_id": "FBA-899FCD38",
+              "document_preview": "calcium propionate citric acid cornmeal cornstarch datem guar gum maltodextrin monoglycerides salt sesame seeds sorbic acid soy cellulose gum soy lecithin sugar vegetable oil water wheat bran wheat gluten whole wheat flour yeast sesame soy ",
+              "metadata": {
+                "item_id": "FBA-899FCD38"
+              },
+              "rank": 2
+            },
+            {
+              "item_id": "FBA-45E5862F",
+              "document_preview": "banana puree carrageenan cocoa cocoa (processed with alkali) coconut oil cream egg yolks guar gum lemon juice concentrate liquid sugar (sugar, water) milk natural flavors nonfat milk peanuts salt skim milk soy lecithin sugar vanilla extract",
+              "metadata": {
+                "item_id": "FBA-45E5862F"
+              },
+              "rank": 3
+            },
+            {
+              "item_id": "FBA-AAF7C579",
+              "document_preview": "butter oil chocolate liquor cocoa butter confectioner's glaze corn syrup dextrin maltodextrin milk chocolate nonfat milk raisins salt soy lecithin sugar vanillin whole milk milk soy calories 190 fat 9 carbohydrates 27 protein 2 sodium 20 su",
+              "metadata": {
+                "item_id": "FBA-AAF7C579"
+              },
+              "rank": 4
+            },
+            {
+              "item_id": "FBA-0EA01950",
+              "document_preview": "baking soda caramel color fudge chips (sugar, hydrogenated vegetable oil [palm kernel and/or palm oil], cocoa [processed with alkali], dextrose, soy lecithin, artificial flavor, nonfat milk) high fructose corn syrup natural and artificial f",
+              "metadata": {
+                "item_id": "FBA-0EA01950"
+              },
+              "rank": 5
+            },
+            {
+              "item_id": "FBA-FC93E110",
+              "document_preview": "calcium propionate cellulose gum citric acid cornmeal cornstarch datem guar gum maltodextrin monoglycerides salt sesame seeds sorbic acid soy lecithin sugar vegetable oil (soybean) water wheat bran wheat gluten whole wheat flour yeast sesam",
+              "metadata": {
+                "item_id": "FBA-FC93E110"
+              },
+              "rank": 6
+            },
+            {
+              "item_id": "FBA-52018693",
+              "document_preview": "carnauba wax coloring (includes blue 1 lake, yellow 6, red 40, yellow 5, blue 1, yellow 6 lake, red 40 lake, yellow 5 lake, blue 2 lake, blue 2) cornstarch dextrin gum acacia less than 1% - corn syrup milk chocolate (sugar, chocolate, skim ",
+              "metadata": {
+                "item_id": "FBA-52018693"
+              },
+              "rank": 7
+            },
+            {
+              "item_id": "FBA-97C8BF53",
+              "document_preview": "cheese culture enzymes pasteurized milk red and green jalapeño peppers salt milk calories 100 fat 8.0 carbohydrates 0.0 protein 7.0 sodium 180.0 sugar 0.0",
+              "metadata": {
+                "item_id": "FBA-97C8BF53"
+              },
+              "rank": 8
+            },
+            {
+              "item_id": "FBA-BCB8DC68",
+              "document_preview": "calcium propionate inulin modified wheat starch monoglycerides oat fiber preservatives salt sorbic acid soybean oil vinegar water wheat gluten wheat protein isolate yeast sesame ingredients wheat calories 35 fat 1.0 carbohydrates 10.0 prote",
+              "metadata": {
+                "item_id": "FBA-BCB8DC68"
+              },
+              "rank": 9
+            },
+            {
+              "item_id": "FBA-AF4E2E5F",
+              "document_preview": "cereal crisp (degerminated yellow corn flour, soy flour, sugar, salt, soy lecithin) dark refiners syrup high oleic canola oil peanut butter (dry roasted peanuts) rolled oats salt sodium bicarbonate soy lecithin sugar water peanut soy calori",
+              "metadata": {
+                "item_id": "FBA-AF4E2E5F"
+              },
+              "rank": 10
+            }
+          ],
+          "issues": [],
+          "error": null
+        }
+      }
+    },
+    {
+      "query": "high protein foods",
+      "methods": {
+        "bm25": {
+          "latency_seconds": 0.00020489999999995234,
+          "raw_result_count": 10,
+          "results": [
+            {
+              "item_id": "FBA-58B4B064",
+              "document_preview": "acesulfame potassium filtered water high fructose corn syrup lemon juice from concentrate less than 1% of: lemon pulp natural flavors pectin sucralose calories 70 fat 0.0 carbohydrates 18.0 protein 0.0 sodium 15.0 sugar 17.0",
+              "metadata": {
+                "item_id": "FBA-58B4B064"
+              },
+              "rank": 1
+            },
+            {
+              "item_id": "FBA-150CE5B4",
+              "document_preview": "acesulfame potassium filtered water high fructose corn syrup lemon juice from concentrate less than 1% of: lemon pulp natural flavors pectin sucralose calories 70 fat 0.0 carbohydrates 18.0 protein 0.0 sodium 15.0 sugar 17.0",
+              "metadata": {
+                "item_id": "FBA-150CE5B4"
+              },
+              "rank": 2
+            },
+            {
+              "item_id": "FBA-AF4E2E5F",
+              "document_preview": "cereal crisp (degerminated yellow corn flour, soy flour, sugar, salt, soy lecithin) dark refiners syrup high oleic canola oil peanut butter (dry roasted peanuts) rolled oats salt sodium bicarbonate soy lecithin sugar water peanut soy calori",
+              "metadata": {
+                "item_id": "FBA-AF4E2E5F"
+              },
+              "rank": 3
+            },
+            {
+              "item_id": "FBA-E591CB7D",
+              "document_preview": "brominated vegetable oil caffeine calcium disodium edta (to protect flavor) carbonated water citric acid concentrated orange juice erythorbic acid (preserves freshness) gum arabic high fructose corn syrup natural flavor sodium benzoate (pre",
+              "metadata": {
+                "item_id": "FBA-E591CB7D"
+              },
+              "rank": 4
+            },
+            {
+              "item_id": "FBA-FE491299",
+              "document_preview": "brominated vegetable oil caffeine calcium disodium edta (to protect flavor) carbonated water citric acid concentrated orange juice erythorbic acid (preserves freshness) gum arabic high fructose corn syrup natural flavor sodium benzoate (pre",
+              "metadata": {
+                "item_id": "FBA-FE491299"
+              },
+              "rank": 5
+            },
+            {
+              "item_id": "FBA-D92E4239",
+              "document_preview": "cereal crisp (degerminated yellow corn flour, soy flour, sugar, salt, soy lecithin) dark refiners syrup high oleic canola oil peanut butter (dry roasted peanuts) rolled oats salt sodium bicarbonate soy lecithin sugar water peanut soy calori",
+              "metadata": {
+                "item_id": "FBA-D92E4239"
+              },
+              "rank": 6
+            },
+            {
+              "item_id": "FBA-0EA01950",
+              "document_preview": "baking soda caramel color fudge chips (sugar, hydrogenated vegetable oil [palm kernel and/or palm oil], cocoa [processed with alkali], dextrose, soy lecithin, artificial flavor, nonfat milk) high fructose corn syrup natural and artificial f",
+              "metadata": {
+                "item_id": "FBA-0EA01950"
+              },
+              "rank": 7
+            },
+            {
+              "item_id": "FBA-1E0E3FF2",
+              "document_preview": "baking soda caramel color fudge chips (sugar, hydrogenated vegetable oil (palm kernel and/or palm oil), cocoa (processed with alkali), dextrose, soy lecithin, artificial flavor, nonfat milk, soybean and/or canola oil) high fructose corn syr",
+              "metadata": {
+                "item_id": "FBA-1E0E3FF2"
+              },
+              "rank": 8
+            },
+            {
+              "item_id": "FBA-0F18E068",
+              "document_preview": "cream live active yogurt cultures (acidophilus, bifidus, l. bulgaricus and s. thermophilus) milk protein concentrate pasteurized milk vitamin a palmitate vitamin d3 whey protein concentrate milk calories 230 fat 16.0 carbohydrates 9.0 prote",
+              "metadata": {
+                "item_id": "FBA-0F18E068"
+              },
+              "rank": 9
+            },
+            {
+              "item_id": "FBA-8F56616E",
+              "document_preview": "cream live active yogurt cultures (acidophilus, bifidus, l. bulgaricus and s. thermophilus) milk protein concentrate pasteurized milk vitamin a palmitate vitamin d3 whey protein concentrate milk calories 230 fat 16.0 carbohydrates 9.0 prote",
+              "metadata": {
+                "item_id": "FBA-8F56616E"
+              },
+              "rank": 10
+            }
+          ],
+          "issues": [],
+          "error": null
+        },
+        "semantic": {
+          "latency_seconds": 0.2202516999999986,
+          "raw_result_count": 10,
+          "results": [
+            {
+              "item_id": "FBA-45E5862F",
+              "document_preview": "Item ID: FBA-45E5862F\n\nIngredients:\nbanana puree, carrageenan, cocoa, cocoa (processed with alkali), coconut oil, cream, egg yolks, guar gum, lemon juice concentrate, liquid sugar (sugar, water), milk, natural flavors, nonfat milk, peanuts,",
+              "metadata": {
+                "ingredient_count": 20,
+                "allergen_count": 4,
+                "item_id": "FBA-45E5862F"
+              },
+              "rank": 1
+            },
+            {
+              "item_id": "FBA-0F18E068",
+              "document_preview": "Item ID: FBA-0F18E068\n\nIngredients:\ncream, live active yogurt cultures (acidophilus, bifidus, l. bulgaricus and s. thermophilus), milk protein concentrate, pasteurized milk, vitamin a palmitate, vitamin d3, whey protein concentrate\n\nAllerge",
+              "metadata": {
+                "allergen_count": 1,
+                "item_id": "FBA-0F18E068",
+                "ingredient_count": 7
+              },
+              "rank": 2
+            },
+            {
+              "item_id": "FBA-D92E4239",
+              "document_preview": "Item ID: FBA-D92E4239\n\nIngredients:\ncereal crisp (degerminated yellow corn flour, soy flour, sugar, salt, soy lecithin), dark refiners syrup, high oleic canola oil, peanut butter (dry roasted peanuts), rolled oats, salt, sodium bicarbonate,",
+              "metadata": {
+                "item_id": "FBA-D92E4239",
+                "allergen_count": 2,
+                "ingredient_count": 10
+              },
+              "rank": 3
+            },
+            {
+              "item_id": "FBA-0EA01950",
+              "document_preview": "Item ID: FBA-0EA01950\n\nIngredients:\nbaking soda, caramel color, fudge chips (sugar, hydrogenated vegetable oil [palm kernel and/or palm oil], cocoa [processed with alkali], dextrose, soy lecithin, artificial flavor, nonfat milk), high fruct",
+              "metadata": {
+                "allergen_count": 3,
+                "item_id": "FBA-0EA01950",
+                "ingredient_count": 8
+              },
+              "rank": 4
+            },
+            {
+              "item_id": "FBA-D139608E",
+              "document_preview": "Item ID: FBA-D139608E\n\nIngredients:\nannatto (color), canola oil, cheddar cheese (milk, cheese culture, cheese sauce (whey, colby cheese (milk, contains less than 2% of salt, enriched macaroni product (wheat flour, enzymes, enzymes), ferrous",
+              "metadata": {
+                "item_id": "FBA-D139608E",
+                "allergen_count": 2,
+                "ingredient_count": 28
+              },
+              "rank": 5
+            },
+            {
+              "item_id": "FBA-95E4F389",
+              "document_preview": "Item ID: FBA-95E4F389\n\nIngredients:\ninulin, modified wheat starch, monoglycerides, oat fiber, preservatives (sorbic acid, calcium propionate), salt, soybean oil, vinegar, water, wheat gluten, wheat protein isolate, yeast\n\nAllergens:\nsesame ",
+              "metadata": {
+                "ingredient_count": 12,
+                "allergen_count": 2,
+                "item_id": "FBA-95E4F389"
+              },
+              "rank": 6
+            },
+            {
+              "item_id": "FBA-6E8C0225",
+              "document_preview": "Item ID: FBA-6E8C0225\n\nIngredients:\ncitric acid, organic chickpeas, organic cumin, organic garlic, organic lemon juice, organic minced garlic, organic onion, organic parsley, organic pine nuts, organic red pepper, organic sesame tahini, org",
+              "metadata": {
+                "ingredient_count": 15,
+                "allergen_count": 2,
+                "item_id": "FBA-6E8C0225"
+              },
+              "rank": 7
+            },
+            {
+              "item_id": "FBA-899FCD38",
+              "document_preview": "Item ID: FBA-899FCD38\n\nIngredients:\ncalcium propionate, citric acid, cornmeal, cornstarch, datem, guar gum, maltodextrin, monoglycerides, salt, sesame seeds, sorbic acid, soy cellulose gum, soy lecithin, sugar, vegetable oil, water, wheat b",
+              "metadata": {
+                "allergen_count": 3,
+                "item_id": "FBA-899FCD38",
+                "ingredient_count": 20
+              },
+              "rank": 8
+            },
+            {
+              "item_id": "FBA-3F554D43",
+              "document_preview": "Item ID: FBA-3F554D43\n\nIngredients:\nalmondmilk (water, almonds), calcium carbonate, d-alpha-tocopherol (natural vitamin e), gellan gum, natural vanilla flavor with other natural flavors, potassium citrate, sea salt, sunflower lecithin, vita",
+              "metadata": {
+                "ingredient_count": 10,
+                "item_id": "FBA-3F554D43",
+                "allergen_count": 1
+              },
+              "rank": 9
+            },
+            {
+              "item_id": "FBA-ADBD6C25",
+              "document_preview": "Item ID: FBA-ADBD6C25\n\nIngredients:\nalmondmilk (water, almonds), calcium carbonate, gellan gum, natural vanilla flavor with other natural flavors, potassium citrate, sea salt, sunflower lecithin, vitamin a palmitate, vitamin d2 and d-alpha-",
+              "metadata": {
+                "allergen_count": 1,
+                "item_id": "FBA-ADBD6C25",
+                "ingredient_count": 9
+              },
+              "rank": 10
+            }
+          ],
+          "issues": [],
+          "error": null
+        },
+        "hybrid": {
+          "latency_seconds": 0.20359579999999866,
+          "raw_result_count": 10,
+          "results": [
+            {
+              "item_id": "FBA-D92E4239",
+              "document_preview": "cereal crisp (degerminated yellow corn flour, soy flour, sugar, salt, soy lecithin) dark refiners syrup high oleic canola oil peanut butter (dry roasted peanuts) rolled oats salt sodium bicarbonate soy lecithin sugar water peanut soy calori",
+              "metadata": {
+                "item_id": "FBA-D92E4239"
+              },
+              "rank": 1
+            },
+            {
+              "item_id": "FBA-0F18E068",
+              "document_preview": "cream live active yogurt cultures (acidophilus, bifidus, l. bulgaricus and s. thermophilus) milk protein concentrate pasteurized milk vitamin a palmitate vitamin d3 whey protein concentrate milk calories 230 fat 16.0 carbohydrates 9.0 prote",
+              "metadata": {
+                "item_id": "FBA-0F18E068"
+              },
+              "rank": 2
+            },
+            {
+              "item_id": "FBA-0EA01950",
+              "document_preview": "baking soda caramel color fudge chips (sugar, hydrogenated vegetable oil [palm kernel and/or palm oil], cocoa [processed with alkali], dextrose, soy lecithin, artificial flavor, nonfat milk) high fructose corn syrup natural and artificial f",
+              "metadata": {
+                "item_id": "FBA-0EA01950"
+              },
+              "rank": 3
+            },
+            {
+              "item_id": "FBA-95E4F389",
+              "document_preview": "inulin modified wheat starch monoglycerides oat fiber preservatives (sorbic acid, calcium propionate) salt soybean oil vinegar water wheat gluten wheat protein isolate yeast sesame ingredients wheat calories 35 fat 1.0 carbohydrates 10.0 pr",
+              "metadata": {
+                "item_id": "FBA-95E4F389"
+              },
+              "rank": 4
+            },
+            {
+              "item_id": "FBA-BCB8DC68",
+              "document_preview": "calcium propionate inulin modified wheat starch monoglycerides oat fiber preservatives salt sorbic acid soybean oil vinegar water wheat gluten wheat protein isolate yeast sesame ingredients wheat calories 35 fat 1.0 carbohydrates 10.0 prote",
+              "metadata": {
+                "item_id": "FBA-BCB8DC68"
+              },
+              "rank": 5
+            },
+            {
+              "item_id": "FBA-8276C4F3",
+              "document_preview": "milk vitamin d3 milk calories 150 fat 8 carbohydrates 12 protein 8 sodium 125 sugar 12",
+              "metadata": {
+                "item_id": "FBA-8276C4F3"
+              },
+              "rank": 6
+            },
+            {
+              "item_id": "FBA-58B4B064",
+              "document_preview": "acesulfame potassium filtered water high fructose corn syrup lemon juice from concentrate less than 1% of: lemon pulp natural flavors pectin sucralose calories 70 fat 0.0 carbohydrates 18.0 protein 0.0 sodium 15.0 sugar 17.0",
+              "metadata": {
+                "item_id": "FBA-58B4B064"
+              },
+              "rank": 7
+            },
+            {
+              "item_id": "FBA-45E5862F",
+              "document_preview": "Item ID: FBA-45E5862F\n\nIngredients:\nbanana puree, carrageenan, cocoa, cocoa (processed with alkali), coconut oil, cream, egg yolks, guar gum, lemon juice concentrate, liquid sugar (sugar, water), milk, natural flavors, nonfat milk, peanuts,",
+              "metadata": {
+                "allergen_count": 4,
+                "item_id": "FBA-45E5862F",
+                "ingredient_count": 20
+              },
+              "rank": 8
+            },
+            {
+              "item_id": "FBA-150CE5B4",
+              "document_preview": "acesulfame potassium filtered water high fructose corn syrup lemon juice from concentrate less than 1% of: lemon pulp natural flavors pectin sucralose calories 70 fat 0.0 carbohydrates 18.0 protein 0.0 sodium 15.0 sugar 17.0",
+              "metadata": {
+                "item_id": "FBA-150CE5B4"
+              },
+              "rank": 9
+            },
+            {
+              "item_id": "FBA-AF4E2E5F",
+              "document_preview": "cereal crisp (degerminated yellow corn flour, soy flour, sugar, salt, soy lecithin) dark refiners syrup high oleic canola oil peanut butter (dry roasted peanuts) rolled oats salt sodium bicarbonate soy lecithin sugar water peanut soy calori",
+              "metadata": {
+                "item_id": "FBA-AF4E2E5F"
+              },
+              "rank": 10
+            }
+          ],
+          "issues": [],
+          "error": null
+        }
+      }
+    },
+    {
+      "query": "foods with peanuts",
+      "methods": {
+        "bm25": {
+          "latency_seconds": 0.00015999999999749548,
+          "raw_result_count": 10,
+          "results": [
+            {
+              "item_id": "FBA-37E11373",
+              "document_preview": "banana puree carrageenan cocoa cocoa (processed with alkali) coconut oil cream egg yolks guar gum lemon juice concentrate liquid sugar (sugar, water) milk natural flavors nonfat milk peanuts salt skim milk soy lecithin sugar vanilla extract",
+              "metadata": {
+                "item_id": "FBA-37E11373"
+              },
+              "rank": 1
+            },
+            {
+              "item_id": "FBA-45E5862F",
+              "document_preview": "banana puree carrageenan cocoa cocoa (processed with alkali) coconut oil cream egg yolks guar gum lemon juice concentrate liquid sugar (sugar, water) milk natural flavors nonfat milk peanuts salt skim milk soy lecithin sugar vanilla extract",
+              "metadata": {
+                "item_id": "FBA-45E5862F"
+              },
+              "rank": 2
+            },
+            {
+              "item_id": "FBA-BDC0DC6A",
+              "document_preview": "hydrogenated vegetable oil (cottonseed, soybean and rapeseed oil) roasted peanuts salt sugar calories 190 fat 16 carbohydrates 6 protein 7 sodium 150 sugar 3",
+              "metadata": {
+                "item_id": "FBA-BDC0DC6A"
+              },
+              "rank": 3
+            },
+            {
+              "item_id": "FBA-0C9A9957",
+              "document_preview": "hydrogenated vegetable oil (cottonseed, soybean and rapeseed oil) to prevent separation roasted peanuts salt sugar calories 190 fat 16.0 carbohydrates 6.0 protein 7.0 sodium 150.0 sugar 3.0",
+              "metadata": {
+                "item_id": "FBA-0C9A9957"
+              },
+              "rank": 4
+            },
+            {
+              "item_id": "FBA-305CDFDD",
+              "document_preview": "cheese made with skim milk (skim milk enriched flour (wheat flour, niacin, reduced iron, vitamin b1 [thiamin mononitrate], vitamin b2 [riboflavin], folic acid) vegetable oil (soybean and palm oil with tbhq for freshness) calories 150 fat 8 ",
+              "metadata": {
+                "item_id": "FBA-305CDFDD"
+              },
+              "rank": 5
+            },
+            {
+              "item_id": "FBA-90E0D6B8",
+              "document_preview": "cheese made with skim milk (skim milk enriched flour (wheat flour, niacin, reduced iron, vitamin b1 [thiamin mononitrate], vitamin b2 [riboflavin], folic acid) vegetable oil (soybean and palm oil with tbhq for freshness) calories 150 fat 8 ",
+              "metadata": {
+                "item_id": "FBA-90E0D6B8"
+              },
+              "rank": 6
+            },
+            {
+              "item_id": "FBA-C566A607",
+              "document_preview": "cheese made with skim milk (skim milk enriched flour (wheat flour, niacin, reduced iron, vitamin b1 [thiamin mononitrate], vitamin b2 [riboflavin], folic acid) vegetable oil (soybean and palm oil with tbhq for freshness) calories 150 fat 8 ",
+              "metadata": {
+                "item_id": "FBA-C566A607"
+              },
+              "rank": 7
+            },
+            {
+              "item_id": "FBA-AF4E2E5F",
+              "document_preview": "cereal crisp (degerminated yellow corn flour, soy flour, sugar, salt, soy lecithin) dark refiners syrup high oleic canola oil peanut butter (dry roasted peanuts) rolled oats salt sodium bicarbonate soy lecithin sugar water peanut soy calori",
+              "metadata": {
+                "item_id": "FBA-AF4E2E5F"
+              },
+              "rank": 8
+            },
+            {
+              "item_id": "FBA-D92E4239",
+              "document_preview": "cereal crisp (degerminated yellow corn flour, soy flour, sugar, salt, soy lecithin) dark refiners syrup high oleic canola oil peanut butter (dry roasted peanuts) rolled oats salt sodium bicarbonate soy lecithin sugar water peanut soy calori",
+              "metadata": {
+                "item_id": "FBA-D92E4239"
+              },
+              "rank": 9
+            },
+            {
+              "item_id": "FBA-3F554D43",
+              "document_preview": "almondmilk (water, almonds) calcium carbonate d-alpha-tocopherol (natural vitamin e) gellan gum natural vanilla flavor with other natural flavors potassium citrate sea salt sunflower lecithin vitamin a palmitate vitamin d2 tree nuts calorie",
+              "metadata": {
+                "item_id": "FBA-3F554D43"
+              },
+              "rank": 10
+            }
+          ],
+          "issues": [],
+          "error": null
+        },
+        "semantic": {
+          "latency_seconds": 0.18082829999999817,
+          "raw_result_count": 10,
+          "results": [
+            {
+              "item_id": "FBA-D92E4239",
+              "document_preview": "Item ID: FBA-D92E4239\n\nIngredients:\ncereal crisp (degerminated yellow corn flour, soy flour, sugar, salt, soy lecithin), dark refiners syrup, high oleic canola oil, peanut butter (dry roasted peanuts), rolled oats, salt, sodium bicarbonate,",
+              "metadata": {
+                "allergen_count": 2,
+                "ingredient_count": 10,
+                "item_id": "FBA-D92E4239"
+              },
+              "rank": 1
+            },
+            {
+              "item_id": "FBA-9F76BEEB",
+              "document_preview": "Item ID: FBA-9F76BEEB\n\nIngredients:\nalmondmilk (water, almonds), calcium carbonate, gellan gum, natural vanilla flavor with other natural flavors, potassium citrate, sea salt, sunflower lecithin, vitamin a palmitate, vitamin d2 and d-alpha-",
+              "metadata": {
+                "allergen_count": 1,
+                "item_id": "FBA-9F76BEEB",
+                "ingredient_count": 9
+              },
+              "rank": 2
+            },
+            {
+              "item_id": "FBA-ADBD6C25",
+              "document_preview": "Item ID: FBA-ADBD6C25\n\nIngredients:\nalmondmilk (water, almonds), calcium carbonate, gellan gum, natural vanilla flavor with other natural flavors, potassium citrate, sea salt, sunflower lecithin, vitamin a palmitate, vitamin d2 and d-alpha-",
+              "metadata": {
+                "item_id": "FBA-ADBD6C25",
+                "ingredient_count": 9,
+                "allergen_count": 1
+              },
+              "rank": 3
+            },
+            {
+              "item_id": "FBA-45E5862F",
+              "document_preview": "Item ID: FBA-45E5862F\n\nIngredients:\nbanana puree, carrageenan, cocoa, cocoa (processed with alkali), coconut oil, cream, egg yolks, guar gum, lemon juice concentrate, liquid sugar (sugar, water), milk, natural flavors, nonfat milk, peanuts,",
+              "metadata": {
+                "item_id": "FBA-45E5862F",
+                "ingredient_count": 20,
+                "allergen_count": 4
+              },
+              "rank": 4
+            },
+            {
+              "item_id": "FBA-3F554D43",
+              "document_preview": "Item ID: FBA-3F554D43\n\nIngredients:\nalmondmilk (water, almonds), calcium carbonate, d-alpha-tocopherol (natural vitamin e), gellan gum, natural vanilla flavor with other natural flavors, potassium citrate, sea salt, sunflower lecithin, vita",
+              "metadata": {
+                "item_id": "FBA-3F554D43",
+                "ingredient_count": 10,
+                "allergen_count": 1
+              },
+              "rank": 5
+            },
+            {
+              "item_id": "FBA-6E8C0225",
+              "document_preview": "Item ID: FBA-6E8C0225\n\nIngredients:\ncitric acid, organic chickpeas, organic cumin, organic garlic, organic lemon juice, organic minced garlic, organic onion, organic parsley, organic pine nuts, organic red pepper, organic sesame tahini, org",
+              "metadata": {
+                "ingredient_count": 15,
+                "allergen_count": 2,
+                "item_id": "FBA-6E8C0225"
+              },
+              "rank": 6
+            },
+            {
+              "item_id": "FBA-899FCD38",
+              "document_preview": "Item ID: FBA-899FCD38\n\nIngredients:\ncalcium propionate, citric acid, cornmeal, cornstarch, datem, guar gum, maltodextrin, monoglycerides, salt, sesame seeds, sorbic acid, soy cellulose gum, soy lecithin, sugar, vegetable oil, water, wheat b",
+              "metadata": {
+                "allergen_count": 3,
+                "ingredient_count": 20,
+                "item_id": "FBA-899FCD38"
+              },
+              "rank": 7
+            },
+            {
+              "item_id": "FBA-595929B1",
+              "document_preview": "Item ID: FBA-595929B1\n\nIngredients:\ncarrots, green beans, peas, super sweet corn\n\nAllergens:\nNone\n\nNutrition:\ncalories: 50\nfat: 0.0\ncarbohydrates: 11.0\nprotein: 2.0\nsodium: 15.0\nsugar: 3.0\n\nFood Characteristics:\nThis food is a low protein f",
+              "metadata": {
+                "allergen_count": 0,
+                "item_id": "FBA-595929B1",
+                "ingredient_count": 4
+              },
+              "rank": 8
+            },
+            {
+              "item_id": "FBA-41BDB53A",
+              "document_preview": "Item ID: FBA-41BDB53A\n\nIngredients:\nalmonds\n\nAllergens:\ntree nuts\n\nNutrition:\ncalories: 160\nfat: 14\ncarbohydrates: 6\nprotein: 6\nsodium: 0\nsugar: 2\n\nFood Characteristics:\nThis food is a low protein food.\nThis food contains allergens.\nThis fo",
+              "metadata": {
+                "ingredient_count": 1,
+                "allergen_count": 1,
+                "item_id": "FBA-41BDB53A"
+              },
+              "rank": 9
+            },
+            {
+              "item_id": "FBA-BDC0DC6A",
+              "document_preview": "Item ID: FBA-BDC0DC6A\n\nIngredients:\nhydrogenated vegetable oil (cottonseed, soybean and rapeseed oil), roasted peanuts, salt, sugar\n\nAllergens:\nNone\n\nNutrition:\ncalories: 190\nfat: 16\ncarbohydrates: 6\nprotein: 7\nsodium: 150\nsugar: 3\n\nFood Ch",
+              "metadata": {
+                "item_id": "FBA-BDC0DC6A",
+                "allergen_count": 0,
+                "ingredient_count": 4
+              },
+              "rank": 10
+            }
+          ],
+          "issues": [],
+          "error": null
+        },
+        "hybrid": {
+          "latency_seconds": 0.19289099999999948,
+          "raw_result_count": 10,
+          "results": [
+            {
+              "item_id": "FBA-45E5862F",
+              "document_preview": "banana puree carrageenan cocoa cocoa (processed with alkali) coconut oil cream egg yolks guar gum lemon juice concentrate liquid sugar (sugar, water) milk natural flavors nonfat milk peanuts salt skim milk soy lecithin sugar vanilla extract",
+              "metadata": {
+                "item_id": "FBA-45E5862F"
+              },
+              "rank": 1
+            },
+            {
+              "item_id": "FBA-D92E4239",
+              "document_preview": "cereal crisp (degerminated yellow corn flour, soy flour, sugar, salt, soy lecithin) dark refiners syrup high oleic canola oil peanut butter (dry roasted peanuts) rolled oats salt sodium bicarbonate soy lecithin sugar water peanut soy calori",
+              "metadata": {
+                "item_id": "FBA-D92E4239"
+              },
+              "rank": 2
+            },
+            {
+              "item_id": "FBA-BDC0DC6A",
+              "document_preview": "hydrogenated vegetable oil (cottonseed, soybean and rapeseed oil) roasted peanuts salt sugar calories 190 fat 16 carbohydrates 6 protein 7 sodium 150 sugar 3",
+              "metadata": {
+                "item_id": "FBA-BDC0DC6A"
+              },
+              "rank": 3
+            },
+            {
+              "item_id": "FBA-9F76BEEB",
+              "document_preview": "almondmilk (water, almonds) calcium carbonate gellan gum natural vanilla flavor with other natural flavors potassium citrate sea salt sunflower lecithin vitamin a palmitate vitamin d2 and d-alpha-tocopherol (natural, vitamin e) tree nuts ca",
+              "metadata": {
+                "item_id": "FBA-9F76BEEB"
+              },
+              "rank": 4
+            },
+            {
+              "item_id": "FBA-ADBD6C25",
+              "document_preview": "almondmilk (water, almonds) calcium carbonate gellan gum natural vanilla flavor with other natural flavors potassium citrate sea salt sunflower lecithin vitamin a palmitate vitamin d2 and d-alpha-tocopherol (natural, vitamin e) tree nuts ca",
+              "metadata": {
+                "item_id": "FBA-ADBD6C25"
+              },
+              "rank": 5
+            },
+            {
+              "item_id": "FBA-3F554D43",
+              "document_preview": "almondmilk (water, almonds) calcium carbonate d-alpha-tocopherol (natural vitamin e) gellan gum natural vanilla flavor with other natural flavors potassium citrate sea salt sunflower lecithin vitamin a palmitate vitamin d2 tree nuts calorie",
+              "metadata": {
+                "item_id": "FBA-3F554D43"
+              },
+              "rank": 6
+            },
+            {
+              "item_id": "FBA-0EA01950",
+              "document_preview": "baking soda caramel color fudge chips (sugar, hydrogenated vegetable oil [palm kernel and/or palm oil], cocoa [processed with alkali], dextrose, soy lecithin, artificial flavor, nonfat milk) high fructose corn syrup natural and artificial f",
+              "metadata": {
+                "item_id": "FBA-0EA01950"
+              },
+              "rank": 7
+            },
+            {
+              "item_id": "FBA-BCB8DC68",
+              "document_preview": "calcium propionate inulin modified wheat starch monoglycerides oat fiber preservatives salt sorbic acid soybean oil vinegar water wheat gluten wheat protein isolate yeast sesame ingredients wheat calories 35 fat 1.0 carbohydrates 10.0 prote",
+              "metadata": {
+                "item_id": "FBA-BCB8DC68"
+              },
+              "rank": 8
+            },
+            {
+              "item_id": "FBA-FC93E110",
+              "document_preview": "calcium propionate cellulose gum citric acid cornmeal cornstarch datem guar gum maltodextrin monoglycerides salt sesame seeds sorbic acid soy lecithin sugar vegetable oil (soybean) water wheat bran wheat gluten whole wheat flour yeast sesam",
+              "metadata": {
+                "item_id": "FBA-FC93E110"
+              },
+              "rank": 9
+            },
+            {
+              "item_id": "FBA-37E11373",
+              "document_preview": "banana puree carrageenan cocoa cocoa (processed with alkali) coconut oil cream egg yolks guar gum lemon juice concentrate liquid sugar (sugar, water) milk natural flavors nonfat milk peanuts salt skim milk soy lecithin sugar vanilla extract",
+              "metadata": {
+                "item_id": "FBA-37E11373"
+              },
+              "rank": 10
+            }
+          ],
+          "issues": [],
+          "error": null
+        }
+      }
+    },
+    {
+      "query": "low calorie foods",
+      "methods": {
+        "bm25": {
+          "latency_seconds": 0.00015970000000109508,
+          "raw_result_count": 10,
+          "results": [
+            {
+              "item_id": "FBA-ADBD6C25",
+              "document_preview": "almondmilk (water, almonds) calcium carbonate gellan gum natural vanilla flavor with other natural flavors potassium citrate sea salt sunflower lecithin vitamin a palmitate vitamin d2 and d-alpha-tocopherol (natural, vitamin e) tree nuts ca",
+              "metadata": {
+                "item_id": "FBA-ADBD6C25"
+              },
+              "rank": 1
+            },
+            {
+              "item_id": "FBA-3F554D43",
+              "document_preview": "almondmilk (water, almonds) calcium carbonate d-alpha-tocopherol (natural vitamin e) gellan gum natural vanilla flavor with other natural flavors potassium citrate sea salt sunflower lecithin vitamin a palmitate vitamin d2 tree nuts calorie",
+              "metadata": {
+                "item_id": "FBA-3F554D43"
+              },
+              "rank": 2
+            },
+            {
+              "item_id": "FBA-FC93E110",
+              "document_preview": "calcium propionate cellulose gum citric acid cornmeal cornstarch datem guar gum maltodextrin monoglycerides salt sesame seeds sorbic acid soy lecithin sugar vegetable oil (soybean) water wheat bran wheat gluten whole wheat flour yeast sesam",
+              "metadata": {
+                "item_id": "FBA-FC93E110"
+              },
+              "rank": 3
+            },
+            {
+              "item_id": "FBA-BCB8DC68",
+              "document_preview": "calcium propionate inulin modified wheat starch monoglycerides oat fiber preservatives salt sorbic acid soybean oil vinegar water wheat gluten wheat protein isolate yeast sesame ingredients wheat calories 35 fat 1.0 carbohydrates 10.0 prote",
+              "metadata": {
+                "item_id": "FBA-BCB8DC68"
+              },
+              "rank": 4
+            },
+            {
+              "item_id": "FBA-CE413A6C",
+              "document_preview": "blue 1 carnauba wax confectioners glaze contains less than 0.5% of the following: citric acid corn syrup dextrin fumaric acid malic acid medium chain triglycerides modified food starch natural and artificial flavors red 40 sodium citrate su",
+              "metadata": {
+                "item_id": "FBA-CE413A6C"
+              },
+              "rank": 5
+            },
+            {
+              "item_id": "FBA-27C42EC2",
+              "document_preview": "green beans salt water calories 20 fat 0.0 carbohydrates 4.0 protein 1.0 sodium 290.0 sugar 2.0",
+              "metadata": {
+                "item_id": "FBA-27C42EC2"
+              },
+              "rank": 6
+            },
+            {
+              "item_id": "FBA-00979C42",
+              "document_preview": "calories 240 fat 8.0 carbohydrates 37.0 protein 4.0 sodium 50.0 sugar 13.0",
+              "metadata": {
+                "item_id": "FBA-00979C42"
+              },
+              "rank": 7
+            },
+            {
+              "item_id": "FBA-97C8BF53",
+              "document_preview": "cheese culture enzymes pasteurized milk red and green jalapeño peppers salt milk calories 100 fat 8.0 carbohydrates 0.0 protein 7.0 sodium 180.0 sugar 0.0",
+              "metadata": {
+                "item_id": "FBA-97C8BF53"
+              },
+              "rank": 8
+            },
+            {
+              "item_id": "FBA-DBC8A194",
+              "document_preview": "cocoa beans cocoa butter calories 238 fat 22.0 carbohydrates 10.0 protein 5.0 sodium 0.0 sugar 0.0",
+              "metadata": {
+                "item_id": "FBA-DBC8A194"
+              },
+              "rank": 9
+            },
+            {
+              "item_id": "FBA-305CDFDD",
+              "document_preview": "cheese made with skim milk (skim milk enriched flour (wheat flour, niacin, reduced iron, vitamin b1 [thiamin mononitrate], vitamin b2 [riboflavin], folic acid) vegetable oil (soybean and palm oil with tbhq for freshness) calories 150 fat 8 ",
+              "metadata": {
+                "item_id": "FBA-305CDFDD"
+              },
+              "rank": 10
+            }
+          ],
+          "issues": [],
+          "error": null
+        },
+        "semantic": {
+          "latency_seconds": 0.18581040000000115,
+          "raw_result_count": 10,
+          "results": [
+            {
+              "item_id": "FBA-595929B1",
+              "document_preview": "Item ID: FBA-595929B1\n\nIngredients:\ncarrots, green beans, peas, super sweet corn\n\nAllergens:\nNone\n\nNutrition:\ncalories: 50\nfat: 0.0\ncarbohydrates: 11.0\nprotein: 2.0\nsodium: 15.0\nsugar: 3.0\n\nFood Characteristics:\nThis food is a low protein f",
+              "metadata": {
+                "allergen_count": 0,
+                "item_id": "FBA-595929B1",
+                "ingredient_count": 4
+              },
+              "rank": 1
+            },
+            {
+              "item_id": "FBA-0EA01950",
+              "document_preview": "Item ID: FBA-0EA01950\n\nIngredients:\nbaking soda, caramel color, fudge chips (sugar, hydrogenated vegetable oil [palm kernel and/or palm oil], cocoa [processed with alkali], dextrose, soy lecithin, artificial flavor, nonfat milk), high fruct",
+              "metadata": {
+                "item_id": "FBA-0EA01950",
+                "ingredient_count": 8,
+                "allergen_count": 3
+              },
+              "rank": 2
+            },
+            {
+              "item_id": "FBA-865771DF",
+              "document_preview": "Item ID: FBA-865771DF\n\nIngredients:\neggs\n\nAllergens:\negg\n\nNutrition:\ncalories: 70\nfat: 5.0\ncarbohydrates: 0.0\nprotein: 6.0\nsodium: 70\nsugar: 0.0\n\nFood Characteristics:\nThis food is a low protein food.\nThis food is lower in calories.\nThis fo",
+              "metadata": {
+                "item_id": "FBA-865771DF",
+                "ingredient_count": 1,
+                "allergen_count": 1
+              },
+              "rank": 3
+            },
+            {
+              "item_id": "FBA-45E5862F",
+              "document_preview": "Item ID: FBA-45E5862F\n\nIngredients:\nbanana puree, carrageenan, cocoa, cocoa (processed with alkali), coconut oil, cream, egg yolks, guar gum, lemon juice concentrate, liquid sugar (sugar, water), milk, natural flavors, nonfat milk, peanuts,",
+              "metadata": {
+                "allergen_count": 4,
+                "ingredient_count": 20,
+                "item_id": "FBA-45E5862F"
+              },
+              "rank": 4
+            },
+            {
+              "item_id": "FBA-D3C25256",
+              "document_preview": "Item ID: FBA-D3C25256\n\nIngredients:\ngreen beans, salt, water\n\nAllergens:\nNone\n\nNutrition:\ncalories: 20\nfat: 0.0\ncarbohydrates: 4.0\nprotein: 1.0\nsodium: 290.0\nsugar: 2.0\n\nFood Characteristics:\nThis food is a low protein food.\nThis food is lo",
+              "metadata": {
+                "ingredient_count": 3,
+                "allergen_count": 0,
+                "item_id": "FBA-D3C25256"
+              },
+              "rank": 5
+            },
+            {
+              "item_id": "FBA-27C42EC2",
+              "document_preview": "Item ID: FBA-27C42EC2\n\nIngredients:\ngreen beans, salt, water\n\nAllergens:\nNone\n\nNutrition:\ncalories: 20\nfat: 0.0\ncarbohydrates: 4.0\nprotein: 1.0\nsodium: 290.0\nsugar: 2.0\n\nFood Characteristics:\nThis food is a low protein food.\nThis food is lo",
+              "metadata": {
+                "item_id": "FBA-27C42EC2",
+                "ingredient_count": 3,
+                "allergen_count": 0
+              },
+              "rank": 6
+            },
+            {
+              "item_id": "FBA-97C8BF53",
+              "document_preview": "Item ID: FBA-97C8BF53\n\nIngredients:\ncheese culture, enzymes, pasteurized milk, red and green jalapeño peppers, salt\n\nAllergens:\nmilk\n\nNutrition:\ncalories: 100\nfat: 8.0\ncarbohydrates: 0.0\nprotein: 7.0\nsodium: 180.0\nsugar: 0.0\n\nFood Character",
+              "metadata": {
+                "allergen_count": 1,
+                "item_id": "FBA-97C8BF53",
+                "ingredient_count": 5
+              },
+              "rank": 7
+            },
+            {
+              "item_id": "FBA-320CBD1F",
+              "document_preview": "Item ID: FBA-320CBD1F\n\nIngredients:\nbleached wheat flour, folic acid, malted barley flour, niacin, reduced iron, riboflavin, thiamine mononitrate\n\nAllergens:\nwheat\n\nNutrition:\ncalories: 110\nfat: 0\ncarbohydrates: 23\nprotein: 3\nsodium: 0\nsuga",
+              "metadata": {
+                "allergen_count": 1,
+                "ingredient_count": 7,
+                "item_id": "FBA-320CBD1F"
+              },
+              "rank": 8
+            },
+            {
+              "item_id": "FBA-996B9AD9",
+              "document_preview": "Item ID: FBA-996B9AD9\n\nIngredients:\nextra virgin olive oil\n\nAllergens:\nNone\n\nNutrition:\ncalories: 120\nfat: 14\ncarbohydrates: 0\nprotein: 0\nsodium: 0\nsugar: 0\n\nFood Characteristics:\nThis food is a low protein food.\nThis food is lower in calor",
+              "metadata": {
+                "item_id": "FBA-996B9AD9",
+                "ingredient_count": 1,
+                "allergen_count": 0
+              },
+              "rank": 9
+            },
+            {
+              "item_id": "FBA-F64F3AD1",
+              "document_preview": "Item ID: FBA-F64F3AD1\n\nIngredients:\ncitric acid, organic cayenne pepper, organic chili pepper, organic cilantro, organic concentrated crushed tomatoes, organic distilled vinegar, organic garlic, organic garlic powder, organic green bell pep",
+              "metadata": {
+                "item_id": "FBA-F64F3AD1",
+                "allergen_count": 0,
+                "ingredient_count": 15
+              },
+              "rank": 10
+            }
+          ],
+          "issues": [],
+          "error": null
+        },
+        "hybrid": {
+          "latency_seconds": 0.18334940000000088,
+          "raw_result_count": 10,
+          "results": [
+            {
+              "item_id": "FBA-27C42EC2",
+              "document_preview": "green beans salt water calories 20 fat 0.0 carbohydrates 4.0 protein 1.0 sodium 290.0 sugar 2.0",
+              "metadata": {
+                "item_id": "FBA-27C42EC2"
+              },
+              "rank": 1
+            },
+            {
+              "item_id": "FBA-BCB8DC68",
+              "document_preview": "calcium propionate inulin modified wheat starch monoglycerides oat fiber preservatives salt sorbic acid soybean oil vinegar water wheat gluten wheat protein isolate yeast sesame ingredients wheat calories 35 fat 1.0 carbohydrates 10.0 prote",
+              "metadata": {
+                "item_id": "FBA-BCB8DC68"
+              },
+              "rank": 2
+            },
+            {
+              "item_id": "FBA-97C8BF53",
+              "document_preview": "cheese culture enzymes pasteurized milk red and green jalapeño peppers salt milk calories 100 fat 8.0 carbohydrates 0.0 protein 7.0 sodium 180.0 sugar 0.0",
+              "metadata": {
+                "item_id": "FBA-97C8BF53"
+              },
+              "rank": 3
+            },
+            {
+              "item_id": "FBA-320CBD1F",
+              "document_preview": "bleached wheat flour folic acid malted barley flour niacin reduced iron riboflavin thiamine mononitrate wheat calories 110 fat 0 carbohydrates 23 protein 3 sodium 0 sugar 0",
+              "metadata": {
+                "item_id": "FBA-320CBD1F"
+              },
+              "rank": 4
+            },
+            {
+              "item_id": "FBA-D3C25256",
+              "document_preview": "green beans salt water calories 20 fat 0.0 carbohydrates 4.0 protein 1.0 sodium 290.0 sugar 2.0",
+              "metadata": {
+                "item_id": "FBA-D3C25256"
+              },
+              "rank": 5
+            },
+            {
+              "item_id": "FBA-F6E21EDD",
+              "document_preview": "carrots green beans peas super sweet corn calories 50 fat 0.0 carbohydrates 11.0 protein 2.0 sodium 15.0 sugar 3.0",
+              "metadata": {
+                "item_id": "FBA-F6E21EDD"
+              },
+              "rank": 6
+            },
+            {
+              "item_id": "FBA-95E4F389",
+              "document_preview": "inulin modified wheat starch monoglycerides oat fiber preservatives (sorbic acid, calcium propionate) salt soybean oil vinegar water wheat gluten wheat protein isolate yeast sesame ingredients wheat calories 35 fat 1.0 carbohydrates 10.0 pr",
+              "metadata": {
+                "item_id": "FBA-95E4F389"
+              },
+              "rank": 7
+            },
+            {
+              "item_id": "FBA-ADBD6C25",
+              "document_preview": "almondmilk (water, almonds) calcium carbonate gellan gum natural vanilla flavor with other natural flavors potassium citrate sea salt sunflower lecithin vitamin a palmitate vitamin d2 and d-alpha-tocopherol (natural, vitamin e) tree nuts ca",
+              "metadata": {
+                "item_id": "FBA-ADBD6C25"
+              },
+              "rank": 8
+            },
+            {
+              "item_id": "FBA-595929B1",
+              "document_preview": "Item ID: FBA-595929B1\n\nIngredients:\ncarrots, green beans, peas, super sweet corn\n\nAllergens:\nNone\n\nNutrition:\ncalories: 50\nfat: 0.0\ncarbohydrates: 11.0\nprotein: 2.0\nsodium: 15.0\nsugar: 3.0\n\nFood Characteristics:\nThis food is a low protein f",
+              "metadata": {
+                "allergen_count": 0,
+                "ingredient_count": 4,
+                "item_id": "FBA-595929B1"
+              },
+              "rank": 9
+            },
+            {
+              "item_id": "FBA-3F554D43",
+              "document_preview": "almondmilk (water, almonds) calcium carbonate d-alpha-tocopherol (natural vitamin e) gellan gum natural vanilla flavor with other natural flavors potassium citrate sea salt sunflower lecithin vitamin a palmitate vitamin d2 tree nuts calorie",
+              "metadata": {
+                "item_id": "FBA-3F554D43"
+              },
+              "rank": 10
+            }
+          ],
+          "issues": [],
+          "error": null
+        }
+      }
+    },
+    {
+      "query": "foods containing milk",
+      "methods": {
+        "bm25": {
+          "latency_seconds": 0.0001753999999998257,
+          "raw_result_count": 10,
+          "results": [
+            {
+              "item_id": "FBA-AAF7C579",
+              "document_preview": "butter oil chocolate liquor cocoa butter confectioner's glaze corn syrup dextrin maltodextrin milk chocolate nonfat milk raisins salt soy lecithin sugar vanillin whole milk milk soy calories 190 fat 9 carbohydrates 27 protein 2 sodium 20 su",
+              "metadata": {
+                "item_id": "FBA-AAF7C579"
+              },
+              "rank": 1
+            },
+            {
+              "item_id": "FBA-2F498658",
+              "document_preview": "confectioner's glaze corn syrup dextrin maltodextrin milk chocolate (sugar, cocoa butter, whole milk, chocolate liquor, nonfat milk, butter oil, soy lecithin, vanillin, salt) raisins milk soy calories 190 fat 9 carbohydrates 27 protein 2 so",
+              "metadata": {
+                "item_id": "FBA-2F498658"
+              },
+              "rank": 2
+            },
+            {
+              "item_id": "FBA-8276C4F3",
+              "document_preview": "milk vitamin d3 milk calories 150 fat 8 carbohydrates 12 protein 8 sodium 125 sugar 12",
+              "metadata": {
+                "item_id": "FBA-8276C4F3"
+              },
+              "rank": 3
+            },
+            {
+              "item_id": "FBA-2766598E",
+              "document_preview": "milk vitamin d3 milk calories 150 fat 8 carbohydrates 12 protein 8 sodium 125 sugar 12",
+              "metadata": {
+                "item_id": "FBA-2766598E"
+              },
+              "rank": 4
+            },
+            {
+              "item_id": "FBA-D139608E",
+              "document_preview": "annatto (color) canola oil cheddar cheese (milk cheese culture cheese sauce (whey colby cheese (milk contains less than 2% of salt enriched macaroni product (wheat flour enzymes enzymes) ferrous sulfate (iron) folic acid) havarti cheese (mi",
+              "metadata": {
+                "item_id": "FBA-D139608E"
+              },
+              "rank": 5
+            },
+            {
+              "item_id": "FBA-8E0711B1",
+              "document_preview": "cheese sauce (whey, cheddar cheese [milk, cheese culture, salt, enzymes], canola oil, parmesan cheese [part-skim milk, cheese culture, salt, enzymes], colby cheese [milk, cheese culture, salt, enzymes], havarti cheese [milk, cheese culture,",
+              "metadata": {
+                "item_id": "FBA-8E0711B1"
+              },
+              "rank": 6
+            },
+            {
+              "item_id": "FBA-37E11373",
+              "document_preview": "banana puree carrageenan cocoa cocoa (processed with alkali) coconut oil cream egg yolks guar gum lemon juice concentrate liquid sugar (sugar, water) milk natural flavors nonfat milk peanuts salt skim milk soy lecithin sugar vanilla extract",
+              "metadata": {
+                "item_id": "FBA-37E11373"
+              },
+              "rank": 7
+            },
+            {
+              "item_id": "FBA-45E5862F",
+              "document_preview": "banana puree carrageenan cocoa cocoa (processed with alkali) coconut oil cream egg yolks guar gum lemon juice concentrate liquid sugar (sugar, water) milk natural flavors nonfat milk peanuts salt skim milk soy lecithin sugar vanilla extract",
+              "metadata": {
+                "item_id": "FBA-45E5862F"
+              },
+              "rank": 8
+            },
+            {
+              "item_id": "FBA-A0577777",
+              "document_preview": "cheese culture enzymes pasteurized milk red and green jalapeño peppers salt milk calories 100 fat 8 carbohydrates 1.0 protein 7 sodium 180 sugar 0",
+              "metadata": {
+                "item_id": "FBA-A0577777"
+              },
+              "rank": 9
+            },
+            {
+              "item_id": "FBA-0F18E068",
+              "document_preview": "cream live active yogurt cultures (acidophilus, bifidus, l. bulgaricus and s. thermophilus) milk protein concentrate pasteurized milk vitamin a palmitate vitamin d3 whey protein concentrate milk calories 230 fat 16.0 carbohydrates 9.0 prote",
+              "metadata": {
+                "item_id": "FBA-0F18E068"
+              },
+              "rank": 10
+            }
+          ],
+          "issues": [],
+          "error": null
+        },
+        "semantic": {
+          "latency_seconds": 0.18910059999999973,
+          "raw_result_count": 10,
+          "results": [
+            {
+              "item_id": "FBA-0F18E068",
+              "document_preview": "Item ID: FBA-0F18E068\n\nIngredients:\ncream, live active yogurt cultures (acidophilus, bifidus, l. bulgaricus and s. thermophilus), milk protein concentrate, pasteurized milk, vitamin a palmitate, vitamin d3, whey protein concentrate\n\nAllerge",
+              "metadata": {
+                "item_id": "FBA-0F18E068",
+                "ingredient_count": 7,
+                "allergen_count": 1
+              },
+              "rank": 1
+            },
+            {
+              "item_id": "FBA-97C8BF53",
+              "document_preview": "Item ID: FBA-97C8BF53\n\nIngredients:\ncheese culture, enzymes, pasteurized milk, red and green jalapeño peppers, salt\n\nAllergens:\nmilk\n\nNutrition:\ncalories: 100\nfat: 8.0\ncarbohydrates: 0.0\nprotein: 7.0\nsodium: 180.0\nsugar: 0.0\n\nFood Character",
+              "metadata": {
+                "allergen_count": 1,
+                "ingredient_count": 5,
+                "item_id": "FBA-97C8BF53"
+              },
+              "rank": 2
+            },
+            {
+              "item_id": "FBA-7B667582",
+              "document_preview": "Item ID: FBA-7B667582\n\nIngredients:\nacesulfame potassium, cane sugar, citric acid, cultured grade a non fat milk, kosher gelatin, less than 1%: natural and artificial flavors, modified food starch, sodium citrate, sucralose, water, yogurt c",
+              "metadata": {
+                "allergen_count": 1,
+                "ingredient_count": 11,
+                "item_id": "FBA-7B667582"
+              },
+              "rank": 3
+            },
+            {
+              "item_id": "FBA-90E0D6B8",
+              "document_preview": "Item ID: FBA-90E0D6B8\n\nIngredients:\ncheese made with skim milk (skim milk, enriched flour (wheat flour, niacin, reduced iron, vitamin b1 [thiamin mononitrate], vitamin b2 [riboflavin], folic acid), vegetable oil (soybean and palm oil with t",
+              "metadata": {
+                "item_id": "FBA-90E0D6B8",
+                "allergen_count": 0,
+                "ingredient_count": 3
+              },
+              "rank": 4
+            },
+            {
+              "item_id": "FBA-305CDFDD",
+              "document_preview": "Item ID: FBA-305CDFDD\n\nIngredients:\ncheese made with skim milk (skim milk, enriched flour (wheat flour, niacin, reduced iron, vitamin b1 [thiamin mononitrate], vitamin b2 [riboflavin], folic acid), vegetable oil (soybean and palm oil with t",
+              "metadata": {
+                "ingredient_count": 3,
+                "item_id": "FBA-305CDFDD",
+                "allergen_count": 0
+              },
+              "rank": 5
+            },
+            {
+              "item_id": "FBA-A5609F93",
+              "document_preview": "Item ID: FBA-A5609F93\n\nIngredients:\ncultured cream\n\nAllergens:\nmilk\n\nNutrition:\ncalories: 60\nfat: 5\ncarbohydrates: 1\nprotein: 1\nsodium: 15\nsugar: 1\n\nFood Characteristics:\nThis food is a low protein food.\nThis food is lower in calories.\nThis",
+              "metadata": {
+                "allergen_count": 1,
+                "item_id": "FBA-A5609F93",
+                "ingredient_count": 1
+              },
+              "rank": 6
+            },
+            {
+              "item_id": "FBA-A0577777",
+              "document_preview": "Item ID: FBA-A0577777\n\nIngredients:\ncheese culture, enzymes, pasteurized milk, red and green jalapeño peppers, salt\n\nAllergens:\nmilk\n\nNutrition:\ncalories: 100\nfat: 8\ncarbohydrates: 1.0\nprotein: 7\nsodium: 180\nsugar: 0\n\nFood Characteristics:\n",
+              "metadata": {
+                "ingredient_count": 5,
+                "item_id": "FBA-A0577777",
+                "allergen_count": 1
+              },
+              "rank": 7
+            },
+            {
+              "item_id": "FBA-D139608E",
+              "document_preview": "Item ID: FBA-D139608E\n\nIngredients:\nannatto (color), canola oil, cheddar cheese (milk, cheese culture, cheese sauce (whey, colby cheese (milk, contains less than 2% of salt, enriched macaroni product (wheat flour, enzymes, enzymes), ferrous",
+              "metadata": {
+                "allergen_count": 2,
+                "ingredient_count": 28,
+                "item_id": "FBA-D139608E"
+              },
+              "rank": 8
+            },
+            {
+              "item_id": "FBA-7E433FF5",
+              "document_preview": "Item ID: FBA-7E433FF5\n\nIngredients:\ncheese culture, guar gum, natamycin (a natural mold inhibitor), pasteurized milk and cream, salt\n\nAllergens:\nmilk\n\nNutrition:\ncalories: 80\nfat: 7.0\ncarbohydrates: 2.0\nprotein: 2.0\nsodium: 125.0\nsugar: 1.0",
+              "metadata": {
+                "allergen_count": 1,
+                "ingredient_count": 5,
+                "item_id": "FBA-7E433FF5"
+              },
+              "rank": 9
+            },
+            {
+              "item_id": "FBA-45E5862F",
+              "document_preview": "Item ID: FBA-45E5862F\n\nIngredients:\nbanana puree, carrageenan, cocoa, cocoa (processed with alkali), coconut oil, cream, egg yolks, guar gum, lemon juice concentrate, liquid sugar (sugar, water), milk, natural flavors, nonfat milk, peanuts,",
+              "metadata": {
+                "allergen_count": 4,
+                "item_id": "FBA-45E5862F",
+                "ingredient_count": 20
+              },
+              "rank": 10
+            }
+          ],
+          "issues": [],
+          "error": null
+        },
+        "hybrid": {
+          "latency_seconds": 0.17980560000000168,
+          "raw_result_count": 10,
+          "results": [
+            {
+              "item_id": "FBA-0F18E068",
+              "document_preview": "cream live active yogurt cultures (acidophilus, bifidus, l. bulgaricus and s. thermophilus) milk protein concentrate pasteurized milk vitamin a palmitate vitamin d3 whey protein concentrate milk calories 230 fat 16.0 carbohydrates 9.0 prote",
+              "metadata": {
+                "item_id": "FBA-0F18E068"
+              },
+              "rank": 1
+            },
+            {
+              "item_id": "FBA-AAF7C579",
+              "document_preview": "butter oil chocolate liquor cocoa butter confectioner's glaze corn syrup dextrin maltodextrin milk chocolate nonfat milk raisins salt soy lecithin sugar vanillin whole milk milk soy calories 190 fat 9 carbohydrates 27 protein 2 sodium 20 su",
+              "metadata": {
+                "item_id": "FBA-AAF7C579"
+              },
+              "rank": 2
+            },
+            {
+              "item_id": "FBA-D139608E",
+              "document_preview": "annatto (color) canola oil cheddar cheese (milk cheese culture cheese sauce (whey colby cheese (milk contains less than 2% of salt enriched macaroni product (wheat flour enzymes enzymes) ferrous sulfate (iron) folic acid) havarti cheese (mi",
+              "metadata": {
+                "item_id": "FBA-D139608E"
+              },
+              "rank": 3
+            },
+            {
+              "item_id": "FBA-97C8BF53",
+              "document_preview": "cheese culture enzymes pasteurized milk red and green jalapeño peppers salt milk calories 100 fat 8.0 carbohydrates 0.0 protein 7.0 sodium 180.0 sugar 0.0",
+              "metadata": {
+                "item_id": "FBA-97C8BF53"
+              },
+              "rank": 4
+            },
+            {
+              "item_id": "FBA-A0577777",
+              "document_preview": "cheese culture enzymes pasteurized milk red and green jalapeño peppers salt milk calories 100 fat 8 carbohydrates 1.0 protein 7 sodium 180 sugar 0",
+              "metadata": {
+                "item_id": "FBA-A0577777"
+              },
+              "rank": 5
+            },
+            {
+              "item_id": "FBA-8276C4F3",
+              "document_preview": "milk vitamin d3 milk calories 150 fat 8 carbohydrates 12 protein 8 sodium 125 sugar 12",
+              "metadata": {
+                "item_id": "FBA-8276C4F3"
+              },
+              "rank": 6
+            },
+            {
+              "item_id": "FBA-45E5862F",
+              "document_preview": "banana puree carrageenan cocoa cocoa (processed with alkali) coconut oil cream egg yolks guar gum lemon juice concentrate liquid sugar (sugar, water) milk natural flavors nonfat milk peanuts salt skim milk soy lecithin sugar vanilla extract",
+              "metadata": {
+                "item_id": "FBA-45E5862F"
+              },
+              "rank": 7
+            },
+            {
+              "item_id": "FBA-7E433FF5",
+              "document_preview": "cheese culture guar gum natamycin (a natural mold inhibitor) pasteurized milk and cream salt milk calories 80 fat 7.0 carbohydrates 2.0 protein 2.0 sodium 125.0 sugar 1.0",
+              "metadata": {
+                "item_id": "FBA-7E433FF5"
+              },
+              "rank": 8
+            },
+            {
+              "item_id": "FBA-A5609F93",
+              "document_preview": "cultured cream milk calories 60 fat 5 carbohydrates 1 protein 1 sodium 15 sugar 1",
+              "metadata": {
+                "item_id": "FBA-A5609F93"
+              },
+              "rank": 9
+            },
+            {
+              "item_id": "FBA-180AC0ED",
+              "document_preview": "cheese culture guar gum natamycin (a natural mold inhibitor) pasteurized milk and cream salt milk calories 80 fat 7.0 carbohydrates 2.0 protein 2.0 sodium 125.0 sugar 1.0",
+              "metadata": {
+                "item_id": "FBA-180AC0ED"
+              },
+              "rank": 10
+            }
+          ],
+          "issues": [],
+          "error": null
+        }
+      }
+    },
+    {
+      "query": "foods with wheat",
+      "methods": {
+        "bm25": {
+          "latency_seconds": 0.00017420000000001323,
+          "raw_result_count": 10,
+          "results": [
+            {
+              "item_id": "FBA-305CDFDD",
+              "document_preview": "cheese made with skim milk (skim milk enriched flour (wheat flour, niacin, reduced iron, vitamin b1 [thiamin mononitrate], vitamin b2 [riboflavin], folic acid) vegetable oil (soybean and palm oil with tbhq for freshness) calories 150 fat 8 ",
+              "metadata": {
+                "item_id": "FBA-305CDFDD"
+              },
+              "rank": 1
+            },
+            {
+              "item_id": "FBA-90E0D6B8",
+              "document_preview": "cheese made with skim milk (skim milk enriched flour (wheat flour, niacin, reduced iron, vitamin b1 [thiamin mononitrate], vitamin b2 [riboflavin], folic acid) vegetable oil (soybean and palm oil with tbhq for freshness) calories 150 fat 8 ",
+              "metadata": {
+                "item_id": "FBA-90E0D6B8"
+              },
+              "rank": 2
+            },
+            {
+              "item_id": "FBA-C566A607",
+              "document_preview": "cheese made with skim milk (skim milk enriched flour (wheat flour, niacin, reduced iron, vitamin b1 [thiamin mononitrate], vitamin b2 [riboflavin], folic acid) vegetable oil (soybean and palm oil with tbhq for freshness) calories 150 fat 8 ",
+              "metadata": {
+                "item_id": "FBA-C566A607"
+              },
+              "rank": 3
+            },
+            {
+              "item_id": "FBA-0EA01950",
+              "document_preview": "baking soda caramel color fudge chips (sugar, hydrogenated vegetable oil [palm kernel and/or palm oil], cocoa [processed with alkali], dextrose, soy lecithin, artificial flavor, nonfat milk) high fructose corn syrup natural and artificial f",
+              "metadata": {
+                "item_id": "FBA-0EA01950"
+              },
+              "rank": 4
+            },
+            {
+              "item_id": "FBA-1E0E3FF2",
+              "document_preview": "baking soda caramel color fudge chips (sugar, hydrogenated vegetable oil (palm kernel and/or palm oil), cocoa (processed with alkali), dextrose, soy lecithin, artificial flavor, nonfat milk, soybean and/or canola oil) high fructose corn syr",
+              "metadata": {
+                "item_id": "FBA-1E0E3FF2"
+              },
+              "rank": 5
+            },
+            {
+              "item_id": "FBA-1FFE34BF",
+              "document_preview": "inulin modified wheat starch monoglycerides oat fiber preservatives (sorbic acid, calcium propionate) salt soybean oil vinegar water wheat gluten wheat protein isolate yeast sesame wheat calories 35 fat 1 carbohydrates 10 protein 4 sodium 1",
+              "metadata": {
+                "item_id": "FBA-1FFE34BF"
+              },
+              "rank": 6
+            },
+            {
+              "item_id": "FBA-BCB8DC68",
+              "document_preview": "calcium propionate inulin modified wheat starch monoglycerides oat fiber preservatives salt sorbic acid soybean oil vinegar water wheat gluten wheat protein isolate yeast sesame ingredients wheat calories 35 fat 1.0 carbohydrates 10.0 prote",
+              "metadata": {
+                "item_id": "FBA-BCB8DC68"
+              },
+              "rank": 7
+            },
+            {
+              "item_id": "FBA-95E4F389",
+              "document_preview": "inulin modified wheat starch monoglycerides oat fiber preservatives (sorbic acid, calcium propionate) salt soybean oil vinegar water wheat gluten wheat protein isolate yeast sesame ingredients wheat calories 35 fat 1.0 carbohydrates 10.0 pr",
+              "metadata": {
+                "item_id": "FBA-95E4F389"
+              },
+              "rank": 8
+            },
+            {
+              "item_id": "FBA-A12CE334",
+              "document_preview": "durum wheat flour durum wheat semolina folic acid iron (ferrous sulfate) niacin riboflavin thiamine mononitrate wheat calories 200 fat 1.0 carbohydrates 42.0 protein 7.0 sodium 0.0 sugar 2.0",
+              "metadata": {
+                "item_id": "FBA-A12CE334"
+              },
+              "rank": 9
+            },
+            {
+              "item_id": "FBA-84214F16",
+              "document_preview": "durum wheat flour durum wheat semolina folic acid iron (ferrous sulfate) niacin riboflavin thiamine mononitrate wheat calories 200 fat 1.0 carbohydrates 42.0 protein 7.0 sodium 0.0 sugar 2.0",
+              "metadata": {
+                "item_id": "FBA-84214F16"
+              },
+              "rank": 10
+            }
+          ],
+          "issues": [],
+          "error": null
+        },
+        "semantic": {
+          "latency_seconds": 0.18343289999999968,
+          "raw_result_count": 10,
+          "results": [
+            {
+              "item_id": "FBA-95E4F389",
+              "document_preview": "Item ID: FBA-95E4F389\n\nIngredients:\ninulin, modified wheat starch, monoglycerides, oat fiber, preservatives (sorbic acid, calcium propionate), salt, soybean oil, vinegar, water, wheat gluten, wheat protein isolate, yeast\n\nAllergens:\nsesame ",
+              "metadata": {
+                "ingredient_count": 12,
+                "allergen_count": 2,
+                "item_id": "FBA-95E4F389"
+              },
+              "rank": 1
+            },
+            {
+              "item_id": "FBA-BCB8DC68",
+              "document_preview": "Item ID: FBA-BCB8DC68\n\nIngredients:\ncalcium propionate, inulin, modified wheat starch, monoglycerides, oat fiber, preservatives, salt, sorbic acid, soybean oil, vinegar, water, wheat gluten, wheat protein isolate, yeast\n\nAllergens:\nsesame i",
+              "metadata": {
+                "allergen_count": 2,
+                "ingredient_count": 14,
+                "item_id": "FBA-BCB8DC68"
+              },
+              "rank": 2
+            },
+            {
+              "item_id": "FBA-D92E4239",
+              "document_preview": "Item ID: FBA-D92E4239\n\nIngredients:\ncereal crisp (degerminated yellow corn flour, soy flour, sugar, salt, soy lecithin), dark refiners syrup, high oleic canola oil, peanut butter (dry roasted peanuts), rolled oats, salt, sodium bicarbonate,",
+              "metadata": {
+                "allergen_count": 2,
+                "ingredient_count": 10,
+                "item_id": "FBA-D92E4239"
+              },
+              "rank": 3
+            },
+            {
+              "item_id": "FBA-899FCD38",
+              "document_preview": "Item ID: FBA-899FCD38\n\nIngredients:\ncalcium propionate, citric acid, cornmeal, cornstarch, datem, guar gum, maltodextrin, monoglycerides, salt, sesame seeds, sorbic acid, soy cellulose gum, soy lecithin, sugar, vegetable oil, water, wheat b",
+              "metadata": {
+                "ingredient_count": 20,
+                "allergen_count": 3,
+                "item_id": "FBA-899FCD38"
+              },
+              "rank": 4
+            },
+            {
+              "item_id": "FBA-0EA01950",
+              "document_preview": "Item ID: FBA-0EA01950\n\nIngredients:\nbaking soda, caramel color, fudge chips (sugar, hydrogenated vegetable oil [palm kernel and/or palm oil], cocoa [processed with alkali], dextrose, soy lecithin, artificial flavor, nonfat milk), high fruct",
+              "metadata": {
+                "ingredient_count": 8,
+                "allergen_count": 3,
+                "item_id": "FBA-0EA01950"
+              },
+              "rank": 5
+            },
+            {
+              "item_id": "FBA-FD0844ED",
+              "document_preview": "Item ID: FBA-FD0844ED\n\nIngredients:\nbleached wheat flour, folic acid, malted barley flour, niacin, reduced iron, riboflavin, thiamine mononitrate\n\nAllergens:\nwheat\n\nNutrition:\ncalories: 110\nfat: 0\ncarbohydrates: 23\nprotein: 3\nsodium: 0\nsuga",
+              "metadata": {
+                "item_id": "FBA-FD0844ED",
+                "allergen_count": 1,
+                "ingredient_count": 7
+              },
+              "rank": 6
+            },
+            {
+              "item_id": "FBA-320CBD1F",
+              "document_preview": "Item ID: FBA-320CBD1F\n\nIngredients:\nbleached wheat flour, folic acid, malted barley flour, niacin, reduced iron, riboflavin, thiamine mononitrate\n\nAllergens:\nwheat\n\nNutrition:\ncalories: 110\nfat: 0\ncarbohydrates: 23\nprotein: 3\nsodium: 0\nsuga",
+              "metadata": {
+                "item_id": "FBA-320CBD1F",
+                "ingredient_count": 7,
+                "allergen_count": 1
+              },
+              "rank": 7
+            },
+            {
+              "item_id": "FBA-A12CE334",
+              "document_preview": "Item ID: FBA-A12CE334\n\nIngredients:\ndurum wheat flour, durum wheat semolina, folic acid, iron (ferrous sulfate), niacin, riboflavin, thiamine mononitrate\n\nAllergens:\nwheat\n\nNutrition:\ncalories: 200\nfat: 1.0\ncarbohydrates: 42.0\nprotein: 7.0\n",
+              "metadata": {
+                "ingredient_count": 7,
+                "item_id": "FBA-A12CE334",
+                "allergen_count": 1
+              },
+              "rank": 8
+            },
+            {
+              "item_id": "FBA-55C678B8",
+              "document_preview": "Item ID: FBA-55C678B8\n\nIngredients:\npotatoes, salt, vegetable oil (canola, corn, soybean, and/or sunflower oil)\n\nAllergens:\nNone\n\nNutrition:\ncalories: 160\nfat: 10.0\ncarbohydrates: 15.0\nprotein: 2.0\nsodium: 150.0\nsugar: 1.0\n\nFood Characteris",
+              "metadata": {
+                "item_id": "FBA-55C678B8",
+                "allergen_count": 0,
+                "ingredient_count": 3
+              },
+              "rank": 9
+            },
+            {
+              "item_id": "FBA-FC93E110",
+              "document_preview": "Item ID: FBA-FC93E110\n\nIngredients:\ncalcium propionate, cellulose gum, citric acid, cornmeal, cornstarch, datem, guar gum, maltodextrin, monoglycerides, salt, sesame seeds, sorbic acid, soy lecithin, sugar, vegetable oil (soybean), water, w",
+              "metadata": {
+                "allergen_count": 3,
+                "item_id": "FBA-FC93E110",
+                "ingredient_count": 20
+              },
+              "rank": 10
+            }
+          ],
+          "issues": [],
+          "error": null
+        },
+        "hybrid": {
+          "latency_seconds": 0.1965426999999984,
+          "raw_result_count": 10,
+          "results": [
+            {
+              "item_id": "FBA-95E4F389",
+              "document_preview": "inulin modified wheat starch monoglycerides oat fiber preservatives (sorbic acid, calcium propionate) salt soybean oil vinegar water wheat gluten wheat protein isolate yeast sesame ingredients wheat calories 35 fat 1.0 carbohydrates 10.0 pr",
+              "metadata": {
+                "item_id": "FBA-95E4F389"
+              },
+              "rank": 1
+            },
+            {
+              "item_id": "FBA-BCB8DC68",
+              "document_preview": "calcium propionate inulin modified wheat starch monoglycerides oat fiber preservatives salt sorbic acid soybean oil vinegar water wheat gluten wheat protein isolate yeast sesame ingredients wheat calories 35 fat 1.0 carbohydrates 10.0 prote",
+              "metadata": {
+                "item_id": "FBA-BCB8DC68"
+              },
+              "rank": 2
+            },
+            {
+              "item_id": "FBA-0EA01950",
+              "document_preview": "baking soda caramel color fudge chips (sugar, hydrogenated vegetable oil [palm kernel and/or palm oil], cocoa [processed with alkali], dextrose, soy lecithin, artificial flavor, nonfat milk) high fructose corn syrup natural and artificial f",
+              "metadata": {
+                "item_id": "FBA-0EA01950"
+              },
+              "rank": 3
+            },
+            {
+              "item_id": "FBA-899FCD38",
+              "document_preview": "calcium propionate citric acid cornmeal cornstarch datem guar gum maltodextrin monoglycerides salt sesame seeds sorbic acid soy cellulose gum soy lecithin sugar vegetable oil water wheat bran wheat gluten whole wheat flour yeast sesame soy ",
+              "metadata": {
+                "item_id": "FBA-899FCD38"
+              },
+              "rank": 4
+            },
+            {
+              "item_id": "FBA-A12CE334",
+              "document_preview": "durum wheat flour durum wheat semolina folic acid iron (ferrous sulfate) niacin riboflavin thiamine mononitrate wheat calories 200 fat 1.0 carbohydrates 42.0 protein 7.0 sodium 0.0 sugar 2.0",
+              "metadata": {
+                "item_id": "FBA-A12CE334"
+              },
+              "rank": 5
+            },
+            {
+              "item_id": "FBA-FD0844ED",
+              "document_preview": "bleached wheat flour folic acid malted barley flour niacin reduced iron riboflavin thiamine mononitrate wheat calories 110 fat 0 carbohydrates 23 protein 3 sodium 0 sugar 0",
+              "metadata": {
+                "item_id": "FBA-FD0844ED"
+              },
+              "rank": 6
+            },
+            {
+              "item_id": "FBA-320CBD1F",
+              "document_preview": "bleached wheat flour folic acid malted barley flour niacin reduced iron riboflavin thiamine mononitrate wheat calories 110 fat 0 carbohydrates 23 protein 3 sodium 0 sugar 0",
+              "metadata": {
+                "item_id": "FBA-320CBD1F"
+              },
+              "rank": 7
+            },
+            {
+              "item_id": "FBA-FC93E110",
+              "document_preview": "calcium propionate cellulose gum citric acid cornmeal cornstarch datem guar gum maltodextrin monoglycerides salt sesame seeds sorbic acid soy lecithin sugar vegetable oil (soybean) water wheat bran wheat gluten whole wheat flour yeast sesam",
+              "metadata": {
+                "item_id": "FBA-FC93E110"
+              },
+              "rank": 8
+            },
+            {
+              "item_id": "FBA-ADBD6C25",
+              "document_preview": "almondmilk (water, almonds) calcium carbonate gellan gum natural vanilla flavor with other natural flavors potassium citrate sea salt sunflower lecithin vitamin a palmitate vitamin d2 and d-alpha-tocopherol (natural, vitamin e) tree nuts ca",
+              "metadata": {
+                "item_id": "FBA-ADBD6C25"
+              },
+              "rank": 9
+            },
+            {
+              "item_id": "FBA-3F554D43",
+              "document_preview": "almondmilk (water, almonds) calcium carbonate d-alpha-tocopherol (natural vitamin e) gellan gum natural vanilla flavor with other natural flavors potassium citrate sea salt sunflower lecithin vitamin a palmitate vitamin d2 tree nuts calorie",
+              "metadata": {
+                "item_id": "FBA-3F554D43"
+              },
+              "rank": 10
+            }
+          ],
+          "issues": [],
+          "error": null
+        }
+      }
+    },
+    {
+      "query": "protein rich foods",
+      "methods": {
+        "bm25": {
+          "latency_seconds": 0.00018920000000122172,
+          "raw_result_count": 10,
+          "results": [
+            {
+              "item_id": "FBA-0F18E068",
+              "document_preview": "cream live active yogurt cultures (acidophilus, bifidus, l. bulgaricus and s. thermophilus) milk protein concentrate pasteurized milk vitamin a palmitate vitamin d3 whey protein concentrate milk calories 230 fat 16.0 carbohydrates 9.0 prote",
+              "metadata": {
+                "item_id": "FBA-0F18E068"
+              },
+              "rank": 1
+            },
+            {
+              "item_id": "FBA-8F56616E",
+              "document_preview": "cream live active yogurt cultures (acidophilus, bifidus, l. bulgaricus and s. thermophilus) milk protein concentrate pasteurized milk vitamin a palmitate vitamin d3 whey protein concentrate milk calories 230 fat 16.0 carbohydrates 9.0 prote",
+              "metadata": {
+                "item_id": "FBA-8F56616E"
+              },
+              "rank": 2
+            },
+            {
+              "item_id": "FBA-49B0077A",
+              "document_preview": "calories 240 fat 8 carbohydrates 37 protein 4 sodium 50 sugar 13",
+              "metadata": {
+                "item_id": "FBA-49B0077A"
+              },
+              "rank": 3
+            },
+            {
+              "item_id": "FBA-99C9DAB8",
+              "document_preview": "calories 130 fat 1 carbohydrates 25 protein 6 sodium 480 sugar 7",
+              "metadata": {
+                "item_id": "FBA-99C9DAB8"
+              },
+              "rank": 4
+            },
+            {
+              "item_id": "FBA-1FFE34BF",
+              "document_preview": "inulin modified wheat starch monoglycerides oat fiber preservatives (sorbic acid, calcium propionate) salt soybean oil vinegar water wheat gluten wheat protein isolate yeast sesame wheat calories 35 fat 1 carbohydrates 10 protein 4 sodium 1",
+              "metadata": {
+                "item_id": "FBA-1FFE34BF"
+              },
+              "rank": 5
+            },
+            {
+              "item_id": "FBA-E80CE6D3",
+              "document_preview": "cane sugar calories 30 fat 0 carbohydrates 8 protein 0 sodium 0 sugar 8",
+              "metadata": {
+                "item_id": "FBA-E80CE6D3"
+              },
+              "rank": 6
+            },
+            {
+              "item_id": "FBA-BCB8DC68",
+              "document_preview": "calcium propionate inulin modified wheat starch monoglycerides oat fiber preservatives salt sorbic acid soybean oil vinegar water wheat gluten wheat protein isolate yeast sesame ingredients wheat calories 35 fat 1.0 carbohydrates 10.0 prote",
+              "metadata": {
+                "item_id": "FBA-BCB8DC68"
+              },
+              "rank": 7
+            },
+            {
+              "item_id": "FBA-95E4F389",
+              "document_preview": "inulin modified wheat starch monoglycerides oat fiber preservatives (sorbic acid, calcium propionate) salt soybean oil vinegar water wheat gluten wheat protein isolate yeast sesame ingredients wheat calories 35 fat 1.0 carbohydrates 10.0 pr",
+              "metadata": {
+                "item_id": "FBA-95E4F389"
+              },
+              "rank": 8
+            },
+            {
+              "item_id": "FBA-A5609F93",
+              "document_preview": "cultured cream milk calories 60 fat 5 carbohydrates 1 protein 1 sodium 15 sugar 1",
+              "metadata": {
+                "item_id": "FBA-A5609F93"
+              },
+              "rank": 9
+            },
+            {
+              "item_id": "FBA-41BDB53A",
+              "document_preview": "almonds tree nuts calories 160 fat 14 carbohydrates 6 protein 6 sodium 0 sugar 2",
+              "metadata": {
+                "item_id": "FBA-41BDB53A"
+              },
+              "rank": 10
+            }
+          ],
+          "issues": [],
+          "error": null
+        },
+        "semantic": {
+          "latency_seconds": 0.1984622999999992,
+          "raw_result_count": 10,
+          "results": [
+            {
+              "item_id": "FBA-0F18E068",
+              "document_preview": "Item ID: FBA-0F18E068\n\nIngredients:\ncream, live active yogurt cultures (acidophilus, bifidus, l. bulgaricus and s. thermophilus), milk protein concentrate, pasteurized milk, vitamin a palmitate, vitamin d3, whey protein concentrate\n\nAllerge",
+              "metadata": {
+                "item_id": "FBA-0F18E068",
+                "ingredient_count": 7,
+                "allergen_count": 1
+              },
+              "rank": 1
+            },
+            {
+              "item_id": "FBA-45E5862F",
+              "document_preview": "Item ID: FBA-45E5862F\n\nIngredients:\nbanana puree, carrageenan, cocoa, cocoa (processed with alkali), coconut oil, cream, egg yolks, guar gum, lemon juice concentrate, liquid sugar (sugar, water), milk, natural flavors, nonfat milk, peanuts,",
+              "metadata": {
+                "allergen_count": 4,
+                "item_id": "FBA-45E5862F",
+                "ingredient_count": 20
+              },
+              "rank": 2
+            },
+            {
+              "item_id": "FBA-D92E4239",
+              "document_preview": "Item ID: FBA-D92E4239\n\nIngredients:\ncereal crisp (degerminated yellow corn flour, soy flour, sugar, salt, soy lecithin), dark refiners syrup, high oleic canola oil, peanut butter (dry roasted peanuts), rolled oats, salt, sodium bicarbonate,",
+              "metadata": {
+                "allergen_count": 2,
+                "ingredient_count": 10,
+                "item_id": "FBA-D92E4239"
+              },
+              "rank": 3
+            },
+            {
+              "item_id": "FBA-D139608E",
+              "document_preview": "Item ID: FBA-D139608E\n\nIngredients:\nannatto (color), canola oil, cheddar cheese (milk, cheese culture, cheese sauce (whey, colby cheese (milk, contains less than 2% of salt, enriched macaroni product (wheat flour, enzymes, enzymes), ferrous",
+              "metadata": {
+                "ingredient_count": 28,
+                "allergen_count": 2,
+                "item_id": "FBA-D139608E"
+              },
+              "rank": 4
+            },
+            {
+              "item_id": "FBA-0EA01950",
+              "document_preview": "Item ID: FBA-0EA01950\n\nIngredients:\nbaking soda, caramel color, fudge chips (sugar, hydrogenated vegetable oil [palm kernel and/or palm oil], cocoa [processed with alkali], dextrose, soy lecithin, artificial flavor, nonfat milk), high fruct",
+              "metadata": {
+                "item_id": "FBA-0EA01950",
+                "ingredient_count": 8,
+                "allergen_count": 3
+              },
+              "rank": 5
+            },
+            {
+              "item_id": "FBA-3F554D43",
+              "document_preview": "Item ID: FBA-3F554D43\n\nIngredients:\nalmondmilk (water, almonds), calcium carbonate, d-alpha-tocopherol (natural vitamin e), gellan gum, natural vanilla flavor with other natural flavors, potassium citrate, sea salt, sunflower lecithin, vita",
+              "metadata": {
+                "item_id": "FBA-3F554D43",
+                "ingredient_count": 10,
+                "allergen_count": 1
+              },
+              "rank": 6
+            },
+            {
+              "item_id": "FBA-95E4F389",
+              "document_preview": "Item ID: FBA-95E4F389\n\nIngredients:\ninulin, modified wheat starch, monoglycerides, oat fiber, preservatives (sorbic acid, calcium propionate), salt, soybean oil, vinegar, water, wheat gluten, wheat protein isolate, yeast\n\nAllergens:\nsesame ",
+              "metadata": {
+                "item_id": "FBA-95E4F389",
+                "allergen_count": 2,
+                "ingredient_count": 12
+              },
+              "rank": 7
+            },
+            {
+              "item_id": "FBA-6E8C0225",
+              "document_preview": "Item ID: FBA-6E8C0225\n\nIngredients:\ncitric acid, organic chickpeas, organic cumin, organic garlic, organic lemon juice, organic minced garlic, organic onion, organic parsley, organic pine nuts, organic red pepper, organic sesame tahini, org",
+              "metadata": {
+                "ingredient_count": 15,
+                "item_id": "FBA-6E8C0225",
+                "allergen_count": 2
+              },
+              "rank": 8
+            },
+            {
+              "item_id": "FBA-ADBD6C25",
+              "document_preview": "Item ID: FBA-ADBD6C25\n\nIngredients:\nalmondmilk (water, almonds), calcium carbonate, gellan gum, natural vanilla flavor with other natural flavors, potassium citrate, sea salt, sunflower lecithin, vitamin a palmitate, vitamin d2 and d-alpha-",
+              "metadata": {
+                "allergen_count": 1,
+                "item_id": "FBA-ADBD6C25",
+                "ingredient_count": 9
+              },
+              "rank": 9
+            },
+            {
+              "item_id": "FBA-9F76BEEB",
+              "document_preview": "Item ID: FBA-9F76BEEB\n\nIngredients:\nalmondmilk (water, almonds), calcium carbonate, gellan gum, natural vanilla flavor with other natural flavors, potassium citrate, sea salt, sunflower lecithin, vitamin a palmitate, vitamin d2 and d-alpha-",
+              "metadata": {
+                "item_id": "FBA-9F76BEEB",
+                "ingredient_count": 9,
+                "allergen_count": 1
+              },
+              "rank": 10
+            }
+          ],
+          "issues": [],
+          "error": null
+        },
+        "hybrid": {
+          "latency_seconds": 0.186038700000001,
+          "raw_result_count": 10,
+          "results": [
+            {
+              "item_id": "FBA-0F18E068",
+              "document_preview": "cream live active yogurt cultures (acidophilus, bifidus, l. bulgaricus and s. thermophilus) milk protein concentrate pasteurized milk vitamin a palmitate vitamin d3 whey protein concentrate milk calories 230 fat 16.0 carbohydrates 9.0 prote",
+              "metadata": {
+                "item_id": "FBA-0F18E068"
+              },
+              "rank": 1
+            },
+            {
+              "item_id": "FBA-95E4F389",
+              "document_preview": "inulin modified wheat starch monoglycerides oat fiber preservatives (sorbic acid, calcium propionate) salt soybean oil vinegar water wheat gluten wheat protein isolate yeast sesame ingredients wheat calories 35 fat 1.0 carbohydrates 10.0 pr",
+              "metadata": {
+                "item_id": "FBA-95E4F389"
+              },
+              "rank": 2
+            },
+            {
+              "item_id": "FBA-BCB8DC68",
+              "document_preview": "calcium propionate inulin modified wheat starch monoglycerides oat fiber preservatives salt sorbic acid soybean oil vinegar water wheat gluten wheat protein isolate yeast sesame ingredients wheat calories 35 fat 1.0 carbohydrates 10.0 prote",
+              "metadata": {
+                "item_id": "FBA-BCB8DC68"
+              },
+              "rank": 3
+            },
+            {
+              "item_id": "FBA-8276C4F3",
+              "document_preview": "milk vitamin d3 milk calories 150 fat 8 carbohydrates 12 protein 8 sodium 125 sugar 12",
+              "metadata": {
+                "item_id": "FBA-8276C4F3"
+              },
+              "rank": 4
+            },
+            {
+              "item_id": "FBA-865771DF",
+              "document_preview": "eggs egg calories 70 fat 5.0 carbohydrates 0.0 protein 6.0 sodium 70 sugar 0.0",
+              "metadata": {
+                "item_id": "FBA-865771DF"
+              },
+              "rank": 5
+            },
+            {
+              "item_id": "FBA-8F56616E",
+              "document_preview": "cream live active yogurt cultures (acidophilus, bifidus, l. bulgaricus and s. thermophilus) milk protein concentrate pasteurized milk vitamin a palmitate vitamin d3 whey protein concentrate milk calories 230 fat 16.0 carbohydrates 9.0 prote",
+              "metadata": {
+                "item_id": "FBA-8F56616E"
+              },
+              "rank": 6
+            },
+            {
+              "item_id": "FBA-45E5862F",
+              "document_preview": "Item ID: FBA-45E5862F\n\nIngredients:\nbanana puree, carrageenan, cocoa, cocoa (processed with alkali), coconut oil, cream, egg yolks, guar gum, lemon juice concentrate, liquid sugar (sugar, water), milk, natural flavors, nonfat milk, peanuts,",
+              "metadata": {
+                "allergen_count": 4,
+                "item_id": "FBA-45E5862F",
+                "ingredient_count": 20
+              },
+              "rank": 7
+            },
+            {
+              "item_id": "FBA-49B0077A",
+              "document_preview": "calories 240 fat 8 carbohydrates 37 protein 4 sodium 50 sugar 13",
+              "metadata": {
+                "item_id": "FBA-49B0077A"
+              },
+              "rank": 8
+            },
+            {
+              "item_id": "FBA-D92E4239",
+              "document_preview": "Item ID: FBA-D92E4239\n\nIngredients:\ncereal crisp (degerminated yellow corn flour, soy flour, sugar, salt, soy lecithin), dark refiners syrup, high oleic canola oil, peanut butter (dry roasted peanuts), rolled oats, salt, sodium bicarbonate,",
+              "metadata": {
+                "allergen_count": 2,
+                "ingredient_count": 10,
+                "item_id": "FBA-D92E4239"
+              },
+              "rank": 9
+            },
+            {
+              "item_id": "FBA-99C9DAB8",
+              "document_preview": "calories 130 fat 1 carbohydrates 25 protein 6 sodium 480 sugar 7",
+              "metadata": {
+                "item_id": "FBA-99C9DAB8"
+              },
+              "rank": 10
+            }
+          ],
+          "issues": [],
+          "error": null
+        }
+      }
+    },
+    {
+      "query": "foods containing sesame",
+      "methods": {
+        "bm25": {
+          "latency_seconds": 0.0001680999999997823,
+          "raw_result_count": 10,
+          "results": [
+            {
+              "item_id": "FBA-AE4A1E21",
+              "document_preview": "calcium propionate citric acid cornmeal datem guar gum maltodextrin monoglycerides salt sesame seeds sorbic acid soy lecithin sugar vegetable oil water wheat bran wheat gluten whole wheat flour yeast sesame soy wheat calories 250 fat 2.0 ca",
+              "metadata": {
+                "item_id": "FBA-AE4A1E21"
+              },
+              "rank": 1
+            },
+            {
+              "item_id": "FBA-FC93E110",
+              "document_preview": "calcium propionate cellulose gum citric acid cornmeal cornstarch datem guar gum maltodextrin monoglycerides salt sesame seeds sorbic acid soy lecithin sugar vegetable oil (soybean) water wheat bran wheat gluten whole wheat flour yeast sesam",
+              "metadata": {
+                "item_id": "FBA-FC93E110"
+              },
+              "rank": 2
+            },
+            {
+              "item_id": "FBA-899FCD38",
+              "document_preview": "calcium propionate citric acid cornmeal cornstarch datem guar gum maltodextrin monoglycerides salt sesame seeds sorbic acid soy cellulose gum soy lecithin sugar vegetable oil water wheat bran wheat gluten whole wheat flour yeast sesame soy ",
+              "metadata": {
+                "item_id": "FBA-899FCD38"
+              },
+              "rank": 3
+            },
+            {
+              "item_id": "FBA-292E509C",
+              "document_preview": "citric acid organic chickpeas organic cumin organic garlic organic lemon juice organic minced garlic organic onion organic parsley organic pine nuts organic red pepper organic sesame tahini organic sunflower oil sea salt water pine nuts ses",
+              "metadata": {
+                "item_id": "FBA-292E509C"
+              },
+              "rank": 4
+            },
+            {
+              "item_id": "FBA-6E8C0225",
+              "document_preview": "citric acid organic chickpeas organic cumin organic garlic organic lemon juice organic minced garlic organic onion organic parsley organic pine nuts organic red pepper organic sesame tahini organic sunflower oil sea salt topping: organic su",
+              "metadata": {
+                "item_id": "FBA-6E8C0225"
+              },
+              "rank": 5
+            },
+            {
+              "item_id": "FBA-1FFE34BF",
+              "document_preview": "inulin modified wheat starch monoglycerides oat fiber preservatives (sorbic acid, calcium propionate) salt soybean oil vinegar water wheat gluten wheat protein isolate yeast sesame wheat calories 35 fat 1 carbohydrates 10 protein 4 sodium 1",
+              "metadata": {
+                "item_id": "FBA-1FFE34BF"
+              },
+              "rank": 6
+            },
+            {
+              "item_id": "FBA-BCB8DC68",
+              "document_preview": "calcium propionate inulin modified wheat starch monoglycerides oat fiber preservatives salt sorbic acid soybean oil vinegar water wheat gluten wheat protein isolate yeast sesame ingredients wheat calories 35 fat 1.0 carbohydrates 10.0 prote",
+              "metadata": {
+                "item_id": "FBA-BCB8DC68"
+              },
+              "rank": 7
+            },
+            {
+              "item_id": "FBA-95E4F389",
+              "document_preview": "inulin modified wheat starch monoglycerides oat fiber preservatives (sorbic acid, calcium propionate) salt soybean oil vinegar water wheat gluten wheat protein isolate yeast sesame ingredients wheat calories 35 fat 1.0 carbohydrates 10.0 pr",
+              "metadata": {
+                "item_id": "FBA-95E4F389"
+              },
+              "rank": 8
+            },
+            {
+              "item_id": "FBA-ADBD6C25",
+              "document_preview": "almondmilk (water, almonds) calcium carbonate gellan gum natural vanilla flavor with other natural flavors potassium citrate sea salt sunflower lecithin vitamin a palmitate vitamin d2 and d-alpha-tocopherol (natural, vitamin e) tree nuts ca",
+              "metadata": {
+                "item_id": "FBA-ADBD6C25"
+              },
+              "rank": 9
+            },
+            {
+              "item_id": "FBA-3F554D43",
+              "document_preview": "almondmilk (water, almonds) calcium carbonate d-alpha-tocopherol (natural vitamin e) gellan gum natural vanilla flavor with other natural flavors potassium citrate sea salt sunflower lecithin vitamin a palmitate vitamin d2 tree nuts calorie",
+              "metadata": {
+                "item_id": "FBA-3F554D43"
+              },
+              "rank": 10
+            }
+          ],
+          "issues": [],
+          "error": null
+        },
+        "semantic": {
+          "latency_seconds": 0.21831690000000137,
+          "raw_result_count": 10,
+          "results": [
+            {
+              "item_id": "FBA-95E4F389",
+              "document_preview": "Item ID: FBA-95E4F389\n\nIngredients:\ninulin, modified wheat starch, monoglycerides, oat fiber, preservatives (sorbic acid, calcium propionate), salt, soybean oil, vinegar, water, wheat gluten, wheat protein isolate, yeast\n\nAllergens:\nsesame ",
+              "metadata": {
+                "allergen_count": 2,
+                "item_id": "FBA-95E4F389",
+                "ingredient_count": 12
+              },
+              "rank": 1
+            },
+            {
+              "item_id": "FBA-6E8C0225",
+              "document_preview": "Item ID: FBA-6E8C0225\n\nIngredients:\ncitric acid, organic chickpeas, organic cumin, organic garlic, organic lemon juice, organic minced garlic, organic onion, organic parsley, organic pine nuts, organic red pepper, organic sesame tahini, org",
+              "metadata": {
+                "item_id": "FBA-6E8C0225",
+                "ingredient_count": 15,
+                "allergen_count": 2
+              },
+              "rank": 2
+            },
+            {
+              "item_id": "FBA-899FCD38",
+              "document_preview": "Item ID: FBA-899FCD38\n\nIngredients:\ncalcium propionate, citric acid, cornmeal, cornstarch, datem, guar gum, maltodextrin, monoglycerides, salt, sesame seeds, sorbic acid, soy cellulose gum, soy lecithin, sugar, vegetable oil, water, wheat b",
+              "metadata": {
+                "allergen_count": 3,
+                "ingredient_count": 20,
+                "item_id": "FBA-899FCD38"
+              },
+              "rank": 3
+            },
+            {
+              "item_id": "FBA-BCB8DC68",
+              "document_preview": "Item ID: FBA-BCB8DC68\n\nIngredients:\ncalcium propionate, inulin, modified wheat starch, monoglycerides, oat fiber, preservatives, salt, sorbic acid, soybean oil, vinegar, water, wheat gluten, wheat protein isolate, yeast\n\nAllergens:\nsesame i",
+              "metadata": {
+                "allergen_count": 2,
+                "ingredient_count": 14,
+                "item_id": "FBA-BCB8DC68"
+              },
+              "rank": 4
+            },
+            {
+              "item_id": "FBA-D92E4239",
+              "document_preview": "Item ID: FBA-D92E4239\n\nIngredients:\ncereal crisp (degerminated yellow corn flour, soy flour, sugar, salt, soy lecithin), dark refiners syrup, high oleic canola oil, peanut butter (dry roasted peanuts), rolled oats, salt, sodium bicarbonate,",
+              "metadata": {
+                "ingredient_count": 10,
+                "allergen_count": 2,
+                "item_id": "FBA-D92E4239"
+              },
+              "rank": 5
+            },
+            {
+              "item_id": "FBA-FC93E110",
+              "document_preview": "Item ID: FBA-FC93E110\n\nIngredients:\ncalcium propionate, cellulose gum, citric acid, cornmeal, cornstarch, datem, guar gum, maltodextrin, monoglycerides, salt, sesame seeds, sorbic acid, soy lecithin, sugar, vegetable oil (soybean), water, w",
+              "metadata": {
+                "item_id": "FBA-FC93E110",
+                "allergen_count": 3,
+                "ingredient_count": 20
+              },
+              "rank": 6
+            },
+            {
+              "item_id": "FBA-7B667582",
+              "document_preview": "Item ID: FBA-7B667582\n\nIngredients:\nacesulfame potassium, cane sugar, citric acid, cultured grade a non fat milk, kosher gelatin, less than 1%: natural and artificial flavors, modified food starch, sodium citrate, sucralose, water, yogurt c",
+              "metadata": {
+                "item_id": "FBA-7B667582",
+                "ingredient_count": 11,
+                "allergen_count": 1
+              },
+              "rank": 7
+            },
+            {
+              "item_id": "FBA-45E5862F",
+              "document_preview": "Item ID: FBA-45E5862F\n\nIngredients:\nbanana puree, carrageenan, cocoa, cocoa (processed with alkali), coconut oil, cream, egg yolks, guar gum, lemon juice concentrate, liquid sugar (sugar, water), milk, natural flavors, nonfat milk, peanuts,",
+              "metadata": {
+                "item_id": "FBA-45E5862F",
+                "ingredient_count": 20,
+                "allergen_count": 4
+              },
+              "rank": 8
+            },
+            {
+              "item_id": "FBA-595929B1",
+              "document_preview": "Item ID: FBA-595929B1\n\nIngredients:\ncarrots, green beans, peas, super sweet corn\n\nAllergens:\nNone\n\nNutrition:\ncalories: 50\nfat: 0.0\ncarbohydrates: 11.0\nprotein: 2.0\nsodium: 15.0\nsugar: 3.0\n\nFood Characteristics:\nThis food is a low protein f",
+              "metadata": {
+                "ingredient_count": 4,
+                "item_id": "FBA-595929B1",
+                "allergen_count": 0
+              },
+              "rank": 9
+            },
+            {
+              "item_id": "FBA-9F76BEEB",
+              "document_preview": "Item ID: FBA-9F76BEEB\n\nIngredients:\nalmondmilk (water, almonds), calcium carbonate, gellan gum, natural vanilla flavor with other natural flavors, potassium citrate, sea salt, sunflower lecithin, vitamin a palmitate, vitamin d2 and d-alpha-",
+              "metadata": {
+                "item_id": "FBA-9F76BEEB",
+                "ingredient_count": 9,
+                "allergen_count": 1
+              },
+              "rank": 10
+            }
+          ],
+          "issues": [],
+          "error": null
+        },
+        "hybrid": {
+          "latency_seconds": 0.2431619999999981,
+          "raw_result_count": 10,
+          "results": [
+            {
+              "item_id": "FBA-899FCD38",
+              "document_preview": "calcium propionate citric acid cornmeal cornstarch datem guar gum maltodextrin monoglycerides salt sesame seeds sorbic acid soy cellulose gum soy lecithin sugar vegetable oil water wheat bran wheat gluten whole wheat flour yeast sesame soy ",
+              "metadata": {
+                "item_id": "FBA-899FCD38"
+              },
+              "rank": 1
+            },
+            {
+              "item_id": "FBA-6E8C0225",
+              "document_preview": "citric acid organic chickpeas organic cumin organic garlic organic lemon juice organic minced garlic organic onion organic parsley organic pine nuts organic red pepper organic sesame tahini organic sunflower oil sea salt topping: organic su",
+              "metadata": {
+                "item_id": "FBA-6E8C0225"
+              },
+              "rank": 2
+            },
+            {
+              "item_id": "FBA-FC93E110",
+              "document_preview": "calcium propionate cellulose gum citric acid cornmeal cornstarch datem guar gum maltodextrin monoglycerides salt sesame seeds sorbic acid soy lecithin sugar vegetable oil (soybean) water wheat bran wheat gluten whole wheat flour yeast sesam",
+              "metadata": {
+                "item_id": "FBA-FC93E110"
+              },
+              "rank": 3
+            },
+            {
+              "item_id": "FBA-95E4F389",
+              "document_preview": "inulin modified wheat starch monoglycerides oat fiber preservatives (sorbic acid, calcium propionate) salt soybean oil vinegar water wheat gluten wheat protein isolate yeast sesame ingredients wheat calories 35 fat 1.0 carbohydrates 10.0 pr",
+              "metadata": {
+                "item_id": "FBA-95E4F389"
+              },
+              "rank": 4
+            },
+            {
+              "item_id": "FBA-BCB8DC68",
+              "document_preview": "calcium propionate inulin modified wheat starch monoglycerides oat fiber preservatives salt sorbic acid soybean oil vinegar water wheat gluten wheat protein isolate yeast sesame ingredients wheat calories 35 fat 1.0 carbohydrates 10.0 prote",
+              "metadata": {
+                "item_id": "FBA-BCB8DC68"
+              },
+              "rank": 5
+            },
+            {
+              "item_id": "FBA-ADBD6C25",
+              "document_preview": "almondmilk (water, almonds) calcium carbonate gellan gum natural vanilla flavor with other natural flavors potassium citrate sea salt sunflower lecithin vitamin a palmitate vitamin d2 and d-alpha-tocopherol (natural, vitamin e) tree nuts ca",
+              "metadata": {
+                "item_id": "FBA-ADBD6C25"
+              },
+              "rank": 6
+            },
+            {
+              "item_id": "FBA-3F554D43",
+              "document_preview": "almondmilk (water, almonds) calcium carbonate d-alpha-tocopherol (natural vitamin e) gellan gum natural vanilla flavor with other natural flavors potassium citrate sea salt sunflower lecithin vitamin a palmitate vitamin d2 tree nuts calorie",
+              "metadata": {
+                "item_id": "FBA-3F554D43"
+              },
+              "rank": 7
+            },
+            {
+              "item_id": "FBA-9F76BEEB",
+              "document_preview": "almondmilk (water, almonds) calcium carbonate gellan gum natural vanilla flavor with other natural flavors potassium citrate sea salt sunflower lecithin vitamin a palmitate vitamin d2 and d-alpha-tocopherol (natural, vitamin e) tree nuts ca",
+              "metadata": {
+                "item_id": "FBA-9F76BEEB"
+              },
+              "rank": 8
+            },
+            {
+              "item_id": "FBA-F6E21EDD",
+              "document_preview": "carrots green beans peas super sweet corn calories 50 fat 0.0 carbohydrates 11.0 protein 2.0 sodium 15.0 sugar 3.0",
+              "metadata": {
+                "item_id": "FBA-F6E21EDD"
+              },
+              "rank": 9
+            },
+            {
+              "item_id": "FBA-AE4A1E21",
+              "document_preview": "calcium propionate citric acid cornmeal datem guar gum maltodextrin monoglycerides salt sesame seeds sorbic acid soy lecithin sugar vegetable oil water wheat bran wheat gluten whole wheat flour yeast sesame soy wheat calories 250 fat 2.0 ca",
+              "metadata": {
+                "item_id": "FBA-AE4A1E21"
+              },
+              "rank": 10
+            }
+          ],
+          "issues": [],
+          "error": null
+        }
+      }
+    },
+    {
+      "query": "foods safe for peanut allergy",
+      "methods": {
+        "bm25": {
+          "latency_seconds": 0.00024690000000049395,
+          "raw_result_count": 10,
+          "results": [
+            {
+              "item_id": "FBA-AF4E2E5F",
+              "document_preview": "cereal crisp (degerminated yellow corn flour, soy flour, sugar, salt, soy lecithin) dark refiners syrup high oleic canola oil peanut butter (dry roasted peanuts) rolled oats salt sodium bicarbonate soy lecithin sugar water peanut soy calori",
+              "metadata": {
+                "item_id": "FBA-AF4E2E5F"
+              },
+              "rank": 1
+            },
+            {
+              "item_id": "FBA-D92E4239",
+              "document_preview": "cereal crisp (degerminated yellow corn flour, soy flour, sugar, salt, soy lecithin) dark refiners syrup high oleic canola oil peanut butter (dry roasted peanuts) rolled oats salt sodium bicarbonate soy lecithin sugar water peanut soy calori",
+              "metadata": {
+                "item_id": "FBA-D92E4239"
+              },
+              "rank": 2
+            },
+            {
+              "item_id": "FBA-305CDFDD",
+              "document_preview": "cheese made with skim milk (skim milk enriched flour (wheat flour, niacin, reduced iron, vitamin b1 [thiamin mononitrate], vitamin b2 [riboflavin], folic acid) vegetable oil (soybean and palm oil with tbhq for freshness) calories 150 fat 8 ",
+              "metadata": {
+                "item_id": "FBA-305CDFDD"
+              },
+              "rank": 3
+            },
+            {
+              "item_id": "FBA-90E0D6B8",
+              "document_preview": "cheese made with skim milk (skim milk enriched flour (wheat flour, niacin, reduced iron, vitamin b1 [thiamin mononitrate], vitamin b2 [riboflavin], folic acid) vegetable oil (soybean and palm oil with tbhq for freshness) calories 150 fat 8 ",
+              "metadata": {
+                "item_id": "FBA-90E0D6B8"
+              },
+              "rank": 4
+            },
+            {
+              "item_id": "FBA-C566A607",
+              "document_preview": "cheese made with skim milk (skim milk enriched flour (wheat flour, niacin, reduced iron, vitamin b1 [thiamin mononitrate], vitamin b2 [riboflavin], folic acid) vegetable oil (soybean and palm oil with tbhq for freshness) calories 150 fat 8 ",
+              "metadata": {
+                "item_id": "FBA-C566A607"
+              },
+              "rank": 5
+            },
+            {
+              "item_id": "FBA-9924A8FA",
+              "document_preview": "acesulfame potassium apple purée from concentrate aspartame citric acid (provides tartness) filtered water grape skin extract (for color) lemon juice from concentrate less than 2% of: grape and pineapple juices from concentrate natural flav",
+              "metadata": {
+                "item_id": "FBA-9924A8FA"
+              },
+              "rank": 6
+            },
+            {
+              "item_id": "FBA-37E11373",
+              "document_preview": "banana puree carrageenan cocoa cocoa (processed with alkali) coconut oil cream egg yolks guar gum lemon juice concentrate liquid sugar (sugar, water) milk natural flavors nonfat milk peanuts salt skim milk soy lecithin sugar vanilla extract",
+              "metadata": {
+                "item_id": "FBA-37E11373"
+              },
+              "rank": 7
+            },
+            {
+              "item_id": "FBA-45E5862F",
+              "document_preview": "banana puree carrageenan cocoa cocoa (processed with alkali) coconut oil cream egg yolks guar gum lemon juice concentrate liquid sugar (sugar, water) milk natural flavors nonfat milk peanuts salt skim milk soy lecithin sugar vanilla extract",
+              "metadata": {
+                "item_id": "FBA-45E5862F"
+              },
+              "rank": 8
+            },
+            {
+              "item_id": "FBA-ADBD6C25",
+              "document_preview": "almondmilk (water, almonds) calcium carbonate gellan gum natural vanilla flavor with other natural flavors potassium citrate sea salt sunflower lecithin vitamin a palmitate vitamin d2 and d-alpha-tocopherol (natural, vitamin e) tree nuts ca",
+              "metadata": {
+                "item_id": "FBA-ADBD6C25"
+              },
+              "rank": 9
+            },
+            {
+              "item_id": "FBA-3F554D43",
+              "document_preview": "almondmilk (water, almonds) calcium carbonate d-alpha-tocopherol (natural vitamin e) gellan gum natural vanilla flavor with other natural flavors potassium citrate sea salt sunflower lecithin vitamin a palmitate vitamin d2 tree nuts calorie",
+              "metadata": {
+                "item_id": "FBA-3F554D43"
+              },
+              "rank": 10
+            }
+          ],
+          "issues": [],
+          "error": null
+        },
+        "semantic": {
+          "latency_seconds": 0.19392639999999872,
+          "raw_result_count": 10,
+          "results": [
+            {
+              "item_id": "FBA-D92E4239",
+              "document_preview": "Item ID: FBA-D92E4239\n\nIngredients:\ncereal crisp (degerminated yellow corn flour, soy flour, sugar, salt, soy lecithin), dark refiners syrup, high oleic canola oil, peanut butter (dry roasted peanuts), rolled oats, salt, sodium bicarbonate,",
+              "metadata": {
+                "allergen_count": 2,
+                "item_id": "FBA-D92E4239",
+                "ingredient_count": 10
+              },
+              "rank": 1
+            },
+            {
+              "item_id": "FBA-9F76BEEB",
+              "document_preview": "Item ID: FBA-9F76BEEB\n\nIngredients:\nalmondmilk (water, almonds), calcium carbonate, gellan gum, natural vanilla flavor with other natural flavors, potassium citrate, sea salt, sunflower lecithin, vitamin a palmitate, vitamin d2 and d-alpha-",
+              "metadata": {
+                "ingredient_count": 9,
+                "item_id": "FBA-9F76BEEB",
+                "allergen_count": 1
+              },
+              "rank": 2
+            },
+            {
+              "item_id": "FBA-45E5862F",
+              "document_preview": "Item ID: FBA-45E5862F\n\nIngredients:\nbanana puree, carrageenan, cocoa, cocoa (processed with alkali), coconut oil, cream, egg yolks, guar gum, lemon juice concentrate, liquid sugar (sugar, water), milk, natural flavors, nonfat milk, peanuts,",
+              "metadata": {
+                "allergen_count": 4,
+                "item_id": "FBA-45E5862F",
+                "ingredient_count": 20
+              },
+              "rank": 3
+            },
+            {
+              "item_id": "FBA-ADBD6C25",
+              "document_preview": "Item ID: FBA-ADBD6C25\n\nIngredients:\nalmondmilk (water, almonds), calcium carbonate, gellan gum, natural vanilla flavor with other natural flavors, potassium citrate, sea salt, sunflower lecithin, vitamin a palmitate, vitamin d2 and d-alpha-",
+              "metadata": {
+                "allergen_count": 1,
+                "item_id": "FBA-ADBD6C25",
+                "ingredient_count": 9
+              },
+              "rank": 4
+            },
+            {
+              "item_id": "FBA-899FCD38",
+              "document_preview": "Item ID: FBA-899FCD38\n\nIngredients:\ncalcium propionate, citric acid, cornmeal, cornstarch, datem, guar gum, maltodextrin, monoglycerides, salt, sesame seeds, sorbic acid, soy cellulose gum, soy lecithin, sugar, vegetable oil, water, wheat b",
+              "metadata": {
+                "ingredient_count": 20,
+                "allergen_count": 3,
+                "item_id": "FBA-899FCD38"
+              },
+              "rank": 5
+            },
+            {
+              "item_id": "FBA-95E4F389",
+              "document_preview": "Item ID: FBA-95E4F389\n\nIngredients:\ninulin, modified wheat starch, monoglycerides, oat fiber, preservatives (sorbic acid, calcium propionate), salt, soybean oil, vinegar, water, wheat gluten, wheat protein isolate, yeast\n\nAllergens:\nsesame ",
+              "metadata": {
+                "item_id": "FBA-95E4F389",
+                "ingredient_count": 12,
+                "allergen_count": 2
+              },
+              "rank": 6
+            },
+            {
+              "item_id": "FBA-0EA01950",
+              "document_preview": "Item ID: FBA-0EA01950\n\nIngredients:\nbaking soda, caramel color, fudge chips (sugar, hydrogenated vegetable oil [palm kernel and/or palm oil], cocoa [processed with alkali], dextrose, soy lecithin, artificial flavor, nonfat milk), high fruct",
+              "metadata": {
+                "ingredient_count": 8,
+                "item_id": "FBA-0EA01950",
+                "allergen_count": 3
+              },
+              "rank": 7
+            },
+            {
+              "item_id": "FBA-595929B1",
+              "document_preview": "Item ID: FBA-595929B1\n\nIngredients:\ncarrots, green beans, peas, super sweet corn\n\nAllergens:\nNone\n\nNutrition:\ncalories: 50\nfat: 0.0\ncarbohydrates: 11.0\nprotein: 2.0\nsodium: 15.0\nsugar: 3.0\n\nFood Characteristics:\nThis food is a low protein f",
+              "metadata": {
+                "ingredient_count": 4,
+                "item_id": "FBA-595929B1",
+                "allergen_count": 0
+              },
+              "rank": 8
+            },
+            {
+              "item_id": "FBA-BCB8DC68",
+              "document_preview": "Item ID: FBA-BCB8DC68\n\nIngredients:\ncalcium propionate, inulin, modified wheat starch, monoglycerides, oat fiber, preservatives, salt, sorbic acid, soybean oil, vinegar, water, wheat gluten, wheat protein isolate, yeast\n\nAllergens:\nsesame i",
+              "metadata": {
+                "item_id": "FBA-BCB8DC68",
+                "ingredient_count": 14,
+                "allergen_count": 2
+              },
+              "rank": 9
+            },
+            {
+              "item_id": "FBA-3F554D43",
+              "document_preview": "Item ID: FBA-3F554D43\n\nIngredients:\nalmondmilk (water, almonds), calcium carbonate, d-alpha-tocopherol (natural vitamin e), gellan gum, natural vanilla flavor with other natural flavors, potassium citrate, sea salt, sunflower lecithin, vita",
+              "metadata": {
+                "item_id": "FBA-3F554D43",
+                "allergen_count": 1,
+                "ingredient_count": 10
+              },
+              "rank": 10
+            }
+          ],
+          "issues": [],
+          "error": null
+        },
+        "hybrid": {
+          "latency_seconds": 0.20296619999999876,
+          "raw_result_count": 10,
+          "results": [
+            {
+              "item_id": "FBA-D92E4239",
+              "document_preview": "cereal crisp (degerminated yellow corn flour, soy flour, sugar, salt, soy lecithin) dark refiners syrup high oleic canola oil peanut butter (dry roasted peanuts) rolled oats salt sodium bicarbonate soy lecithin sugar water peanut soy calori",
+              "metadata": {
+                "item_id": "FBA-D92E4239"
+              },
+              "rank": 1
+            },
+            {
+              "item_id": "FBA-45E5862F",
+              "document_preview": "banana puree carrageenan cocoa cocoa (processed with alkali) coconut oil cream egg yolks guar gum lemon juice concentrate liquid sugar (sugar, water) milk natural flavors nonfat milk peanuts salt skim milk soy lecithin sugar vanilla extract",
+              "metadata": {
+                "item_id": "FBA-45E5862F"
+              },
+              "rank": 2
+            },
+            {
+              "item_id": "FBA-ADBD6C25",
+              "document_preview": "almondmilk (water, almonds) calcium carbonate gellan gum natural vanilla flavor with other natural flavors potassium citrate sea salt sunflower lecithin vitamin a palmitate vitamin d2 and d-alpha-tocopherol (natural, vitamin e) tree nuts ca",
+              "metadata": {
+                "item_id": "FBA-ADBD6C25"
+              },
+              "rank": 3
+            },
+            {
+              "item_id": "FBA-3F554D43",
+              "document_preview": "almondmilk (water, almonds) calcium carbonate d-alpha-tocopherol (natural vitamin e) gellan gum natural vanilla flavor with other natural flavors potassium citrate sea salt sunflower lecithin vitamin a palmitate vitamin d2 tree nuts calorie",
+              "metadata": {
+                "item_id": "FBA-3F554D43"
+              },
+              "rank": 4
+            },
+            {
+              "item_id": "FBA-BCB8DC68",
+              "document_preview": "calcium propionate inulin modified wheat starch monoglycerides oat fiber preservatives salt sorbic acid soybean oil vinegar water wheat gluten wheat protein isolate yeast sesame ingredients wheat calories 35 fat 1.0 carbohydrates 10.0 prote",
+              "metadata": {
+                "item_id": "FBA-BCB8DC68"
+              },
+              "rank": 5
+            },
+            {
+              "item_id": "FBA-FC93E110",
+              "document_preview": "calcium propionate cellulose gum citric acid cornmeal cornstarch datem guar gum maltodextrin monoglycerides salt sesame seeds sorbic acid soy lecithin sugar vegetable oil (soybean) water wheat bran wheat gluten whole wheat flour yeast sesam",
+              "metadata": {
+                "item_id": "FBA-FC93E110"
+              },
+              "rank": 6
+            },
+            {
+              "item_id": "FBA-F6E21EDD",
+              "document_preview": "carrots green beans peas super sweet corn calories 50 fat 0.0 carbohydrates 11.0 protein 2.0 sodium 15.0 sugar 3.0",
+              "metadata": {
+                "item_id": "FBA-F6E21EDD"
+              },
+              "rank": 7
+            },
+            {
+              "item_id": "FBA-AF4E2E5F",
+              "document_preview": "cereal crisp (degerminated yellow corn flour, soy flour, sugar, salt, soy lecithin) dark refiners syrup high oleic canola oil peanut butter (dry roasted peanuts) rolled oats salt sodium bicarbonate soy lecithin sugar water peanut soy calori",
+              "metadata": {
+                "item_id": "FBA-AF4E2E5F"
+              },
+              "rank": 8
+            },
+            {
+              "item_id": "FBA-9F76BEEB",
+              "document_preview": "Item ID: FBA-9F76BEEB\n\nIngredients:\nalmondmilk (water, almonds), calcium carbonate, gellan gum, natural vanilla flavor with other natural flavors, potassium citrate, sea salt, sunflower lecithin, vitamin a palmitate, vitamin d2 and d-alpha-",
+              "metadata": {
+                "ingredient_count": 9,
+                "allergen_count": 1,
+                "item_id": "FBA-9F76BEEB"
+              },
+              "rank": 9
+            },
+            {
+              "item_id": "FBA-305CDFDD",
+              "document_preview": "cheese made with skim milk (skim milk enriched flour (wheat flour, niacin, reduced iron, vitamin b1 [thiamin mononitrate], vitamin b2 [riboflavin], folic acid) vegetable oil (soybean and palm oil with tbhq for freshness) calories 150 fat 8 ",
+              "metadata": {
+                "item_id": "FBA-305CDFDD"
+              },
+              "rank": 10
+            }
+          ],
+          "issues": [],
+          "error": null
+        }
+      }
+    },
+    {
+      "query": "lower calorie snacks",
+      "methods": {
+        "bm25": {
+          "latency_seconds": 0.00015890000000240434,
+          "raw_result_count": 10,
+          "results": [
+            {
+              "item_id": "FBA-ADBD6C25",
+              "document_preview": "almondmilk (water, almonds) calcium carbonate gellan gum natural vanilla flavor with other natural flavors potassium citrate sea salt sunflower lecithin vitamin a palmitate vitamin d2 and d-alpha-tocopherol (natural, vitamin e) tree nuts ca",
+              "metadata": {
+                "item_id": "FBA-ADBD6C25"
+              },
+              "rank": 1
+            },
+            {
+              "item_id": "FBA-3F554D43",
+              "document_preview": "almondmilk (water, almonds) calcium carbonate d-alpha-tocopherol (natural vitamin e) gellan gum natural vanilla flavor with other natural flavors potassium citrate sea salt sunflower lecithin vitamin a palmitate vitamin d2 tree nuts calorie",
+              "metadata": {
+                "item_id": "FBA-3F554D43"
+              },
+              "rank": 2
+            },
+            {
+              "item_id": "FBA-FC93E110",
+              "document_preview": "calcium propionate cellulose gum citric acid cornmeal cornstarch datem guar gum maltodextrin monoglycerides salt sesame seeds sorbic acid soy lecithin sugar vegetable oil (soybean) water wheat bran wheat gluten whole wheat flour yeast sesam",
+              "metadata": {
+                "item_id": "FBA-FC93E110"
+              },
+              "rank": 3
+            },
+            {
+              "item_id": "FBA-BCB8DC68",
+              "document_preview": "calcium propionate inulin modified wheat starch monoglycerides oat fiber preservatives salt sorbic acid soybean oil vinegar water wheat gluten wheat protein isolate yeast sesame ingredients wheat calories 35 fat 1.0 carbohydrates 10.0 prote",
+              "metadata": {
+                "item_id": "FBA-BCB8DC68"
+              },
+              "rank": 4
+            },
+            {
+              "item_id": "FBA-CE413A6C",
+              "document_preview": "blue 1 carnauba wax confectioners glaze contains less than 0.5% of the following: citric acid corn syrup dextrin fumaric acid malic acid medium chain triglycerides modified food starch natural and artificial flavors red 40 sodium citrate su",
+              "metadata": {
+                "item_id": "FBA-CE413A6C"
+              },
+              "rank": 5
+            },
+            {
+              "item_id": "FBA-27C42EC2",
+              "document_preview": "green beans salt water calories 20 fat 0.0 carbohydrates 4.0 protein 1.0 sodium 290.0 sugar 2.0",
+              "metadata": {
+                "item_id": "FBA-27C42EC2"
+              },
+              "rank": 6
+            },
+            {
+              "item_id": "FBA-00979C42",
+              "document_preview": "calories 240 fat 8.0 carbohydrates 37.0 protein 4.0 sodium 50.0 sugar 13.0",
+              "metadata": {
+                "item_id": "FBA-00979C42"
+              },
+              "rank": 7
+            },
+            {
+              "item_id": "FBA-97C8BF53",
+              "document_preview": "cheese culture enzymes pasteurized milk red and green jalapeño peppers salt milk calories 100 fat 8.0 carbohydrates 0.0 protein 7.0 sodium 180.0 sugar 0.0",
+              "metadata": {
+                "item_id": "FBA-97C8BF53"
+              },
+              "rank": 8
+            },
+            {
+              "item_id": "FBA-DBC8A194",
+              "document_preview": "cocoa beans cocoa butter calories 238 fat 22.0 carbohydrates 10.0 protein 5.0 sodium 0.0 sugar 0.0",
+              "metadata": {
+                "item_id": "FBA-DBC8A194"
+              },
+              "rank": 9
+            },
+            {
+              "item_id": "FBA-305CDFDD",
+              "document_preview": "cheese made with skim milk (skim milk enriched flour (wheat flour, niacin, reduced iron, vitamin b1 [thiamin mononitrate], vitamin b2 [riboflavin], folic acid) vegetable oil (soybean and palm oil with tbhq for freshness) calories 150 fat 8 ",
+              "metadata": {
+                "item_id": "FBA-305CDFDD"
+              },
+              "rank": 10
+            }
+          ],
+          "issues": [],
+          "error": null
+        },
+        "semantic": {
+          "latency_seconds": 0.22347470000000058,
+          "raw_result_count": 10,
+          "results": [
+            {
+              "item_id": "FBA-595929B1",
+              "document_preview": "Item ID: FBA-595929B1\n\nIngredients:\ncarrots, green beans, peas, super sweet corn\n\nAllergens:\nNone\n\nNutrition:\ncalories: 50\nfat: 0.0\ncarbohydrates: 11.0\nprotein: 2.0\nsodium: 15.0\nsugar: 3.0\n\nFood Characteristics:\nThis food is a low protein f",
+              "metadata": {
+                "allergen_count": 0,
+                "item_id": "FBA-595929B1",
+                "ingredient_count": 4
+              },
+              "rank": 1
+            },
+            {
+              "item_id": "FBA-0EA01950",
+              "document_preview": "Item ID: FBA-0EA01950\n\nIngredients:\nbaking soda, caramel color, fudge chips (sugar, hydrogenated vegetable oil [palm kernel and/or palm oil], cocoa [processed with alkali], dextrose, soy lecithin, artificial flavor, nonfat milk), high fruct",
+              "metadata": {
+                "ingredient_count": 8,
+                "item_id": "FBA-0EA01950",
+                "allergen_count": 3
+              },
+              "rank": 2
+            },
+            {
+              "item_id": "FBA-D92E4239",
+              "document_preview": "Item ID: FBA-D92E4239\n\nIngredients:\ncereal crisp (degerminated yellow corn flour, soy flour, sugar, salt, soy lecithin), dark refiners syrup, high oleic canola oil, peanut butter (dry roasted peanuts), rolled oats, salt, sodium bicarbonate,",
+              "metadata": {
+                "item_id": "FBA-D92E4239",
+                "ingredient_count": 10,
+                "allergen_count": 2
+              },
+              "rank": 3
+            },
+            {
+              "item_id": "FBA-F6E21EDD",
+              "document_preview": "Item ID: FBA-F6E21EDD\n\nIngredients:\ncarrots, green beans, peas, super sweet corn\n\nAllergens:\nNone\n\nNutrition:\ncalories: 50\nfat: 0.0\ncarbohydrates: 11.0\nprotein: 2.0\nsodium: 15.0\nsugar: 3.0\n\nFood Characteristics:\nThis food is a low protein f",
+              "metadata": {
+                "ingredient_count": 4,
+                "item_id": "FBA-F6E21EDD",
+                "allergen_count": 0
+              },
+              "rank": 4
+            },
+            {
+              "item_id": "FBA-45E5862F",
+              "document_preview": "Item ID: FBA-45E5862F\n\nIngredients:\nbanana puree, carrageenan, cocoa, cocoa (processed with alkali), coconut oil, cream, egg yolks, guar gum, lemon juice concentrate, liquid sugar (sugar, water), milk, natural flavors, nonfat milk, peanuts,",
+              "metadata": {
+                "ingredient_count": 20,
+                "allergen_count": 4,
+                "item_id": "FBA-45E5862F"
+              },
+              "rank": 5
+            },
+            {
+              "item_id": "FBA-865771DF",
+              "document_preview": "Item ID: FBA-865771DF\n\nIngredients:\neggs\n\nAllergens:\negg\n\nNutrition:\ncalories: 70\nfat: 5.0\ncarbohydrates: 0.0\nprotein: 6.0\nsodium: 70\nsugar: 0.0\n\nFood Characteristics:\nThis food is a low protein food.\nThis food is lower in calories.\nThis fo",
+              "metadata": {
+                "allergen_count": 1,
+                "ingredient_count": 1,
+                "item_id": "FBA-865771DF"
+              },
+              "rank": 6
+            },
+            {
+              "item_id": "FBA-D3C25256",
+              "document_preview": "Item ID: FBA-D3C25256\n\nIngredients:\ngreen beans, salt, water\n\nAllergens:\nNone\n\nNutrition:\ncalories: 20\nfat: 0.0\ncarbohydrates: 4.0\nprotein: 1.0\nsodium: 290.0\nsugar: 2.0\n\nFood Characteristics:\nThis food is a low protein food.\nThis food is lo",
+              "metadata": {
+                "allergen_count": 0,
+                "item_id": "FBA-D3C25256",
+                "ingredient_count": 3
+              },
+              "rank": 7
+            },
+            {
+              "item_id": "FBA-27C42EC2",
+              "document_preview": "Item ID: FBA-27C42EC2\n\nIngredients:\ngreen beans, salt, water\n\nAllergens:\nNone\n\nNutrition:\ncalories: 20\nfat: 0.0\ncarbohydrates: 4.0\nprotein: 1.0\nsodium: 290.0\nsugar: 2.0\n\nFood Characteristics:\nThis food is a low protein food.\nThis food is lo",
+              "metadata": {
+                "ingredient_count": 3,
+                "item_id": "FBA-27C42EC2",
+                "allergen_count": 0
+              },
+              "rank": 8
+            },
+            {
+              "item_id": "FBA-996B9AD9",
+              "document_preview": "Item ID: FBA-996B9AD9\n\nIngredients:\nextra virgin olive oil\n\nAllergens:\nNone\n\nNutrition:\ncalories: 120\nfat: 14\ncarbohydrates: 0\nprotein: 0\nsodium: 0\nsugar: 0\n\nFood Characteristics:\nThis food is a low protein food.\nThis food is lower in calor",
+              "metadata": {
+                "ingredient_count": 1,
+                "allergen_count": 0,
+                "item_id": "FBA-996B9AD9"
+              },
+              "rank": 9
+            },
+            {
+              "item_id": "FBA-664B4697",
+              "document_preview": "Item ID: FBA-664B4697\n\nIngredients:\ncalcium silicate, dextrose, potassium iodide, salt\n\nAllergens:\nNone\n\nNutrition:\ncalories: 0\nfat: 0\ncarbohydrates: 0\nprotein: 0\nsodium: 590\nsugar: None\n\nFood Characteristics:\nThis food is a low protein foo",
+              "metadata": {
+                "allergen_count": 0,
+                "ingredient_count": 4,
+                "item_id": "FBA-664B4697"
+              },
+              "rank": 10
+            }
+          ],
+          "issues": [],
+          "error": null
+        },
+        "hybrid": {
+          "latency_seconds": 0.19209199999999882,
+          "raw_result_count": 10,
+          "results": [
+            {
+              "item_id": "FBA-27C42EC2",
+              "document_preview": "green beans salt water calories 20 fat 0.0 carbohydrates 4.0 protein 1.0 sodium 290.0 sugar 2.0",
+              "metadata": {
+                "item_id": "FBA-27C42EC2"
+              },
+              "rank": 1
+            },
+            {
+              "item_id": "FBA-F6E21EDD",
+              "document_preview": "carrots green beans peas super sweet corn calories 50 fat 0.0 carbohydrates 11.0 protein 2.0 sodium 15.0 sugar 3.0",
+              "metadata": {
+                "item_id": "FBA-F6E21EDD"
+              },
+              "rank": 2
+            },
+            {
+              "item_id": "FBA-ADBD6C25",
+              "document_preview": "almondmilk (water, almonds) calcium carbonate gellan gum natural vanilla flavor with other natural flavors potassium citrate sea salt sunflower lecithin vitamin a palmitate vitamin d2 and d-alpha-tocopherol (natural, vitamin e) tree nuts ca",
+              "metadata": {
+                "item_id": "FBA-ADBD6C25"
+              },
+              "rank": 3
+            },
+            {
+              "item_id": "FBA-00979C42",
+              "document_preview": "calories 240 fat 8.0 carbohydrates 37.0 protein 4.0 sodium 50.0 sugar 13.0",
+              "metadata": {
+                "item_id": "FBA-00979C42"
+              },
+              "rank": 4
+            },
+            {
+              "item_id": "FBA-DBC8A194",
+              "document_preview": "cocoa beans cocoa butter calories 238 fat 22.0 carbohydrates 10.0 protein 5.0 sodium 0.0 sugar 0.0",
+              "metadata": {
+                "item_id": "FBA-DBC8A194"
+              },
+              "rank": 5
+            },
+            {
+              "item_id": "FBA-D3C25256",
+              "document_preview": "green beans salt water calories 20 fat 0.0 carbohydrates 4.0 protein 1.0 sodium 290.0 sugar 2.0",
+              "metadata": {
+                "item_id": "FBA-D3C25256"
+              },
+              "rank": 6
+            },
+            {
+              "item_id": "FBA-9F76BEEB",
+              "document_preview": "almondmilk (water, almonds) calcium carbonate gellan gum natural vanilla flavor with other natural flavors potassium citrate sea salt sunflower lecithin vitamin a palmitate vitamin d2 and d-alpha-tocopherol (natural, vitamin e) tree nuts ca",
+              "metadata": {
+                "item_id": "FBA-9F76BEEB"
+              },
+              "rank": 7
+            },
+            {
+              "item_id": "FBA-320CBD1F",
+              "document_preview": "bleached wheat flour folic acid malted barley flour niacin reduced iron riboflavin thiamine mononitrate wheat calories 110 fat 0 carbohydrates 23 protein 3 sodium 0 sugar 0",
+              "metadata": {
+                "item_id": "FBA-320CBD1F"
+              },
+              "rank": 8
+            },
+            {
+              "item_id": "FBA-595929B1",
+              "document_preview": "Item ID: FBA-595929B1\n\nIngredients:\ncarrots, green beans, peas, super sweet corn\n\nAllergens:\nNone\n\nNutrition:\ncalories: 50\nfat: 0.0\ncarbohydrates: 11.0\nprotein: 2.0\nsodium: 15.0\nsugar: 3.0\n\nFood Characteristics:\nThis food is a low protein f",
+              "metadata": {
+                "item_id": "FBA-595929B1",
+                "ingredient_count": 4,
+                "allergen_count": 0
+              },
+              "rank": 9
+            },
+            {
+              "item_id": "FBA-3F554D43",
+              "document_preview": "almondmilk (water, almonds) calcium carbonate d-alpha-tocopherol (natural vitamin e) gellan gum natural vanilla flavor with other natural flavors potassium citrate sea salt sunflower lecithin vitamin a palmitate vitamin d2 tree nuts calorie",
+              "metadata": {
+                "item_id": "FBA-3F554D43"
+              },
+              "rank": 10
+            }
+          ],
+          "issues": [],
+          "error": null
+        }
+      }
+    }
+  ]
+}
