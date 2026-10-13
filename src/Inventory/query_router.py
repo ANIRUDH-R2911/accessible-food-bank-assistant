@@ -54,7 +54,9 @@ class QueryRouter:
         "free",
         "free from",
         "avoid",
-        "exclude"
+        "exclude",
+        "safe for",
+        "allergic to"
     }
     
     ALLERGEN_NORMALIZATION = {

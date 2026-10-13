@@ -29,27 +29,33 @@ class ConstraintFilter:
         return filtered_results
 
     def filter_allergens(self, results, excluded_allergens):
-        filtered = []
         normalized_excluded = {
-            ALLERGEN_NORMALIZATION.get(allergen.lower().strip(), allergen.lower().strip())
+            ALLERGEN_NORMALIZATION.get(str(allergen).lower().strip(), str(allergen).lower().strip())
             for allergen in excluded_allergens
             }
+        filtered = []
         for item in results:
-            item_allergens = item.get("contains_allergens")
-            if item_allergens is None:
-                item_allergens = item.get("allergens", [])
+            if ("contains_allergens" not in item and "allergens" not in item):
+                continue
+            contains_allergens = item.get("contains_allergens")
+            if contains_allergens is None:
+                contains_allergens = item.get("allergens")
 
-            normalized_excluded = [
-                ALLERGEN_NORMALIZATION.get(allergen.lower(), allergen.lower())
-                for allergen in excluded_allergens
-            ]
-            contains_excluded = any(
-                allergen in item_allergens
-                for allergen in normalized_excluded
-            )
+            may_contain = item.get("may_contain")
+            if isinstance(contains_allergens, str):
+                contains_allergens = [contains_allergens]
+            if isinstance(may_contain, str):
+                may_contain = [may_contain]
 
-            if not contains_excluded:
-                filtered.append(item)
+            contains_allergens = contains_allergens or []
+            may_contain = may_contain or []
+            item_allergens = set()
+            for allergen in list(contains_allergens) + list(may_contain):
+                normalized = ALLERGEN_NORMALIZATION.get(str(allergen).lower().strip(), str(allergen).lower().strip())
+                item_allergens.add(normalized)
+            if normalized_excluded.intersection(item_allergens):
+                continue
+            filtered.append(item)
 
         return filtered
     
