@@ -1,0 +1,384 @@
+{
+  "benchmark": "production_retrieval_quality",
+  "generated_at_utc": "2026-10-14T15:09:26.100520+00:00",
+  "configuration": {
+    "retriever": "ProductionHybridRetriever",
+    "top_k": 5,
+    "retrieval_k": 20,
+    "relevance_threshold": 2,
+    "only_completed_queries": true,
+    "judgments_path": "data\\results\\retrieval_relevance_judgments.json"
+  },
+  "metric_definitions": {
+    "precision": "Precision@5: fraction of the top-5 ranking graded at least 2.",
+    "recall": "Recall@5: retrieved judged-relevant items divided by all judged-relevant candidates for that query. Judgments are not assumed to cover the full inventory.",
+    "mrr": "MRR@5: reciprocal rank of the first result graded at least 2.",
+    "ndcg": "nDCG@5: graded ranking quality using the existing metric implementation and gain 2**grade - 1."
+  },
+  "aggregate_metrics": {
+    "precision@5": 0.72,
+    "recall@5": 0.3396,
+    "mrr@5": 0.8833,
+    "ndcg@5": 0.7695
+  },
+  "reliability": {
+    "total_queries_selected": 10,
+    "queries_evaluated": 10,
+    "queries_with_metrics": 10,
+    "query_errors": 0,
+    "empty_result_queries": 0,
+    "queries_with_duplicate_results": 0,
+    "total_duplicate_ids": 0,
+    "results_missing_inventory_data": 0,
+    "total_unjudged_retrieved_results": 0,
+    "skipped_queries": 0,
+    "latency_ms": {
+      "mean": 573.147,
+      "median": 366.564,
+      "max": 2640.41
+    }
+  },
+  "skipped_queries": [],
+  "query_results": [
+    {
+      "query": "foods containing soy",
+      "review_status": "completed",
+      "judged_candidate_count": 17,
+      "relevant_candidate_count": 15,
+      "top_k": 5,
+      "retrieval_k": 20,
+      "status": "success",
+      "latency_ms": 2640.41,
+      "retrieved_ids": [
+        "FBA-D92E4239",
+        "FBA-899FCD38",
+        "FBA-45E5862F",
+        "FBA-AAF7C579",
+        "FBA-0EA01950"
+      ],
+      "retrieved_grades": [
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "unjudged_result_count": 0,
+      "missing_inventory_data_count": 0,
+      "duplicate_ids": [],
+      "metrics": {
+        "precision@5": 1.0,
+        "recall@5": 0.3333333333333333,
+        "mrr@5": 1.0,
+        "ndcg@5": 1.0
+      },
+      "error": null
+    },
+    {
+      "query": "high protein foods",
+      "review_status": "completed",
+      "judged_candidate_count": 19,
+      "relevant_candidate_count": 4,
+      "top_k": 5,
+      "retrieval_k": 20,
+      "status": "success",
+      "latency_ms": 337.744,
+      "retrieved_ids": [
+        "FBA-D92E4239",
+        "FBA-0F18E068",
+        "FBA-0EA01950",
+        "FBA-95E4F389",
+        "FBA-BCB8DC68"
+      ],
+      "retrieved_grades": [
+        0,
+        2,
+        0,
+        0,
+        0
+      ],
+      "unjudged_result_count": 0,
+      "missing_inventory_data_count": 0,
+      "duplicate_ids": [],
+      "metrics": {
+        "precision@5": 0.2,
+        "recall@5": 0.25,
+        "mrr@5": 0.5,
+        "ndcg@5": 0.23449779936240625
+      },
+      "error": null
+    },
+    {
+      "query": "foods with peanuts",
+      "review_status": "completed",
+      "judged_candidate_count": 19,
+      "relevant_candidate_count": 6,
+      "top_k": 5,
+      "retrieval_k": 20,
+      "status": "success",
+      "latency_ms": 359.328,
+      "retrieved_ids": [
+        "FBA-45E5862F",
+        "FBA-D92E4239",
+        "FBA-BDC0DC6A",
+        "FBA-9F76BEEB",
+        "FBA-ADBD6C25"
+      ],
+      "retrieved_grades": [
+        2,
+        2,
+        2,
+        0,
+        0
+      ],
+      "unjudged_result_count": 0,
+      "missing_inventory_data_count": 0,
+      "duplicate_ids": [],
+      "metrics": {
+        "precision@5": 0.6,
+        "recall@5": 0.5,
+        "mrr@5": 1.0,
+        "ndcg@5": 0.7227265726449517
+      },
+      "error": null
+    },
+    {
+      "query": "low calorie foods",
+      "review_status": "completed",
+      "judged_candidate_count": 20,
+      "relevant_candidate_count": 16,
+      "top_k": 5,
+      "retrieval_k": 20,
+      "status": "success",
+      "latency_ms": 424.114,
+      "retrieved_ids": [
+        "FBA-27C42EC2",
+        "FBA-BCB8DC68",
+        "FBA-97C8BF53",
+        "FBA-320CBD1F",
+        "FBA-D3C25256"
+      ],
+      "retrieved_grades": [
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "unjudged_result_count": 0,
+      "missing_inventory_data_count": 0,
+      "duplicate_ids": [],
+      "metrics": {
+        "precision@5": 1.0,
+        "recall@5": 0.3125,
+        "mrr@5": 1.0,
+        "ndcg@5": 1.0
+      },
+      "error": null
+    },
+    {
+      "query": "foods containing milk",
+      "review_status": "completed",
+      "judged_candidate_count": 17,
+      "relevant_candidate_count": 17,
+      "top_k": 5,
+      "retrieval_k": 20,
+      "status": "success",
+      "latency_ms": 397.519,
+      "retrieved_ids": [
+        "FBA-0F18E068",
+        "FBA-AAF7C579",
+        "FBA-D139608E",
+        "FBA-97C8BF53",
+        "FBA-A0577777"
+      ],
+      "retrieved_grades": [
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "unjudged_result_count": 0,
+      "missing_inventory_data_count": 0,
+      "duplicate_ids": [],
+      "metrics": {
+        "precision@5": 1.0,
+        "recall@5": 0.29411764705882354,
+        "mrr@5": 1.0,
+        "ndcg@5": 1.0
+      },
+      "error": null
+    },
+    {
+      "query": "foods with wheat",
+      "review_status": "completed",
+      "judged_candidate_count": 18,
+      "relevant_candidate_count": 14,
+      "top_k": 5,
+      "retrieval_k": 20,
+      "status": "success",
+      "latency_ms": 373.8,
+      "retrieved_ids": [
+        "FBA-95E4F389",
+        "FBA-BCB8DC68",
+        "FBA-0EA01950",
+        "FBA-899FCD38",
+        "FBA-A12CE334"
+      ],
+      "retrieved_grades": [
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "unjudged_result_count": 0,
+      "missing_inventory_data_count": 0,
+      "duplicate_ids": [],
+      "metrics": {
+        "precision@5": 1.0,
+        "recall@5": 0.35714285714285715,
+        "mrr@5": 1.0,
+        "ndcg@5": 1.0
+      },
+      "error": null
+    },
+    {
+      "query": "protein rich foods",
+      "review_status": "completed",
+      "judged_candidate_count": 20,
+      "relevant_candidate_count": 3,
+      "top_k": 5,
+      "retrieval_k": 20,
+      "status": "success",
+      "latency_ms": 390.598,
+      "retrieved_ids": [
+        "FBA-0F18E068",
+        "FBA-95E4F389",
+        "FBA-BCB8DC68",
+        "FBA-8276C4F3",
+        "FBA-865771DF"
+      ],
+      "retrieved_grades": [
+        2,
+        0,
+        0,
+        1,
+        0
+      ],
+      "unjudged_result_count": 0,
+      "missing_inventory_data_count": 0,
+      "duplicate_ids": [],
+      "metrics": {
+        "precision@5": 0.2,
+        "recall@5": 0.3333333333333333,
+        "mrr@5": 1.0,
+        "ndcg@5": 0.47580096470244104
+      },
+      "error": null
+    },
+    {
+      "query": "foods containing sesame",
+      "review_status": "completed",
+      "judged_candidate_count": 16,
+      "relevant_candidate_count": 8,
+      "top_k": 5,
+      "retrieval_k": 20,
+      "status": "success",
+      "latency_ms": 320.981,
+      "retrieved_ids": [
+        "FBA-899FCD38",
+        "FBA-6E8C0225",
+        "FBA-FC93E110",
+        "FBA-95E4F389",
+        "FBA-BCB8DC68"
+      ],
+      "retrieved_grades": [
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "unjudged_result_count": 0,
+      "missing_inventory_data_count": 0,
+      "duplicate_ids": [],
+      "metrics": {
+        "precision@5": 1.0,
+        "recall@5": 0.625,
+        "mrr@5": 1.0,
+        "ndcg@5": 1.0
+      },
+      "error": null
+    },
+    {
+      "query": "foods safe for peanut allergy",
+      "review_status": "completed",
+      "judged_candidate_count": 18,
+      "relevant_candidate_count": 14,
+      "top_k": 5,
+      "retrieval_k": 20,
+      "status": "success",
+      "latency_ms": 244.932,
+      "retrieved_ids": [
+        "FBA-D92E4239",
+        "FBA-45E5862F",
+        "FBA-ADBD6C25",
+        "FBA-3F554D43",
+        "FBA-BCB8DC68"
+      ],
+      "retrieved_grades": [
+        0,
+        0,
+        2,
+        2,
+        2
+      ],
+      "unjudged_result_count": 0,
+      "missing_inventory_data_count": 0,
+      "duplicate_ids": [],
+      "metrics": {
+        "precision@5": 0.6,
+        "recall@5": 0.21428571428571427,
+        "mrr@5": 0.3333333333333333,
+        "ndcg@5": 0.4468535299918563
+      },
+      "error": null
+    },
+    {
+      "query": "lower calorie snacks",
+      "review_status": "completed",
+      "judged_candidate_count": 21,
+      "relevant_candidate_count": 17,
+      "top_k": 5,
+      "retrieval_k": 20,
+      "status": "success",
+      "latency_ms": 242.046,
+      "retrieved_ids": [
+        "FBA-27C42EC2",
+        "FBA-F6E21EDD",
+        "FBA-ADBD6C25",
+        "FBA-00979C42",
+        "FBA-DBC8A194"
+      ],
+      "retrieved_grades": [
+        2,
+        2,
+        2,
+        1,
+        1
+      ],
+      "unjudged_result_count": 0,
+      "missing_inventory_data_count": 0,
+      "duplicate_ids": [],
+      "metrics": {
+        "precision@5": 0.6,
+        "recall@5": 0.17647058823529413,
+        "mrr@5": 1.0,
+        "ndcg@5": 0.8151510484299677
+      },
+      "error": null
+    }
+  ]
+}
