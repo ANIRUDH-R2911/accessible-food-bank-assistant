@@ -1,4 +1,5 @@
-from src.rag.nutrient_config import (get_nutrient_threshold)
+import re
+from src.rag.nutrient_config import get_nutrient_threshold
 
 ALLERGEN_NORMALIZATION = {
     "peanut": "peanut",
@@ -17,6 +18,52 @@ ALLERGEN_NORMALIZATION = {
     "shellfish": "shellfish",
     "sesame": "sesame"
 }
+
+INGREDIENT_ALLERGEN_TERMS = {
+    "peanut": ("peanut", "peanuts", "groundnut", "groundnuts", "arachis"),
+    "milk": ("milk", "dairy", "whey", "casein", "lactose", "buttermilk", "cream", "cheese", "yogurt", "yoghurt"),
+    "egg": ("egg", "eggs", "albumen", "albumin"),
+    "tree nuts": ("almond", "almonds", "cashew", "cashews", "walnut", "walnuts", "pistachio", "pistachios", "hazelnut", "hazelnuts", "pecan", "pecans", "macadamia", "brazil nut", "pine nut"),
+    "soy": ("soy", "soya", "soybean", "soybeans", "tofu", "edamame"),
+    "wheat": ("wheat", "durum", "semolina", "spelt", "farro", "bulgur"),
+    "fish": ("fish", "anchovy", "anchovies", "salmon", "tuna", "cod"),
+    "shellfish": ("shellfish", "shrimp", "prawn", "crab", "lobster", "crayfish"),
+    "sesame": ("sesame", "tahini", "benne"),
+}
+
+def as_values(value):
+    if value is None:
+        return []
+    if isinstance(value, str):
+        return [value]
+    if isinstance(value, (list, tuple, set)):
+        return list(value)
+    return [value]
+
+
+def normalize_allergen(value):
+    normalized = str(value).lower().strip()
+    return ALLERGEN_NORMALIZATION.get(normalized, normalized)
+
+
+def ingredient_text(item):
+    ingredients = item.get("ingredients")
+    values = as_values(ingredients)
+    return " ".join(str(value) for value in values if value is not None).lower()
+
+
+def ingredient_mentions_excluded_allergen(item, excluded_allergens):
+    text = ingredient_text(item)
+    if not text:
+        return False
+
+    for allergen in excluded_allergens:
+        canonical = normalize_allergen(allergen)
+        terms = INGREDIENT_ALLERGEN_TERMS.get(canonical, (canonical,))
+        for term in terms:
+            if re.search(rf"(?<!\w){re.escape(term)}(?!\w)", text):
+                return True
+    return False
 class ConstraintFilter:
     def apply_constraints(self, results, constraints):
         filtered_results = results
@@ -30,7 +77,7 @@ class ConstraintFilter:
 
     def filter_allergens(self, results, excluded_allergens):
         normalized_excluded = {
-            ALLERGEN_NORMALIZATION.get(str(allergen).lower().strip(), str(allergen).lower().strip())
+            normalize_allergen(allergen)
             for allergen in excluded_allergens
             }
         filtered = []
@@ -42,18 +89,14 @@ class ConstraintFilter:
                 contains_allergens = item.get("allergens")
 
             may_contain = item.get("may_contain")
-            if isinstance(contains_allergens, str):
-                contains_allergens = [contains_allergens]
-            if isinstance(may_contain, str):
-                may_contain = [may_contain]
+            item_allergens = {
+                normalize_allergen(allergen)
+                for allergen in as_values(contains_allergens) + as_values(may_contain)
+            }
 
-            contains_allergens = contains_allergens or []
-            may_contain = may_contain or []
-            item_allergens = set()
-            for allergen in list(contains_allergens) + list(may_contain):
-                normalized = ALLERGEN_NORMALIZATION.get(str(allergen).lower().strip(), str(allergen).lower().strip())
-                item_allergens.add(normalized)
             if normalized_excluded.intersection(item_allergens):
+                continue
+            if ingredient_mentions_excluded_allergen(item, normalized_excluded):
                 continue
             filtered.append(item)
 
