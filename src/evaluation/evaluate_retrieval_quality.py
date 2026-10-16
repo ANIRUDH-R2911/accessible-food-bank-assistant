@@ -6,12 +6,12 @@ from pathlib import Path
 
 from src.rag.production_hybrid_retriever import ProductionHybridRetriever
 from src.evaluation.retrieval_metrics import (precision_at_k, recall_at_k, reciprocal_rank, ndcg_at_k)
-
+from src.Inventory.query_router import QueryRouter
 
 PROJECT_ROOT = Path(__file__).resolve().parents[2]
 
 JUDGMENTS_PATH = (PROJECT_ROOT / "data" / "results" / "retrieval_relevance_judgments.json")
-OUTPUT_PATH = (PROJECT_ROOT / "data" / "results" / "retrieval_quality_evaluation_report.json")
+OUTPUT_PATH = (PROJECT_ROOT / "data" / "results" / "retrieval_quality_evaluation_report_constraint_aware.json")
 
 TOP_K = 5
 RETRIEVAL_K = 20
@@ -97,16 +97,19 @@ def prepare_benchmark(data):
 
     return benchmark, skipped_queries
 
-def evaluate_query(retriever, benchmark_record):
+def evaluate_query(retriever, benchmark_record, router=None):
     query = benchmark_record["query"]
     judgments = benchmark_record["judgments"]
+    router = router or QueryRouter()
+    route_info = router.route(query)
+    constraints = route_info.get("constraints", {})
     record = {
         "query": query,
+        "route_type": route_info.get("query_type"),
+        "constraints_applied": constraints,
         "review_status": benchmark_record["review_status"],
         "judged_candidate_count": benchmark_record["judged_candidate_count"],
-        "relevant_candidate_count": benchmark_record[
-            "relevant_candidate_count"
-        ],
+        "relevant_candidate_count": benchmark_record["relevant_candidate_count"],
         "top_k": TOP_K,
         "retrieval_k": RETRIEVAL_K,
         "status": "success",
@@ -122,7 +125,7 @@ def evaluate_query(retriever, benchmark_record):
 
     start = time.perf_counter()
     try:
-        results = retriever.search(query=query, top_k=TOP_K, retrieval_k=RETRIEVAL_K)
+        results = retriever.search(query=query, constraints=constraints, top_k=TOP_K, retrieval_k=RETRIEVAL_K)
         record["latency_ms"] = round((time.perf_counter() - start) * 1000, 3)
         if results is None:
             raise ValueError("Retriever returned None instead of a result list.")
@@ -228,13 +231,13 @@ def build_report(benchmark, skipped_queries, query_results):
         "generated_at_utc": datetime.now(timezone.utc).isoformat(),
         "configuration": {
             "retriever": "ProductionHybridRetriever",
+            "query_router": "QueryRouter",
+            "constraint_aware_evaluation": True,
             "top_k": TOP_K,
             "retrieval_k": RETRIEVAL_K,
             "relevance_threshold": RELEVANCE_THRESHOLD,
             "only_completed_queries": ONLY_COMPLETED_QUERIES,
-            "judgments_path": str(
-                JUDGMENTS_PATH.relative_to(PROJECT_ROOT)
-            ),
+            "judgments_path": str(JUDGMENTS_PATH.relative_to(PROJECT_ROOT)),
         },
         "metric_definitions": {
             "precision": (
