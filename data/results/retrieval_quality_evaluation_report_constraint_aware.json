@@ -1,6 +1,6 @@
 {
   "benchmark": "production_retrieval_quality",
-  "generated_at_utc": "2026-10-16T17:11:02.010703+00:00",
+  "generated_at_utc": "2026-10-19T18:12:15.444769+00:00",
   "configuration": {
     "retriever": "ProductionHybridRetriever",
     "query_router": "QueryRouter",
@@ -18,10 +18,10 @@
     "ndcg": "nDCG@5: graded ranking quality using the existing metric implementation and gain 2**grade - 1."
   },
   "aggregate_metrics": {
-    "precision@5": 0.82,
-    "recall@5": 0.4289,
+    "precision@5": 0.92,
+    "recall@5": 0.4956,
     "mrr@5": 1.0,
-    "ndcg@5": 0.8966
+    "ndcg@5": 0.9538
   },
   "reliability": {
     "total_queries_selected": 10,
@@ -32,12 +32,12 @@
     "queries_with_duplicate_results": 0,
     "total_duplicate_ids": 0,
     "results_missing_inventory_data": 0,
-    "total_unjudged_retrieved_results": 1,
+    "total_unjudged_retrieved_results": 0,
     "skipped_queries": 0,
     "latency_ms": {
-      "mean": 629.269,
-      "median": 392.759,
-      "max": 2708.568
+      "mean": 264.904,
+      "median": 211.041,
+      "max": 459.314
     }
   },
   "skipped_queries": [],
@@ -52,7 +52,7 @@
       "top_k": 5,
       "retrieval_k": 20,
       "status": "success",
-      "latency_ms": 2708.568,
+      "latency_ms": 459.314,
       "retrieved_ids": [
         "FBA-D92E4239",
         "FBA-899FCD38",
@@ -91,12 +91,12 @@
         ]
       },
       "review_status": "completed",
-      "judged_candidate_count": 19,
-      "relevant_candidate_count": 4,
+      "judged_candidate_count": 20,
+      "relevant_candidate_count": 5,
       "top_k": 5,
       "retrieval_k": 20,
       "status": "success",
-      "latency_ms": 383.767,
+      "latency_ms": 378.924,
       "retrieved_ids": [
         "FBA-0F18E068",
         "FBA-D139608E",
@@ -109,16 +109,16 @@
         2,
         2,
         2,
-        null
+        2
       ],
-      "unjudged_result_count": 1,
+      "unjudged_result_count": 0,
       "missing_inventory_data_count": 0,
       "duplicate_ids": [],
       "metrics": {
-        "precision@5": 0.8,
+        "precision@5": 1.0,
         "recall@5": 1.0,
         "mrr@5": 1.0,
-        "ndcg@5": 0.9520727775370875
+        "ndcg@5": 1.0
       },
       "error": null
     },
@@ -132,7 +132,7 @@
       "top_k": 5,
       "retrieval_k": 20,
       "status": "success",
-      "latency_ms": 388.957,
+      "latency_ms": 341.914,
       "retrieved_ids": [
         "FBA-45E5862F",
         "FBA-D92E4239",
@@ -176,7 +176,7 @@
       "top_k": 5,
       "retrieval_k": 20,
       "status": "success",
-      "latency_ms": 393.836,
+      "latency_ms": 304.945,
       "retrieved_ids": [
         "FBA-27C42EC2",
         "FBA-BCB8DC68",
@@ -212,7 +212,7 @@
       "top_k": 5,
       "retrieval_k": 20,
       "status": "success",
-      "latency_ms": 397.468,
+      "latency_ms": 205.214,
       "retrieved_ids": [
         "FBA-0F18E068",
         "FBA-AAF7C579",
@@ -248,7 +248,7 @@
       "top_k": 5,
       "retrieval_k": 20,
       "status": "success",
-      "latency_ms": 392.121,
+      "latency_ms": 216.867,
       "retrieved_ids": [
         "FBA-95E4F389",
         "FBA-BCB8DC68",
@@ -276,37 +276,45 @@
     },
     {
       "query": "protein rich foods",
-      "route_type": "nutrition",
-      "constraints_applied": {},
+      "route_type": "hybrid",
+      "constraints_applied": {
+        "allergen_exclude": [],
+        "nutrient_constraints": [
+          {
+            "nutrient": "protein",
+            "level": "high"
+          }
+        ]
+      },
       "review_status": "completed",
-      "judged_candidate_count": 20,
-      "relevant_candidate_count": 3,
+      "judged_candidate_count": 22,
+      "relevant_candidate_count": 5,
       "top_k": 5,
       "retrieval_k": 20,
       "status": "success",
-      "latency_ms": 386.769,
+      "latency_ms": 183.625,
       "retrieved_ids": [
         "FBA-0F18E068",
-        "FBA-95E4F389",
-        "FBA-BCB8DC68",
-        "FBA-8276C4F3",
-        "FBA-865771DF"
+        "FBA-8F56616E",
+        "FBA-D139608E",
+        "FBA-899FCD38",
+        "FBA-FC93E110"
       ],
       "retrieved_grades": [
         2,
-        0,
-        0,
-        1,
-        0
+        2,
+        2,
+        2,
+        2
       ],
       "unjudged_result_count": 0,
       "missing_inventory_data_count": 0,
       "duplicate_ids": [],
       "metrics": {
-        "precision@5": 0.2,
-        "recall@5": 0.3333333333333333,
+        "precision@5": 1.0,
+        "recall@5": 1.0,
         "mrr@5": 1.0,
-        "ndcg@5": 0.47580096470244104
+        "ndcg@5": 1.0
       },
       "error": null
     },
@@ -320,7 +328,7 @@
       "top_k": 5,
       "retrieval_k": 20,
       "status": "success",
-      "latency_ms": 393.08,
+      "latency_ms": 182.6,
       "retrieved_ids": [
         "FBA-899FCD38",
         "FBA-6E8C0225",
@@ -361,7 +369,7 @@
       "top_k": 5,
       "retrieval_k": 20,
       "status": "success",
-      "latency_ms": 455.682,
+      "latency_ms": 189.63,
       "retrieved_ids": [
         "FBA-ADBD6C25",
         "FBA-3F554D43",
@@ -397,7 +405,7 @@
       "top_k": 5,
       "retrieval_k": 20,
       "status": "success",
-      "latency_ms": 392.437,
+      "latency_ms": 186.005,
       "retrieved_ids": [
         "FBA-27C42EC2",
         "FBA-F6E21EDD",
