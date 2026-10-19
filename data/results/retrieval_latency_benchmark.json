@@ -1,0 +1,233 @@
+{
+  "benchmark": "retrieval_latency_day45",
+  "generated_at_utc": "2026-10-19T18:00:26.616952+00:00",
+  "configuration": {
+    "retriever": "ProductionHybridRetriever",
+    "top_k": 5,
+    "retrieval_k": 20,
+    "steady_state_repetitions_per_query": 5,
+    "completed_query_count": 10
+  },
+  "initial_call": {
+    "query": "foods containing soy",
+    "latency_ms": 3142.113,
+    "result_count": 5
+  },
+  "steady_state_overall_ms": {
+    "sample_count": 50,
+    "mean": 363.889,
+    "median": 354.071,
+    "max": 544.69
+  },
+  "query_results": [
+    {
+      "query": "foods containing soy",
+      "constraints": {},
+      "warmup_ms": 363.904,
+      "steady_state_samples_ms": [
+        347.749,
+        380.281,
+        346.584,
+        346.416,
+        373.551
+      ],
+      "repetitions_completed": 5,
+      "mean_ms": 358.916,
+      "median_ms": 347.749,
+      "max_ms": 380.281,
+      "result_count": 5,
+      "error": null
+    },
+    {
+      "query": "high protein foods",
+      "constraints": {
+        "allergen_exclude": [],
+        "nutrient_constraints": [
+          {
+            "nutrient": "protein",
+            "level": "high"
+          }
+        ]
+      },
+      "warmup_ms": 361.532,
+      "steady_state_samples_ms": [
+        377.298,
+        354.709,
+        352.783,
+        332.275,
+        367.332
+      ],
+      "repetitions_completed": 5,
+      "mean_ms": 356.879,
+      "median_ms": 354.709,
+      "max_ms": 377.298,
+      "result_count": 5,
+      "error": null
+    },
+    {
+      "query": "foods with peanuts",
+      "constraints": {},
+      "warmup_ms": 386.805,
+      "steady_state_samples_ms": [
+        544.69,
+        386.085,
+        340.521,
+        332.302,
+        352.629
+      ],
+      "repetitions_completed": 5,
+      "mean_ms": 391.245,
+      "median_ms": 352.629,
+      "max_ms": 544.69,
+      "result_count": 5,
+      "error": null
+    },
+    {
+      "query": "low calorie foods",
+      "constraints": {
+        "allergen_exclude": [],
+        "nutrient_constraints": [
+          {
+            "nutrient": "calories",
+            "level": "low"
+          }
+        ]
+      },
+      "warmup_ms": 360.902,
+      "steady_state_samples_ms": [
+        335.969,
+        338.227,
+        348.59,
+        335.078,
+        356.301
+      ],
+      "repetitions_completed": 5,
+      "mean_ms": 342.833,
+      "median_ms": 338.227,
+      "max_ms": 356.301,
+      "result_count": 5,
+      "error": null
+    },
+    {
+      "query": "foods containing milk",
+      "constraints": {},
+      "warmup_ms": 343.897,
+      "steady_state_samples_ms": [
+        338.653,
+        359.367,
+        355.54,
+        340.128,
+        334.985
+      ],
+      "repetitions_completed": 5,
+      "mean_ms": 345.735,
+      "median_ms": 340.128,
+      "max_ms": 359.367,
+      "result_count": 5,
+      "error": null
+    },
+    {
+      "query": "foods with wheat",
+      "constraints": {},
+      "warmup_ms": 364.251,
+      "steady_state_samples_ms": [
+        344.77,
+        335.748,
+        348.892,
+        404.256,
+        353.583
+      ],
+      "repetitions_completed": 5,
+      "mean_ms": 357.45,
+      "median_ms": 348.892,
+      "max_ms": 404.256,
+      "result_count": 5,
+      "error": null
+    },
+    {
+      "query": "protein rich foods",
+      "constraints": {
+        "allergen_exclude": [],
+        "nutrient_constraints": [
+          {
+            "nutrient": "protein",
+            "level": "high"
+          }
+        ]
+      },
+      "warmup_ms": 350.417,
+      "steady_state_samples_ms": [
+        337.614,
+        356.993,
+        356.831,
+        336.278,
+        339.104
+      ],
+      "repetitions_completed": 5,
+      "mean_ms": 345.364,
+      "median_ms": 339.104,
+      "max_ms": 356.993,
+      "result_count": 5,
+      "error": null
+    },
+    {
+      "query": "foods containing sesame",
+      "constraints": {},
+      "warmup_ms": 342.933,
+      "steady_state_samples_ms": [
+        356.373,
+        340.869,
+        333.037,
+        344.231,
+        354.559
+      ],
+      "repetitions_completed": 5,
+      "mean_ms": 345.814,
+      "median_ms": 344.231,
+      "max_ms": 356.373,
+      "result_count": 5,
+      "error": null
+    },
+    {
+      "query": "foods safe for peanut allergy",
+      "constraints": {
+        "allergen_exclude": [
+          "peanuts"
+        ],
+        "nutrient_constraints": []
+      },
+      "warmup_ms": 336.858,
+      "steady_state_samples_ms": [
+        402.292,
+        411.278,
+        432.589,
+        376.703,
+        401.593
+      ],
+      "repetitions_completed": 5,
+      "mean_ms": 404.891,
+      "median_ms": 402.292,
+      "max_ms": 432.589,
+      "result_count": 5,
+      "error": null
+    },
+    {
+      "query": "lower calorie snacks",
+      "constraints": {},
+      "warmup_ms": 336.776,
+      "steady_state_samples_ms": [
+        412.473,
+        406.661,
+        377.398,
+        391.035,
+        361.244
+      ],
+      "repetitions_completed": 5,
+      "mean_ms": 389.762,
+      "median_ms": 391.035,
+      "max_ms": 412.473,
+      "result_count": 5,
+      "error": null
+    }
+  ]
+}
