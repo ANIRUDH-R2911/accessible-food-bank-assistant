@@ -231,21 +231,31 @@ class QueryRouter:
     def extract_nutrient_constraints(self, query: str):
         query = query.lower()
         constraints = []
-        levels = ["high", "low"]
         for canonical_name, config in NUTRIENT_CONFIG.items():
             aliases = config.get("aliases", [])
             candidate_terms = [canonical_name] + aliases
             for term in candidate_terms:
-                for level in levels:
-                    pattern = f"{level} {term}"
-                    if pattern in query:
-                        constraint = {
+                phrase_patters={
+                    "high": [
+                        f"high {term}",
+                        f"{term} rich",
+                        f"{term}-rich",
+                        f"rich in {term}",
+                    ],
+                    "low": [
+                        f"low {term}",
+                    ],
+                }
+                for level, patterns in phrase_patters.items():
+                    matched = any (re.search(rf"(?<!\w){re.escape(pattern)}(?!\w)",query) for pattern in patterns)
+                    if matched:
+                            constraint = {
                             "nutrient": canonical_name,
-                            "level": level
-                            }
-                        if constraint not in constraints:
-                            constraints.append(constraint)
-                        break
+                            "level": level,
+                        }
+                            if constraint not in constraints:
+                                constraints.append(constraint)
+                                break
         return constraints
 
 
