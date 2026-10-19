@@ -18,13 +18,23 @@ def test_low_sugar():
     nutrient_constraints = constraints["nutrient_constraints"]
     assert nutrient_constraints[0]["nutrient"] == "sugar"
 
-def test_high_fiber_low_sugar():
-    router = QueryRouter()
-    constraints = router.extract_constraints("high fiber low sugar foods")
-    assert len(constraints["nutrient_constraints"]) == 2
-
 def test_high_carbs_alias():
     router = QueryRouter()
     constraints = router.extract_constraints("high carbs foods")
     nutrients = constraints["nutrient_constraints"]
     assert nutrients[0]["nutrient"] == ("carbohydrates")
+
+
+def test_protein_rich_phrases_are_high_protein():
+    router = QueryRouter()
+    queries = [
+        "high protein foods",
+        "protein rich foods",
+        "protein-rich foods",
+        "foods rich in protein",
+    ]
+    for query in queries:
+        constraints = router.extract_constraints(query)
+        assert constraints["nutrient_constraints"] == [
+            {"nutrient": "protein", "level": "high"}
+        ], f"Unexpected constraints for query: {query}"

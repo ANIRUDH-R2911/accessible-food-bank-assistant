@@ -7,5 +7,5 @@ sys.path.append(str(project_root))
 from src.rag.semantic_retriever import SemanticRetriever
 
 retriever = SemanticRetriever()
-results = retriever.search(query="foods containing soy", top_k=5)
+results = retriever.search(query="high protein foods", top_k=5)
 print(results)
