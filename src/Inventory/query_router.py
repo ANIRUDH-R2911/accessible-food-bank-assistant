@@ -244,6 +244,7 @@ class QueryRouter:
                     ],
                     "low": [
                         f"low {term}",
+                        f"lower {term}",
                     ],
                 }
                 for level, patterns in phrase_patters.items():
