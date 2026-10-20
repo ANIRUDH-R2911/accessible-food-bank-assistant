@@ -1,6 +1,6 @@
 {
   "benchmark": "production_retrieval_quality",
-  "generated_at_utc": "2026-10-19T18:12:15.444769+00:00",
+  "generated_at_utc": "2026-10-20T17:42:15.252468+00:00",
   "configuration": {
     "retriever": "ProductionHybridRetriever",
     "query_router": "QueryRouter",
@@ -18,10 +18,10 @@
     "ndcg": "nDCG@5: graded ranking quality using the existing metric implementation and gain 2**grade - 1."
   },
   "aggregate_metrics": {
-    "precision@5": 0.92,
-    "recall@5": 0.4956,
+    "precision@5": 0.96,
+    "recall@5": 0.5073,
     "mrr@5": 1.0,
-    "ndcg@5": 0.9538
+    "ndcg@5": 0.9723
   },
   "reliability": {
     "total_queries_selected": 10,
@@ -35,9 +35,9 @@
     "total_unjudged_retrieved_results": 0,
     "skipped_queries": 0,
     "latency_ms": {
-      "mean": 264.904,
-      "median": 211.041,
-      "max": 459.314
+      "mean": 573.625,
+      "median": 296.985,
+      "max": 3099.458
     }
   },
   "skipped_queries": [],
@@ -52,7 +52,7 @@
       "top_k": 5,
       "retrieval_k": 20,
       "status": "success",
-      "latency_ms": 459.314,
+      "latency_ms": 3099.458,
       "retrieved_ids": [
         "FBA-D92E4239",
         "FBA-899FCD38",
@@ -96,7 +96,7 @@
       "top_k": 5,
       "retrieval_k": 20,
       "status": "success",
-      "latency_ms": 378.924,
+      "latency_ms": 353.426,
       "retrieved_ids": [
         "FBA-0F18E068",
         "FBA-D139608E",
@@ -132,7 +132,7 @@
       "top_k": 5,
       "retrieval_k": 20,
       "status": "success",
-      "latency_ms": 341.914,
+      "latency_ms": 300.806,
       "retrieved_ids": [
         "FBA-45E5862F",
         "FBA-D92E4239",
@@ -176,7 +176,7 @@
       "top_k": 5,
       "retrieval_k": 20,
       "status": "success",
-      "latency_ms": 304.945,
+      "latency_ms": 294.839,
       "retrieved_ids": [
         "FBA-27C42EC2",
         "FBA-BCB8DC68",
@@ -212,7 +212,7 @@
       "top_k": 5,
       "retrieval_k": 20,
       "status": "success",
-      "latency_ms": 205.214,
+      "latency_ms": 299.131,
       "retrieved_ids": [
         "FBA-0F18E068",
         "FBA-AAF7C579",
@@ -248,7 +248,7 @@
       "top_k": 5,
       "retrieval_k": 20,
       "status": "success",
-      "latency_ms": 216.867,
+      "latency_ms": 282.716,
       "retrieved_ids": [
         "FBA-95E4F389",
         "FBA-BCB8DC68",
@@ -292,7 +292,7 @@
       "top_k": 5,
       "retrieval_k": 20,
       "status": "success",
-      "latency_ms": 183.625,
+      "latency_ms": 270.215,
       "retrieved_ids": [
         "FBA-0F18E068",
         "FBA-8F56616E",
@@ -328,7 +328,7 @@
       "top_k": 5,
       "retrieval_k": 20,
       "status": "success",
-      "latency_ms": 182.6,
+      "latency_ms": 247.01,
       "retrieved_ids": [
         "FBA-899FCD38",
         "FBA-6E8C0225",
@@ -369,7 +369,7 @@
       "top_k": 5,
       "retrieval_k": 20,
       "status": "success",
-      "latency_ms": 189.63,
+      "latency_ms": 279.704,
       "retrieved_ids": [
         "FBA-ADBD6C25",
         "FBA-3F554D43",
@@ -397,37 +397,45 @@
     },
     {
       "query": "lower calorie snacks",
-      "route_type": "nutrition",
-      "constraints_applied": {},
+      "route_type": "hybrid",
+      "constraints_applied": {
+        "allergen_exclude": [],
+        "nutrient_constraints": [
+          {
+            "nutrient": "calories",
+            "level": "low"
+          }
+        ]
+      },
       "review_status": "completed",
       "judged_candidate_count": 21,
       "relevant_candidate_count": 17,
       "top_k": 5,
       "retrieval_k": 20,
       "status": "success",
-      "latency_ms": 186.005,
+      "latency_ms": 308.941,
       "retrieved_ids": [
         "FBA-27C42EC2",
         "FBA-F6E21EDD",
         "FBA-ADBD6C25",
-        "FBA-00979C42",
-        "FBA-DBC8A194"
+        "FBA-D3C25256",
+        "FBA-9F76BEEB"
       ],
       "retrieved_grades": [
         2,
         2,
         2,
-        1,
-        1
+        2,
+        2
       ],
       "unjudged_result_count": 0,
       "missing_inventory_data_count": 0,
       "duplicate_ids": [],
       "metrics": {
-        "precision@5": 0.6,
-        "recall@5": 0.17647058823529413,
+        "precision@5": 1.0,
+        "recall@5": 0.29411764705882354,
         "mrr@5": 1.0,
-        "ndcg@5": 0.8151510484299677
+        "ndcg@5": 1.0
       },
       "error": null
     }
