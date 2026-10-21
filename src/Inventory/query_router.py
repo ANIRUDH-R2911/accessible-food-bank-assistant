@@ -88,23 +88,30 @@ class QueryRouter:
         
         has_constraint = any(term in query for term in self.CONSTRAINT_TERMS)
         has_allergen = any(allergen in query for allergen in self.ALLERGENS)
-        has_semantic = any(term in query for term in self.SEMANTIC_TERMS)
         has_nutrient = False
         for canonical_name, config in NUTRIENT_CONFIG.items():
             aliases = config.get("aliases", [])
             candidate_terms = [canonical_name] + aliases
             if any(
-                term in query
-                for term in candidate_terms):
+                re.search(rf"(?<!\w){re.escape(term)}(?!\w)", query)
+                for term in candidate_terms
+                ):
                 has_nutrient = True
                 break
 
-        if (has_constraint and (has_allergen or has_semantic or has_nutrient)):
+        if (has_constraint and (has_allergen or has_nutrient)):
             return "hybrid"
         if has_nutrient:
             return "nutrition"
         if has_allergen:
             return "allergen"
+        
+        ingredient_phrases = ("containing ", "contains ", "with ")
+        if any(phrase in query for phrase in ingredient_phrases):
+            return "ingredient"
+        has_semantic = any(term in query for term in self.SEMANTIC_TERMS)
+        if has_constraint and has_semantic:
+            return "hybrid"
         if has_semantic:
             return "semantic"
         return "ingredient"
