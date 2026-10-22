@@ -4,7 +4,7 @@ from pathlib import Path
 project_root = Path(__file__).resolve().parent.parent
 sys.path.append(str(project_root))
 
-
+import json
 from types import SimpleNamespace
 from src.rag.answer_generator import AnswerGenerator
 
@@ -91,3 +91,72 @@ def test_empty_model_response_raises_error():
         assert False, "Expected ValueError for empty model response"
     except ValueError as exc:
         assert "empty response" in str(exc)
+
+def test_build_evidence_accepts_direct_inventory_record():
+    generator = AnswerGenerator(client=object())
+    record = {
+        "item_id": "FBA-001",
+        "ingredients": ["oats", "sugar"],
+        "contains_allergens": ["wheat"],
+        "may_contain": ["peanuts"],
+        "nutrition": {"protein": 12},
+    }
+
+    evidence = json.loads(generator.build_evidence([record]))
+    assert len(evidence) == 1
+    assert evidence[0]["item_id"] == "FBA-001"
+    assert evidence[0]["ingredients"] == ["oats", "sugar"]
+    assert evidence[0]["contains_allergens"] == ["wheat"]
+    assert evidence[0]["may_contain"] == ["peanuts"]
+    assert evidence[0]["nutrition"] == {"protein": 12}
+
+
+def test_build_evidence_unwraps_hybrid_result():
+    generator = AnswerGenerator(client=object())
+    inventory_record = {
+        "item_id": "FBA-002",
+        "ingredients": ["beans"],
+        "contains_allergens": [],
+        "may_contain": [],
+        "nutrition": {"protein": 20},
+    }
+    hybrid_result = {
+        "id": "FBA-002",
+        "rrf_score": 0.04,
+        "document": "Beans protein 20",
+        "inventory_data": inventory_record,
+    }
+
+    evidence = json.loads(generator.build_evidence([hybrid_result]))
+    assert len(evidence) == 1
+    assert evidence[0]["item_id"] == "FBA-002"
+    assert evidence[0]["nutrition"]["protein"] == 20
+    assert evidence[0]["retrieval_context"]["rrf_score"] == 0.04
+
+
+def test_build_evidence_skips_unenriched_retrieval_wrapper():
+    generator = AnswerGenerator(client=object())
+    semantic_result = {
+        "item_id": "FBA-003",
+        "document": "Possibly high protein food",
+        "distance": 0.2,
+        "metadata": {"item_id": "FBA-003"},
+    }
+    evidence = json.loads(generator.build_evidence([semantic_result]))
+    assert evidence == []
+
+
+def test_build_evidence_preserves_unknown_fields():
+    generator = AnswerGenerator(client=object())
+    record = {
+        "item_id": "FBA-004",
+        "ingredients": None,
+        "contains_allergens": None,
+        "may_contain": None,
+        "nutrition": {"protein": None},
+    }
+    evidence = json.loads(generator.build_evidence([record]))
+    assert evidence[0]["ingredients"] is None
+    assert evidence[0]["contains_allergens"] is None
+    assert evidence[0]["may_contain"] is None
+    assert evidence[0]["nutrition"]["protein"] is None

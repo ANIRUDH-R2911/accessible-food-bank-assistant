@@ -44,7 +44,7 @@ class SearchService:
 
         if not query.strip():
             raise ValueError("Query cannot be empty.")
-        
+
     def _execute_retrieval(self, query: str, query_type: str, filters: dict, constraints: dict = None):
         if query_type == "ingredient":
             return self.retriever.search_by_ingredient(filters["ingredient"])
@@ -63,7 +63,8 @@ class SearchService:
                 nutrition=filters.get("nutrition")
                 )
         elif query_type == "semantic":
-            return (self.semantic_retriever.search(query= query, top_k=5))
+            results = self.semantic_retriever.search(query= query, top_k=5)
+            return self._enrich_semantic_results(results)
         elif query_type == "hybrid":
             return self.hybrid_retriever.search(query=query, constraints=constraints, top_k=5)
 
@@ -71,3 +72,31 @@ class SearchService:
 
     def _log_search(self, query: str, route_type: str, result_count: int) -> None:
         logging.info(f"Query='{query}' | " f"Route='{route_type}' | " f"Results={result_count}")
+
+
+    def _enrich_semantic_results(self, results):
+        enriched_results = []
+        for result in results:
+            if not isinstance(result, dict):
+                continue
+
+            item_id = (
+                result.get("item_id")
+                or result.get("id")
+                or (result.get("metadata") or {}).get("item_id")
+            )
+            if not item_id:
+                continue
+
+            inventory_data = result.get("inventory_data")
+            if inventory_data is None:
+                inventory_data = self.retriever.get_item_by_id(item_id)
+            if not isinstance(inventory_data, dict):
+                continue
+            if inventory_data.get("item_id") != item_id:
+                continue
+            enriched_result = result.copy()
+            enriched_result["item_id"] = item_id
+            enriched_result["inventory_data"] = inventory_data
+            enriched_results.append(enriched_result)
+        return enriched_results

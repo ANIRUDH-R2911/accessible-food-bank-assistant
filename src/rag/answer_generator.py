@@ -29,6 +29,9 @@ class AnswerGenerator:
             )
 
         evidence = self.build_evidence(records)
+        if not json.loads(evidence):
+            raise ValueError("No authoritative inventory records available for answer generation.")
+
         prompt = self.build_prompt(question, evidence)
         response = self.client.models.generate_content(model=self.model_name, contents=prompt)
         answer = getattr(response, "text", None)
@@ -38,16 +41,39 @@ class AnswerGenerator:
 
     def build_evidence(self, records):
         evidence = []
-        for record in records:
-            if not isinstance(record, dict):
+        for result in records:
+            if not isinstance(result, dict):
                 continue
-            evidence.append({
-                "item_id": record.get("item_id") or "UNKNOWN_ITEM",
-                "ingredients": record.get("ingredients"),
-                "contains_allergens": record.get("contains_allergens"),
-                "may_contain": record.get("may_contain"),
-                "nutrition": record.get("nutrition"),
-            })
+            inventory_record = result.get("inventory_data")
+            inventory_fields = {
+                "ingredients",
+                "contains_allergens",
+                "may_contain",
+                "nutrition",
+            }
+            if inventory_record is None and (inventory_fields.intersection(result)):
+                inventory_record = result
+            if not isinstance(inventory_record, dict):
+                continue
+            item_id = inventory_record.get("item_id")
+            if not item_id:
+                continue
+            entry = {
+                "item_id": item_id,
+                "ingredients": inventory_record.get("ingredients"),
+                "contains_allergens": inventory_record.get(
+                    "contains_allergens"
+                ),
+                "may_contain": inventory_record.get("may_contain"),
+                "nutrition": inventory_record.get("nutrition"),
+            }
+            retrieval_context = {}
+            for key in ("document", "score", "distance", "rrf_score", "retriever"):
+                if key in result:
+                    retrieval_context[key] = result[key]
+            if retrieval_context:
+                entry["retrieval_context"] = retrieval_context
+            evidence.append(entry)
         return json.dumps(evidence, ensure_ascii=False, default=str)
 
     def build_prompt(self, question, evidence):

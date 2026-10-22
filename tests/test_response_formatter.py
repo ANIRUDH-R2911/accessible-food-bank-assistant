@@ -70,3 +70,28 @@ def test_missing_item_id():
     results = [{}]
     response = formatter.format_response("foods with milk", results)
     assert "UNKNOWN_ITEM" in response
+
+
+def test_formatter_supports_hybrid_result_shape():
+    formatter = ResponseFormatter()
+    results = [{
+        "id": "FBA-HYBRID",
+        "rrf_score": 0.04,
+        "inventory_data": {"item_id": "FBA-HYBRID"},
+    }]
+    response = formatter.format_response("high protein foods", results)
+    assert "FBA-HYBRID" in response
+    assert "UNKNOWN_ITEM" not in response
+
+
+def test_formatter_supports_semantic_result_shape():
+    formatter = ResponseFormatter()
+    results = [{
+        "item_id": "FBA-SEMANTIC",
+        "document": "Protein-rich food",
+        "metadata": {"item_id": "FBA-SEMANTIC"},
+        "inventory_data": {"item_id": "FBA-SEMANTIC"},
+    }]
+    response = formatter.format_response("protein foods", results)
+    assert "FBA-SEMANTIC" in response
+    assert "UNKNOWN_ITEM" not in response

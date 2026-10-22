@@ -15,10 +15,23 @@ class ResponseFormatter:
                 "- nutrition"
             )
 
-        result_count = len(results) if results else 0
+
+        result_count = len(results)
         item_ids = []
-        for item in results[: self.max_examples]:
-            item_id = item.get("item_id", "UNKNOWN_ITEM")
+        for result in results[: self.max_examples]:
+            if not isinstance(result, dict):
+                item_ids.append("UNKNOWN_ITEM")
+                continue
+            inventory_data = result.get("inventory_data")
+            if not isinstance(inventory_data, dict):
+                inventory_data = result
+            item_id = (
+                inventory_data.get("item_id")
+                or result.get("item_id")
+                or result.get("id")
+                or (result.get("metadata") or {}).get("item_id")
+                or "UNKNOWN_ITEM"
+            )
             item_ids.append(item_id)
 
         if result_count == 1:
