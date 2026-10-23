@@ -160,3 +160,23 @@ def test_build_evidence_preserves_unknown_fields():
     assert evidence[0]["contains_allergens"] is None
     assert evidence[0]["may_contain"] is None
     assert evidence[0]["nutrition"]["protein"] is None
+
+def test_evidence_preserves_item_identity_and_allergen_distinctions():
+    generator = AnswerGenerator(client=object())
+    records = [{
+        "id": "FBA-999",
+        "rrf_score": 0.04,
+        "inventory_data": {
+            "item_id": "FBA-999",
+            "ingredients": ["oats", "sugar"],
+            "contains_allergens": ["wheat"],
+            "may_contain": ["peanuts"],
+            "nutrition": {"protein": 12},
+        },
+    }]
+    evidence = json.loads(generator.build_evidence(records))
+    assert len(evidence) == 1
+    assert evidence[0]["item_id"] == "FBA-999"
+    assert evidence[0]["contains_allergens"] == ["wheat"]
+    assert evidence[0]["may_contain"] == ["peanuts"]
+    assert evidence[0]["nutrition"]["protein"] == 12
