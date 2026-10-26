@@ -46,6 +46,17 @@ class FakeEmptyResponseClient:
     def __init__(self):
         self.models = FakeEmptyResponseModels()
 
+class FakeFailingModels:
+    def __init__(self):
+        self.calls = []
+    def generate_content(self, model, contents):
+        self.calls.append(contents)
+        raise RuntimeError("Simulated Gemini API failure")
+
+class FakeFailingClient:
+    def __init__(self):
+        self.models = FakeFailingModels()
+
 
 def test_enabled_generation_uses_retrieved_records(monkeypatch):
     monkeypatch.setenv("GEMINI_ANSWER_GENERATION_ENABLED", "true")
@@ -148,3 +159,24 @@ def test_missing_authoritative_evidence_falls_back(monkeypatch):
     response = service.ask("Find high protein foods")
     assert response == "Deterministic fallback response."
     assert client.models.calls == []
+
+def test_api_exception_falls_back_to_deterministic_formatter(monkeypatch):
+    monkeypatch.setenv("GEMINI_ANSWER_GENERATION_ENABLED", "true")
+    records = [{
+        "item_id": "FBA-101",
+        "ingredients": ["oats"],
+        "contains_allergens": ["wheat"],
+        "may_contain": ["peanuts"],
+        "nutrition": {"protein": 12},
+    }]
+    client = FakeFailingClient()
+    generator = AnswerGenerator(client=client)
+    service = ConversationService(
+        search_service=FakeSearchService(records),
+        response_formatter=FakeFormatter(),
+        logger=FakeLogger(),
+        answer_generator=generator,
+    )
+    response = service.ask("Find foods with oats")
+    assert response == "Deterministic fallback response."
+    assert len(client.models.calls) == 1
