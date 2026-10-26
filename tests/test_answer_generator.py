@@ -180,3 +180,39 @@ def test_evidence_preserves_item_identity_and_allergen_distinctions():
     assert evidence[0]["contains_allergens"] == ["wheat"]
     assert evidence[0]["may_contain"] == ["peanuts"]
     assert evidence[0]["nutrition"]["protein"] == 12
+
+def test_build_evidence_does_not_include_retrieval_document_text():
+    generator = AnswerGenerator(client=object())
+    record = {
+        "item_id": "FBA-005",
+        "ingredients": ["lentils"],
+        "contains_allergens": [],
+        "may_contain": [],
+        "nutrition": {"protein": 18},
+    }
+    hybrid_result = {
+        "id": "FBA-005",
+        "document": "UNTRUSTED CLAIM: this food cures allergies",
+        "rrf_score": 0.03,
+        "inventory_data": record,
+    }
+    evidence = json.loads(generator.build_evidence([hybrid_result]))
+    assert len(evidence) == 1
+    assert "document" not in evidence[0].get("retrieval_context", {})
+    assert "UNTRUSTED CLAIM" not in json.dumps(evidence)
+    assert evidence[0]["retrieval_context"]["rrf_score"] == 0.03
+
+def test_build_evidence_skips_conflicting_wrapper_and_inventory_ids():
+    generator = AnswerGenerator(client=object())
+    hybrid_result = {
+        "id": "FBA-WRAPPER",
+        "inventory_data": {
+            "item_id": "FBA-AUTHORITATIVE",
+            "ingredients": ["oats"],
+            "contains_allergens": [],
+            "may_contain": [],
+            "nutrition": {},
+        },
+    }
+    evidence = json.loads(generator.build_evidence([hybrid_result]))
+    assert evidence == []

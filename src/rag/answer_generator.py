@@ -58,6 +58,18 @@ class AnswerGenerator:
             item_id = inventory_record.get("item_id")
             if not item_id:
                 continue
+            if isinstance(result.get("inventory_data"), dict):
+                metadata = result.get("metadata")
+                wrapper_ids = [
+                    result.get("item_id"),
+                    result.get("id"),
+                    metadata.get("item_id") if isinstance(metadata, dict) else None,
+                    ]
+                if any(
+                    wrapper_id is not None and str(wrapper_id) != str(item_id)
+                    for wrapper_id in wrapper_ids
+                    ):
+                    continue
             entry = {
                 "item_id": item_id,
                 "ingredients": inventory_record.get("ingredients"),
@@ -68,7 +80,7 @@ class AnswerGenerator:
                 "nutrition": inventory_record.get("nutrition"),
             }
             retrieval_context = {}
-            for key in ("document", "score", "distance", "rrf_score", "retriever"):
+            for key in ("score", "distance", "rrf_score", "retriever"):
                 if key in result:
                     retrieval_context[key] = result[key]
             if retrieval_context:
