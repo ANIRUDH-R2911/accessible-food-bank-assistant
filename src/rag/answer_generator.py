@@ -2,6 +2,7 @@ import json
 import os
 from dotenv import load_dotenv
 from google import genai
+from google.genai import types
 
 class AnswerGenerator:
     def __init__(self, client=None, model_name=None):
@@ -14,7 +15,13 @@ class AnswerGenerator:
             if not api_key:
                 raise ValueError("GEMINI_API_KEY not found in environment or .env file.")
 
-            self.client = genai.Client(api_key=api_key)
+            self.client = genai.Client(
+                api_key=api_key,
+                http_options=types.HttpOptions(
+                    timeout=30_000,
+                    retry_options=types.HttpRetryOptions(attempts=1),
+                    ),
+                )
 
     def generate_answer(self, question, records):
         if not question or not question.strip():
