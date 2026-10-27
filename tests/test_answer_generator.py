@@ -216,3 +216,41 @@ def test_build_evidence_skips_conflicting_wrapper_and_inventory_ids():
     }
     evidence = json.loads(generator.build_evidence([hybrid_result]))
     assert evidence == []
+
+
+def test_default_client_uses_bounded_timeout_and_single_attempt(monkeypatch):
+    import os
+    from google.genai import types
+    captured = {}
+    def fake_client_factory(**kwargs):
+        captured.update(kwargs)
+        return FakeClient()
+
+    monkeypatch.setenv("GEMINI_API_KEY", "test-key")
+    monkeypatch.setattr("src.rag.answer_generator.genai.Client", fake_client_factory)
+    AnswerGenerator()
+    http_options = captured["http_options"]
+    assert isinstance(http_options, types.HttpOptions)
+    assert http_options.timeout == 30_000
+    assert http_options.retry_options.attempts == 1
+
+
+def test_quota_error_is_propagated_without_application_retry():
+    class QuotaErrorModels:
+        def __init__(self):
+            self.calls = 0
+
+        def generate_content(self, model, contents):
+            self.calls += 1
+            raise RuntimeError("429 RESOURCE_EXHAUSTED: quota exceeded")
+
+    models = QuotaErrorModels()
+    client = SimpleNamespace(models=models)
+    generator = AnswerGenerator(client=client)
+    records = [{"item_id": "FBA-101", "ingredients": ["oats"]}]
+    try:
+        generator.generate_answer("Find foods containing oats", records)
+        assert False, "Expected the simulated quota error to propagate"
+    except RuntimeError as exc:
+        assert "RESOURCE_EXHAUSTED" in str(exc)
+    assert models.calls == 1
