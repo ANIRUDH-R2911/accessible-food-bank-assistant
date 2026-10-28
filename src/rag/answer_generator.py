@@ -7,6 +7,7 @@ from google.genai import types
 class AnswerGenerator:
     def __init__(self, client=None, model_name=None):
         self.model_name = (model_name or os.getenv("GEMINI_ANSWER_MODEL") or "gemini-3.5-flash-lite")
+        self.last_model_call_attempted = False
         if client is not None:
             self.client = client
         else:
@@ -24,6 +25,7 @@ class AnswerGenerator:
                 )
 
     def generate_answer(self, question, records):
+        self.last_model_call_attempted = False
         if not question or not question.strip():
             return "Please enter a food search query."
         if not records:
@@ -40,6 +42,7 @@ class AnswerGenerator:
             raise ValueError("No authoritative inventory records available for answer generation.")
 
         prompt = self.build_prompt(question, evidence)
+        self.last_model_call_attempted = True
         response = self.client.models.generate_content(model=self.model_name, contents=prompt)
         answer = getattr(response, "text", None)
         if not isinstance(answer, str) or not answer.strip():

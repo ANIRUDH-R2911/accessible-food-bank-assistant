@@ -254,3 +254,4 @@ def test_quota_error_is_propagated_without_application_retry():
     except RuntimeError as exc:
         assert "RESOURCE_EXHAUSTED" in str(exc)
     assert models.calls == 1
+    assert generator.last_model_call_attempted is True
