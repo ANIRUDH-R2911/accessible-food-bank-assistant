@@ -3,9 +3,21 @@ import os
 from dotenv import load_dotenv
 from google import genai
 from google.genai import types
+import sys
+from pathlib import Path
+
+project_root = Path(__file__).resolve().parent.parent
+sys.path.append(str(project_root))
+
+from src.services.daily_generation_budget import DailyGenerationBudget
 
 class AnswerGenerator:
-    def __init__(self, client=None, model_name=None):
+    def __init__(self, client=None, model_name=None, generation_budget=None):
+        self.generation_budget = (
+            generation_budget
+            if generation_budget is not None
+            else DailyGenerationBudget()
+            )
         self.model_name = (model_name or os.getenv("GEMINI_ANSWER_MODEL") or "gemini-3.5-flash-lite")
         self.last_model_call_attempted = False
         if client is not None:
@@ -42,6 +54,8 @@ class AnswerGenerator:
             raise ValueError("No authoritative inventory records available for answer generation.")
 
         prompt = self.build_prompt(question, evidence)
+        if not self.generation_budget.reserve():
+            raise RuntimeError("Daily Gemini generation budget exhausted.")
         self.last_model_call_attempted = True
         response = self.client.models.generate_content(model=self.model_name, contents=prompt)
         answer = getattr(response, "text", None)

@@ -255,3 +255,53 @@ def test_quota_error_is_propagated_without_application_retry():
         assert "RESOURCE_EXHAUSTED" in str(exc)
     assert models.calls == 1
     assert generator.last_model_call_attempted is True
+
+def test_exhausted_budget_skips_gemini_call():
+    class ExhaustedBudget:
+        def reserve(self):
+            return False
+
+    client = FakeClient()
+    generator = AnswerGenerator(client=client, generation_budget=ExhaustedBudget())
+    records = [
+        {
+            "item_id": "FBA-101",
+            "ingredients": ["oats"],
+            "contains_allergens": [],
+            "may_contain": [],
+            "nutrition": {},
+        }
+    ]
+    try:
+        generator.generate_answer("Find foods with oats", records)
+        assert False, "Expected exhausted budget to raise an error"
+    except RuntimeError as exc:
+        assert "budget exhausted" in str(exc).lower()
+    assert client.models.calls == []
+
+
+def test_invalid_evidence_does_not_reserve_budget():
+    class TrackingBudget:
+        def __init__(self):
+            self.calls = 0
+
+        def reserve(self):
+            self.calls += 1
+            return True
+
+    budget = TrackingBudget()
+    client = FakeClient()
+    generator = AnswerGenerator(client=client, generation_budget=budget)
+    invalid_records = [
+        {
+            "item_id": "FBA-MISSING",
+            "document": "Not authoritative inventory evidence",
+        }
+    ]
+    try:
+        generator.generate_answer("Find high-protein foods", invalid_records)
+        assert False, "Expected invalid evidence to raise an error"
+    except ValueError as exc:
+        assert "authoritative inventory records" in str(exc)
+    assert budget.calls == 0
+    assert client.models.calls == []
