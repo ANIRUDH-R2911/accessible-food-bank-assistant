@@ -5,14 +5,20 @@ from src.services.search_service import SearchService
 from src.conversation.response_formatter import ResponseFormatter
 from src.conversation.conversation_logger import ConversationLogger
 from src.rag.answer_generator import AnswerGenerator
+from src.services.daily_generation_budget import DailyGenerationBudget
 
 
 class ConversationService:
-    def __init__(self, search_service=None, response_formatter=None, logger=None, answer_generator=None):
+    def __init__(self, search_service=None, response_formatter=None, logger=None, answer_generator=None, generation_budget=None,):
         self.search_service = search_service or SearchService()
         self.response_formatter = response_formatter or ResponseFormatter()
         self.logger = logger or ConversationLogger()
         self.answer_generator = answer_generator
+        self.generation_budget = (
+            generation_budget
+            if generation_budget is not None
+            else DailyGenerationBudget()
+            )
 
     def ask(self, question):
         if not isinstance(question, str) or not question.strip():
@@ -34,11 +40,16 @@ class ConversationService:
                 generation_start = time.perf_counter()
                 try:
                     response = self.generate_answer(question, results)
+                    if self.answer_generator is not None:
+                        generation_attempts = int(getattr(self.answer_generator, "last_model_call_attempted", False))
                     answer_generation_status = "success"
                 except Exception as exc:
                     response = self.response_formatter.format_response(question, results)
-                    answer_generation_status = "fallback"
                     error_type = type(exc).__name__
+                    if str(exc) == "Daily Gemini generation budget exhausted.":
+                        answer_generation_status = "budget_exhausted"
+                    else:
+                        answer_generation_status = "fallback"
                 finally:
                     generation_latency_seconds = time.perf_counter() - generation_start
                     if self.answer_generator is not None:
@@ -61,5 +72,5 @@ class ConversationService:
     
     def generate_answer(self, question, results):
         if self.answer_generator is None:
-            self.answer_generator = AnswerGenerator()
+            self.answer_generator = AnswerGenerator(generation_budget=self.generation_budget)
         return self.answer_generator.generate_answer(question, results)

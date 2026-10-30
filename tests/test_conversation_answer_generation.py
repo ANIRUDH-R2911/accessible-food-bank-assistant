@@ -212,3 +212,34 @@ def test_invalid_non_string_query_is_rejected_without_search():
     )
     assert service.ask(123) == "Please enter a food search query."
     assert logger.entries == []
+
+def test_budget_exhaustion_falls_back_without_model_call(monkeypatch):
+    monkeypatch.setenv("GEMINI_ANSWER_GENERATION_ENABLED", "true")
+    class ExhaustedBudget:
+        def reserve(self):
+            return False
+
+    client = FakeEmptyResponseClient()
+    generator = AnswerGenerator(client=client, generation_budget=ExhaustedBudget())
+    logger=FakeLogger()
+    service = ConversationService(
+        search_service=FakeSearchService([
+            {
+                "item_id": "FBA-101",
+                "ingredients": ["oats"],
+                "contains_allergens": [],
+                "may_contain": [],
+                "nutrition": {},
+            }
+        ]),
+        response_formatter=FakeFormatter(),
+        logger=logger,
+        answer_generator=generator,
+    )
+    response = service.ask("Find foods containing oats")
+    assert response == "Deterministic fallback response."
+    assert client.models.calls == []
+    assert logger.entries[0]["answer_generation_status"] == "budget_exhausted"
+    assert logger.entries[0]["generation_attempts"] == 0
+    assert logger.entries[0]["error_type"] == "RuntimeError"
+    assert logger.entries[0]["generation_latency_seconds"] is not None
