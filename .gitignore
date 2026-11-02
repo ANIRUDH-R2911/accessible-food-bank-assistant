@@ -1,8 +1,19 @@
 venv/
+.venv312/
+
 __pycache__/
 *.pyc
-.ipynb_checkpoints/
+
 .env
+.env.*
+
 logs/*.jsonl
 logs/*.log
+
 data/chroma_db
+
+# Temporary migration files
+imports-audit.txt
+ocr-usage-audit.txt
+packages-py39.txt
+requirements-py39-legacy.txt

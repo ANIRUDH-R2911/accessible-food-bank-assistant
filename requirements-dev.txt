@@ -1,0 +1,8 @@
+-r requirements.txt
+
+# Testing
+pytest
+
+# Evaluation and similarity metrics
+scikit-learn
+rapidfuzz
