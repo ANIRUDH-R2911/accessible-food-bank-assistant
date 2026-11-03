@@ -19,8 +19,10 @@ class ConversationService:
             if generation_budget is not None
             else DailyGenerationBudget()
             )
+        self.last_search_results = []
 
     def ask(self, question):
+        self.last_search_results = []
         if not isinstance(question, str) or not question.strip():
             return "Please enter a food search query."
         start_time = time.perf_counter()
@@ -31,6 +33,7 @@ class ConversationService:
         error_type = None
         try:
             results = self.search_service.search(question)
+            self.last_search_results = results
             if not results:
                 response = self.response_formatter.format_response(question, results)
             elif os.getenv("GEMINI_ANSWER_GENERATION_ENABLED", "false").lower() != "true":
