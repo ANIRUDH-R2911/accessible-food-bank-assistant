@@ -5,8 +5,6 @@ import logging
 from src.Inventory.inventory_retriever import InventoryRetriever
 from src.Inventory.query_router import QueryRouter
 from src.rag.document_builder import DocumentBuilder
-from src.rag.embedding_generator import EmbeddingGenerator
-from src.rag.chroma_manager import ChromaManager
 from src.rag.semantic_retriever import SemanticRetriever
 from src.rag.production_hybrid_retriever import ProductionHybridRetriever
 
@@ -15,8 +13,6 @@ class SearchService:
         self.router = QueryRouter()
         self.retriever = InventoryRetriever(inventory_path)
         self.document_builder = DocumentBuilder()
-        self.embedding_generator = EmbeddingGenerator()
-        self.chroma_manager = ChromaManager()
         self.semantic_retriever = SemanticRetriever()
         self.hybrid_retriever = ProductionHybridRetriever()
         logging.basicConfig(
