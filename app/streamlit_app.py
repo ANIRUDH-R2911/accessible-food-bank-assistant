@@ -36,10 +36,12 @@ if "last_search_results" not in st.session_state:
 
 
 st.title("🥫 Accessible Food Bank Assistant")
+st.badge("Public Demo", color="blue")
 st.write(
     """
-    Search donated food inventory using natural language.
-    Find foods by ingredients, allergens, and nutritional requirements without manually browsing inventory records.
+    An AI-powered food inventory discovery assistant designed for food bank volunteers.
+    Search preloaded food inventory using natural language and find items based on ingredients, allergens, and nutritional requirements.
+    This public demo uses a sample inventory dataset and is intended for demonstration and evaluation purposes. It does not support live inventory management.
     """
 )
 st.divider()
@@ -128,7 +130,7 @@ def display_inventory_record(result):
                 display_value = (
                     "Not available"
                     if value is None
-                    else value
+                    else str(value)
                 )
                 nutrition_rows.append(
                     {
