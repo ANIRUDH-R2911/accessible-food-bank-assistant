@@ -18,7 +18,8 @@ def test_log_interaction(tmp_path):
     lines = log_file.read_text(encoding="utf-8").splitlines()
     assert len(lines) == 1
     entry = json.loads(lines[0])
-    assert entry["query"] == "foods with milk"
+    assert entry["query_length"] == len("foods with milk")
+    assert "query" not in entry
     assert entry["result_count"] == 14
     assert entry["latency_seconds"] == 0.001
     assert entry["answer_generation_status"] == "not_attempted"
@@ -44,3 +45,14 @@ def test_log_interaction_records_generation_metrics(tmp_path):
     assert entry["generation_latency_seconds"] == 0.25
     assert entry["generation_attempts"] == 1
     assert entry["error_type"] == "TimeoutError"
+
+def test_log_interaction_does_not_store_sensitive_query(tmp_path):
+    log_file = tmp_path / "conversation_log.jsonl"
+    logger = ConversationLogger(log_file=str(log_file))
+    sensitive_query = "My private information is confidential"
+    logger.log_interaction(query=sensitive_query, result_count=1, latency_seconds=0.1)
+    content = log_file.read_text(encoding="utf-8")
+    assert sensitive_query not in content
+    entry = json.loads(content.splitlines()[0])
+    assert entry["query_length"] == len(sensitive_query)
+    assert "query" not in entry

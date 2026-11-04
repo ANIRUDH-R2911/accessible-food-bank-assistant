@@ -11,7 +11,7 @@ class ConversationLogger:
         generation_attempts=0, error_type=None):
         log_entry = {
             "timestamp": datetime.now().isoformat(),
-            "query": query,
+            "query_length": len(query) if isinstance(query, str) else None,
             "result_count": result_count,
             "latency_seconds": latency_seconds,
             "answer_generation_status": answer_generation_status,
