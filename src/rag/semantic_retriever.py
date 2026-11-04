@@ -10,7 +10,7 @@ from src.rag.embedding_generator import EmbeddingGenerator
 class SemanticRetriever:
     def __init__(self):
         self.chroma_manager = ChromaManager()
-        self.embedding_generator = None
+        self._embedding_generator = None
 
     def search(self, query, top_k=5):
         results = self.chroma_manager.search(query=query, top_k=top_k)
