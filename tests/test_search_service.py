@@ -4,29 +4,9 @@ from pathlib import Path
 project_root = Path(__file__).resolve().parent.parent
 sys.path.append(str(project_root))
 
+import pytest
 from src.services.search_service import SearchService
 
-'''
-def main():
-    service = SearchService()
-    print("\n----- SEARCH SERVICE TESTS -----")
-    queries = [
-        "foods with milk",
-        "foods containing soy",
-        "show foods with high protein"
-    ]
-    for query in queries:
-        results = service.search(query)
-        print(f"\nQuery: {query}")
-        print(f"Results Returned: {len(results)}")
-        if results:
-            print("First Item:", results[0]["item_id"])
-
-    print("\nSEARCH SERVICE TESTS PASSED")
-
-if __name__ == "__main__":
-    main()
-'''
 class FakeRouter:
     def __init__(self, route_info):
         self.route_info = route_info
@@ -134,3 +114,68 @@ def test_nutrition_query_routes_to_inventory_retriever():
     service.retriever = FakeInventoryRetriever(nutrition_results=[{"item_id": "FBA-003"}])
     results = service.search("foods with at least 10g protein")
     assert results == [{"item_id": "FBA-003"}]
+
+class TrackingRouter:
+    def __init__(self):
+        self.calls = []
+    def route(self, query):
+        self.calls.append(query)
+        return {
+            "query_type": "unsupported",
+            "filters": {},
+            "constraints": {},
+        }
+
+def test_query_at_maximum_length_is_accepted():
+    service = SearchService.__new__(SearchService)
+    service.router = TrackingRouter()
+    query = "a" * 500
+    results = service.search(query)
+    assert results == []
+    assert service.router.calls == [query]
+
+
+def test_query_exceeding_maximum_length_is_rejected():
+    service = SearchService.__new__(SearchService)
+    service.router = TrackingRouter()
+    query = "a" * 501
+    with pytest.raises(ValueError, match="500"):
+        service.search(query)
+    assert service.router.calls == []
+
+
+def test_extremely_large_query_is_rejected_before_routing():
+    service = SearchService.__new__(SearchService)
+    service.router = TrackingRouter()
+    query = "a" * 100_000
+    with pytest.raises(ValueError, match="500"):
+        service.search(query)
+    assert service.router.calls == []
+
+def test_search_log_does_not_store_raw_query(caplog):
+    service = SearchService.__new__(SearchService)
+    sensitive_query = "My private information is confidential"
+    with caplog.at_level("INFO"):
+        service._log_search(
+            query=sensitive_query,
+            route_type="semantic",
+            result_count=3,
+        )
+    assert sensitive_query not in caplog.text
+    assert f"Query_Length={len(sensitive_query)}" in caplog.text
+    assert "Route='semantic'" in caplog.text
+    assert "Results=3" in caplog.text
+
+
+def test_search_log_preserves_metrics_without_query_content(caplog):
+    service = SearchService.__new__(SearchService)
+    with caplog.at_level("INFO"):
+        service._log_search(
+            query="foods containing soy",
+            route_type="allergen",
+            result_count=5,
+        )
+    assert "foods containing soy" not in caplog.text
+    assert "Query_Length=20" in caplog.text
+    assert "Route='allergen'" in caplog.text
+    assert "Results=5" in caplog.text

@@ -7,6 +7,7 @@ from src.Inventory.query_router import QueryRouter
 from src.rag.document_builder import DocumentBuilder
 from src.rag.semantic_retriever import SemanticRetriever
 from src.rag.production_hybrid_retriever import ProductionHybridRetriever
+from src.rag.config import MAX_QUERY_LENGTH
 
 class SearchService:
     def __init__(self, inventory_path: str = "data/inventory/inventory.json"):
@@ -40,6 +41,9 @@ class SearchService:
 
         if not query.strip():
             raise ValueError("Query cannot be empty.")
+        
+        if len(query) > MAX_QUERY_LENGTH:
+            raise ValueError(f"Query exceeds the maximum allowed length of {MAX_QUERY_LENGTH} characters.")
 
     def _execute_retrieval(self, query: str, query_type: str, filters: dict, constraints: dict = None):
         if query_type == "ingredient":
@@ -67,7 +71,7 @@ class SearchService:
         return []
 
     def _log_search(self, query: str, route_type: str, result_count: int) -> None:
-        logging.info(f"Query='{query}' | " f"Route='{route_type}' | " f"Results={result_count}")
+        logging.info(f"Query_Length={len(query)} | " f"Route='{route_type}' | " f"Results={result_count}")
 
 
     def _enrich_semantic_results(self, results):
