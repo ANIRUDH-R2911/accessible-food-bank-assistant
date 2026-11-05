@@ -9,8 +9,12 @@ __pycache__/
 
 logs/*.jsonl
 logs/*.log
+logs/*
+!logs/.gitkeep
 
 data/chroma_db
+
+.streamlit/secrets.toml
 
 # Temporary migration files
 imports-audit.txt
