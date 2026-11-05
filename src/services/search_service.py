@@ -17,7 +17,6 @@ class SearchService:
         self.semantic_retriever = SemanticRetriever()
         self.hybrid_retriever = ProductionHybridRetriever()
         logging.basicConfig(
-            filename="logs/search_service.log",
             level=logging.INFO,
             format="%(asctime)s - %(levelname)s - %(message)s"
         )
