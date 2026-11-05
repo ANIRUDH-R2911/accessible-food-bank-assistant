@@ -13,7 +13,15 @@ class ChromaManager:
         self.collection = (self.client.get_or_create_collection(name=COLLECTION_NAME))
 
     def add_documents(self, ids, documents, metadatas):
-        self.collection.add(ids=ids, documents=documents, metadatas=metadatas)
+        self.collection.upsert(ids=ids, documents=documents, metadatas=metadatas)
+    
+    def get_all_documents(self):
+        return self.collection.get(include=["documents", "metadatas"])
+    
+    def delete_documents(self, ids):
+        if not ids:
+            return
+        self.collection.delete(ids=ids)
 
     def search(self, query, top_k=5):
         results = self.collection.query(query_texts=[query], n_results=top_k)
