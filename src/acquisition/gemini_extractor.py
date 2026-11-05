@@ -64,16 +64,12 @@ class GeminiExtractor:
         response = self.client.models.generate_content(model=self.model_name, contents=[self.build_prompt(), types.Part.from_bytes(data=image_bytes, mime_type=mime_type)])
         raw_text = response.text.strip()
 
-        print("\n------ GEMINI RAW RESPONSE ------\n")
-        print(raw_text)
-        print("\n---------------------------------\n")
-
         try:
             if raw_text.startswith("```json"):
                 raw_text = (raw_text.replace("```json", "").replace("```", "").strip())
             result = json.loads(raw_text)
         except Exception as e:
-            raise ValueError("Failed to parse Gemini JSON response.\n\n" f"Response:\n{raw_text}") from e
+            raise ValueError("Failed to parse Gemini JSON response.") from e
 
         final_record = {
             "item_id": self.generate_item_id(),
