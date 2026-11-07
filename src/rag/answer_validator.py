@@ -49,38 +49,73 @@ class AnswerValidator:
         return mentioned_ids.issubset(available_ids)
 
     def validate_nutrition_claims(self, answer: str, records: list[dict]) -> bool:
-        answer_lower = answer.lower()
-        for record in records:
+        records_by_id = {
+            str(record["item_id"]).upper(): record
+            for record in records
+            if isinstance(record, dict) and record.get("item_id")
+        }
+        nutrient_patterns = {}
+        for record in records_by_id.values():
             nutrition = record.get("nutrition")
             if not isinstance(nutrition, dict):
                 continue
-            for nutrient, recorded_value in nutrition.items():
-                if not isinstance(nutrient, str):
-                    continue
-                nutrient_pattern = self._nutrient_pattern(nutrient)
-                if not re.search(nutrient_pattern, answer_lower):
-                    continue
-                claims = self._extract_nutrition_claims(answer_lower, nutrient_pattern)
+            for nutrient in nutrition:
+                if isinstance(nutrient, str):
+                    nutrient_patterns[nutrient] = self.nutrient_pattern(nutrient)
+
+        sentences = re.split(r"(?<=[.!?])\s+", answer)
+        for sentence in sentences:
+            sentence_lower = sentence.lower()
+            sentence_claims = {}
+            for nutrient, pattern in nutrient_patterns.items():
+                if re.search(pattern, sentence_lower):
+                    claims = self.extract_nutrition_claims(sentence_lower, pattern)
+                    if claims:
+                        sentence_claims[nutrient] = claims
+            if not sentence_claims:
+                continue
+            mentioned_ids = {
+                item_id.upper()
+                for item_id in self.ITEM_ID_PATTERN.findall(sentence)
+            }
+            if mentioned_ids:
+                if len(mentioned_ids) != 1:
+                    return False
+                item_id = next(iter(mentioned_ids))
+                record = records_by_id.get(item_id)
+                if record is None:
+                    return False
+            else:
+                if len(records_by_id) != 1:
+                    return False
+                record = next(iter(records_by_id.values()))
+            nutrition = record.get("nutrition")
+            if not isinstance(nutrition, dict):
+                return False
+            for nutrient, claims in sentence_claims.items():
+                if nutrient not in nutrition:
+                    return False
+                recorded_value = nutrition[nutrient]
+                if recorded_value is None:
+                    return False
+                try:
+                    expected = float(recorded_value)
+                except (TypeError, ValueError):
+                    return False
                 for claimed_value in claims:
-                    if recorded_value is None:
-                        return False
-                    try:
-                        expected = float(recorded_value)
-                    except (TypeError, ValueError):
-                        return False
                     if abs(claimed_value - expected) > 0.01:
                         return False
         return True
 
     @staticmethod
-    def _nutrient_pattern(nutrient: str) -> str:
+    def nutrient_pattern(nutrient: str) -> str:
         normalized = re.sub(r"[_\-]+", " ", nutrient.strip())
         normalized = re.sub(r"\s+", " ", normalized)
         normalized = re.sub(r"\s+(?:g|mg|mcg|kcal)$", "", normalized)
         return r"\b" + re.escape(normalized) + r"\b"
 
     @staticmethod
-    def _extract_nutrition_claims(answer: str, nutrient_pattern: str) -> list[float]:
+    def extract_nutrition_claims(answer: str, nutrient_pattern: str) -> list[float]:
         patterns = (
             rf"(\d+(?:\.\d+)?)\s*(?:g|mg|mcg|kcal)?\s*"
             rf"(?:of\s+)?{nutrient_pattern}",
@@ -97,28 +132,48 @@ class AnswerValidator:
         return claims
 
     def validate_ingredient_claims(self, answer: str, records: list[dict]) -> bool:
-        claims = re.findall(r"\bcontains\s+([^.!?;]+)", answer, flags=re.IGNORECASE)
-        for claim in claims:
-            if re.match(r"\s*\d+(?:\.\d+)?\s*(?:g|mg|mcg|kcal)\b", claim, re.I):
+        records_by_id = {
+            str(record["item_id"]).upper(): record
+            for record in records
+            if isinstance(record, dict) and record.get("item_id")
+        }
+        sentences = re.split(r"(?<=[.!?])\s+", answer)
+        for sentence in sentences:
+            claims = re.findall(r"\bcontains\s+([^.!?;]+)", sentence, flags=re.IGNORECASE)
+            if not claims:
                 continue
-            if re.search(r"\b(?:free|safe|allerg|allergy|allergies)\b", claim, re.IGNORECASE):
-                continue
-
-            claimed_ingredients = self.split_ingredient_claim(claim)
-            if not claimed_ingredients:
-                continue
-            available_ingredients = set()
-            for record in records:
-                ingredients = record.get("ingredients", [])
-                if isinstance(ingredients, list):
-                    available_ingredients.update(
-                        self.normalize_term(item)
-                        for item in ingredients
-                        if isinstance(item, str)
-                    )
-            for ingredient in claimed_ingredients:
-                if ingredient not in available_ingredients:
+            mentioned_ids = {
+                item_id.upper()
+                for item_id in self.ITEM_ID_PATTERN.findall(sentence)
+            }
+            if mentioned_ids:
+                if len(mentioned_ids) != 1:
                     return False
+                item_id = next(iter(mentioned_ids))
+                record = records_by_id.get(item_id)
+                if record is None:
+                    return False
+            else:
+                if len(records_by_id) != 1:
+                    return False
+                record = next(iter(records_by_id.values()))
+            ingredients = record.get("ingredients", [])
+            if not isinstance(ingredients, list):
+                return False
+            available_ingredients = {
+                self.normalize_term(item)
+                for item in ingredients
+                if isinstance(item, str)
+            }
+            for claim in claims:
+                if re.match(r"\s*\d+(?:\.\d+)?\s*(?:g|mg|mcg|kcal)\b", claim, re.IGNORECASE):
+                    continue
+                if re.search(r"\b(?:free|safe|allerg|allergy|allergies)\b", claim, re.IGNORECASE):
+                    continue
+                claimed_ingredients = self.split_ingredient_claim(claim)
+                for ingredient in claimed_ingredients:
+                    if ingredient not in available_ingredients:
+                        return False
         return True
 
     @staticmethod
@@ -131,41 +186,16 @@ class AnswerValidator:
         ]
 
     def validate_allergen_claims(self, answer: str, records: list[dict]) -> bool:
-        answer_lower = answer.lower()
-        has_safety_claim = any(
-            re.search(pattern, answer_lower)
-            for pattern in self.ALLERGEN_SAFETY_PATTERNS
-        )
-        if not has_safety_claim:
-            return True
-        recorded_allergens = set()
-        for record in records:
-            for field in ("contains_allergens", "may_contain"):
-                values = record.get(field, [])
-                if isinstance(values, list):
-                    recorded_allergens.update(
-                        self.normalize_term(value)
-                        for value in values
-                        if isinstance(value, str)
-                    )
-        if not recorded_allergens:
-            return True
-        if re.search(r"\ballergen[- ]free\b|\bsafe for\b", answer_lower):
-            return False
-
-        for allergen in recorded_allergens:
-            if not allergen:
-                continue
-            escaped = re.escape(allergen)
-            specific_patterns = (
-                rf"\b{escaped}(?:s)?[- ]free\b",
-                rf"\bfree of {escaped}(?:s)?\b",
-                rf"\bdoes not contain {escaped}(?:s)?\b",
-                rf"\bcontains no {escaped}(?:s)?\b",
-                rf"\bsafe for (?:people with )?{escaped} allergies\b",
-                rf"\bsafe for people allergic to {escaped}\b",
+        sentences = re.split(r"(?<=[.!?])\s+", answer)
+        for sentence in sentences:
+            sentence_lower = sentence.lower()
+            has_safety_claim = any(
+                re.search(pattern, sentence_lower)
+                for pattern in self.ALLERGEN_SAFETY_PATTERNS
             )
-            if any(re.search(pattern, answer_lower) for pattern in specific_patterns):
+            has_specific_free_claim = bool(re.search(r"\b[a-z][a-z-]*[- ]free\b|\bfree of\b", sentence_lower))
+            has_negative_allergen_claim = bool(re.search(r"\bdoes not contain\b|\bcontains no\b", sentence_lower))
+            if (has_safety_claim or has_specific_free_claim or has_negative_allergen_claim):
                 return False
         return True
 
