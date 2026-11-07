@@ -243,3 +243,98 @@ def test_budget_exhaustion_falls_back_without_model_call(monkeypatch):
     assert logger.entries[0]["generation_attempts"] == 0
     assert logger.entries[0]["error_type"] == "RuntimeError"
     assert logger.entries[0]["generation_latency_seconds"] is not None
+
+
+def test_invalid_generated_answer_falls_back_to_formatter(monkeypatch):
+    monkeypatch.setenv("GEMINI_ANSWER_GENERATION_ENABLED", "true")
+    records = [
+        {
+            "item_id": "FBA-101",
+            "ingredients": ["oats"],
+            "contains_allergens": [],
+            "may_contain": [],
+            "nutrition": {"protein": 5},
+        }
+    ]
+    generator = FakeAnswerGenerator(response="Item FBA-101 contains 25g of protein.")
+    logger = FakeLogger()
+    service = ConversationService(
+        search_service=FakeSearchService(records),
+        response_formatter=FakeFormatter(),
+        logger=logger,
+        answer_generator=generator,
+    )
+    response = service.ask("Find foods with protein")
+    assert response == "Deterministic fallback response."
+    assert logger.entries[0]["answer_generation_status"] == "validation_failed"
+    assert logger.entries[0]["error_type"] == "AnswerValidationError"
+
+
+def test_validated_generated_answer_is_returned(monkeypatch):
+    monkeypatch.setenv("GEMINI_ANSWER_GENERATION_ENABLED", "true")
+    records = [
+        {
+            "item_id": "FBA-101",
+            "ingredients": ["oats"],
+            "contains_allergens": [],
+            "may_contain": [],
+            "nutrition": {"protein": 5},
+        }
+    ]
+    generator = FakeAnswerGenerator(response="Item FBA-101 contains 5g of protein.")
+    service = ConversationService(
+        search_service=FakeSearchService(records),
+        response_formatter=FakeFormatter(),
+        logger=FakeLogger(),
+        answer_generator=generator,
+    )
+    response = service.ask("Find foods with protein")
+    assert response == "Item FBA-101 contains 5g of protein."
+
+def test_unknown_item_id_in_generated_answer_falls_back(monkeypatch):
+    monkeypatch.setenv("GEMINI_ANSWER_GENERATION_ENABLED", "true")
+    records = [{
+        "item_id": "FBA-101",
+        "ingredients": ["oats"],
+        "contains_allergens": [],
+        "may_contain": [],
+        "nutrition": {},
+    }]
+    generator = FakeAnswerGenerator(
+        response="Item FBA-999 contains oats."
+    )
+    logger = FakeLogger()
+    service = ConversationService(
+        search_service=FakeSearchService(records),
+        response_formatter=FakeFormatter(),
+        logger=logger,
+        answer_generator=generator,
+    )
+    response = service.ask("Find foods containing oats")
+    assert response == "Deterministic fallback response."
+    assert logger.entries[0]["answer_generation_status"] == "validation_failed"
+    assert logger.entries[0]["error_type"] == "AnswerValidationError"
+
+def test_unsupported_ingredient_claim_falls_back(monkeypatch):
+    monkeypatch.setenv("GEMINI_ANSWER_GENERATION_ENABLED", "true")
+    records = [{
+        "item_id": "FBA-101",
+        "ingredients": ["oats"],
+        "contains_allergens": [],
+        "may_contain": [],
+        "nutrition": {},
+    }]
+    generator = FakeAnswerGenerator(
+        response="Item FBA-101 contains oats, milk, and almonds."
+    )
+    logger = FakeLogger()
+    service = ConversationService(
+        search_service=FakeSearchService(records),
+        response_formatter=FakeFormatter(),
+        logger=logger,
+        answer_generator=generator,
+    )
+    response = service.ask("Find foods containing oats")
+    assert response == "Deterministic fallback response."
+    assert logger.entries[0]["answer_generation_status"] == "validation_failed"
+    assert logger.entries[0]["error_type"] == "AnswerValidationError"

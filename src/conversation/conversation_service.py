@@ -6,7 +6,10 @@ from src.conversation.response_formatter import ResponseFormatter
 from src.conversation.conversation_logger import ConversationLogger
 from src.rag.answer_generator import AnswerGenerator
 from src.services.daily_generation_budget import DailyGenerationBudget
+from src.rag.answer_validator import AnswerValidator
 
+class AnswerValidationError(Exception):
+    """Raised when a generated answer fails inventory evidence validation."""
 
 class ConversationService:
     def __init__(self, search_service=None, response_formatter=None, logger=None, answer_generator=None, generation_budget=None,):
@@ -19,6 +22,7 @@ class ConversationService:
             if generation_budget is not None
             else DailyGenerationBudget()
             )
+        self.answer_validator = AnswerValidator()
         self.last_search_results = []
 
     def ask(self, question):
@@ -43,13 +47,17 @@ class ConversationService:
                 generation_start = time.perf_counter()
                 try:
                     response = self.generate_answer(question, results)
+                    if not self.answer_validator.validate(response, results):
+                        raise AnswerValidationError("Generated answer failed inventory evidence validation.")
                     if self.answer_generator is not None:
                         generation_attempts = int(getattr(self.answer_generator, "last_model_call_attempted", False))
                     answer_generation_status = "success"
                 except Exception as exc:
                     response = self.response_formatter.format_response(question, results)
                     error_type = type(exc).__name__
-                    if str(exc) == "Daily Gemini generation budget exhausted.":
+                    if isinstance(exc, AnswerValidationError):
+                        answer_generation_status = "validation_failed"
+                    elif str(exc) == "Daily Gemini generation budget exhausted.":
                         answer_generation_status = "budget_exhausted"
                     else:
                         answer_generation_status = "fallback"
