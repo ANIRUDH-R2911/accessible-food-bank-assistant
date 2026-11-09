@@ -1,12 +1,16 @@
 import os
 import json
 import uuid
+import sys
 from pathlib import Path
 from mimetypes import guess_type
-
 from dotenv import load_dotenv
 from google import genai
 from google.genai import types
+project_root = Path(__file__).resolve().parent.parent
+sys.path.append(str(project_root))
+
+from src.prompts.extraction_prompt import (EXTRACTION_SYSTEM_INSTRUCTION, build_extraction_prompt)
 class GeminiExtractor:
     def __init__(self, model_name: str = "gemini-3.5-flash-lite"):
         load_dotenv()
@@ -19,37 +23,6 @@ class GeminiExtractor:
     def generate_item_id(self) -> str:
         return f"FBA-{uuid.uuid4().hex[:8].upper()}"
 
-    def build_prompt(self) -> str:
-        return """
-    You are an expert food inventory extraction system.
-    Analyze the provided food product image and extract all visible food inventory information.
-    Return ONLY valid JSON.
-    Schema:
-    {
-        "ingredients": [],
-        "contains_allergens": [],
-        "may_contain": [],
-        "nutrition": {
-            "calories": null,
-            "fat": null,
-            "carbohydrates": null,
-            "protein": null,
-            "sodium": null,
-            "sugar": null
-            }
-    }
-    Rules:
-    1. Return JSON only.
-    2. Do not include markdown.
-    3. Do not include explanations.
-    4. Ingredients must be a list of strings.
-    5. Allergens must be a list of strings.
-    6. Nutrition values must be numeric when visible.
-    7. Use null when information is not visible.
-    8. If ingredients cannot be read, return an empty list.
-    9. Extract only information visible in the image.
-    10. Do not hallucinate ingredients or nutrition values.
-"""
     def extract(self, image_path: str) -> dict:
         image_path = Path(image_path)
         if not image_path.exists():
@@ -61,7 +34,18 @@ class GeminiExtractor:
         if mime_type is None:
             mime_type = "image/jpeg"
 
-        response = self.client.models.generate_content(model=self.model_name, contents=[self.build_prompt(), types.Part.from_bytes(data=image_bytes, mime_type=mime_type)])
+        response = self.client.models.generate_content(
+            model=self.model_name,
+            contents=[
+                build_extraction_prompt(),
+                types.Part.from_bytes(data=image_bytes, mime_type=mime_type)
+                ],
+            config=types.GenerateContentConfig(
+                system_instruction=EXTRACTION_SYSTEM_INSTRUCTION,
+                temperature=0.1,
+                response_mime_type="application/json",
+                ),
+            )
         raw_text = response.text.strip()
 
         try:
