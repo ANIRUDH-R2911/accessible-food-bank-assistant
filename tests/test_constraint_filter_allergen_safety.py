@@ -6,7 +6,6 @@ sys.path.append(str(project_root))
 
 from src.rag.constraint_filter import ConstraintFilter
 
-
 def test_excludes_recorded_contains_allergen():
     items = [
         {"item_id": "unsafe", "contains_allergens": ["peanut"], "may_contain": [], "ingredients": ["peanut butter"]},
@@ -15,7 +14,6 @@ def test_excludes_recorded_contains_allergen():
     results = ConstraintFilter().filter_allergens(items, ["peanuts"])
     assert [item["item_id"] for item in results] == ["safe_recorded"]
 
-
 def test_excludes_precautionary_may_contain_allergen():
     items = [
         {"item_id": "precautionary", "contains_allergens": [], "may_contain": ["peanuts"], "ingredients": ["chocolate"]},
@@ -23,7 +21,6 @@ def test_excludes_precautionary_may_contain_allergen():
     ]
     results = ConstraintFilter().filter_allergens(items, ["peanut"])
     assert [item["item_id"] for item in results] == ["no_recorded_peanut"]
-
 
 def test_excludes_peanut_mentioned_only_in_ingredient_text():
     items = [
