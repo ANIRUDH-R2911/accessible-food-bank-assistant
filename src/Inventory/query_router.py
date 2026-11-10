@@ -2,6 +2,7 @@ import re
 from typing import Dict
 from src.rag.nutrient_config import (NUTRIENT_CONFIG)
 from src.rag.numeric_constraint_parser import (NumericConstraintParser)
+from src.rag.allergen_config import (extract_excluded_allergens, find_allergen_categories, has_allergen_mention)
 
 class QueryRouter:
     ALLERGENS = {
@@ -11,6 +12,8 @@ class QueryRouter:
         "peanuts",
         "tree nut",
         "tree nuts",
+        "nut",
+        "nuts",
         "almond",
         "almonds",
         "soy",
@@ -48,38 +51,14 @@ class QueryRouter:
         "avoid",
         "exclude"
     }
-    
-    ALLERGEN_EXCLUSION_PATTERNS = {
-        "without",
-        "free",
-        "free from",
-        "avoid",
-        "exclude",
-        "safe for",
-        "allergic to"
-    }
-    
-    ALLERGEN_NORMALIZATION = {
-        "peanut": "peanuts",
-        "peanuts": "peanuts",
-        "milk": "milk",
-        "dairy": "milk",
-        "egg": "eggs",
-        "eggs": "eggs",
-        "almond": "tree nuts",
-        "almonds": "tree nuts",
-        "tree nut": "tree nuts",
-        "tree nuts": "tree nuts",
-        "soy": "soy",
-        "wheat": "wheat",
-        "fish": "fish",
-        "shellfish": "shellfish",
-        "sesame": "sesame"
-    }
 
     def __init__(self):
         self.numeric_constraint_parser = NumericConstraintParser()
         
+    @staticmethod
+    def contains_allergen_term(query: str, allergen: str) -> bool:
+        return bool(re.search(rf"(?<!\w){re.escape(allergen)}(?!\w)", query))
+    
     def detect_query_type(self, query: str) -> str:
         query = query.lower()
         constraints = self.extract_constraints(query)
@@ -87,7 +66,7 @@ class QueryRouter:
             return "hybrid"
         
         has_constraint = any(term in query for term in self.CONSTRAINT_TERMS)
-        has_allergen = any(allergen in query for allergen in self.ALLERGENS)
+        has_allergen = has_allergen_mention(query)
         has_nutrient = False
         for canonical_name, config in NUTRIENT_CONFIG.items():
             aliases = config.get("aliases", [])
@@ -137,22 +116,16 @@ class QueryRouter:
         ingredient = " ".join(ingredient_tokens).strip()
         return {
             "query_type": "ingredient",
-            "filters": {
-                "ingredient": ingredient
-            }
+            "filters": {"ingredient": ingredient}
         }
 
     def parse_allergen_query(self, query: str) -> Dict:
-        query = query.lower()
-        for allergen in self.ALLERGENS:
-            if allergen in query:
-                return {
-                    "query_type": "allergen",
-                    "filters": {
-                        "allergen": allergen
-                    }
+        categories = find_allergen_categories(query)
+        if categories:
+            return {
+                "query_type": "allergen",
+                "filters": {"allergen": categories[0]}
                 }
-
         return {
             "query_type": "allergen",
             "filters": {}
@@ -186,20 +159,12 @@ class QueryRouter:
                 value = float(match.group(1))
                 if any(
                     phrase in query
-                    for phrase in [
-                        "more than",
-                        "greater than",
-                        "above"
-                    ]
+                    for phrase in ["more than", "greater than", "above"]
                 ):
                     operator = ">"
                 elif any(
                     phrase in query
-                    for phrase in [
-                        "less than",
-                        "below",
-                        "under"
-                    ]
+                    for phrase in ["less than", "below", "under"]
                 ):
                     operator = "<"
                 else:
@@ -221,18 +186,14 @@ class QueryRouter:
         query = query.lower()
         return {
         "query_type": "hybrid",
-        "filters": {
-            "query": query
-        },
+        "filters": {"query": query},
         "constraints": self.extract_constraints(query)
     }
 
     def parse_semantic_query(self, query: str) -> Dict:
         return {
             "query_type": "semantic",
-            "filters": {
-                "query": query.lower()
-            }
+            "filters": {"query": query.lower()}
         }
         
     def extract_nutrient_constraints(self, query: str):
@@ -257,10 +218,7 @@ class QueryRouter:
                 for level, patterns in phrase_patters.items():
                     matched = any (re.search(rf"(?<!\w){re.escape(pattern)}(?!\w)",query) for pattern in patterns)
                     if matched:
-                            constraint = {
-                            "nutrient": canonical_name,
-                            "level": level,
-                        }
+                            constraint = {"nutrient": canonical_name, "level": level}
                             if constraint not in constraints:
                                 constraints.append(constraint)
                                 break
@@ -273,18 +231,7 @@ class QueryRouter:
             "allergen_exclude": [],
             "nutrient_constraints": []
             }
-        has_exclusion_pattern = any(
-            pattern in query
-            for pattern in self.ALLERGEN_EXCLUSION_PATTERNS
-            )
-        if has_exclusion_pattern:
-            detected_allergens = set()
-            for allergen in self.ALLERGENS:
-                if allergen in query:
-                    canonical = self.ALLERGEN_NORMALIZATION.get(allergen, allergen)
-                    detected_allergens.add(canonical)
-            constraints["allergen_exclude"] = list(detected_allergens)
-        
+        constraints["allergen_exclude"] = extract_excluded_allergens(query)
         qualitative_constraints = self.extract_nutrient_constraints(query)
         numeric_constraints = self.numeric_constraint_parser.parse(query)
         constraints["nutrient_constraints"] = (qualitative_constraints + numeric_constraints)  
@@ -309,7 +256,6 @@ class QueryRouter:
             return self.parse_hybrid_query(query)
         if query_type == "semantic":
             return self.parse_semantic_query(query)
-
         return {
             "query_type": "unknown",
             "filters": {}
