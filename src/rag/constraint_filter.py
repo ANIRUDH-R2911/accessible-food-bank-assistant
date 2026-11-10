@@ -1,35 +1,6 @@
 import re
+from src.rag.allergen_config import (CANONICAL_ALLERGENS, expand_excluded_allergens, allergen_ingredient_pattern, normalize_allergen_label)
 from src.rag.nutrient_config import get_nutrient_threshold
-
-ALLERGEN_NORMALIZATION = {
-    "peanut": "peanut",
-    "peanuts": "peanut",
-    "milk": "milk",
-    "dairy": "milk",
-    "egg": "egg",
-    "eggs": "egg",
-    "almond": "tree nuts",
-    "almonds": "tree nuts",
-    "tree nut": "tree nuts",
-    "tree nuts": "tree nuts",
-    "soy": "soy",
-    "wheat": "wheat",
-    "fish": "fish",
-    "shellfish": "shellfish",
-    "sesame": "sesame"
-}
-
-INGREDIENT_ALLERGEN_TERMS = {
-    "peanut": ("peanut", "peanuts", "groundnut", "groundnuts", "arachis"),
-    "milk": ("milk", "dairy", "whey", "casein", "lactose", "buttermilk", "cream", "cheese", "yogurt", "yoghurt"),
-    "egg": ("egg", "eggs", "albumen", "albumin"),
-    "tree nuts": ("almond", "almonds", "cashew", "cashews", "walnut", "walnuts", "pistachio", "pistachios", "hazelnut", "hazelnuts", "pecan", "pecans", "macadamia", "brazil nut", "pine nut"),
-    "soy": ("soy", "soya", "soybean", "soybeans", "tofu", "edamame"),
-    "wheat": ("wheat", "durum", "semolina", "spelt", "farro", "bulgur"),
-    "fish": ("fish", "anchovy", "anchovies", "salmon", "tuna", "cod"),
-    "shellfish": ("shellfish", "shrimp", "prawn", "crab", "lobster", "crayfish"),
-    "sesame": ("sesame", "tahini", "benne"),
-}
 
 def as_values(value):
     if value is None:
@@ -39,12 +10,6 @@ def as_values(value):
     if isinstance(value, (list, tuple, set)):
         return list(value)
     return [value]
-
-
-def normalize_allergen(value):
-    normalized = str(value).lower().strip()
-    return ALLERGEN_NORMALIZATION.get(normalized, normalized)
-
 
 def ingredient_text(item):
     ingredients = item.get("ingredients")
@@ -58,11 +23,10 @@ def ingredient_mentions_excluded_allergen(item, excluded_allergens):
         return False
 
     for allergen in excluded_allergens:
-        canonical = normalize_allergen(allergen)
-        terms = INGREDIENT_ALLERGEN_TERMS.get(canonical, (canonical,))
-        for term in terms:
-            if re.search(rf"(?<!\w){re.escape(term)}(?!\w)", text):
-                return True
+        canonical = normalize_allergen_label(allergen)
+        pattern = allergen_ingredient_pattern(canonical)
+        if pattern.search(text):
+            return True
     return False
 class ConstraintFilter:
     def apply_constraints(self, results, constraints):
@@ -76,30 +40,33 @@ class ConstraintFilter:
         return filtered_results
 
     def filter_allergens(self, results, excluded_allergens):
-        normalized_excluded = {
-            normalize_allergen(allergen)
-            for allergen in excluded_allergens
-            }
+        normalized_excluded = expand_excluded_allergens(excluded_allergens)            
         filtered = []
         for item in results:
-            if ("contains_allergens" not in item and "allergens" not in item):
+            contains_metadata_available = (
+                ("contains_allergens" in item and item.get("contains_allergens") is not None) or 
+                ("allergens" in item and item.get("allergens") is not None))
+            may_contain_metadata_available = ("may_contain" in item and item.get("may_contain") is not None)
+            if not contains_metadata_available or not may_contain_metadata_available:
                 continue
-            contains_allergens = item.get("contains_allergens")
-            if contains_allergens is None:
-                contains_allergens = item.get("allergens")
-
-            may_contain = item.get("may_contain")
+            contains_allergens = (as_values(item.get("contains_allergens")) + as_values(item.get("allergens")))
+            may_contain = as_values(item.get("may_contain"))
             item_allergens = {
-                normalize_allergen(allergen)
-                for allergen in as_values(contains_allergens) + as_values(may_contain)
+                normalize_allergen_label(allergen)
+                for allergen in contains_allergens + may_contain
+                if allergen is not None
             }
-
+            has_unknown_allergen = any(
+                allergen not in CANONICAL_ALLERGENS
+                for allergen in item_allergens
+            )
+            if has_unknown_allergen:
+                continue
             if normalized_excluded.intersection(item_allergens):
                 continue
             if ingredient_mentions_excluded_allergen(item, normalized_excluded):
                 continue
             filtered.append(item)
-
         return filtered
     
     def filter_nutrients(self, results, nutrient_constraints):
