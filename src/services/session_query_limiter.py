@@ -1,34 +1,29 @@
 class SessionQueryLimiter:
-    def __init__(self, max_queries=3):
-        if not isinstance(max_queries, int) or isinstance(max_queries, bool):
-            raise TypeError("max queries must be an integer.")
-        if max_queries < 1:
-            raise ValueError("max queries must be at least 1.")
+    def __init__(self, max_generations=3):
+        if not isinstance(max_generations, int) or isinstance(max_generations, bool):
+            raise TypeError("max generations must be an integer.")
+        if max_generations < 1:
+            raise ValueError("max generations must be at least 1.")
 
-        self.max_queries = max_queries
-        self._query_count = 0
-
-    @property
-    def query_count(self):
-        return self._query_count
+        self.max_generations = max_generations
+        self._generation_count = 0
 
     @property
-    def remaining_queries(self):
-        return max(0, self.max_queries - self._query_count)
+    def generation_count(self):
+        return self._generation_count
 
-    def allow_query(self):
-        if self._query_count >= self.max_queries:
+    @property
+    def remaining_generations(self):
+        return max(0, self.max_generations - self._generation_count)
+
+    def can_generate(self):
+        return self._generation_count < self.max_generations
+    
+    def record_generation_attempt(self):
+        if not self.can_generate():
             return False
-        self._query_count += 1
+        self._generation_count+=1
         return True
-
+    
     def reset(self):
-        self._query_count = 0
-
-    def execute_query(self, query_function, *args, **kwargs):
-        if not self.allow_query():
-            return (
-                f"You've reached the limit of {self.max_queries} queries "
-                "for this session. Please start a new session to continue."
-            )
-        return query_function(*args, **kwargs)
+        self._generation_count = 0

@@ -7,6 +7,7 @@ sys.path.append(str(project_root))
 from types import SimpleNamespace
 from src.conversation.conversation_service import ConversationService
 from src.rag.answer_generator import AnswerGenerator
+from src.services.session_query_limiter import SessionQueryLimiter
 class FakeSearchService:
     def __init__(self, results):
         self.results = results
@@ -38,7 +39,7 @@ class FakeEmptyResponseModels:
     def __init__(self):
         self.calls = []
 
-    def generate_content(self, model, contents):
+    def generate_content(self, model, contents, **kwargs):
         self.calls.append(contents)
         return SimpleNamespace(text="  ")
 
@@ -49,7 +50,7 @@ class FakeEmptyResponseClient:
 class FakeFailingModels:
     def __init__(self):
         self.calls = []
-    def generate_content(self, model, contents):
+    def generate_content(self, model, contents, **kwargs):
         self.calls.append(contents)
         raise RuntimeError("Simulated Gemini API failure")
 
@@ -338,3 +339,135 @@ def test_unsupported_ingredient_claim_falls_back(monkeypatch):
     assert response == "Deterministic fallback response."
     assert logger.entries[0]["answer_generation_status"] == "validation_failed"
     assert logger.entries[0]["error_type"] == "AnswerValidationError"
+
+def test_session_limit_allows_three_generations_then_continues_retrieval(monkeypatch):
+    monkeypatch.setenv("GEMINI_ANSWER_GENERATION_ENABLED", "true")
+    records = [{
+        "item_id": "FBA-101",
+        "ingredients": ["oats"],
+        "contains_allergens": [],
+        "may_contain": [],
+        "nutrition": {"protein": 12},
+    }]
+    class TrackingSearchService(FakeSearchService):
+        def __init__(self, results):
+            super().__init__(results)
+            self.search_calls = 0
+
+        def search(self, question):
+            self.search_calls += 1
+            return super().search(question)
+
+    search_service = TrackingSearchService(records)
+    generator = FakeAnswerGenerator()
+    limiter = SessionQueryLimiter(max_generations=3)
+    logger = FakeLogger()
+    service = ConversationService(
+        search_service=search_service,
+        response_formatter=FakeFormatter(),
+        logger=logger,
+        answer_generator=generator,
+        session_generation_limiter=limiter,
+    )
+    responses = [service.ask("Find foods with oats") for _ in range(4)]
+    assert responses[:3] == ["Grounded answer for FBA-101."] * 3
+    assert responses[3] == "Deterministic fallback response."
+    assert len(generator.calls) == 3
+    assert limiter.generation_count == 3
+    assert limiter.remaining_generations == 0
+    assert search_service.search_calls == 4
+    assert [entry["answer_generation_status"] for entry in logger.entries] == [
+        "success",
+        "success",
+        "success",
+        "session_limit_reached",
+    ]
+    assert [entry["generation_attempts"] for entry in logger.entries] == [1, 1, 1, 0]
+    
+def test_daily_budget_exhaustion_does_not_consume_session_generation(monkeypatch):
+    monkeypatch.setenv("GEMINI_ANSWER_GENERATION_ENABLED", "true")
+    class ExhaustedBudget:
+        def reserve(self):
+            return False
+
+    records = [{
+        "item_id": "FBA-101",
+        "ingredients": ["oats"],
+        "contains_allergens": [],
+        "may_contain": [],
+        "nutrition": {"protein": 12},
+    }]
+    client = FakeEmptyResponseClient()
+    generator = AnswerGenerator(client=client, generation_budget=ExhaustedBudget())
+    limiter = SessionQueryLimiter(max_generations=3)
+    logger = FakeLogger()
+    service = ConversationService(
+        search_service=FakeSearchService(records),
+        response_formatter=FakeFormatter(),
+        logger=logger,
+        answer_generator=generator,
+        session_generation_limiter=limiter,
+    )
+    response = service.ask("Find foods with oats")
+    assert response == "Deterministic fallback response."
+    assert client.models.calls == []
+    assert generator.last_model_call_attempted is False
+    assert limiter.generation_count == 0
+    assert limiter.remaining_generations == 3
+    assert logger.entries[0]["answer_generation_status"] == "budget_exhausted"
+    assert logger.entries[0]["generation_attempts"] == 0
+
+def test_api_failure_consumes_session_generation_slot(monkeypatch):
+    monkeypatch.setenv("GEMINI_ANSWER_GENERATION_ENABLED", "true")
+    records = [{
+        "item_id": "FBA-101",
+        "ingredients": ["oats"],
+        "contains_allergens": ["wheat"],
+        "may_contain": ["peanuts"],
+        "nutrition": {"protein": 12},
+    }]
+    client = FakeFailingClient()
+    generator = AnswerGenerator(client=client)
+    limiter = SessionQueryLimiter(max_generations=3)
+    logger = FakeLogger()
+    service = ConversationService(
+        search_service=FakeSearchService(records),
+        response_formatter=FakeFormatter(),
+        logger=logger,
+        answer_generator=generator,
+        session_generation_limiter=limiter,
+    )
+    response = service.ask("Find foods with oats")
+    assert response == "Deterministic fallback response."
+    assert len(client.models.calls) == 1
+    assert generator.last_model_call_attempted is True
+    assert limiter.generation_count == 1
+    assert limiter.remaining_generations == 2
+    assert logger.entries[0]["answer_generation_status"] == "fallback"
+    assert logger.entries[0]["generation_attempts"] == 1
+
+def test_invalid_evidence_does_not_consume_session_generation(monkeypatch):
+    monkeypatch.setenv("GEMINI_ANSWER_GENERATION_ENABLED", "true")
+    records = [{
+        "item_id": "FBA-MISSING",
+        "document": "Possibly high protein food",
+        "metadata": {"item_id": "FBA-MISSING"},
+    }]
+    client = FakeEmptyResponseClient()
+    generator = AnswerGenerator(client=client)
+    limiter = SessionQueryLimiter(max_generations=3)
+    logger = FakeLogger()
+    service = ConversationService(
+        search_service=FakeSearchService(records),
+        response_formatter=FakeFormatter(),
+        logger=logger,
+        answer_generator=generator,
+        session_generation_limiter=limiter,
+    )
+    response = service.ask("Find high protein foods")
+    assert response == "Deterministic fallback response."
+    assert client.models.calls == []
+    assert generator.last_model_call_attempted is False
+    assert limiter.generation_count == 0
+    assert limiter.remaining_generations == 3
+    assert logger.entries[0]["generation_attempts"] == 0

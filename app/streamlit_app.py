@@ -7,6 +7,8 @@ project_root = Path(__file__).resolve().parent.parent
 sys.path.append(str(project_root))
 from src.conversation.conversation_service import ConversationService
 from src.services.session_query_limiter import SessionQueryLimiter
+import os
+
 APP_START = time.perf_counter()
 print(
     f"[STARTUP] Imports completed in "
@@ -18,15 +20,17 @@ st.set_page_config(
     layout="centered"
 )
 
+if "gemini_generation_limiter" not in st.session_state:
+    st.session_state.gemini_generation_limiter = SessionQueryLimiter(max_generations=3)
+    
 if "conversation_service" not in st.session_state:
     service_start = time.perf_counter()
-    st.session_state.conversation_service = ConversationService()
+    st.session_state.conversation_service = ConversationService(session_generation_limiter=st.session_state.gemini_generation_limiter)
     print(
         f"[STARTUP] ConversationService initialized in "
         f"{time.perf_counter() - service_start:.2f} seconds"
     )
-if "query_limiter" not in st.session_state:
-    st.session_state.query_limiter = SessionQueryLimiter(max_queries=3)
+st.session_state.conversation_service.session_generation_limiter = (st.session_state.gemini_generation_limiter)
 if "last_response" not in st.session_state:
     st.session_state.last_response = None
 if "last_query" not in st.session_state:
@@ -58,12 +62,12 @@ with st.form("food_search_form"):
     user_query = st.text_input("Enter your search query", placeholder="e.g. Find foods containing oats")
     search_clicked = st.form_submit_button("Search Inventory", use_container_width=True)
 
-limiter = st.session_state.query_limiter
-remaining_queries = limiter.remaining_queries
+limiter = st.session_state.gemini_generation_limiter
+remaining_generations = limiter.remaining_generations
 st.divider()
 st.subheader("Session Usage")
-st.progress(remaining_queries / limiter.max_queries)
-st.caption(f"{remaining_queries} of {limiter.max_queries} queries remaining")
+st.progress(remaining_generations / limiter.max_generations)
+st.caption(f"{remaining_generations} of {limiter.max_generations} Gemini generations remaining")
 
 if search_clicked:
     query = user_query.strip()
@@ -71,9 +75,7 @@ if search_clicked:
         query = selected_example
     if not query:
         st.warning("Please enter a search query or select an example.")
-    elif limiter.remaining_queries == 0:
-        st.warning("You've reached the limit of 3 queries for this session. Please start a new session to continue.")
-    elif limiter.allow_query():
+    else:
         try:
             search_start = time.perf_counter()
             response = st.session_state.conversation_service.ask(query)
@@ -155,5 +157,5 @@ if st.session_state.last_response is not None:
         for result in search_results:
             display_inventory_record(result)
 
-if limiter.remaining_queries == 0:
-    st.info("You have used all 3 searches available in this session.")
+if limiter.remaining_generations == 0:
+    st.info("You have used all 3 Gemini generations available in this session. You can continue searching the inventory using retrieval-only responses.")

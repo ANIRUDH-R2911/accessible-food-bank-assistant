@@ -1,18 +1,19 @@
 import time
 import os 
-
+from dotenv import load_dotenv
 from src.services.search_service import SearchService
+from src.services.session_query_limiter import SessionQueryLimiter
 from src.conversation.response_formatter import ResponseFormatter
 from src.conversation.conversation_logger import ConversationLogger
 from src.rag.answer_generator import AnswerGenerator
 from src.services.daily_generation_budget import DailyGenerationBudget
 from src.rag.answer_validator import AnswerValidator
-
+load_dotenv()
 class AnswerValidationError(Exception):
     """Raised when a generated answer fails inventory evidence validation."""
 
 class ConversationService:
-    def __init__(self, search_service=None, response_formatter=None, logger=None, answer_generator=None, generation_budget=None,):
+    def __init__(self, search_service=None, response_formatter=None, logger=None, answer_generator=None, generation_budget=None, session_generation_limiter=None):
         self.search_service = search_service or SearchService()
         self.response_formatter = response_formatter or ResponseFormatter()
         self.logger = logger or ConversationLogger()
@@ -22,6 +23,7 @@ class ConversationService:
             if generation_budget is not None
             else DailyGenerationBudget()
             )
+        self.session_generation_limiter = session_generation_limiter
         self.answer_validator = AnswerValidator()
         self.last_search_results = []
 
@@ -43,14 +45,15 @@ class ConversationService:
             elif os.getenv("GEMINI_ANSWER_GENERATION_ENABLED", "false").lower() != "true":
                 response = self.response_formatter.format_response(question, results)
                 answer_generation_status = "disabled"
+            elif (self.session_generation_limiter is not None and not self.session_generation_limiter.can_generate()):
+                response = self.response_formatter.format_response(question, results)
+                answer_generation_status = "session_limit_reached"
             else:
                 generation_start = time.perf_counter()
                 try:
                     response = self.generate_answer(question, results)
                     if not self.answer_validator.validate(response, results):
                         raise AnswerValidationError("Generated answer failed inventory evidence validation.")
-                    if self.answer_generator is not None:
-                        generation_attempts = int(getattr(self.answer_generator, "last_model_call_attempted", False))
                     answer_generation_status = "success"
                 except Exception as exc:
                     response = self.response_formatter.format_response(question, results)
@@ -63,8 +66,16 @@ class ConversationService:
                         answer_generation_status = "fallback"
                 finally:
                     generation_latency_seconds = time.perf_counter() - generation_start
-                    if self.answer_generator is not None:
-                        generation_attempts = int(getattr(self.answer_generator, "last_model_call_attempted", True))
+                    generator = self.answer_generator
+                    model_call_attempted = (
+                        bool(getattr(generator, "last_model_call_attempted", True))
+                        if generator is not None
+                        else False
+                    )
+                    if model_call_attempted:
+                        generation_attempts = 1
+                        if self.session_generation_limiter is not None:
+                            self.session_generation_limiter.record_generation_attempt()
         except Exception as exc:
             response = self.response_formatter.format_response(question, results)
             error_type = type(exc).__name__
