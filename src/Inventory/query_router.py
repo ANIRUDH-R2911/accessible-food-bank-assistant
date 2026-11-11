@@ -101,13 +101,26 @@ class QueryRouter:
         stop_words = {
             "show",
             "find",
+            "suggest",
+            "recommend",
+            "search",
+            "list",
+            "get",
+            
             "foods",
             "food",
             "items",
+            "item",
+            "snack",
+            "snacks",
+            "options",
+            
             "with",
             "containing",
-            "contains"
-        }
+            "contains",
+            "include",
+            "including",
+            }
         tokens = query.split()
         ingredient_tokens = [
             token for token in tokens
