@@ -30,20 +30,20 @@ def test_generic_recommendation_remains_semantic():
     result = router.route("recommend healthy snacks")
     assert result["query_type"] == "semantic"
 
-def test_nut_free_query_excludes_tree_nuts():
+def test_nut_free_query_excludes_peanuts_and_tree_nuts():
     router = QueryRouter()
     result = router.route("Find nut free foods")
     assert result["query_type"] == "hybrid"
     assert result["constraints"]["allergen_exclude"] == ["tree nuts"]
 
-def test_nuts_free_query_excludes_tree_nuts():
+def test_nut_free_query_excludes_peanuts_and_tree_nuts():
+    router = QueryRouter()
+    result = router.route("Find nut free foods")
+    assert result["query_type"] == "hybrid"
+    assert result["constraints"]["allergen_exclude"] == ["peanuts", "tree nuts"]
+
+def test_nuts_free_query_excludes_peanuts_and_tree_nuts():
     router = QueryRouter()
     result = router.route("Find nuts free foods")
     assert result["query_type"] == "hybrid"
-    assert result["constraints"]["allergen_exclude"] == ["tree nuts"]
-
-def test_tree_nut_free_query_excludes_tree_nuts():
-    router = QueryRouter()
-    result = router.route("Find tree nut free foods")
-    assert result["query_type"] == "hybrid"
-    assert result["constraints"]["allergen_exclude"] == ["tree nuts"]
+    assert result["constraints"]["allergen_exclude"] == ["peanuts", "tree nuts"]
