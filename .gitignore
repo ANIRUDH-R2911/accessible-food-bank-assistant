@@ -14,10 +14,5 @@ logs/*
 
 data/chroma_db
 
-.streamlit/secrets.toml
-
-# Temporary migration files
-imports-audit.txt
-ocr-usage-audit.txt
-packages-py39.txt
-requirements-py39-legacy.txt
+# Local evaluation reports
+data/results/latency_report.json

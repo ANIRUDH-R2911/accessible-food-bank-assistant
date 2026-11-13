@@ -1,8 +1,8 @@
 -r requirements.txt
 
 # Testing
-pytest
+pytest==9.2.0
 
 # Evaluation and similarity metrics
-scikit-learn
-rapidfuzz
+scikit-learn==1.9.1
+rapidfuzz==3.14.6

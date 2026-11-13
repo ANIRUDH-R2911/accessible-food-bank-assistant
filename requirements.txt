@@ -1,17 +1,17 @@
 # Gemini API
-google-genai
+google-genai==2.34.0
 
 # Environment configuration
-python-dotenv
+python-dotenv==1.2.4
 
 # Vector database
-chromadb
+chromadb==1.5.9
 
 # Semantic retrieval and embeddings
-sentence-transformers
+sentence-transformers==6.2.0
 
 # Keyword retrieval
-rank-bm25
+rank-bm25==0.2.2
 
 # Web application
-streamlit
+streamlit==1.66.1
