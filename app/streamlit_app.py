@@ -8,6 +8,7 @@ sys.path.append(str(project_root))
 from src.conversation.conversation_service import ConversationService
 from src.services.session_query_limiter import SessionQueryLimiter
 import os
+from src.services.inventory_index_initializer import (initialize_inventory_index as initialize_inventory_index_service)
 
 APP_START = time.perf_counter()
 print(f"[STARTUP] Imports completed in {time.perf_counter() - APP_START:.2f} seconds")
@@ -18,6 +19,14 @@ st.set_page_config(
     layout="wide"
 )
 
+@st.cache_resource(show_spinner="Preparing food inventory...")
+def initialize_inventory_index():
+    inventory_path = project_root / "data" / "inventory" / "inventory.json"
+    report = initialize_inventory_index_service(inventory_path=inventory_path)
+    print(f"[STARTUP] Inventory indexing result: {report}")
+    return report
+
+initialize_inventory_index()
 if "gemini_generation_limiter" not in st.session_state:
     st.session_state.gemini_generation_limiter = SessionQueryLimiter(max_generations=3)
     
