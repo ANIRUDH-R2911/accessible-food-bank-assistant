@@ -8,9 +8,10 @@ sys.path.append(str(project_root))
 from src.rag.config import (VECTOR_DB_DIRECTORY, COLLECTION_NAME)
 
 class ChromaManager:
-    def __init__(self):
-        self.client = chromadb.PersistentClient(path=VECTOR_DB_DIRECTORY)
-        self.collection = (self.client.get_or_create_collection(name=COLLECTION_NAME))
+    def __init__(self, persist_directory=None):
+        database_path = persist_directory or VECTOR_DB_DIRECTORY
+        self.client = chromadb.PersistentClient(path=str(database_path))
+        self.collection = self.client.get_or_create_collection(name=COLLECTION_NAME)
 
     def add_documents(self, ids, documents, metadatas):
         self.collection.upsert(ids=ids, documents=documents, metadatas=metadatas)
