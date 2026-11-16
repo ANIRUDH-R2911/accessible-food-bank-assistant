@@ -7,7 +7,7 @@ class DailyGenerationBudget:
         configured_limit = (
             daily_limit
             if daily_limit is not None
-            else int(os.getenv("GEMINI_DAILY_GENERATION_LIMIT", "600"))
+            else int(os.getenv("GEMINI_DAILY_GENERATION_LIMIT", "1000"))
         )
 
         if configured_limit < 0:
