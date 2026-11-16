@@ -113,8 +113,8 @@ cd accessible-food-bank-assistant
 The project has been validated with Python 3.12.
 
 ```bash
-py -3.12 -m venv .venv312
-source .venv312/Scripts/activate
+py -3.12 -m venv venv
+source venv/Scripts/activate
 ```
 
 ### 3. Install dependencies
