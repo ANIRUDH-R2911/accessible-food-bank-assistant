@@ -180,7 +180,7 @@ python -m pytest tests/test_gemini_pipeline.py -v
 - [x] Retrieval evaluation and automated tests
 - [x] Streamlit search interface
 - [x] Query and Gemini usage safeguards
-- [ ] Improve result presentation so users can readily recognize food products, not just internal inventory identifiers
+- [x] Improve result presentation so users can readily recognize food products, not just internal inventory identifiers
 - [ ] Complete public deployment and end-to-end validation
 
 ## Project Goal
