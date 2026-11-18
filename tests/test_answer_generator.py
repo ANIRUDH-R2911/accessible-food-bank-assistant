@@ -453,7 +453,6 @@ def test_contradictory_model_allergen_claim_is_currently_returned():
     response = generator.generate_answer("Is this food safe for someone with a peanut allergy?", records)
     assert "peanut-free" in response.lower()
 
-
 def test_invented_model_ingredient_claim_is_currently_returned():
     client = FakeClient("Item FBA-SEC-010 contains oats, milk, and almonds.")
     generator = AnswerGenerator(client=client)
@@ -467,3 +466,49 @@ def test_invented_model_ingredient_claim_is_currently_returned():
     response = generator.generate_answer("What are the ingredients?", records)
     assert "milk" in response.lower()
     assert "almonds" in response.lower()
+
+def test_model_generation_latency_is_recorded():
+    client = FakeClient()
+    generator = AnswerGenerator(client=client)
+    records = [{
+        "item_id": "FBA-101",
+        "ingredients": ["oats"],
+        "contains_allergens": [],
+        "may_contain": [],
+        "nutrition": {},
+    }]
+    generator.generate_answer("Find foods containing oats", records)
+    assert generator.last_model_generation_latency_seconds is not None
+    assert generator.last_model_generation_latency_seconds >= 0
+    assert generator.last_error_diagnostics is None
+    assert generator.last_model_call_attempted is True
+
+def test_server_error_records_sanitized_diagnostics():
+    class SimulatedServerError(Exception):
+        code = 503
+
+    class ServerErrorModels:
+        def generate_content(self, model, contents, config=None):
+            raise SimulatedServerError("Simulated failure with sensitive details")
+
+    client = SimpleNamespace(models=ServerErrorModels())
+    generator = AnswerGenerator(client=client)
+    records = [{
+        "item_id": "FBA-101",
+        "ingredients": ["oats"],
+        "contains_allergens": [],
+        "may_contain": [],
+        "nutrition": {},
+    }]
+
+    with pytest.raises(SimulatedServerError):
+        generator.generate_answer("Find foods containing oats", records)
+
+    diagnostics = generator.last_error_diagnostics
+    assert diagnostics["error_type"] == "SimulatedServerError"
+    assert diagnostics["error_category"] == "server_error"
+    assert diagnostics["http_status_code"] == 503
+    assert "sensitive details" not in str(diagnostics)
+    assert generator.last_model_generation_latency_seconds is not None
+    assert generator.last_model_generation_latency_seconds >= 0
+    assert generator.last_model_call_attempted is True
