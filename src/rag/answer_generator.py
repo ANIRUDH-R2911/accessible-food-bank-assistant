@@ -1,5 +1,6 @@
 import json
 import os
+import time
 from dotenv import load_dotenv
 from google import genai
 from google.genai import types
@@ -22,6 +23,8 @@ class AnswerGenerator:
             )
         self.model_name = (model_name or os.getenv("GEMINI_ANSWER_MODEL") or "gemini-3.5-flash-lite")
         self.last_model_call_attempted = False
+        self.last_model_generation_latency_seconds = None
+        self.last_error_diagnostics = None
         if client is not None:
             self.client = client
         else:
@@ -38,6 +41,40 @@ class AnswerGenerator:
                     ),
                 )
 
+    @staticmethod
+    def extract_error_diagnostics(exc):
+        error_type = type(exc).__name__
+        status_code = None
+        for attribute in ("code", "status_code"):
+            value = getattr(exc, attribute, None)
+            if isinstance(value, int) and 100 <= value <= 599:
+                status_code = value
+                break
+        if status_code is None:
+            response = getattr(exc, "response", None)
+            response_status = getattr(response, "status_code", None)
+            if (isinstance(response_status, int) and 100 <= response_status <= 599):
+                status_code = response_status
+        if status_code == 429:
+            category = "rate_limit"
+        elif status_code is not None and status_code >= 500:
+            category = "server_error"
+        elif status_code in (401, 403):
+            category = "authentication_or_permission"
+        elif status_code is not None and status_code >= 400:
+            category = "client_error"
+        elif error_type == "TimeoutError":
+            category = "timeout"
+        elif error_type in ("ConnectionError", "ConnectError"):
+            category = "connection_error"
+        else:
+            category = "other"
+        return {
+            "error_type": error_type,
+            "error_category": category,
+            "http_status_code": status_code,
+        }
+
     def generate_answer(self, question, records):
         if not isinstance(question, str):
             raise TypeError("Question must be a string.")
@@ -46,6 +83,8 @@ class AnswerGenerator:
         if len(question) > MAX_QUERY_LENGTH:
             raise ValueError(f"Question exceeds the maximum allowed length of {MAX_QUERY_LENGTH} characters.")
         self.last_model_call_attempted = False
+        self.last_model_generation_latency_seconds = None
+        self.last_error_diagnostics = None
         if not question or not question.strip():
             return "Please enter a food search query."
         if not records:
@@ -65,11 +104,18 @@ class AnswerGenerator:
         if not self.generation_budget.reserve():
             raise RuntimeError("Daily Gemini generation budget exhausted.")
         self.last_model_call_attempted = True
-        response = self.client.models.generate_content(
-            model=self.model_name,
-            contents=prompt,
-            config=types.GenerateContentConfig(system_instruction=GENERATION_SYSTEM_INSTRUCTION, temperature=0.2),
-            )
+        model_start = time.perf_counter()
+        try:
+            response = self.client.models.generate_content(
+                model=self.model_name,
+                contents=prompt,
+                config=types.GenerateContentConfig(system_instruction=GENERATION_SYSTEM_INSTRUCTION, temperature=0.2),
+                )
+        except Exception as exc:
+            self.last_error_diagnostics = self.extract_error_diagnostics(exc)
+            raise
+        finally:
+            self.last_model_generation_latency_seconds = (time.perf_counter() - model_start)
         answer = getattr(response, "text", None)
         if not isinstance(answer, str) or not answer.strip():
             raise ValueError("The answer model returned an empty response.")
