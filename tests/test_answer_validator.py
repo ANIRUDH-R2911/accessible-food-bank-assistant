@@ -262,3 +262,60 @@ def test_rejects_allergy_safety_claim_when_allergen_information_is_missing(valid
     }
     answer = "Item FBA-SEC-021 is safe for people with peanut allergies."
     assert validator.validate(answer, [record]) is False
+
+def test_diagnostics_identify_unsupported_item_id(validator, inventory_record):
+    result = validator.validate_with_diagnostics("Item FBA-SEC-999 contains oats.", [inventory_record])
+    assert result == {
+        "valid": False,
+        "failed_check": "item_ids",
+    }
+
+def test_diagnostics_identify_nutrition_failure(validator, inventory_record):
+    result = validator.validate_with_diagnostics("Item FBA-SEC-001 contains 25g of protein.", [inventory_record])
+    assert result == {
+        "valid": False,
+        "failed_check": "nutrition",
+    }
+
+def test_diagnostics_identify_ingredient_failure(validator, inventory_record):
+    result = validator.validate_with_diagnostics("Item FBA-SEC-001 contains almonds.", [inventory_record])
+    assert result == {
+        "valid": False,
+        "failed_check": "ingredients",
+    }
+
+def test_diagnostics_identify_allergen_failure(validator, inventory_record):
+    result = validator.validate_with_diagnostics("Item FBA-SEC-001 is peanut-free.", [inventory_record])
+    assert result == {
+        "valid": False,
+        "failed_check": "allergens",
+    }
+
+def test_diagnostics_accept_supported_answer(validator, inventory_record):
+    result = validator.validate_with_diagnostics("Item FBA-SEC-001 contains 5g of protein.", [inventory_record])
+    assert result == {
+        "valid": True,
+        "failed_check": None,
+    }
+
+def test_accepts_item_specific_ingredient_response(validator, inventory_record):
+    answer = "FBA-SEC-001 contains oats."
+    assert validator.validate(answer, [inventory_record]) is True
+
+def test_accepts_exact_item_specific_nutrition_response(validator, inventory_record):
+    answer = "FBA-SEC-001 provides 5g of protein."
+    assert validator.validate(answer, [inventory_record]) is True
+
+def test_accepts_cautious_allergen_response(validator, inventory_record):
+    answer = (
+        "FBA-SEC-001 does not list peanuts under confirmed allergens, but it is listed under may_contain."
+        "Check the original product label for confirmation."
+    )
+    assert validator.validate(answer, [inventory_record]) is True
+
+def test_accepts_combined_grounded_response(validator, inventory_record):
+    answer = (
+        "FBA-SEC-001 contains oats. FBA-SEC-001 provides 5g of protein."
+        "Peanuts are listed under may_contain."
+    )
+    assert validator.validate(answer, [inventory_record]) is True

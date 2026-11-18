@@ -13,27 +13,35 @@ class AnswerValidator:
     )
 
     def validate(self, answer: str, records: list[dict]) -> bool:
-        if not isinstance(answer, str) or not answer.strip():
-            return False
-        if not isinstance(records, list) or not records:
-            return False
-        valid_records = [
-            record
-            for record in records
-            if isinstance(record, dict) and record.get("item_id")
-        ]
-        if not valid_records:
-            return False
-        if not self.validate_item_ids(answer, valid_records):
-            return False
-        if not self.validate_nutrition_claims(answer, valid_records):
-            return False
-        if not self.validate_ingredient_claims(answer, valid_records):
-            return False
-        if not self.validate_allergen_claims(answer, valid_records):
-            return False
-
-        return True
+            return self.validate_with_diagnostics(answer, records)["valid"]
+    
+    def validate_with_diagnostics(self, answer: str, records: list[dict]) -> dict:
+            if not isinstance(answer, str) or not answer.strip():
+                return {"valid": False, "failed_check": "answer"}
+            if not isinstance(records, list) or not records:
+                return {"valid": False, "failed_check": "records"}
+            valid_records = [
+                record
+                for record in records
+                if isinstance(record, dict) and record.get("item_id")]
+            if not valid_records:
+                return {"valid": False, "failed_check": "inventory_evidence"}
+            checks = (
+                ("item_ids", self.validate_item_ids),
+                ("nutrition", self.validate_nutrition_claims),
+                ("ingredients", self.validate_ingredient_claims),
+                ("allergens", self.validate_allergen_claims),
+            )
+            for check_name, check_function in checks:
+                if not check_function(answer, valid_records):
+                    return {
+                        "valid": False,
+                        "failed_check": check_name,
+                        }
+            return {
+                "valid": True,
+                "failed_check": None,
+            }
 
     def validate_item_ids(self, answer: str, records: list[dict]) -> bool:
         mentioned_ids = {
