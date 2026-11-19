@@ -12,3 +12,5 @@ logs/*
 !logs/.gitkeep
 
 data/chroma_db
+
+experiments/database_scaling/indexes
