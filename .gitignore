@@ -12,6 +12,3 @@ logs/*
 !logs/.gitkeep
 
 data/chroma_db
-
-# Local evaluation reports
-data/results/latency_report.json
