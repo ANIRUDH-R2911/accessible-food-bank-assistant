@@ -13,7 +13,7 @@ Volunteers can ask questions such as:
 
 The application searches an existing food inventory, applies dietary and nutritional constraints, and provides responses grounded in retrieved inventory evidence.
 
-🚀 **[Try the Live Demo](https://accessible-food-bank-assistant-vugcme9uwqywymsosmh63c.streamlit.app/)**
+🚀 **[Try the Live Demo](https://foodbankassistant.streamlit.app/)**
 
 ## Key Features
 
