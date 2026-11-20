@@ -13,6 +13,8 @@ Volunteers can ask questions such as:
 
 The application searches an existing food inventory, applies dietary and nutritional constraints, and provides responses grounded in retrieved inventory evidence.
 
+🚀 **[Try the Live Demo](https://accessible-food-bank-assistant-vugcme9uwqywymsosmh63c.streamlit.app/)**
+
 ## Key Features
 
 - **Gemini-powered food extraction:** Extracts ingredients, allergens, and nutrition information from food labels.
