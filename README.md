@@ -1,12 +1,34 @@
 # 🥫 Accessible Food Bank Assistant
 
 
-## ⚡ Technology Stack
-
-<p align="left">
-  <img src="https://skillicons.dev/icons?i=python,googlecolab,numpy,pytorch,opencv,sklearn" />
+<p align="center">
+  <strong>Core Language & Data Processing</strong>
   <br>
-  <img src="https://skillicons.dev/icons?i=streamlit,git,github,pytest,linux" />
+  <img src="https://skillicons.dev/icons?i=python,numpy" />
+  <br>
+  <img src="https://img.shields.io/badge/Python-3.12-3776AB?logo=python&logoColor=white" />
+  <img src="https://img.shields.io/badge/NumPy-Data%20Processing-013243?logo=numpy&logoColor=white" />
+</p>
+
+<p align="center">
+  <strong>Generative AI & Retrieval</strong>
+  <br>
+  <img src="https://img.shields.io/badge/Google%20Gemini-API-8E75B2?logo=googlegemini&logoColor=white" />
+  <img src="https://img.shields.io/badge/BM25-Hybrid%20Retrieval-2E8B57" />
+  <img src="https://img.shields.io/badge/Sentence%20Transformers-Embeddings-444444" />
+  <img src="https://img.shields.io/badge/Reciprocal%20Rank%20Fusion-RRF-444444" />
+  <br>
+  <img src="https://img.shields.io/badge/ChromaDB-Vector%20Database-FF6F00" />
+</p>
+
+<p align="center">
+  <strong>Application & Testing</strong>
+  <br>
+  <img src="https://skillicons.dev/icons?i=streamlit,pytest,git,github" />
+  <br>
+  <img src="https://img.shields.io/badge/Streamlit-1.66.1-FF4B4B?logo=streamlit&logoColor=white" />
+  <img src="https://img.shields.io/badge/Pytest-Testing-0A9EDC?logo=pytest&logoColor=white" />
+  <img src="https://img.shields.io/badge/Git-Version%20Control-F05032?logo=git&logoColor=white" />
 </p>
 
 
