@@ -1,5 +1,15 @@
 # 🥫 Accessible Food Bank Assistant
 
+
+## ⚡ Technology Stack
+
+<p align="left">
+  <img src="https://skillicons.dev/icons?i=python,googlecolab,numpy,pytorch,opencv,sklearn" />
+  <br>
+  <img src="https://skillicons.dev/icons?i=streamlit,git,github,pytest,linux" />
+</p>
+
+
 Making donated food inventory easier to search and understand with AI.
 
 Accessible Food Bank Assistant is an AI-powered application that transforms food-label information into structured inventory records and helps food bank volunteers discover products through natural-language queries.
