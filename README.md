@@ -2,17 +2,11 @@
 
 
 <p align="center">
-  <strong>Core Language & Data Processing</strong>
-  <br>
-  <img src="https://skillicons.dev/icons?i=python,numpy" />
-  <br>
   <img src="https://img.shields.io/badge/Python-3.12-3776AB?logo=python&logoColor=white" />
   <img src="https://img.shields.io/badge/NumPy-Data%20Processing-013243?logo=numpy&logoColor=white" />
 </p>
 
 <p align="center">
-  <strong>Generative AI & Retrieval</strong>
-  <br>
   <img src="https://img.shields.io/badge/Google%20Gemini-API-8E75B2?logo=googlegemini&logoColor=white" />
   <img src="https://img.shields.io/badge/BM25-Hybrid%20Retrieval-2E8B57" />
   <img src="https://img.shields.io/badge/Sentence%20Transformers-Embeddings-444444" />
@@ -22,10 +16,6 @@
 </p>
 
 <p align="center">
-  <strong>Application & Testing</strong>
-  <br>
-  <img src="https://skillicons.dev/icons?i=streamlit,pytest,git,github" />
-  <br>
   <img src="https://img.shields.io/badge/Streamlit-1.66.1-FF4B4B?logo=streamlit&logoColor=white" />
   <img src="https://img.shields.io/badge/Pytest-Testing-0A9EDC?logo=pytest&logoColor=white" />
   <img src="https://img.shields.io/badge/Git-Version%20Control-F05032?logo=git&logoColor=white" />
@@ -180,17 +170,6 @@ Synthetic records did not have independent human relevance judgments. Precision 
 All scaling experiments used isolated ChromaDB indexes. Production inventory and production vector storage were not accessed or modified.
 
 These measurements represent local benchmark performance, not deployed Streamlit Cloud performance.
-
-## Technology Stack
-
-- **Language:** Python 3.12
-- **Generative AI:** Google Gemini API
-- **Retrieval:** BM25, Sentence Transformers, Reciprocal Rank Fusion
-- **Vector Database:** ChromaDB
-- **Data Processing:** NumPy
-- **Application:** Streamlit
-- **Testing:** Pytest
-- **Version Control:** Git and GitHub
 
 ## Run Locally
 
