@@ -38,11 +38,18 @@ The application searches an existing food inventory, applies dietary and nutriti
 🚀 **[Try the Live Demo](https://foodbankassistant.streamlit.app/)**
 
 ## Application Preview
-<p align="center">
-  <img src="docs/Application_UI.png" width="33%" />
-  <img src="docs/Result_page.png" width="34%" />
-  <img src="docs/Detailed_record.png" width="34%" />
-</p>
+<table>
+  <tr>
+    <td width="50%">
+      <img src="docs/Application_UI.png" width="100%" />
+      <br><br>
+      <img src="docs/Result_page.png" width="100%" />
+    </td>
+    <td width="50%" valign="middle">
+      <img src="docs/Detailed_record.png" width="100%" />
+    </td>
+  </tr>
+</table>
 
 ## Key Features
 
