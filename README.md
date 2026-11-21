@@ -238,33 +238,13 @@ Run it separately only when intentionally testing the live extraction pipeline:
 python -m pytest tests/test_gemini_pipeline.py -v
 ```
 
-## Deployment
+## Deployment & Safety
 
-The application is deployed using Streamlit Community Cloud and connected to GitHub for source control.
+The application is deployed on Streamlit Community Cloud and configured for **read-only inventory search**.
 
-The public application is configured for read-only inventory searches.
+- Session query limits, query-length limits, and a daily Gemini generation budget.
+- Gemini answer generation disabled by default, with request timeouts and no repeated SDK retries.
+- Cached initialization that reuses the existing ChromaDB collection instead of re-indexing.
+- No public upload workflow that can modify inventory records; food-label extraction is kept separate from public search.
+- Generated answers grounded in retrieved inventory evidence, with missing nutritional values never assumed.
 
-Deployment safeguards include:
-
-- Automatic inventory index initialization when required.
-- Reuse of an existing populated ChromaDB collection.
-- Cached application initialization to avoid unnecessary re-indexing.
-- Gemini answer generation disabled by default.
-- Session-level query limits and daily Gemini generation budgets.
-- No public image-upload workflow that modifies persistent inventory records.
-
-## Reliability and Safety
-
-- Limits user query length and the number of queries allowed per session.
-- Applies a daily generation budget to manage Gemini API usage.
-- Configures request timeouts and avoids repeated SDK retries.
-- Grounds generated responses in retrieved inventory evidence.
-- Handles missing nutritional information without assuming values.
-- Separates public inventory search from the food-label extraction workflow.
-- Uses isolated databases for synthetic scaling experiments.
-
-## Project Goal
-
-Food banks manage diverse donated inventories, and finding products that meet specific nutritional or allergen requirements can take time.
-
-This project applies Generative AI, information retrieval, and structured data processing to make inventory discovery more accessible and practical for food-bank volunteers and the communities they serve.
