@@ -170,8 +170,6 @@ Evaluated BM25, semantic, and hybrid retrieval across progressively larger synth
 - Synthetic records did not have independent human relevance judgments. Precision calculations use only retrieved records with available human labels, and judgment coverage is reported separately.
 - All scaling experiments used isolated ChromaDB indexes. Production inventory and production vector storage were not accessed or modified.
 
-These measurements represent local benchmark performance, not deployed Streamlit Cloud performance.
-
 ## Run Locally
 
 ### 1. Clone the repository
