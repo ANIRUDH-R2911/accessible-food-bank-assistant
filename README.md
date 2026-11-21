@@ -133,55 +133,42 @@ The project has been evaluated across food-label extraction, query routing, retr
 
 Metrics reflect the corresponding evaluation datasets and relevance judgments.
 
-### Synthetic Database Scaling Study
+### Application Latency (105 Records)
 
-A synthetic database scaling experiment evaluated retrieval performance at increasing inventory sizes.
+Measured warm `ConversationService.ask()` execution across five query categories (30 runs each).
 
-**Experimental configuration:**
+| Query Category | Average (ms) | P95 (ms) |
+|---|---:|---:|
+| Ingredient | 0.636 | 0.846 |
+| Allergen | 0.594 | 0.762 |
+| Nutrition | 0.647 | 0.974 |
+| Semantic | 231.575 | 257.992 |
+| Hybrid | 192.980 | 218.350 |
 
-- Dataset sizes: 1,000, 2,500, 5,000, and 10,000 records.
-- Queries: 10 representative natural-language queries.
-- Benchmark runs: 20 per query.
-- Warmup runs: 3.
-- Retrieval methods: BM25, semantic search, and hybrid retrieval.
-- Embedding model: `all-MiniLM-L6-v2`.
-- Vector database: ChromaDB.
-- Hybrid ranking: Reciprocal Rank Fusion (RRF), k=60.
-- Gemini answer generation excluded.
+**Gemini-enabled tests:** 3 API calls recorded total response times of 1.12–1.96 seconds; 2 responses passed evidence validation, while 1 was rejected by the validation safeguard.
 
-**Average query latency (milliseconds):**
+### Synthetic Database Scalability
 
-| Inventory Size | BM25 | Semantic | Hybrid |
+Evaluated BM25, semantic, and hybrid retrieval across progressively larger synthetic inventories using 10 judged queries and 20 measured runs per query.
+
+| Inventory Size | BM25 (ms) | Semantic (ms) | Hybrid (ms) |
 |---:|---:|---:|---:|
 | 1,000 | 1.30 | 19.42 | 23.45 |
 | 2,500 | 1.41 | 5.85 | 8.49 |
 | 5,000 | 3.07 | 5.84 | 9.90 |
 | 10,000 | 7.60 | 6.85 | 16.92 |
 
-**Index construction and storage:**
+*Benchmark configuration: all-MiniLM-L6-v2, retrieval-k=20, top-k=5, RRF k=60, and 3 warmup runs.*
 
-| Inventory Size | BM25 Build | Semantic Build | ChromaDB Storage |
-|---:|---:|---:|---:|
-| 1,000 | 46 ms | 21.74 s | 9.40 MB |
-| 2,500 | 97 ms | 41.54 s | 14.02 MB |
-| 5,000 | 79 ms | 49.47 s | 28.09 MB |
-| 10,000 | 304 ms | 99.02 s | 52.26 MB |
+**Observations:** BM25 and hybrid retrieval latency increased at larger inventory sizes, while semantic retrieval remained relatively stable beyond the 1,000-record experiment. The 1,000-record semantic result was an outlier, so the measurements should not be interpreted as a strictly monotonic scaling trend.
 
-**Observations:**
-
-- BM25 retrieval remained relatively fast as inventory size increased.
-- Hybrid retrieval required additional processing compared with BM25 alone.
-- Semantic index construction time and storage requirements increased with dataset size.
-- Query latency did not increase uniformly across all dataset sizes.
-- The 1,000-record semantic and hybrid measurements were higher than those at larger sizes.
+*Note: Application latency measurements were collected locally on Windows 11 with Python 3.12.10, not from the deployed Streamlit Cloud runtime. Synthetic scaling experiments used isolated indexes and did not modify production inventory data.*
 
 **Limitations:**
 
-Synthetic records were derived from existing inventory records with variations in nutritional values. They do not represent independently collected real-world food products.
-
-Synthetic records did not have independent human relevance judgments. Precision calculations use only retrieved records with available human labels, and judgment coverage is reported separately.
-
-All scaling experiments used isolated ChromaDB indexes. Production inventory and production vector storage were not accessed or modified.
+- Synthetic records were derived from existing inventory records with variations in nutritional values. They do not represent independently collected real-world food products.
+- Synthetic records did not have independent human relevance judgments. Precision calculations use only retrieved records with available human labels, and judgment coverage is reported separately.
+- All scaling experiments used isolated ChromaDB indexes. Production inventory and production vector storage were not accessed or modified.
 
 These measurements represent local benchmark performance, not deployed Streamlit Cloud performance.
 
