@@ -37,6 +37,13 @@ The application searches an existing food inventory, applies dietary and nutriti
 
 🚀 **[Try the Live Demo](https://foodbankassistant.streamlit.app/)**
 
+## Application Preview
+<p align="center">
+  <img src="docs/Application_UI.png" width="33%" />
+  <img src="docs/Result_page.png" width="34%" />
+  <img src="docs/Detailed_record.png" width="34%" />
+</p>
+
 ## Key Features
 
 - **Gemini-powered food extraction:** Extracts ingredients, allergens, and nutrition information from food labels.
